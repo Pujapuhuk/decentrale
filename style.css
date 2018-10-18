@@ -548,14 +548,37 @@ box-shadow: 0px 0px 16px 0px rgba(54,54,54,0.15);
     background: url(img/groepen/groepen-3.jpg) center/cover no-repeat;
         margin-bottom:40px;
 }
-.groepen-contact{
-    text-align:center;
-    margin-top:40px;
+.meer-weten{
+    display: flex;
+    padding:80px; 
+    background-color:#F7F5F2; 
+}
+.meer-weten-text-wrap{ 
+    text-align: center; 
+    width:90%; 
+    margin:auto;
 }
 .portret-foto{
     width:80px;
     margin-bottom: 20px;
 }
+.link-mail-thijs-bg{
+    background-color: #FFF02E;
+    width:160px;
+    padding:12px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.link{
+    margin-left:auto;
+    margin-right:auto;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    }
+.link :hover{
+    color:black;
+    }
 /*******************/
 /*RESERVEREN PAGINA*/
 /*******************/
