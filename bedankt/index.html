@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>De Centrale - Reserveren</title>
+	<title>De Centrale - Bedankt voor de reservering</title>
 
 	<!-- to do: verdiepen in meta tags voor vindbaarheid in google-->
 
@@ -81,96 +81,13 @@
 	<!-- content-reserveren -->
 	<div class="page-title-white container-s reserveren-content">
 		<div class="page-title-text-wrap">
-			<h1>RESERVEREN</h1>
+			<h1>BEDANKT VOOR JE RESERVERING</h1>
 		</div>
 	</div>
 	<div class="container-s page-intro-text text-center reserveren-intro">
-		<p>Reserveren voor het diner kan via onderstaand formulier. Let op! Je reservering staat pas vast als je een
-			bevestigende e-mail van ons hebt ontvangen. Bel je liever? Doe dat dan tijdens onze openingstijden op 015-8892777.</p>
+		<p>Je bericht is verstuurd. We gaan kijken of we een plekje hebben en nemen dan zo snel mogelijk contact met je op.</p>
 	</div>
-	<div class="container-s">
-		<form name="contact" id="contact-form" action="/bedankt/" method="post" role="form" autocomplete="off" data-netlify="true">
-			<div class="controls">
-				<div class="row">
-					<div class="col-xs-12 col-md-8">
-						<div class="form-group">
-							<label for="form_date">Welke dag wil je komen?</label>
-							<input id="form_date" name="date" type="text" class="form-control formnumber" placeholder="dd/mm/yyyy" required="required"
-							 data-error="Selecteer een dag"></input>
-							<div class="help-block with-errors"></div>
-						</div>
-					</div>
-					<div class="col-xs-6 col-md-3">
-						<div class="form-group ">
-							<label for="form_time">Hoe laat?</label>
-							<div class="selectpicker">
-								<select id="form_time" name="time" class="form-control">
-									<optgroup label="Diner">
-										<option value="17:30">17:30</option>
-										<option value="18:00">18:00</option>
-										<option value="18:30">18:30</option>
-										<option value="19:00">19:00</option>
-										<option value="19:30">19:30</option>
-										<option value="20:00">20:00</option>
-										<option value="20:30">20:30</option>
-										<option value="21:00">21:00</option>
-										<option value="anders">Anders</option>
-									</optgroup>
-								</select>
-							</div>
-						</div>
-					</div>
-					<div class="col-xs-6 col-md-4">
-						<div class="form-group ">
-							<label for="form_number">Hoeveel personen?</label>
-							<input id="form_number" name="number" type="number" class="formnumber form-control" placeholder=""></input>
-							<div class="help-block with-errors"></div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12 col-md-12">
-						<div class="form-group">
-							<label for="form_message">Zijn er allergieën of andere eetwensen waar we rekening mee moeten houden?</label>
-							<textarea id="form_message" name="message" class="form-control textarea-form" placeholder="" rows="4" data-error=""></textarea>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12 col-md-8">
-						<div class="form-group">
-							<label for="form_name">Naam *</label>
-							<input id="form_name" type="text" name="name" class="form-control" placeholder="" required="required" data-error="Vul een naam in.">
-							<div class="help-block with-errors"></div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12 col-md-8">
-						<div class="form-group">
-							<label for="form_email">Email adres *</label>
-							<input id="form_email" type="email" name="email" class="form-control" placeholder="" required="required"
-							 data-error="Vul een geldig emailadres in.">
-							<div class="help-block with-errors"></div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12 col-md-8">
-						<div class="form-group ">
-							<label for="form_phone">Telefoonnummer *</label>
-							<input id="form_phone" type="tel" name="phone" class="form-control" placeholder="" required="required"
-							 data-error="Als je wilt reserveren hebben we een telefoonnummer nodig.">
-							<div class="help-block with-errors"></div>
-						</div>
-					</div>
-				</div>
-				<div class="messages"></div>
-				<button type="submit" class="btn btn-success btn-send btn-form">VERSTUUR</button>
-		</form>
-	</div>
-	</form>
-	</div>
+
 	<!-- FOOTER-->
 	<div id="footer"></div>
 
