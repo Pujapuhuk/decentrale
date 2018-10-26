@@ -1,5 +1,5 @@
-import dotenv from 'dotenv'
-import postmark from 'postmark'
+const dotenv = require('dotenv')
+const postmark = require('postmark')
 
 dotenv.config()
 
