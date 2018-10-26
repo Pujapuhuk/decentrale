@@ -7,9 +7,11 @@
 		"dotenv": "^6.1.0",
 		"postmark": "^2.0.0"
 	},
-	"devDependencies": {},
+	"devDependencies": {
+		"netlify-lambda": "^1.0.2"
+	},
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"build": "netlify-lambda build functions/"
 	},
 	"repository": {
 		"type": "git",
