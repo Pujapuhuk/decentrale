@@ -8,7 +8,6 @@ const EMAIL_FROM = process.env.EMAIL_FROM
 const EMAIL_TO = process.env.EMAIL_TO
 const client = new postmark.Client(POSTMARK_SERVER_TOKEN)
 
-
 exports.handler = function (event, context, calback) {
 	client.sendEmail({
 		"From": EMAIL_FROM,
