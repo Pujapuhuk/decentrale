@@ -1,3 +1,4 @@
+/*
 $(function () {
 
     $('#contact-form').validator();
@@ -26,3 +27,4 @@ $(function () {
         }
     })
 });
+*/
