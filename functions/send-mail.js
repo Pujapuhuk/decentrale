@@ -1,8 +1,4 @@
-const dotenv = require('dotenv')
 const postmark = require('postmark')
-
-dotenv.config()
-
 const POSTMARK_SERVER_TOKEN = process.env.POSTMARK_SERVER_TOKEN
 const EMAIL_FROM = process.env.EMAIL_FROM
 const EMAIL_TO = process.env.EMAIL_TO
