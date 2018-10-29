@@ -10,6 +10,8 @@ h3{
     font-size: 20px; 
 }
 h4{
+    text-align:left;
+    margin-bottom:14px;
 }
 h5{
     letter-spacing:1px;
@@ -17,7 +19,7 @@ h5{
     margin:0px;
 }
 p {
-    font-size:16px; 
+    line-height: 28px;
 }
 /* Home Style */
 header {
@@ -30,24 +32,7 @@ header p {
     font-size:12px; 
     line-height: 24px;
     margin:0px;
-}
-button {
-    font-size:;
-    letter-spacing:;  
-    text-transform:;
-    padding:;
-    background-color:;
-}
-button:hover, button:focus, button:active {
-    background-color: #FFFFF3;
-    text-decoration: none;
-    outline: none; 
-}
-button img{
-    margin-right:5px;
-    margin-left:15px;
-    margin-bottom:5px;
-}
+} 
 .button-more{
     z-index:1;
     position:absolute;
@@ -139,11 +124,6 @@ button img{
     margin-right:5px;
     margin-top:100px; 
     border-bottom:none;
-}
-.button-back{
-    text-align: left;
-    width:160px;
-    margin-top:15px;
 }
 .post-content{
         text-align: left;
