@@ -4,17 +4,25 @@ const EMAIL_FROM = "reserveer@decentraledelft.nl"
 const EMAIL_TO = "hallo@decentraledelft.nl"
 const client = new postmark.Client(POSTMARK_SERVER_TOKEN)
 
-console.log('in send-mail.js')
-
-exports.handler = function (event, context, calback) {
+exports.handler = function (event, context, callback) {
 	const options = {
 		"From": EMAIL_FROM,
 		"To": EMAIL_TO,
 		"Subject": "Test",
 		"TextBody": "Hello from Postmark!"
 	}
+	const callbackHandler = {
+		statusCode: 302,
+		headers: {
+			"Location": '/bedankt/'
+		},
+		body: ''
+	}
 
 	client.sendEmail(options)
-		.then(result => console.log('result', result))
+		.then(result => {
+			console.log('result', result)
+			callback(null, callbackHandler)
+		})
 		.catch(error => console.error('error', error))
 }
