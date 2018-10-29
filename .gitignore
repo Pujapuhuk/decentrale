@@ -1,6 +1,4 @@
 # Don't track content of these folders
 bootstrap-datepicker/
-fonts/
-js/
 dist/
 node_modules
