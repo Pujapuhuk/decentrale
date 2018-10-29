@@ -22,7 +22,7 @@
 		"build:client": "ncp src/client/ dist/client",
 		"build:server": "netlify-lambda build src/server/functions/",
 		"dev": "npm run build && run-p dev:*",
-		"dev:client": "http-server src/client -c-1 -o -p 5000 --proxy 'http://localhost:9000/'",
+		"dev:client": "http-server src/client -c-1 -p 5000 --proxy 'http://localhost:9000/'",
 		"dev:server": "netlify-lambda serve src/server/functions/"
 	},
 	"repository": {
