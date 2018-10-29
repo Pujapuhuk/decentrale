@@ -3,3 +3,4 @@ bootstrap-datepicker/
 fonts/
 js/
 dist/
+node_modules

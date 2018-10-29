@@ -5,7 +5,8 @@
 	"private": true,
 	"dependencies": {
 		"dotenv": "^6.1.0",
-		"postmark": "^1.6.1"
+		"postmark": "^1.6.1",
+		"query-string": "^6.2.0"
 	},
 	"devDependencies": {
 		"http-server": "^0.11.1",
