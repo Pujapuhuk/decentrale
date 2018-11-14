@@ -646,6 +646,9 @@ box-shadow: 0px 0px 16px 0px rgba(54,54,54,0.15);
     padding-top:0px;
     padding-bottom:0px;
 }
+.reserveren-intro a{
+    color:#000DB6;
+}
 @media (max-width: 480px) {
     .reserveren-content{
         padding-bottom:20px; 
@@ -775,5 +778,8 @@ footer h6{
     margin-bottom:20px;
 }
 }
+.ticket-knop{
+    width:120px;
+    margin-left:auto;
+    margin-right:auto;
 }
-
