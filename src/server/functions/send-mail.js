@@ -34,7 +34,7 @@ exports.handler = function (event, context, callback) {
 		"From": EMAIL_FROM,
 		"To": EMAIL_TO,
 		"ReplyTo": email,
-		"Subject": `${date} - ${time} Reservering De Centrale`,
+		"Subject": `${date} - ${time} Reservering`,
 		"TextBody": emailBody
 	}
 	const callbackHandler = {
