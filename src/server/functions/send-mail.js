@@ -52,7 +52,7 @@ exports.handler = function (event, context, callback) {
 	}
 
 	client.sendEmail(options)
-       .then(() => client.sendMail(optionsDirect)
+       .then(() => client.sendMail(optionsDirect))
        .then(result => {
             callback(null, callbackHandler)
         })
