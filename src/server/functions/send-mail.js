@@ -33,7 +33,8 @@ exports.handler = function (event, context, callback) {
 	const options = {
 		"From": EMAIL_FROM,
 		"To": EMAIL_TO,
-		"Subject": `[${date}] - [${time}] Reservering De Centrale van ${email}`,
+		"ReplyTo": email,
+		"Subject": `${date} - ${time} Reservering De Centrale`,
 		"TextBody": emailBody
 	}
 	const callbackHandler = {
