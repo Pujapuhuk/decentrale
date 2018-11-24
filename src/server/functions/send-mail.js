@@ -28,13 +28,14 @@ exports.handler = function (event, context, callback) {
 	const postData = queryString.parse(event.body)
 	const date = postData.date
 	const time = postData.time
+	const name = postData.name
 	const email = postData.email
 	const emailBody = getEmailBody(postData)
 	const options = {
-		"From": "time <EMAIL_FROM>",
+		"From": `${name} <${EMAIL_FROM}>`,
 		"To": EMAIL_TO,
 		"ReplyTo": email,
-		"Subject": `${date} - ${time} Reservering`,
+		"Subject": `${date} - ${time} Reservering bij De Centrale`,
 		"TextBody": emailBody
 	}
 	const optionsDirect = {
