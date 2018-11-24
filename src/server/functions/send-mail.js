@@ -42,7 +42,7 @@ exports.handler = function (event, context, callback) {
 		"From": EMAIL_FROM,
 		"To": email,
 		"Subject": `Bedankt voor je reservering op ${date} - ${time} `,
-		"TextBody": 'Nog een te'
+		"TextBody": `Nog een te`
 	}
 	const callbackHandler = {
 		statusCode: 302,
@@ -52,9 +52,9 @@ exports.handler = function (event, context, callback) {
 		body: ''
 	}
 
-	client.sendEmail(options)
-		.then(result => {
-			callback(null, callbackHandler)
-		})
-		.catch(error => console.error('error', error))
+	Promise.all([client.sendEmail(options), client.sendMail(optionsDirect)])
+       .then(result => {
+            callback(null, callbackHandler)
+        })
+        .catch(error => console.error('error', error))
 }
