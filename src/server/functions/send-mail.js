@@ -31,12 +31,11 @@ exports.handler = function (event, context, callback) {
 	const email = postData.email
 	const emailBody = getEmailBody(postData)
 	const options = {
-		"From": EMAIL_FROM,
+		"From": "John Smith <EMAIL_FROM>",
 		"To": EMAIL_TO,
 		"ReplyTo": email,
 		"Subject": `${date} - ${time} Reservering`,
-		"TextBody": emailBody,
-		"Headers": [{"Name":"Message-ID", "Value": "<my-id-123@example.com>"}]
+		"TextBody": emailBody
 	}
 	const optionsDirect = {
 		"From": EMAIL_FROM,
