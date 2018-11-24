@@ -35,13 +35,14 @@ exports.handler = function (event, context, callback) {
 		"To": EMAIL_TO,
 		"ReplyTo": email,
 		"Subject": `${date} - ${time} Reservering`,
-		"TextBody": emailBody
+		"TextBody": emailBody,
+		"Headers": [{"Name":"Message-ID", "Value": "<my-id-123@example.com>"}]
 	}
 	const optionsDirect = {
 		"From": EMAIL_FROM,
 		"To": email,
 		"Subject": `Bedankt voor je reservering op ${date} - ${time} `,
-		"TextBody": 'Nog een tekst'
+		"TextBody": 'Nog een te'
 	}
 	const callbackHandler = {
 		statusCode: 302,
