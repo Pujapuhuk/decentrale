@@ -31,7 +31,7 @@ exports.handler = function (event, context, callback) {
 	const email = postData.email
 	const emailBody = getEmailBody(postData)
 	const options = {
-		"From": "John Smith <EMAIL_FROM>",
+		"From": EMAIL_FROM,
 		"To": EMAIL_TO,
 		"ReplyTo": email,
 		"Subject": `${date} - ${time} Reservering`,
