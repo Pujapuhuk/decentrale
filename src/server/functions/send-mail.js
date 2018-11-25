@@ -45,10 +45,9 @@ exports.handler = function (event, context, callback) {
 		},
 		body: ''
 	}
-
-	Promise.all([client.sendEmail(options), client.sendMail(optionsDirect)])
-       .then(result => {
-            callback(null, callbackHandler)
-        })
-        .catch(error => console.error('error', error))
+	client.sendEmail(options)
+		.then(result => {
+			callback(null, callbackHandler)
+		})
+		.catch(error => console.error('error', error))
 }
