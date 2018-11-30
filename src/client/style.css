@@ -100,6 +100,11 @@ p {
     font-size:16px; 
     line-height: 34px;
 }
+figcaption{
+    font-weight:400;
+    font-style: ;
+    font-size:0.8em;
+}
 header p {
     font-family: "letter-gothic-std",sans-serif;    
     font-weight: 700;
@@ -277,7 +282,7 @@ box-shadow: 0px 0px 16px 0px rgba(54,54,54,0.15);
 .home-header{
     background: url(../img/home/home-header.jpg) 50% 50%/cover no-repeat;
     background-size: 1800px;
-    min-height: 700px;
+    min-height: 799px;
     margin-top:50px;  
 }
 @media (max-width: 480PX) {
@@ -586,7 +591,7 @@ box-shadow: 0px 0px 16px 0px rgba(54,54,54,0.15);
 }
 .groepen-6{
     background: url(img/groepen/groepen-6.jpg) center/cover no-repeat;
-        margin-bottom:40px;
+        margin-bottom:;
 }
 .meer-weten{
     display: flex;
@@ -640,6 +645,9 @@ box-shadow: 0px 0px 16px 0px rgba(54,54,54,0.15);
 .reserveren-intro{
     padding-top:0px;
     padding-bottom:0px;
+}
+.reserveren-intro a{
+    color:#000DB6;
 }
 @media (max-width: 480px) {
     .reserveren-content{
@@ -770,5 +778,8 @@ footer h6{
     margin-bottom:20px;
 }
 }
+.ticket-knop{
+    width:120px;
+    margin-left:auto;
+    margin-right:auto;
 }
-

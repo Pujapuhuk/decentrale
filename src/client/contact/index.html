@@ -1,245 +1,247 @@
 <!DOCTYPE html>
 <html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>De Centrale - Reserveren</title>
+  
+  <!-- to do: verdiepen in meta tags voor vindbaarheid in google-->
+  
+  <!-- favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>De Centrale - Reserveren</title>
+  <!-- Bootstrap -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <link id="bsdp-css" href="/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet">
 
-	<!-- to do: verdiepen in meta tags voor vindbaarheid in google-->
+  <!--oud <link href="css/bootstrap.min.css" rel="stylesheet">-->
 
-	<!-- favicon -->
-	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+  <!-- Scrolling nav -->
+  <link href="/css/scrolling-nav.css" rel="stylesheet">
 
-	<!-- Bootstrap -->
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-	<link id="bsdp-css" href="/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet">
+  <!-- Style -->
+  <link rel="stylesheet" type="text/css" href="/style.css">
+  <link rel='stylesheet' media='screen and (max-width: 480px)' href='/css/style480.css' />
 
-	<!--oud <link href="css/bootstrap.min.css" rel="stylesheet">-->
+  <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+  
+  <!-- font -->
+  <link href="https://fonts.googleapis.com/css?family=Gabriela|Karla:400,400i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-	<!-- Scrolling nav -->
-	<link href="/css/scrolling-nav.css" rel="stylesheet">
+  <!-- font typekit -->
+  <script src="https://use.typekit.net/npb7rdo.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-	<!-- Style -->
-	<link rel="stylesheet" type="text/css" href="/style.css">
-	<link rel='stylesheet' media='screen and (max-width: 480px)' href='/css/style480.css' />
+    ga('create', 'UA-36915461-3', 'auto');
+    ga('send', 'pageview');t
+  </script>
+  <script language="javascript">var p = null; function centeredPopup(u,n,w,h,r){ l = (screen.width) ? (screen.width-w)/2 : 0; t = (screen.height) ? (screen.height-h)/2 : 0; s = "height="+h+",width="+w+",top="+t+",left="+l+",scrollbars="+r+",resizable"; p = window.open(u,n,s);}</script> 
 
-	<link rel="stylesheet" type="text/css" href="/css/animate.min.css">
-
-	<!-- font -->
-	<link href="https://fonts.googleapis.com/css?family=Gabriela|Karla:400,400i,700,700i" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-	<!-- font typekit -->
-	<script src="https://use.typekit.net/npb7rdo.js"></script>
-	<script>try { Typekit.load({ async: true }); } catch (e) { }</script>
-	<script>
-		(function (i, s, o, g, r, a, m) {
-			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-				(i[r].q = i[r].q || []).push(arguments)
-			}, i[r].l = 1 * new Date(); a = s.createElement(o),
-				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-
-		ga('create', 'UA-36915461-3', 'auto');
-		ga('send', 'pageview');
-	</script>
 </head>
 
 <body>
 
+<nav class="navbar fixed-top navbar-expand-lg navbar-light">
+  <a class="navbar-brand js-scroll-trigger" href="/">DE CENTRALE</a>
+  <button class="navbar-toggler custom-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    <span class="my-1 close">
+<svg fill="#000000" height="32" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
+    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+    <path d="M0 0h24v24H0z" fill="none"/>
+</svg></span>
 
-	<nav class="navbar fixed-top navbar-expand-lg navbar-light">
-		<a class="navbar-brand js-scroll-trigger" href="/">DE CENTRALE</a>
-		<button class="navbar-toggler custom-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-		 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-			<span class="my-1 close">
-				<svg fill="#000000" height="32" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
-					<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
-					<path d="M0 0h24v24H0z" fill="none" />
-				</svg></span>
+  </button>
 
-		</button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/" class="page-scroll">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/menukaart/" class="page-scroll">Menukaart</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/groepen/" class="page-scroll">Groepen</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="/contact/" class="page-scroll">Reserveren</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item">
-					<a class="nav-link" href="/" class="page-scroll">Home</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="/menukaart/" class="page-scroll">Menukaart</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="/groepen/" class="page-scroll">Groepen</a>
-				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="/contact/" class="page-scroll">Reserveren</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
+<!-- content-reserveren -->
+<div class="page-title-white container-s reserveren-content">
+  <div class="page-title-text-wrap">
+    <h1>RESERVEREN</h1>
+  </div>
+</div>
+<div class="container-s page-intro-text text-center reserveren-intro">
+  <p>Reserveren voor het diner kan via onderstaand formulier. Let op! Je reservering staat pas vast als je een bevestigende e-mail van ons hebt ontvangen. Bel je liever? Doe dat dan tijdens onze openingstijden op 015-8892777.</p>
+  <h6>Koop hier je tickets voor het <a href="https://www.facebook.com/events/255389425095393/">wijnfestival </a>op zondag 2 december</h6>
+  <div class="ticket-knop"><a href="https://shop.ikbenaanwezig.nl/tickets/event/centrale-wijnfestival" onclick="centeredPopup(this.href,'Ik Ben Aanwezig Tickets','500','750','yes');return false"><img src="https://shop.ikbenaanwezig.nl/media/images/tickets_button.png" alt="Tickets"></a> </div>
+</div>
+<div class="container-s">
+  <form id="contact-form" method="post" action="/contact.php" role="form" autocomplete="off">
+    <div class="controls">
+      <div class="row">
+         <div class="col-xs-12 col-md-8">
+           <div class="form-group">
+             <label for="form_date">Welke dag wil je komen?</label>
+              <input id="form_date" name="date" type="text" class="form-control formnumber" placeholder="dd/mm/yyyy"  required="required" data-error="Selecteer een dag"></input>
+              <div class="help-block with-errors"></div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-md-3">
+              <div class="form-group ">
+                <label for="form_time">Hoe laat?</label>    
+                <div class="selectpicker">
+                  <select id ="form_time" name="time" class="form-control">
+                   <optgroup label="Diner">
+                      <option value="17:30">17:30</option>
+                      <option value="18:00">18:00</option>
+                      <option value="18:30">18:30</option>
+                      <option value="19:00">19:00</option>
+                      <option value="19:30">19:30</option>
+                      <option value="20:00">20:00</option>
+                      <option value="20:30">20:30</option>
+                      <option value="21:00">21:00</option>
+                      <option value="anders">Anders</option>
+                    </optgroup>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-6 col-md-4">
+              <div class="form-group ">
+                <label for="form_number">Hoeveel personen?</label>
+                <input id="form_number" name="number" type="number" class="formnumber form-control" placeholder=""></input>
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-md-12">
+              <div class="form-group">
+                <label for="form_message">Zijn er allergieën of andere eetwensen waar we rekening mee moeten houden?</label>
+                <textarea id="form_message" name="message" class="form-control textarea-form" placeholder="" rows="4" data-error=""></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-md-8">
+              <div class="form-group">
+                <label for="form_name">Naam *</label>
+                <input id="form_name" type="text" name="name" class="form-control" placeholder="" required="required" data-error="Vul een naam in.">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-md-8">
+              <div class="form-group">
+                <label for="form_email">Email adres *</label>
+                <input id="form_email" type="email" name="email" class="form-control" placeholder="" required="required" data-error="Vul een geldig emailadres in.">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-md-8">
+              <div class="form-group ">
+                <label for="form_phone">Telefoonnummer *</label>
+                <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="" required="required" data-error="Als je wilt reserveren hebben we een telefoonnummer nodig.">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+          </div>
+          <div class="messages"></div>
+          <input type="submit" class="btn btn-success btn-send btn-form" value="VERSTUUR"> 
+  </form>
+</div>
+</form>
+</div>
+<!-- FOOTER-->
+<div id="footer"></div>
 
-	<!-- content-reserveren -->
-	<div class="page-title-white container-s reserveren-content">
-		<div class="page-title-text-wrap">
-			<h1>RESERVEREN</h1>
-		</div>
-	</div>
-	<div class="container-s page-intro-text text-center reserveren-intro">
-		<p>Reserveren voor het diner kan via onderstaand formulier. Let op! Je reservering staat pas vast als je een
-			bevestigende e-mail van ons hebt ontvangen. Bel je liever? Doe dat dan tijdens onze openingstijden op 015-8892777.</p>
-	</div>
-	<div class="container-s">
-		<form name="contact" id="contact-form" action="/.netlify/functions/send-mail" method="post" role="form" autocomplete="off">
-			<div class="controls">
-				<div class="row">
-					<div class="col-xs-12 col-md-8">
-						<div class="form-group">
-							<label for="form_date">Welke dag wil je komen?</label>
-							<input id="form_date" name="date" type="text" class="form-control formnumber" placeholder="dd/mm/yyyy" required="required"
-							 data-error="Selecteer een dag"></input>
-							<div class="help-block with-errors"></div>
-						</div>
-					</div>
-					<div class="col-xs-6 col-md-3">
-						<div class="form-group ">
-							<label for="form_time">Hoe laat?</label>
-							<div class="selectpicker">
-								<select id="form_time" name="time" class="form-control">
-									<optgroup label="Diner">
-										<option value="17:30">17:30</option>
-										<option value="18:00">18:00</option>
-										<option value="18:30">18:30</option>
-										<option value="19:00">19:00</option>
-										<option value="19:30">19:30</option>
-										<option value="20:00">20:00</option>
-										<option value="20:30">20:30</option>
-										<option value="21:00">21:00</option>
-										<option value="anders">Anders</option>
-									</optgroup>
-								</select>
-							</div>
-						</div>
-					</div>
-					<div class="col-xs-6 col-md-4">
-						<div class="form-group ">
-							<label for="form_number">Hoeveel personen?</label>
-							<input id="form_number" name="number" type="number" class="formnumber form-control" placeholder=""></input>
-							<div class="help-block with-errors"></div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12 col-md-12">
-						<div class="form-group">
-							<label for="form_message">Zijn er allergieën of andere eetwensen waar we rekening mee moeten houden?</label>
-							<textarea id="form_message" name="message" class="form-control textarea-form" placeholder="" rows="4" data-error=""></textarea>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12 col-md-8">
-						<div class="form-group">
-							<label for="form_name">Naam *</label>
-							<input id="form_name" type="text" name="name" class="form-control" placeholder="" required="required" data-error="Vul een naam in.">
-							<div class="help-block with-errors"></div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12 col-md-8">
-						<div class="form-group">
-							<label for="form_email">Email adres *</label>
-							<input id="form_email" type="email" name="email" class="form-control" placeholder="" required="required"
-							 data-error="Vul een geldig emailadres in.">
-							<div class="help-block with-errors"></div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-xs-12 col-md-8">
-						<div class="form-group ">
-							<label for="form_phone">Telefoonnummer *</label>
-							<input id="form_phone" type="tel" name="phone" class="form-control" placeholder="" required="required"
-							 data-error="Als je wilt reserveren hebben we een telefoonnummer nodig.">
-							<div class="help-block with-errors"></div>
-						</div>
-					</div>
-				</div>
-				<div class="messages"></div>
-				<button type="submit" class="btn btn-success btn-send btn-form">VERSTUUR</button>
-		</form>
-	</div>
-	</form>
-	</div>
-	<!-- FOOTER-->
-	<div id="footer"></div>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="/js/jquery.1.11.1.js"></script>
 
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script type="text/javascript" src="/js/jquery.1.11.1.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> 
+<script src="/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="/bootstrap-datepicker/locales/bootstrap-datepicker.nl.min.js" charset="UTF-8"></script>
+<script type="text/javascript" src="/js/wow.min.js"></script>
 
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<script src="/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
-	<script src="/bootstrap-datepicker/locales/bootstrap-datepicker.nl.min.js" charset="UTF-8"></script>
-	<script type="text/javascript" src="/js/wow.min.js"></script>
+<!-- Scrolling Nav JavaScript -->
+<script src="/js/jquery.easing.min.js"></script>
+<script src="/js/scrolling-nav.js"></script>
 
-	<!-- Scrolling Nav JavaScript -->
-	<script src="/js/jquery.easing.min.js"></script>
-	<script src="/js/scrolling-nav.js"></script>
+<script src="/js/validator.js"></script>
+<script src="/js/contact.js"></script>
 
-	<script src="/js/validator.js"></script>
-	<script src="/js/contact.js"></script>
-
-	<!-- LightWidget WIDGET -->
-	<script src="//lightwidget.com/widgets/lightwidget.js"></script>
+<!-- LightWidget WIDGET -->
+<script src="//lightwidget.com/widgets/lightwidget.js"></script>
 
 
 
-	<!-- Javascripts ================================================== -->
-	<script>
+<!-- Javascripts ================================================== -->
+<script>
 
-		$("#footer").load("/components/footer.html");
+$("#footer").load("/components/footer.html");
 
-		$(document).ready(function () {
-			$(document).click(function (event) {
-				var clickover = $(event.target);
-				var _opened = $(".navbar-collapse").hasClass("show");
-				if (_opened === true && !clickover.hasClass("navbar-toggler")) {
-					$(".navbar-toggler").click();
-				}
-			});
-		});
-		Date.prototype.addDays = function (days) {
-			var dat = new Date(this.valueOf());
-			dat.setDate(dat.getDate() + days);
-			return dat;
-		}
+$(document).ready(function () {
+     $(document).click(function (event) {
+         var clickover = $(event.target);
+         var _opened = $(".navbar-collapse").hasClass("show");
+         if (_opened === true && !clickover.hasClass("navbar-toggler")) {
+             $(".navbar-toggler").click();
+         }
+     });
+ });
+Date.prototype.addDays = function(days) {
+  var dat = new Date(this.valueOf());
+  dat.setDate(dat.getDate() + days);
+  return dat;
+}
 
-		function getNextSelectableDate() {
-			var today = new Date();
-			if (today.getDay() == 2) { // Dinsdag + 2
-				return today.addDays(2);
-			}
-			if (today.getDay() == 3) { // Woensdag + 1
-				return today.addDays(1);
-			}
-			return today;
-		};
+function getNextSelectableDate() {
+    var today = new Date();
+    if (today.getDay() == 2) { // Dinsdag + 2
+        return today.addDays(2);
+    }
+    if (today.getDay() == 3) { // Woensdag + 1
+        return today.addDays(1);
+    }
+    return today;
+};
 
-		var selectedDate = getNextSelectableDate();
-		$('#form_date').datepicker({
-			weekStart: 1,
-			daysOfWeekDisabled: "2",
-			autoclose: true,
-			format: 'dd/mm/yyyy',
-			startDate: '+0d',
-			language: "nl",
-			todayHighlight: true
-		});
+var selectedDate = getNextSelectableDate();
+$('#form_date').datepicker({
+    weekStart: 1,
+    daysOfWeekDisabled: "2",
+    autoclose: true,
+    format: 'dd/mm/yyyy',
+    startDate: '+0d',
+    language: "nl",
+    todayHighlight: true
+});
 
-	</script>
+$('.selectpicker').selectpicker({
+  style: 'btn-info',
+  size: 4
+});
+
+</script>
 </body>
+
+
