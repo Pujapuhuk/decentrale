@@ -5,9 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>De Centrale - Reserveren</title>
-  
+
   <!-- to do: verdiepen in meta tags voor vindbaarheid in google-->
-  
+
   <!-- favicon -->
   <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
 
@@ -25,7 +25,7 @@
   <link rel='stylesheet' media='screen and (max-width: 480px)' href='/css/style480.css' />
 
   <link rel="stylesheet" type="text/css" href="css/animate.min.css">
-  
+
   <!-- font -->
   <link href="https://fonts.googleapis.com/css?family=Gabriela|Karla:400,400i,700,700i" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -42,7 +42,7 @@
     ga('create', 'UA-36915461-3', 'auto');
     ga('send', 'pageview');t
   </script>
-  <script language="javascript">var p = null; function centeredPopup(u,n,w,h,r){ l = (screen.width) ? (screen.width-w)/2 : 0; t = (screen.height) ? (screen.height-h)/2 : 0; s = "height="+h+",width="+w+",top="+t+",left="+l+",scrollbars="+r+",resizable"; p = window.open(u,n,s);}</script> 
+  <script language="javascript">var p = null; function centeredPopup(u,n,w,h,r){ l = (screen.width) ? (screen.width-w)/2 : 0; t = (screen.height) ? (screen.height-h)/2 : 0; s = "height="+h+",width="+w+",top="+t+",left="+l+",scrollbars="+r+",resizable"; p = window.open(u,n,s);}</script>
 
 </head>
 
@@ -90,7 +90,7 @@
   <div class="ticket-knop"><a href="https://shop.ikbenaanwezig.nl/tickets/event/centrale-wijnfestival" onclick="centeredPopup(this.href,'Ik Ben Aanwezig Tickets','500','750','yes');return false"><img src="https://shop.ikbenaanwezig.nl/media/images/tickets_button.png" alt="Tickets"></a> </div>
 </div>
 <div class="container-s">
-  <form id="contact-form" method="post" action="/contact.php" role="form" autocomplete="off">
+  <form id="contact-form" method="post" action="/.netlify/functions/send-mail" role="form" autocomplete="off">
     <div class="controls">
       <div class="row">
          <div class="col-xs-12 col-md-8">
@@ -102,7 +102,7 @@
           </div>
           <div class="col-xs-6 col-md-3">
               <div class="form-group ">
-                <label for="form_time">Hoe laat?</label>    
+                <label for="form_time">Hoe laat?</label>
                 <div class="selectpicker">
                   <select id ="form_time" name="time" class="form-control">
                    <optgroup label="Diner">
@@ -164,7 +164,7 @@
             </div>
           </div>
           <div class="messages"></div>
-          <input type="submit" class="btn btn-success btn-send btn-form" value="VERSTUUR"> 
+          <input type="submit" class="btn btn-success btn-send btn-form" value="VERSTUUR">
   </form>
 </div>
 </form>
@@ -177,7 +177,7 @@
 <script type="text/javascript" src="/js/jquery.1.11.1.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
 <script src="/bootstrap-datepicker/locales/bootstrap-datepicker.nl.min.js" charset="UTF-8"></script>
 <script type="text/javascript" src="/js/wow.min.js"></script>
@@ -243,5 +243,3 @@ $('.selectpicker').selectpicker({
 
 </script>
 </body>
-
-
