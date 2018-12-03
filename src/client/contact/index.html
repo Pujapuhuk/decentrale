@@ -85,9 +85,10 @@
   </div>
 </div>
 <div class="container-s page-intro-text text-center reserveren-intro">
-  <p>Reserveren voor het diner kan via onderstaand formulier. Let op! Je reservering staat pas vast als je een bevestigende e-mail van ons hebt ontvangen. Bel je liever? Doe dat dan tijdens onze openingstijden op 015-8892777.</p>
-  <h6>Koop hier je tickets voor het <a href="https://www.facebook.com/events/255389425095393/">wijnfestival </a>op zondag 2 december</h6>
-  <div class="ticket-knop"><a href="https://shop.ikbenaanwezig.nl/tickets/event/centrale-wijnfestival" onclick="centeredPopup(this.href,'Ik Ben Aanwezig Tickets','500','750','yes');return false"><img src="https://shop.ikbenaanwezig.nl/media/images/tickets_button.png" alt="Tickets"></a> </div>
+  <p>Reserveren voor het diner kan via onderstaand formulier. Let op! Je reservering staat pas vast als je een bevestigende e-mail van ons hebt ontvangen. Bel je liever? Doe dat dan tijdens onze openingstijden op <br>015-8892777.</p>
+  <p>🔥 Dinsdag 11 december <span style="font-weight:bold">lichtjesavond: geopend</span></p>
+  <p><span style="font-weight:bold">🎄 1e & 2e kerstdag: gesloten</span></p>
+  <p><span style="font-weight:bold">🍾 Oudejaarsavond: gesloten</span></p>
 </div>
 <div class="container-s">
   <form id="contact-form" method="post" action="/.netlify/functions/send-mail" role="form" autocomplete="off">
@@ -228,7 +229,7 @@ function getNextSelectableDate() {
 var selectedDate = getNextSelectableDate();
 $('#form_date').datepicker({
     weekStart: 1,
-    daysOfWeekDisabled: "2",
+    daysOfWeekDisabled: "",
     autoclose: true,
     format: 'dd/mm/yyyy',
     startDate: '+0d',
