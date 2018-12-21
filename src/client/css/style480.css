@@ -2,25 +2,9 @@ body, html {
     padding:2px;
 }
 
-h1{
-    font-size:32px;
-    line-height: 40px;
-}
-h3{
-    font-size: 20px; 
-}
-h4{
-    text-align:left;
-    margin-bottom:14px;
-}
-h5{
-    letter-spacing:1px;
-    font-size: 18px; 
-    margin:0px;
-}
-p {
-    line-height: 28px;
-}
+
+
+
 /* Home Style */
 header {
     margin-left:5px;
