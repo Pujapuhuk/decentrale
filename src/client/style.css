@@ -124,10 +124,6 @@ a{
     padding:5px;
 }
 
-a :hover{
-    color:;
-    text-decoration: none;
-}
 @media (max-width: 768px) {
   h1{
     font-size:36px;
@@ -161,25 +157,32 @@ button {
     padding:14px;
     padding-left:20px;
     padding-right:20px;
-    border: 4px solid #000000;
-    background-color: #ffffff;
+    border: 0px solid #000000;
+    background-color: #FFEC00;
     cursor:pointer;
+
 }
 button:hover, button:focus, button:active {
     outline:0;
 }
+.btn-header{
+        -webkit-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+}
 .btn-header:hover{
-    background-color: #000000;
-    color:#ffffff;
+    background-color: #FFF146;
+    color:;
+    top:-1px;
     text-decoration: none;
     outline: none; 
-    -webkit-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.50);
-        -moz-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.50);
-            box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.50);
+        -webkit-box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.75);
+box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.75);
 }
 .btn-header:active{
     position:relative;
-    top:1px;
+    top:2px;
     -webkit-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0);
         -moz-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0);
             box-shadow: 0px 0px 4px 0px rgba(0,0,0,0);
@@ -252,8 +255,8 @@ button:hover, button:focus, button:active {
 .navbar{
     background-color:white;
     -webkit-box-shadow: 0px 0px 16px 0px rgba(54,54,54,0.15);
--moz-box-shadow: 0px 0px 16px 0px rgba(54,54,54,0.15);
-box-shadow: 0px 0px 16px 0px rgba(54,54,54,0.15);
+        -moz-box-shadow: 0px 0px 16px 0px rgba(54,54,54,0.15);
+        box-shadow: 0px 0px 16px 0px rgba(54,54,54,0.15);
     padding-left: 80px;
     padding-top: 20px;
     padding-bottom:20px;
@@ -269,10 +272,8 @@ box-shadow: 0px 0px 16px 0px rgba(54,54,54,0.15);
   }
 }
 .navbar-brand{
-    background-color:white;
     font-size: 28px;
     letter-spacing:1.5px;
-    font-weight: 700;
 }
 .navbar-toggler {
     border:none;
@@ -283,14 +284,35 @@ box-shadow: 0px 0px 16px 0px rgba(54,54,54,0.15);
 .custom-toggler.navbar-toggler {
   border-color: rgb(255,102,203);
 } 
+/* Nav */
 .navbar-nav > li >a{
-  background-color: white;
   letter-spacing: 1px;
 }
 .navbar-nav > li > a:hover{
+    background-color:;
+    text-decoration: underline
+}
+.nav-link-reserveer>a{
+    border: 2px solid #000000;
+}
+.navbar-nav > .nav-link-reserveer> a:hover{
     color:#000000;
     text-decoration: none;
-    background-color:#F8F8F8;
+    background-color:#FFEC00;
+    border: 2px solid #FFEC00;
+}
+.navbar-nav > .active-reserveer> a{
+    color:#000000;
+    text-decoration: none;
+    background-color:#FFEC00;
+    border: 2px solid #FFEC00;
+}
+.navbar-nav > .nav-link-reserveer> a:active{
+    position:relative;
+    top:1px;
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0);
+        -moz-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0);
+            box-shadow: 0px 0px 4px 0px rgba(0,0,0,0);
 }
 .navbar-light .navbar-nav .active>.nav-link {
     background-color:#F8F8F8;
@@ -298,6 +320,9 @@ box-shadow: 0px 0px 16px 0px rgba(54,54,54,0.15);
 .navbar-light .navbar-nav .nav-link{
     color: rgba(0,0,0,1);
     text-align:center;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: rgba(0,0,0,1);
 }
 .nav-item{
     margin-left:12px; 
@@ -344,8 +369,8 @@ box-shadow: 0px 0px 16px 0px rgba(54,54,54,0.15);
     margin-bottom:10px;   
     background-color:#FFFFFF;
     -webkit-box-shadow: 0px 0px 16px 0px rgba(54,54,54,0.15);
--moz-box-shadow: 0px 0px 16px 0px rgba(54,54,54,0.15);
-box-shadow: 0px 0px 16px 0px rgba(54,54,54,0.15);
+    -moz-box-shadow: 0px 0px 16px 0px rgba(54,54,54,0.15);
+    box-shadow: 0px 0px 16px 0px rgba(54,54,54,0.15);
     text-align:center;
 }
 .widget p{
