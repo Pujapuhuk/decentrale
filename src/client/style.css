@@ -173,7 +173,7 @@ button:hover, button:focus, button:active {
     top:0px;
     text-decoration: none;
     outline: none; 
-    border: 4px solid #ffffff;
+    border: 4px solid #FFF146;
 }
 .btn-header:active{
     position:relative;
@@ -736,14 +736,18 @@ button:hover, button:focus, button:active {
 /*CULTUUR PAGINA*/
 /*******************/
 .cultuur-header{
-    background: url(img/cultuur/cultuur-header.jpg) 50% 50%/cover no-repeat;
+    background: url(img/cultuur/maaike-2.jpg) 50% -200px/cover no-repeat;
 }
-.cultuur-1{
-    background: url(img/cultuur/cultuur-1.jpg) center/cover no-repeat;
+@media (max-width: 480px) {
+    .cultuur-header{
+    background: url(img/cultuur/maaike-2.jpg) 50% 50%/cover no-repeat;
+}}
+.maaike-1{
+    background: url(img/cultuur/maaike-1.jpg) center/cover no-repeat;
     margin-bottom:40px;
 }
-.cultuur-2{
-    background: url(img/cultuur/cultuur-2.jpg) center/cover no-repeat;
+.maaike-2{
+    background: url(img/cultuur/maaike-2.jpg) center/cover no-repeat;
     margin-bottom:0px;
 }
 .cultuur-3{
