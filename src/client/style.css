@@ -736,12 +736,8 @@ button:hover, button:focus, button:active {
 /*CULTUUR PAGINA*/
 /*******************/
 .cultuur-header{
-    background: url(img/cultuur/maaike-2.jpg) 50% -200px/cover no-repeat;
+    background: url(img/cultuur/maaike-2.jpg) 50% 20%/cover no-repeat;
 }
-@media (max-width: 480px) {
-    .cultuur-header{
-    background: url(img/cultuur/maaike-2.jpg) 50% 50%/cover no-repeat;
-}}
 .maaike-1{
     background: url(img/cultuur/maaike-1.jpg) center/cover no-repeat;
     margin-bottom:40px;
