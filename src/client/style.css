@@ -385,7 +385,7 @@ button:hover, button:focus, button:active {
 /* page-title */
 .page-title{
     display: flex;
-    padding:80px; 
+    padding:8vh; 
     background-color:#CEE1BB;
 }
 .page-title-home{
@@ -747,6 +747,7 @@ button:hover, button:focus, button:active {
 .maaike-3{
     background: url(img/cultuur/maaike-3.jpg) center/cover no-repeat;
     margin-bottom:40px;
+    margin-top:20px;
 }
 .cultuur-3{
     background: url(img/cultuur/cultuur-3.jpg) center/cover no-repeat;
