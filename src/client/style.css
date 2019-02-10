@@ -201,14 +201,7 @@ button:hover, button:focus, button:active {
     position:relative;
     font-size:20px;
     text-align: left;
-    font-weight: 700;
     letter-spacing:1.2px;  
-    text-transform:;
-    padding:0px;
-    padding-left:0px;
-    padding-right:0px;
-    border: 0px solid #000000;
-    background-color:#ffffff;
     color:#0F8D08;
     cursor:pointer;
 }
@@ -523,7 +516,7 @@ button:hover, button:focus, button:active {
     background: url(../img/menu/menu-bg.jpg) center/cover no-repeat ;
 }
 .menukaart-content{
-    padding-top:172px; 
+    padding-top:120px; 
 }
 .menukaart-content img{
     -webkit-box-shadow: 4px 4px 53px -10px rgba(0,0,0,0.75);
@@ -532,7 +525,7 @@ button:hover, button:focus, button:active {
 }
 @media (max-width: 480px) {
     .menukaart-content{
-      padding-top:115px;
+      padding-top:80px;
 }
 }
 
