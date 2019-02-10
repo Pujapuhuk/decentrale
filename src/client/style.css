@@ -729,7 +729,12 @@ button:hover, button:focus, button:active {
 /*CULTUUR PAGINA*/
 /*******************/
 .cultuur-header{
-    background: url(img/cultuur/maaike-2.jpg) 50% 20%/cover no-repeat;
+    background: url(img/cultuur/cultuur-header.jpg) 50% 20%/cover no-repeat;
+}
+@media (max-width: 480PX) {
+  .cultuur-header {
+      background: url(img/cultuur/cultuur-header-S.jpg) 50% 20%/cover no-repeat;
+  }
 }
 .maaike-1{
     background: url(img/cultuur/maaike-1.jpg) center/cover no-repeat;
@@ -738,6 +743,10 @@ button:hover, button:focus, button:active {
 .maaike-2{
     background: url(img/cultuur/maaike-2.jpg) center/cover no-repeat;
     margin-bottom:0px;
+}
+.maaike-3{
+    background: url(img/cultuur/maaike-3.jpg) center/cover no-repeat;
+    margin-bottom:40px;
 }
 .cultuur-3{
     background: url(img/cultuur/cultuur-3.jpg) center/cover no-repeat;
