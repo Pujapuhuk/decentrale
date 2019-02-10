@@ -349,7 +349,7 @@ button:hover, button:focus, button:active {
 .home-widgets{
     position:absolute;
     left:80px;
-    top:140px;
+    top:10vh;
     width:240px; 
 }
 .widget{ 
