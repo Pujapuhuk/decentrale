@@ -103,16 +103,17 @@
               <label for="form_time">Hoe laat?</label>
               <div class="selectpicker">
                 <select id ="form_time" name="time" class="form-control">
-                  <option value="" selected disabled>Kies een tijd</option>
-                  <option value="17:30">17:30</option>
-                  <option value="18:00">18:00</option>
-                  <option value="18:30">18:30</option>
-                  <option value="19:00">19:00</option>
-                  <option value="19:30">19:30</option>
-                  <option value="20:00">20:00</option>
-                  <option value="20:30">20:30</option>
-                  <option value="21:00">21:00</option>
-                  <option value="other">Anders</option>
+                  <optgroup label="Kies een tijd" id="timeslots">
+                    <option value="17:30">17:30</option>
+                    <option value="18:00">18:00</option>
+                    <option value="18:30">18:30</option>
+                    <option value="19:00">19:00</option>
+                    <option value="19:30">19:30</option>
+                    <option value="20:00">20:00</option>
+                    <option value="20:30">20:30</option>
+                    <option value="21:00">21:00</option>
+                    <option value="other">Anders</option>
+                  </option>
                 </select>
               </div>
             </div>
@@ -186,6 +187,126 @@
     </div>
   </footer>
 
+  <script>
+    /**
+     * initialize Google Calendar API using our config.
+     */
+    function init() {
+      const ApiConfig = {
+        apiKey: 'AIzaSyBhPTF4En6SMqtes_3iJdto98ScWFivIww',
+        discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest'],
+      }
+
+      gapi.client
+        .init(ApiConfig)
+        .then(() => requestCalendarEvents())
+        .then((res) => parseResponseResult(res))
+        .catch((err) => logError(err))
+    }
+
+    /**
+     * request all events from the calendar using our config.
+     */
+    function requestCalendarEvents() {
+      const date = document.getElementById('form_date').value.split('-')
+      const minDate = `${date[2]}-${date[1]}-${date[0]}T00:00:00Z`
+      const maxDate = `${date[2]}-${date[1]}-${date[0]}T23:59:59Z`
+      const requestConfig = {
+        calendarId: 'voorhoede.nl_pt3rmlvbplsrmo5fn7svhb0n90@group.calendar.google.com',
+        alwaysIncludeEmail: false,
+        orderBy: 'startTime',
+        singleEvents: true,
+        timeMin: minDate,
+        timeMax: maxDate,
+      }
+
+      return gapi.client.calendar.events.list(requestConfig)
+    }
+
+    /**
+     * parse the received response, and update the timeslots on the page.
+     */
+    function parseResponseResult(data) {
+      const body = JSON.parse(data.body)
+
+      if (body.items.length) {
+        updateTimeslots(body.items)
+      }
+    }
+
+    /**
+     * compare the received events times with the timeslots
+     * if a match is found, the corresponding timeslot is disabled.
+     */
+    function updateTimeslots(items) {
+      const timeslots = [...document.getElementById('timeslots').children]
+      const events = formatEvents(items)
+      const date = getSelectedDate()
+
+      /* Remove selected and disabled attributes */
+      timeslots.map(slot => {
+        slot.selected = false
+        slot.disabled = false
+      })
+
+      /* if timeslot falls between the start time and
+         end time of a calendar event, we disable that timeslot. */
+      timeslots.map(slot => {
+        const selectedTime = new Date(`${date} ${slot.value}`).getTime()
+        const match = events.find((event) => selectedTime >= event.startTime && selectedTime <= event.endTime)
+
+        if (match) {
+          slot.disabled = true
+        }
+      })
+    }
+
+    /**
+     * Get the selected date.
+     * Returns date with format: mm/dd/yyyy
+     */
+    function getSelectedDate() {
+      const date = document.getElementById('form_date').value.split('-')
+
+      return [date[1], date[0], date[2]].join('-')
+    }
+
+    /**
+     * Format the received calendar events to only contain
+     * the necessary data we need.
+     */
+    function formatEvents(items) {
+      return items.map((item) => {
+        return {
+          id: item.id,
+          startTime: new Date(item.start.dateTime).getTime(),
+          endTime: new Date(item.end.dateTime).getTime(),
+        }
+      })
+    }
+
+    /**
+     * Log any API errors
+     * format: error code, message
+     */
+    function logError(reason) {
+      const { error } = reason.result
+      console.error(error.code, error.message)
+    }
+
+    /**
+     * Start loading the Google API Client.
+     */
+    function initApiClient() {
+      gapi.load('client', init)
+    }
+  </script>
+
+  <!-- Google API Client -->
+  <script async defer src="https://apis.google.com/js/api.js"
+    onload="this.onload=function(){};initApiClient()"
+    onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
+
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="/js/jquery.1.11.1.js"></script>
@@ -202,6 +323,25 @@
 
   <script>
     $(document).ready(() => {
+      const datepickerConfig = {
+        weekStart: 1,
+        daysOfWeekDisabled: '2',
+        autoclose: true,
+        format: 'dd-mm-yyyy',
+        startDate: '+0d',
+        language: 'nl',
+        todayHighlight: true,
+      }
+
+      // initialize datepicker
+      $('#form_date')
+        .datepicker(datepickerConfig)
+        .datepicker('setDate', new Date())
+        .on('changeDate', () => {
+          initApiClient()
+        })
+
+      // initialize navbar toggle behavior
       $(document).click((event) => {
         const clickover = $(event.target)
         const opened = $('.navbar-collapse').hasClass('show')
@@ -210,33 +350,5 @@
         }
       })
     })
-
-    Date.prototype.addDays = (days) => {
-      const date = new Date(this.valueOf())
-      date.setDate(date.getDate() + days)
-      return date
-    }
-
-    function getNextSelectableDate() {
-      var today = new Date()
-      if (today.getDay() === 2) { // Dinsdag + 2
-        return today.addDays(2)
-      }
-      if (today.getDay() === 3) { // Woensdag + 1
-        return today.addDays(1)
-      }
-      return today
-    };
-
-    var selectedDate = getNextSelectableDate();
-    $('#form_date').datepicker({
-      weekStart: 1,
-      daysOfWeekDisabled: '2',
-      autoclose: true,
-      format: 'dd/mm/yyyy',
-      startDate: '+0d',
-      language: 'nl',
-      todayHighlight: true
-    });
   </script>
 </body>
