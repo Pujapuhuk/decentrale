@@ -245,8 +245,8 @@
 
       /* Remove selected and disabled attributes */
       timeslots.map(slot => {
-        slot.selected = false
         slot.disabled = false
+        slot.selected = false
       })
 
       /* if timeslot falls between the start time and
@@ -257,6 +257,7 @@
 
         if (match) {
           slot.disabled = true
+          slot.selected = false
         }
       })
     }
