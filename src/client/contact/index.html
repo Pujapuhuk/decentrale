@@ -208,15 +208,13 @@
      */
     function requestCalendarEvents() {
       const date = document.getElementById('form_date').value.split('-')
-      const minDate = `${date[2]}-${date[1]}-${date[0]}T00:00:00Z`
-      const maxDate = `${date[2]}-${date[1]}-${date[0]}T23:59:59Z`
       const requestConfig = {
         calendarId: 'voorhoede.nl_pt3rmlvbplsrmo5fn7svhb0n90@group.calendar.google.com',
         alwaysIncludeEmail: false,
         orderBy: 'startTime',
         singleEvents: true,
-        timeMin: minDate,
-        timeMax: maxDate,
+        timeMin: `${date[2]}-${date[1]}-${date[0]}T00:00:00Z`,
+        timeMax: `${date[2]}-${date[1]}-${date[0]}T23:59:59Z`,
       }
 
       return gapi.client.calendar.events.list(requestConfig)
@@ -242,18 +240,19 @@
       const events = formatEvents(items)
       const date = getSelectedDate()
 
-      /* Remove selected and disabled attributes */
+      /* Remove selected and disabled attributes and reset the slot innerHTML */
       timeslots.map(slot => {
         slot.disabled = false
         slot.selected = false
         slot.innerHTML = slot.value
       })
 
-      /* if timeslot falls between the start time and
-         end time of a calendar event, we disable that timeslot. */
+      /* if timeslot falls between the start time and end time of a calendar event
+         we disable that timeslot and add '(vol)' after the value */
       timeslots.map(slot => {
-        const selectedTime = new Date(`${date} ${slot.value}`).getTime()
-        const match = events.find((event) => selectedTime >= event.startTime && selectedTime <= event.endTime)
+        const slotStartTime = new Date(`${date}T${slot.value}:00`).getTime()
+        const slotEndTime = new Date(`${date}T${slot.value}:00`).getTime() + 60000 // plus 1 minute
+        const match = events.find((event) => slotStartTime >= event.startTime && slotEndTime <= event.endTime)
 
         if (match) {
           slot.disabled = true
@@ -270,7 +269,7 @@
     function getSelectedDate() {
       const date = document.getElementById('form_date').value.split('-')
 
-      return [date[1], date[0], date[2]].join('-')
+      return [date[2], date[1], date[0]].join('-')
     }
 
     /**
