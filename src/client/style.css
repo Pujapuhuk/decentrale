@@ -776,9 +776,6 @@ button:hover, button:focus, button:active {
     padding-top:0px;
     padding-bottom:0px;
 }
-.reserveren-intro a{
-    color:#000DB6;
-}
 @media (max-width: 480px) {
     .reserveren-content{
         padding-bottom:20px; 
