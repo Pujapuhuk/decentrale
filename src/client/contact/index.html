@@ -228,7 +228,7 @@
     function parseResponseResult(data) {
       const body = JSON.parse(data.body)
 
-      if (body.items.length) {
+      if (body.items) {
         updateTimeslots(body.items)
       }
     }
