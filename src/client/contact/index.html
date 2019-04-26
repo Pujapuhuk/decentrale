@@ -246,6 +246,7 @@
       timeslots.map(slot => {
         slot.disabled = false
         slot.selected = false
+        slot.innerHTML = slot.value
       })
 
       /* if timeslot falls between the start time and
@@ -257,6 +258,7 @@
         if (match) {
           slot.disabled = true
           slot.selected = false
+          slot.innerHTML = `${slot.value} (vol)`
         }
       })
     }
