@@ -274,7 +274,7 @@ button:hover, button:focus, button:active {
 } 
 /* Nav */
 .navbar-nav > li >a{
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
 }
 .navbar-nav > li > a:hover{
     background-color:;
