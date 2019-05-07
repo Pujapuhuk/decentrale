@@ -1,7 +1,7 @@
 body, html {
     font-family: 'Karla', sans-serif;
     text-rendering: optimizeLegibility !important;
-    -webkit-font-smoothing: antialiased !important;
+    -webkit-font-smoothing: subpixel-antialiased !important;
     color:#303030;
     font-weight: 700;
     overflow-x:hidden;
