@@ -81,7 +81,7 @@ h4{
 
 h5{
     font-weight: 700;
-    letter-spacing:0.5px;
+    letter-spacing:0.2px;
     font-size: 20px;
     text-transform: uppercase;
     line-height: 34px; 
@@ -261,7 +261,7 @@ button:hover, button:focus, button:active {
 }
 .navbar-brand{
     font-size: 28px;
-    letter-spacing:1.5px;
+    letter-spacing:1.2px;
 }
 .navbar-toggler {
     border:none;
