@@ -1,0 +1,34 @@
+.wijnfestival-background{
+	background-color:#FFE9E9;
+}
+.wijnfestival-content{
+	background: url(../img/wijnfestival/wijnfestival-header.png) 50% 0%/cover no-repeat;
+	display:flex;
+	min-height:100vh;
+	flex-direction:column;
+	top:90px;
+	padding:40px;
+}
+.wijnfestival-button{
+	
+}
+.btn-wijn{
+    width: 200px !important;
+    float: right;
+}
+.btn-wijn:hover{
+	background-color: #FFE9E9;
+	color:;
+    top:0px;
+    text-decoration: none;
+    outline: none; 
+    border: 4px solid black;
+}
+.wijn-1{
+	top:260px;
+	right:-80px;
+	width:40%;
+}
+
+    
+    
