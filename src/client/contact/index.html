@@ -202,17 +202,19 @@
     }
 
     /**
-     * request all events from the calendar using our config.
+     * request all events from the calendar.
      */
     function requestCalendarEvents() {
-      const date = document.getElementById('form_date').value.split('-')
+      const date = getSelectedDate()
+      const timeMin = dayjs(date).toString()
+      const timeMax = dayjs(date).add(1, 'day').subtract(1, 'second').toString()
       const requestConfig = {
         calendarId: '0pbhpkd9b1qik41539d52vu3ko@group.calendar.google.com',
         alwaysIncludeEmail: false,
         orderBy: 'startTime',
         singleEvents: true,
-        timeMin: `${date[2]}-${date[1]}-${date[0]}T00:00:00Z`,
-        timeMax: `${date[2]}-${date[1]}-${date[0]}T23:59:59Z`,
+        timeMin: formatDate(timeMin, 'YYYY-MM-DDTHH:mm:ss[Z]'),
+        timeMax: formatDate(timeMax, 'YYYY-MM-DDTHH:mm:ss[Z]'),
       }
 
       return gapi.client.calendar.events.list(requestConfig)
@@ -235,6 +237,7 @@
      */
     function updateTimeslots(items) {
       const timeslots = [...document.getElementById('timeslots').children]
+      const offset = -(new Date().getTimezoneOffset() / 60)
       const events = formatEvents(items)
       const date = getSelectedDate()
 
@@ -246,11 +249,16 @@
       })
 
       /* if timeslot falls between the start time and end time of a calendar event
-         we disable that timeslot and add '(vol)' after the value */
+      we disable that timeslot and add '(vol)' after the value */
       timeslots.map(slot => {
-        const slotStartTime = new Date(`${date}T${slot.value}:00`).getTime()
-        const slotEndTime = new Date(`${date}T${slot.value}:00`).getTime() + 60000 // plus 1 minute
-        const match = events.find((event) => slotStartTime >= event.startTime && slotEndTime <= event.endTime)
+        const dateTime = formatDate(`${date}T${slot.value}`, 'YYYY-MM-DDTHH:mm:ss[Z]')
+        const slotStartTime = dayjs(dateTime).unix()
+        const slotEndTime = dayjs(dateTime).add(1, 'minute').unix()
+
+        const match = events.find((event) =>
+          slotStartTime >= dayjs(event.startTime).unix() &&
+          slotEndTime <= dayjs(event.endTime).unix()
+        )
 
         if (match) {
           slot.disabled = true
@@ -266,8 +274,16 @@
      */
     function getSelectedDate() {
       const date = document.getElementById('form_date').value.split('-')
+      const newDate = [date[2], date[1], date[0]].join('-')
+      return formatDate(newDate, 'YYYY-MM-DD')
+    }
 
-      return [date[2], date[1], date[0]].join('-')
+    /**
+     *
+     */
+    function formatDate(date, format) {
+      const parsedDate = dayjs(date).toDate()
+      return dayjs(parsedDate).format(format).toString()
     }
 
     /**
@@ -275,13 +291,11 @@
      * the necessary data we need.
      */
     function formatEvents(items) {
-      return items.map((item) => {
-        return {
-          id: item.id,
-          startTime: new Date(item.start.dateTime).getTime(),
-          endTime: new Date(item.end.dateTime).getTime(),
-        }
-      })
+      return items.map((item) => ({
+        id: item.id,
+        startTime: formatDate(item.start.dateTime, 'YYYY-MM-DDTHH:mm:ss[Z]'),
+        endTime: formatDate(item.end.dateTime, 'YYYY-MM-DDTHH:mm:ss[Z]'),
+      }))
     }
 
     /**
