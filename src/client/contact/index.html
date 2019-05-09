@@ -83,7 +83,19 @@
     </div>
   </div>
   <div class="container-s page-intro-text text-center reserveren-intro">
-    <p>Reserveren voor het diner kan via onderstaand formulier. Let op! Je reservering staat pas vast als je een bevestigende e-mail van ons hebt ontvangen. Bel je liever? Doe dat dan tijdens onze openingstijden op <br>015-8892777.</p><br><h6>9 juni 2019 organiseren wij <a target="_blank" href="https://www.facebook.com/events/440820566660832/">HET CENTRALE WIJNFESTIVAL</a></h6><a class="btn-secundair" style="width:100%; text-align: right;" href="https://shop.ikbenaanwezig.nl/tickets/event/het-centrale-wijnfestival">KOOP HIER EEN KAARTJE<i class="material-icons md-24 btn-icon-secundair">arrow_forward</i></a> 
+    <p>Reserveren voor het diner kan via onderstaand formulier. Let op! Je reservering staat
+      pas vast als je een bevestigende e-mail van ons hebt ontvangen. Bel je liever?
+      Doe dat dan tijdens onze openingstijden op <br>015-8892777.</p>
+    <br>
+    <h6>9 juni 2019 organiseren wij
+      <a target="_blank" href="https://www.facebook.com/events/440820566660832/">HET CENTRALE WIJNFESTIVAL</a>
+    </h6>
+    <p>
+      <a class="btn-secundair" style="font-family: 'Karla', sans-serif;" href="https://shop.ikbenaanwezig.nl/tickets/event/het-centrale-wijnfestival">
+        KOOP HIER EEN KAARTJE
+        <i class="material-icons md-24 btn-icon-secundair">arrow_forward</i>
+      </a>
+    </p>
   </div>
   <div class="container-s">
     <form id="contact-form" method="post" action="/.netlify/functions/send-mail" autocomplete="off">
@@ -98,27 +110,26 @@
           </div>
           <div class="col-xs-6 col-md-4">
             <div class="form-group">
-              <label for="form_time">Hoe laat?</label>
+              <label for="timeslots">Hoe laat?</label>
               <div class="selectpicker">
-                <select id ="form_time" name="time" class="form-control">
-                  <optgroup label="Kies een tijd" id="timeslots">
-                    <option value="17:30">17:30</option>
-                    <option value="18:00">18:00</option>
-                    <option value="18:30">18:30</option>
-                    <option value="19:00">19:00</option>
-                    <option value="19:30">19:30</option>
-                    <option value="20:00">20:00</option>
-                    <option value="20:30">20:30</option>
-                    <option value="21:00">21:00</option>
-                  </option>
+                <select id ="timeslots" name="time" class="form-control">
+                  <option value="17:30">17:30</option>
+                  <option value="17:30">17:30</option>
+                  <option value="18:00">18:00</option>
+                  <option value="18:30">18:30</option>
+                  <option value="19:00">19:00</option>
+                  <option value="19:30">19:30</option>
+                  <option value="20:00">20:00</option>
+                  <option value="20:30">20:30</option>
+                  <option value="21:00">21:00</option>
                 </select>
               </div>
             </div>
           </div>
           <div class="col-xs-6 col-md-4">
             <div class="form-group">
-              <label for="form_number">Hoeveel personen?</label>
-              <input id="form_number" name="number" type="number" class="formnumber form-control" placeholder="" />
+              <label for="form_number">Hoeveel personen? *</label>
+              <input id="form_number" name="number" type="number" class="formnumber form-control" placeholder="" min="1" required="required" data-error="Geef een aantal op." />
               <div class="help-block with-errors"></div>
             </div>
           </div>
@@ -202,17 +213,19 @@
     }
 
     /**
-     * request all events from the calendar using our config.
+     * request all events from the calendar.
      */
     function requestCalendarEvents() {
-      const date = document.getElementById('form_date').value.split('-')
+      const date = getSelectedDate()
+      const timeMin = dayjs(date).toString()
+      const timeMax = dayjs(date).add(1, 'day').subtract(1, 'second').toString()
       const requestConfig = {
         calendarId: '0pbhpkd9b1qik41539d52vu3ko@group.calendar.google.com',
         alwaysIncludeEmail: false,
         orderBy: 'startTime',
         singleEvents: true,
-        timeMin: `${date[2]}-${date[1]}-${date[0]}T00:00:00Z`,
-        timeMax: `${date[2]}-${date[1]}-${date[0]}T23:59:59Z`,
+        timeMin: formatDate(timeMin, 'YYYY-MM-DDTHH:mm:ss[Z]'),
+        timeMax: formatDate(timeMax, 'YYYY-MM-DDTHH:mm:ss[Z]'),
       }
 
       return gapi.client.calendar.events.list(requestConfig)
@@ -235,6 +248,7 @@
      */
     function updateTimeslots(items) {
       const timeslots = [...document.getElementById('timeslots').children]
+      const offset = -(new Date().getTimezoneOffset() / 60)
       const events = formatEvents(items)
       const date = getSelectedDate()
 
@@ -246,11 +260,16 @@
       })
 
       /* if timeslot falls between the start time and end time of a calendar event
-         we disable that timeslot and add '(vol)' after the value */
+      we disable that timeslot and add '(vol)' after the value */
       timeslots.map(slot => {
-        const slotStartTime = new Date(`${date}T${slot.value}:00`).getTime()
-        const slotEndTime = new Date(`${date}T${slot.value}:00`).getTime() + 60000 // plus 1 minute
-        const match = events.find((event) => slotStartTime >= event.startTime && slotEndTime <= event.endTime)
+        const dateTime = formatDate(`${date}T${slot.value}`, 'YYYY-MM-DDTHH:mm:ss[Z]')
+        const slotStartTime = dayjs(dateTime).unix()
+        const slotEndTime = dayjs(dateTime).add(1, 'minute').unix()
+
+        const match = events.find((event) =>
+          slotStartTime >= dayjs(event.startTime).unix() &&
+          slotEndTime <= dayjs(event.endTime).unix()
+        )
 
         if (match) {
           slot.disabled = true
@@ -266,8 +285,16 @@
      */
     function getSelectedDate() {
       const date = document.getElementById('form_date').value.split('-')
+      const newDate = [date[2], date[1], date[0]].join('-')
+      return formatDate(newDate, 'YYYY-MM-DD')
+    }
 
-      return [date[2], date[1], date[0]].join('-')
+    /**
+     *
+     */
+    function formatDate(date, format) {
+      const parsedDate = dayjs(date).toDate()
+      return dayjs(parsedDate).format(format).toString()
     }
 
     /**
@@ -275,13 +302,11 @@
      * the necessary data we need.
      */
     function formatEvents(items) {
-      return items.map((item) => {
-        return {
-          id: item.id,
-          startTime: new Date(item.start.dateTime).getTime(),
-          endTime: new Date(item.end.dateTime).getTime(),
-        }
-      })
+      return items.map((item) => ({
+        id: item.id,
+        startTime: formatDate(item.start.dateTime, 'YYYY-MM-DDTHH:mm:ss[Z]'),
+        endTime: formatDate(item.end.dateTime, 'YYYY-MM-DDTHH:mm:ss[Z]'),
+      }))
     }
 
     /**
@@ -317,8 +342,12 @@
 
   <!-- Error message in form -->
   <script src="/js/validator.js"></script>
+
   <!-- Validator on form -->
   <script src="/js/contact.js"></script>
+
+  <!-- DayJS -->
+  <script src="/js/dayjs.min.js"></script>
 
   <script>
     $(document).ready(() => {
