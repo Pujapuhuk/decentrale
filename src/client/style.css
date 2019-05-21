@@ -100,7 +100,7 @@ p {
     font-weight: 400;
     letter-spacing:0.5px;
     font-size:16px; 
-    line-height: 34px;
+    line-height: 32px;
 }
 figcaption{
     font-weight:400;
@@ -393,6 +393,13 @@ button:hover, button:focus, button:active {
     padding:80px; 
     background-color:#CEE1BB;
     padding:16px;
+}
+.page-title-contact{
+    display: flex;
+    padding:80px; 
+    background-color:#CEE1BB;
+    padding:16px;
+    margin-top:50px;
 }
 .page-title-white{
     display: flex; 
@@ -769,11 +776,11 @@ button:hover, button:focus, button:active {
 /*RESERVEREN PAGINA*/
 /*******************/
 .reserveren-content{
-    margin-top:80px;
-    padding-bottom:40px; 
+    margin-top:40px;
+    padding-bottom:0px; 
 }
 .reserveren-intro{
-    padding-top:0px;
+    padding-top:10px;
     padding-bottom:0px;
 }
 @media (max-width: 480px) {
