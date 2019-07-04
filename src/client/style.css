@@ -547,6 +547,9 @@ button:hover, button:focus, button:active {
     margin-top: 40px;
     margin-bottom: 80px
 }
+.vacature h3{
+    text-align:left;
+}
 @media (max-width: 480px) {
     .vacature{
         padding-top: 40px;
