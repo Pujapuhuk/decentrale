@@ -241,10 +241,16 @@
        * if a match is found, the corresponding timeslot is disabled.
        */
       function updateTimeslots(items) {
-        const timeslots = [...document.getElementById('timeslots').children]
+        const selectElement = document.getElementById('timeslots')
+        const timeslots = [...selectElement.children]
         const offset = -(new Date().getTimezoneOffset() / 60)
         const events = formatEvents(items)
-        const date = getSelectedDate()
+        const selectedDate = getSelectedDate()
+        const disabledDayOfWeek = dayjs(selectedDate).day() === 2 // 2 = Tuesday
+
+        disabledDayOfWeek
+          ? selectElement.disabled = true
+          : selectElement.disabled = false
 
         /* Remove selected and disabled attributes and reset the slot innerHTML */
         timeslots.map(slot => {
@@ -256,7 +262,7 @@
         /* if timeslot falls between the start time and end time of a calendar event
         we disable that timeslot and add '(vol)' after the value */
         timeslots.map(slot => {
-          const dateTime = formatDate(`${date}T${slot.value}`, 'YYYY-MM-DDTHH:mm:ss[Z]')
+          const dateTime = formatDate(`${selectedDate}T${slot.value}`, 'YYYY-MM-DDTHH:mm:ss[Z]')
           const slotStartTime = dayjs(dateTime).unix()
           const slotEndTime = dayjs(dateTime).add(1, 'minute').unix()
 
