@@ -1,385 +1,368 @@
 <!DOCTYPE html>
 <html lang="nl">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta content="IE=edge" http-equiv="X-UA-Compatible">
-  <title>De Centrale - Reserveren</title>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <title>De Centrale - Reserveren</title>
 
-  <!-- favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
 
-  <!-- Bootstrap -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-  <link id="bsdp-css" href="/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link id="bsdp-css" href="/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet">
 
-  <!-- Scrolling nav -->
-  <link href="/css/scrolling-nav.css" rel="stylesheet">
+    <!-- Style -->
+    <link href="/style.css" rel="stylesheet">
+    <link media="screen and (max-width: 480px)" href="/css/style480.css" rel="stylesheet">
 
-  <!-- Style -->
-  <link href="/style.css" rel="stylesheet">
-  <link media="screen and (max-width: 480px)" href="/css/style480.css" rel="stylesheet" />
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Gabriela" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  <!-- font -->
-  <link href="https://fonts.googleapis.com/css?family=Gabriela" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  <!-- font typekit -->
-  <script src="https://use.typekit.net/npb7rdo.js"></script>
-  <script>
-    try{Typekit.load({async:true});}catch(e){}
-  </script>
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-36915461-3', 'auto');
-    ga('send', 'pageview');
-  </script>
-  <script>
-    var p = null;function centeredPopup(u,n,w,h,r){l=(screen.width)?(screen.width-w)/2:0;t=(screen.height)?(screen.height-h)/2:0;s='height='+h+',width='+w+',top='+t+',left='+l+',scrollbars='+r+',resizable';p=window.open(u,n,s);}
-  </script>
-</head>
-<body>
-  <nav class="navbar fixed-top navbar-expand-lg navbar-light">
-    <a class="navbar-brand js-scroll-trigger" href="/">DE CENTRALE</a>
-    <button class="navbar-toggler custom-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-      <span class="my-1 close">
-        <svg fill="#000000" height="32" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
-          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
-          <path d="M0 0h24v24H0z" fill="none"/>
-        </svg>
-      </span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link page-scroll" href="/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/wijnfestival/" class="page-scroll">🍷Wijnfestival</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link page-scroll" href="/menukaart/">Menukaart</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link page-scroll" href="/groepen/">Groepen</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link page-scroll" href="/cultuur/">Cultuur</a>
-        </li>
-        <li class="nav-item nav-link-reserveer active-reserveer">
-          <a class="nav-link page-scroll" href="/contact/">Reserveer</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-<div class="container-l page-title-contact d-block d-sm-none">
+      ga('create', 'UA-36915461-3', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+      <a class="navbar-brand js-scroll-trigger" href="/">DE CENTRALE</a>
+      <button class="navbar-toggler custom-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        <span class="my-1 close">
+          <svg fill="#000000" height="32" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link page-scroll" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link page-scroll" href="/wijnfestival/">🍷Wijnfestival</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link page-scroll" href="/menukaart/">Menukaart</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link page-scroll" href="/groepen/">Groepen</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link page-scroll" href="/cultuur/">Cultuur</a>
+          </li>
+          <li class="nav-item nav-link-reserveer active-reserveer">
+            <a class="nav-link page-scroll" href="/contact/">Reserveer</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-l page-title-contact d-block d-sm-none">
       <div class="page-title-text-wrap">
         <h5>Reserveer</h5>
       </div>
-</div>
-  <!-- content-reserveren -->
-  <div class="page-title-white container-s reserveren-content  d-none d-sm-block">
-
-    <div class="page-title-text-wrap">
-      <h1>RESERVEER</h1>
     </div>
-  </div>
-  <div class="container-s page-intro-text text-center reserveren-intro">
-    <p>Reserveren voor het diner kan via onderstaand formulier. Let op! Je reservering staat
-      pas vast als je een bevestigende e-mail van ons hebt ontvangen. Bel je liever?
-      Doe dat dan tijdens onze openingstijden op <br>015-8892777.</p>
-    
-    <p>🍷 Ook leuk: 9 juni organiseren wij een wijnfestival <a href="../wijnfestival/" style="    color: blue;">Lees meer</a>
-    <p>
-    <p></p>
-  </div>
-  <div class="container-s">
-    <form id="contact-form" method="post" action="/.netlify/functions/send-mail" autocomplete="off">
-      <div class="controls">
-        <div class="row">
-          <div class="col-xs-12 col-md-8">
-            <div class="form-group">
-              <label for="form_date">Welke dag wil je komen?</label>
-              <input id="form_date" name="date" type="text" class="form-control formnumber" placeholder="dd/mm/yyyy"  required="required" data-error="Selecteer een dag" />
-              <div class="help-block with-errors"></div>
+    <!-- content-reserveren -->
+    <div class="page-title-white container-s reserveren-content  d-none d-sm-block">
+
+      <div class="page-title-text-wrap">
+        <h1>RESERVEER</h1>
+      </div>
+    </div>
+    <div class="container-s page-intro-text text-center reserveren-intro">
+      <p>Reserveren voor het diner kan via onderstaand formulier. Let op! Je reservering staat
+        pas vast als je een bevestigende e-mail van ons hebt ontvangen. Bel je liever?
+        Doe dat dan tijdens onze openingstijden op <br>015-8892777.</p>
+      <p>🍷 Ook leuk: 9 juni organiseren wij een wijnfestival <a href="/wijnfestival/" style="color: blue;">Lees meer</a></p>
+    </div>
+    <div class="container-s">
+      <form id="contact-form" method="post" action="/.netlify/functions/send-mail" autocomplete="off">
+        <div class="controls">
+          <div class="row">
+            <div class="col-xs-12 col-md-8">
+              <div class="form-group">
+                <label for="form_date">Welke dag wil je komen?</label>
+                <input id="form_date" name="date" type="text" class="form-control formnumber" placeholder="dd/mm/yyyy"  required="required" data-error="Selecteer een dag" />
+                <div class="help-block with-errors"></div>
+              </div>
             </div>
-          </div>
-          <div class="col-xs-6 col-md-4">
-            <div class="form-group">
-              <label for="timeslots">Hoe laat?</label>
-              <div class="selectpicker">
-                <select id ="timeslots" name="time" class="form-control">
-                  <option value="17:30">17:30</option>
-                  <option value="17:30">17:30</option>
-                  <option value="18:00">18:00</option>
-                  <option value="18:30">18:30</option>
-                  <option value="19:00">19:00</option>
-                  <option value="19:30">19:30</option>
-                  <option value="20:00">20:00</option>
-                  <option value="20:30">20:30</option>
-                  <option value="21:00">21:00</option>
-                </select>
+            <div class="col-xs-6 col-md-4">
+              <div class="form-group">
+                <label for="timeslots">Hoe laat?</label>
+                <div class="selectpicker">
+                  <select id ="timeslots" name="time" class="form-control">
+                    <option value="17:30">17:30</option>
+                    <option value="17:30">17:30</option>
+                    <option value="18:00">18:00</option>
+                    <option value="18:30">18:30</option>
+                    <option value="19:00">19:00</option>
+                    <option value="19:30">19:30</option>
+                    <option value="20:00">20:00</option>
+                    <option value="20:30">20:30</option>
+                    <option value="21:00">21:00</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-6 col-md-4">
+              <div class="form-group">
+                <label for="form_number">Hoeveel personen? *</label>
+                <input id="form_number" name="number" type="number" class="formnumber form-control" placeholder="" min="1" required="required" data-error="Geef een aantal op." />
+                <div class="help-block with-errors"></div>
               </div>
             </div>
           </div>
-          <div class="col-xs-6 col-md-4">
-            <div class="form-group">
-              <label for="form_number">Hoeveel personen? *</label>
-              <input id="form_number" name="number" type="number" class="formnumber form-control" placeholder="" min="1" required="required" data-error="Geef een aantal op." />
-              <div class="help-block with-errors"></div>
+          <div class="row">
+            <div class="col-xs-12 col-md-12">
+              <div class="form-group">
+                <label for="form_message">Zijn er allergieën of andere eetwensen waar we rekening mee moeten houden?</label>
+                <textarea id="form_message" name="message" class="form-control textarea-form" placeholder="" rows="4" data-error=""></textarea>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12 col-md-12">
-            <div class="form-group">
-              <label for="form_message">Zijn er allergieën of andere eetwensen waar we rekening mee moeten houden?</label>
-              <textarea id="form_message" name="message" class="form-control textarea-form" placeholder="" rows="4" data-error=""></textarea>
+          <div class="row">
+            <div class="col-xs-12 col-md-8">
+              <div class="form-group">
+                <label for="form_name">Naam *</label>
+                <input id="form_name" type="text" name="name" class="form-control" placeholder="" required="required" data-error="Vul een naam in.">
+                <div class="help-block with-errors"></div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12 col-md-8">
-            <div class="form-group">
-              <label for="form_name">Naam *</label>
-              <input id="form_name" type="text" name="name" class="form-control" placeholder="" required="required" data-error="Vul een naam in.">
-              <div class="help-block with-errors"></div>
+          <div class="row">
+            <div class="col-xs-12 col-md-8">
+              <div class="form-group">
+                <label for="form_email">Email adres *</label>
+                <input id="form_email" type="email" name="email" class="form-control" placeholder="" required="required" data-error="Vul een geldig emailadres in.">
+                <div class="help-block with-errors"></div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12 col-md-8">
-            <div class="form-group">
-              <label for="form_email">Email adres *</label>
-              <input id="form_email" type="email" name="email" class="form-control" placeholder="" required="required" data-error="Vul een geldig emailadres in.">
-              <div class="help-block with-errors"></div>
+          <div class="row">
+            <div class="col-xs-12 col-md-8">
+              <div class="form-group">
+                <label for="form_phone">Telefoonnummer *</label>
+                <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="" required="required" data-error="Als je wilt reserveren hebben we een telefoonnummer nodig.">
+                <div class="help-block with-errors"></div>
+              </div>
             </div>
           </div>
+          <div class="messages"></div>
+          <input type="submit" class="btn btn-success btn-send btn-form" value="VERSTUUR" />
         </div>
-        <div class="row">
-          <div class="col-xs-12 col-md-8">
-            <div class="form-group">
-              <label for="form_phone">Telefoonnummer *</label>
-              <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="" required="required" data-error="Als je wilt reserveren hebben we een telefoonnummer nodig.">
-              <div class="help-block with-errors"></div>
-            </div>
-          </div>
-        </div>
-        <div class="messages"></div>
-        <input type="submit" class="btn btn-success btn-send btn-form" value="VERSTUUR" />
-      </div>
-    </form>
-  </div>
-  <footer class="container-l">
-    <div class="row">
-      <div class="footer-box col-md-3 text-center">
-        <h6>Contact<br></h6>
-        <p>015 - 889 27 77<br>hallo@decentraledelft.nl</p>
-      </div>
-      <div class="footer-box col-md-3 text-center">
-            <h6>Openingstijden<br></h6>
-            <p>ma, wo, do, vr, za en zo open vanaf 17:30,<br>alleen dinsdag gesloten<br></p>
-      </div>
-      <div class="footer-box col-md-3 text-center">
-        <h6>Locatie<br></h6>
-        <p>Voldersgracht 2<br>2611 ET Delft</p><a href="https://www.google.nl/maps/place/Voldersgracht+2,+2611+ET+Delft/@52.011741,4.355754,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5b5c3b08304c5:0x79ad52aba43f8354!8m2!3d52.011741!4d4.357948" target="_blank">route</a>
-      </div>
-      <div class="col-md-3 text-center">
-        <a href="https://www.facebook.com/decentraledelft" target="_blank" rel="noopener">Facebook</a><br>
-        <a href="https://www.instagram.com/decentraledelft/" target="_blank" rel="noopener">Instagram</a>
-      </div>
+      </form>
     </div>
-  </footer>
+    <footer class="container-l">
+      <div class="row">
+        <div class="footer-box col-md-3 text-center">
+          <h6>Contact</h6>
+          <p>015 - 889 27 77</p>
+          <p>hallo@decentraledelft.nl</p>
+        </div>
+        <div class="footer-box col-md-3 text-center">
+          <h6>Openingstijden</h6>
+          <p>ma, wo, do, vr, za en zo open vanaf 17:30</p>
+          <p>alleen dinsdag gesloten</p>
+        </div>
+        <div class="footer-box col-md-3 text-center">
+          <h6>Locatie</h6>
+          <p>Voldersgracht 2<br>2611 ET Delft</p>
+          <a href="https://www.google.nl/maps/place/Voldersgracht+2,+2611+ET+Delft/@52.011741,4.355754,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5b5c3b08304c5:0x79ad52aba43f8354!8m2!3d52.011741!4d4.357948" target="_blank" rel="noopener">
+            Route
+          </a>
+        </div>
+        <div class="col-md-3 text-center">
+          <p><a href="https://www.facebook.com/decentraledelft" target="_blank" rel="noopener">Facebook</a></p>
+          <p><a href="https://www.instagram.com/decentraledelft/" target="_blank" rel="noopener">Instagram</a></p>
+        </div>
+      </div>
+    </footer>
 
-  <script>
-    /**
-     * initialize Google Calendar API using our config.
-     */
-    function init() {
-      const ApiConfig = {
-        apiKey: 'AIzaSyAZNrZJmglPTHZphiJ80MmbD3stQGbbcJo',
-        discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest'],
-      }
-
-      gapi.client
-        .init(ApiConfig)
-        .then(() => requestCalendarEvents())
-        .then((res) => parseResponseResult(res))
-        .catch((err) => logError(err))
-    }
-
-    /**
-     * request all events from the calendar.
-     */
-    function requestCalendarEvents() {
-      const date = getSelectedDate()
-      const timeMin = dayjs(date).toString()
-      const timeMax = dayjs(date).add(1, 'day').subtract(1, 'second').toString()
-      const requestConfig = {
-        calendarId: '0pbhpkd9b1qik41539d52vu3ko@group.calendar.google.com',
-        alwaysIncludeEmail: false,
-        orderBy: 'startTime',
-        singleEvents: true,
-        timeMin: formatDate(timeMin, 'YYYY-MM-DDTHH:mm:ss[Z]'),
-        timeMax: formatDate(timeMax, 'YYYY-MM-DDTHH:mm:ss[Z]'),
-      }
-
-      return gapi.client.calendar.events.list(requestConfig)
-    }
-
-    /**
-     * parse the received response, and update the timeslots on the page.
-     */
-    function parseResponseResult(data) {
-      const body = JSON.parse(data.body)
-
-      if (body.items) {
-        updateTimeslots(body.items)
-      }
-    }
-
-    /**
-     * compare the received events times with the timeslots
-     * if a match is found, the corresponding timeslot is disabled.
-     */
-    function updateTimeslots(items) {
-      const timeslots = [...document.getElementById('timeslots').children]
-      const offset = -(new Date().getTimezoneOffset() / 60)
-      const events = formatEvents(items)
-      const date = getSelectedDate()
-
-      /* Remove selected and disabled attributes and reset the slot innerHTML */
-      timeslots.map(slot => {
-        slot.disabled = false
-        slot.selected = false
-        slot.innerHTML = slot.value
-      })
-
-      /* if timeslot falls between the start time and end time of a calendar event
-      we disable that timeslot and add '(vol)' after the value */
-      timeslots.map(slot => {
-        const dateTime = formatDate(`${date}T${slot.value}`, 'YYYY-MM-DDTHH:mm:ss[Z]')
-        const slotStartTime = dayjs(dateTime).unix()
-        const slotEndTime = dayjs(dateTime).add(1, 'minute').unix()
-
-        const match = events.find((event) =>
-          slotStartTime >= dayjs(event.startTime).unix() &&
-          slotEndTime <= dayjs(event.endTime).unix()
-        )
-
-        if (match) {
-          slot.disabled = true
-          slot.selected = false
-          slot.innerHTML = `${slot.value} (vol)`
+    <script>
+      /**
+       * initialize Google Calendar API using our config.
+       */
+      function init() {
+        const ApiConfig = {
+          apiKey: 'AIzaSyAZNrZJmglPTHZphiJ80MmbD3stQGbbcJo',
+          discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest'],
         }
-      })
-    }
 
-    /**
-     * Get the selected date.
-     * Returns date with format: mm/dd/yyyy
-     */
-    function getSelectedDate() {
-      const date = document.getElementById('form_date').value.split('-')
-      const newDate = [date[2], date[1], date[0]].join('-')
-      return formatDate(newDate, 'YYYY-MM-DD')
-    }
-
-    /**
-     *
-     */
-    function formatDate(date, format) {
-      const parsedDate = dayjs(date).toDate()
-      return dayjs(parsedDate).format(format).toString()
-    }
-
-    /**
-     * Format the received calendar events to only contain
-     * the necessary data we need.
-     */
-    function formatEvents(items) {
-      return items.map((item) => ({
-        id: item.id,
-        startTime: formatDate(item.start.dateTime, 'YYYY-MM-DDTHH:mm:ss[Z]'),
-        endTime: formatDate(item.end.dateTime, 'YYYY-MM-DDTHH:mm:ss[Z]'),
-      }))
-    }
-
-    /**
-     * Log any API errors
-     * format: error code, message
-     */
-    function logError(reason) {
-      const { error } = reason.result
-      console.error(error.code, error.message)
-    }
-
-    /**
-     * Start loading the Google API Client.
-     */
-    function initApiClient() {
-      gapi.load('client', init)
-    }
-  </script>
-
-  <!-- Google API Client -->
-  <script async defer src="https://apis.google.com/js/api.js"
-    onload="this.onload=function(){};initApiClient()"
-    onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
-
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="/js/jquery.1.11.1.js"></script>
-
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <script src="/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
-  <script src="/bootstrap-datepicker/locales/bootstrap-datepicker.nl.min.js"></script>
-
-  <!-- Error message in form -->
-  <script src="/js/validator.js"></script>
-
-  <!-- Validator on form -->
-  <script src="/js/contact.js"></script>
-
-  <!-- DayJS -->
-  <script src="/js/dayjs.min.js"></script>
-
-  <script>
-    $(document).ready(() => {
-      const datepickerConfig = {
-        weekStart: 1,
-        daysOfWeekDisabled: '2',
-        autoclose: true,
-        format: 'dd-mm-yyyy',
-        startDate: '+0d',
-        language: 'nl',
-        todayHighlight: true,
+        gapi.client
+          .init(ApiConfig)
+          .then(() => requestCalendarEvents())
+          .then((res) => parseResponseResult(res))
+          .catch((err) => logError(err))
       }
 
-      // initialize datepicker
-      $('#form_date')
-        .datepicker(datepickerConfig)
-        .datepicker('setDate', new Date())
-        .on('changeDate', () => {
-          initApiClient()
+      /**
+       * request all events from the calendar.
+       */
+      function requestCalendarEvents() {
+        const date = getSelectedDate()
+        const timeMin = dayjs(date).toString()
+        const timeMax = dayjs(date).add(1, 'day').subtract(1, 'second').toString()
+        const requestConfig = {
+          calendarId: '0pbhpkd9b1qik41539d52vu3ko@group.calendar.google.com',
+          alwaysIncludeEmail: false,
+          orderBy: 'startTime',
+          singleEvents: true,
+          timeMin: formatDate(timeMin, 'YYYY-MM-DDTHH:mm:ss[Z]'),
+          timeMax: formatDate(timeMax, 'YYYY-MM-DDTHH:mm:ss[Z]'),
+        }
+
+        return gapi.client.calendar.events.list(requestConfig)
+      }
+
+      /**
+       * parse the received response, and update the timeslots on the page.
+       */
+      function parseResponseResult(data) {
+        const body = JSON.parse(data.body)
+
+        if (body.items) {
+          updateTimeslots(body.items)
+        }
+      }
+
+      /**
+       * compare the received events times with the timeslots
+       * if a match is found, the corresponding timeslot is disabled.
+       */
+      function updateTimeslots(items) {
+        const timeslots = [...document.getElementById('timeslots').children]
+        const offset = -(new Date().getTimezoneOffset() / 60)
+        const events = formatEvents(items)
+        const date = getSelectedDate()
+
+        /* Remove selected and disabled attributes and reset the slot innerHTML */
+        timeslots.map(slot => {
+          slot.disabled = false
+          slot.selected = false
+          slot.innerHTML = slot.value
         })
 
-      // initialize navbar toggle behavior
-      $(document).click((event) => {
-        const clickover = $(event.target)
-        const opened = $('.navbar-collapse').hasClass('show')
-        if (opened === true && !clickover.hasClass('navbar-toggler')) {
-          $('.navbar-toggler').click()
+        /* if timeslot falls between the start time and end time of a calendar event
+        we disable that timeslot and add '(vol)' after the value */
+        timeslots.map(slot => {
+          const dateTime = formatDate(`${date}T${slot.value}`, 'YYYY-MM-DDTHH:mm:ss[Z]')
+          const slotStartTime = dayjs(dateTime).unix()
+          const slotEndTime = dayjs(dateTime).add(1, 'minute').unix()
+
+          const match = events.find((event) =>
+            slotStartTime >= dayjs(event.startTime).unix() &&
+            slotEndTime <= dayjs(event.endTime).unix()
+          )
+
+          if (match) {
+            slot.disabled = true
+            slot.selected = false
+            slot.innerHTML = `${slot.value} (vol)`
+          }
+        })
+      }
+
+      /**
+       * Get the selected date.
+       * Returns date with format: mm/dd/yyyy
+       */
+      function getSelectedDate() {
+        const date = document.getElementById('form_date').value.split('-')
+        const newDate = [date[2], date[1], date[0]].join('-')
+        return formatDate(newDate, 'YYYY-MM-DD')
+      }
+
+      /**
+       * Return a date string in a specified format.
+       */
+      function formatDate(date, format) {
+        const parsedDate = dayjs(date).toDate()
+        return dayjs(parsedDate).format(format).toString()
+      }
+
+      /**
+       * Format the received calendar events to only contain
+       * the necessary data we need.
+       */
+      function formatEvents(items) {
+        return items.map((item) => ({
+          id: item.id,
+          startTime: formatDate(item.start.dateTime, 'YYYY-MM-DDTHH:mm:ss[Z]'),
+          endTime: formatDate(item.end.dateTime, 'YYYY-MM-DDTHH:mm:ss[Z]'),
+        }))
+      }
+
+      /**
+       * Log any API errors
+       * format: error code, message
+       */
+      function logError(reason) {
+        const { error } = reason.result
+        console.error(error.code, error.message)
+      }
+
+      /**
+       * Start loading the Google API Client.
+       */
+      function initApiClient() {
+        gapi.load('client', init)
+      }
+    </script>
+
+    <!-- Google API Client -->
+    <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};initApiClient()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/jquery.1.11.1.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="/bootstrap-datepicker/locales/bootstrap-datepicker.nl.min.js"></script>
+
+    <!-- Error message in form -->
+    <script src="/js/validator.js"></script>
+
+    <!-- Validator on form -->
+    <script src="/js/contact.js"></script>
+
+    <!-- DayJS -->
+    <script src="/js/dayjs.min.js"></script>
+
+    <script>
+      $(document).ready(() => {
+        const datepickerConfig = {
+          weekStart: 1,
+          daysOfWeekDisabled: '2',
+          autoclose: true,
+          format: 'dd-mm-yyyy',
+          startDate: '+0d',
+          language: 'nl',
+          todayHighlight: true,
         }
+
+        // initialize datepicker
+        $('#form_date')
+          .datepicker(datepickerConfig)
+          .datepicker('setDate', new Date())
+          .on('changeDate', () => {
+            initApiClient()
+          })
       })
-    })
-  </script>
-</body>
+    </script>
+  </body>
+</html>

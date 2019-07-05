@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta content="IE=edge" http-equiv="X-UA-Compatible">
-	<title>De Centrale - Bedankt voor de reservering</title>
-  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <title>De Centrale - Bedankt voor de reservering</title>
+
   <!-- favicon -->
   <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
 
@@ -14,23 +14,15 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
   <link id="bsdp-css" href="/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet">
 
-  <!-- Scrolling nav -->
-  <link href="/css/scrolling-nav.css" rel="stylesheet">
-
   <!-- Style -->
   <link href="/style.css" rel="stylesheet">
-  <link media="screen and (max-width: 480px)" href="/css/style480.css" rel="stylesheet" />
+  <link media="screen and (max-width: 480px)" href="/css/style480.css" rel="stylesheet">
 
   <!-- font -->
   <link href="https://fonts.googleapis.com/css?family=Gabriela" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  <!-- font typekit -->
-  <script src="https://use.typekit.net/npb7rdo.js"></script>
-  <script>
-    try{Typekit.load({async:true});}catch(e){}
-  </script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -45,42 +37,40 @@
 
 <body>
 
-		<nav class="navbar fixed-top navbar-expand-lg navbar-light">
-		<a class="navbar-brand js-scroll-trigger" href="/">DE CENTRALE</a>
-		<button class="navbar-toggler custom-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-		 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-			<span class="my-1 close">
-				<svg fill="#000000" height="32" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
-					<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
-					<path d="M0 0h24v24H0z" fill="none" />
-				</svg></span>
-
-		</button>
-
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item">
-					<a class="nav-link" href="/" class="page-scroll">Home</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="/wijnfestival/" class="page-scroll">🍷Wijnfestival</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="/menukaart/" class="page-scroll">Menukaart</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="/groepen/" class="page-scroll">Groepen</a>
-				</li>
-				<li class="nav-item">
-        			<a class="nav-link" href="/cultuur/" class="page-scroll">Cultuur</a>
-      			</li>
-				<li class="nav-item nav-link-reserveer ">
-					<a class="nav-link" href="/contact/" class="page-scroll">Reserveer</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+    <a class="navbar-brand js-scroll-trigger" href="/">DE CENTRALE</a>
+    <button class="navbar-toggler custom-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      <span class="my-1 close">
+        <svg fill="#000000" height="32" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+          <path d="M0 0h24v24H0z" fill="none"/>
+        </svg>
+      </span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link page-scroll" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link page-scroll" href="/wijnfestival/">🍷Wijnfestival</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link page-scroll" href="/menukaart/">Menukaart</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link page-scroll" href="/groepen/">Groepen</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link page-scroll" href="/cultuur/">Cultuur</a>
+        </li>
+        <li class="nav-item nav-link-reserveer active-reserveer">
+          <a class="nav-link page-scroll" href="/contact/">Reserveer</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
 	<!-- content-reserveren -->
 	<div class="page-title-white container-s reserveren-content">
@@ -92,36 +82,36 @@
 		<p>Je bericht is verstuurd. We gaan kijken of we een plekje hebben en nemen dan zo snel mogelijk contact met je op.</p>
 	</div>
 
-<footer class="container-l">
+  <footer class="container-l">
     <div class="row">
-        <div class="footer-box col-md-3 text-center">
-            <h6>Contact<br></h6>
-            <p>015 - 889 27 77<br>hallo@decentraledelft.nl</p>
-        </div>
-        
-        <div class="footer-box col-md-3 text-center">
-            <h6>Openingstijden<br></h6>
-            <p>ma, wo, do, vr, za en zo open vanaf 17:30,<br>alleen dinsdag gesloten<br></p>
+      <div class="footer-box col-md-3 text-center">
+        <h6>Contact</h6>
+        <p>015 - 889 27 77</p>
+        <p>hallo@decentraledelft.nl</p>
       </div>
-        <div class="footer-box col-md-3 text-center">
-            <h6>Locatie<br></h6>
-            <p>Voldersgracht 2<br>2611 ET Delft</p><a href="https://www.google.nl/maps/place/Voldersgracht+2,+2611+ET+Delft/@52.011741,4.355754,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5b5c3b08304c5:0x79ad52aba43f8354!8m2!3d52.011741!4d4.357948" target="_blank">route</a>
-        </div>
-
-        <div class="col-md-3 text-center">
-            <a href="https://www.facebook.com/decentraledelft" target="_blank">facebook</a><br>
-            <a href="https://www.instagram.com/decentraledelft/" target="_blank">instagram</a>
-        </div>
-
-  </div>
-</footer> 
+      <div class="footer-box col-md-3 text-center">
+        <h6>Openingstijden</h6>
+        <p>ma, wo, do, vr, za en zo open vanaf 17:30</p>
+        <p>alleen dinsdag gesloten</p>
+      </div>
+      <div class="footer-box col-md-3 text-center">
+        <h6>Locatie</h6>
+        <p>Voldersgracht 2<br>2611 ET Delft</p>
+        <a href="https://www.google.nl/maps/place/Voldersgracht+2,+2611+ET+Delft/@52.011741,4.355754,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5b5c3b08304c5:0x79ad52aba43f8354!8m2!3d52.011741!4d4.357948" target="_blank" rel="noopener">
+          Route
+        </a>
+      </div>
+      <div class="col-md-3 text-center">
+        <p><a href="https://www.facebook.com/decentraledelft" target="_blank" rel="noopener">Facebook</a></p>
+        <p><a href="https://www.instagram.com/decentraledelft/" target="_blank" rel="noopener">Instagram</a></p>
+      </div>
+    </div>
+  </footer>
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-
-
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
+</html>
