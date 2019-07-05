@@ -561,6 +561,9 @@ button:hover, button:focus, button:active {
 }
 }
 
+.vacature-1{
+    background: url(img/vacatures/vacature1.jpg) center/cover no-repeat;
+}
 /*******************/
 /*KUNST PAGINA*/
 .kunst-titel-block{
