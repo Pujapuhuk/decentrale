@@ -751,15 +751,15 @@ button:hover, button:focus, button:active {
       height:30vh;
   }
 }
-.maaike-1{
-    background: url(img/cultuur/maaike-1.jpg) center/cover no-repeat;
+.kunst-1{
+    background: url(img/cultuur/kunst1.jpg) center/cover no-repeat;
     margin-bottom:40px;
 }
-.maaike-2{
-    background: url(img/cultuur/maaike-2.jpg) center/cover no-repeat;
+.kunst-2{
+    background: url(img/cultuur/kunst2.jpg) center/cover no-repeat;
     margin-bottom:0px;
 }
-.maaike-3{
+.kunst-3{
     background: url(img/cultuur/maaike-3.jpg) center/cover no-repeat;
     margin-bottom:40px;
     margin-top:20px;
