@@ -83,6 +83,7 @@
       <p>Reserveren voor het diner kan via onderstaand formulier. Let op! Je reservering staat
         pas vast als je een bevestigende e-mail van ons hebt ontvangen. Bel je liever?
         Doe dat dan tijdens onze openingstijden op <br>015-8892777.</p>
+        <p>☀️ Maandag 15 juli t/m donderdag 18 juli en maandag 19 augustus t/m donderdag 22 augustus zijn wij gesloten.</p>
     </div>
     <div class="container-s">
       <form id="contact-form" method="post" action="/.netlify/functions/send-mail" autocomplete="off">
@@ -335,7 +336,8 @@
       $(document).ready(() => {
         const datepickerConfig = {
           weekStart: 1,
-          daysOfWeekDisabled: '2',
+          daysOfWeekDisabled: '5',
+          datesDisabled: ['15/07/2019','17/07/2019','18/07/2019','19/08/2019','21/08/2019','22/08/2019'],
           autoclose: true,
           format: 'dd-mm-yyyy',
           startDate: '+0d',
