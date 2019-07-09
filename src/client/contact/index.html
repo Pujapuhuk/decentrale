@@ -239,7 +239,7 @@
         const offset = -(new Date().getTimezoneOffset() / 60)
         const events = formatEvents(items)
         const selectedDate = getSelectedDate()
-        const disabledDayOfWeek = dayjs(selectedDate).day() === 5 // 5 = Friday
+        const disabledDayOfWeek = dayjs(selectedDate).day() === 2 // 2 = Tuesday
         disabledDayOfWeek
           ? selectElement.disabled = true
           : selectElement.disabled = false
