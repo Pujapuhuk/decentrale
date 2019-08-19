@@ -8,19 +8,44 @@
 
 
 <url>
-  <loc>http://www.decentraledelft.nl/</loc>
-  <lastmod>2018-10-11T19:41:14+00:00</lastmod>
+  <loc>https://www.decentraledelft.nl/</loc>
+  <lastmod>2019-08-19T08:54:44+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://www.decentraledelft.nl/menukaart/</loc>
-  <lastmod>2018-10-11T19:41:24+00:00</lastmod>
+  <loc>https://www.decentraledelft.nl/menukaart/</loc>
+  <lastmod>2019-08-19T08:54:44+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.decentraledelft.nl/contact/</loc>
-  <lastmod>2018-10-11T19:51:43+00:00</lastmod>
+  <loc>https://www.decentraledelft.nl/wijnkaart/</loc>
+  <lastmod>2019-08-19T08:54:44+00:00</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.decentraledelft.nl/groepen/</loc>
+  <lastmod>2019-08-19T08:54:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.decentraledelft.nl/kunst/</loc>
+  <lastmod>2019-08-19T08:54:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.decentraledelft.nl/vacatures/</loc>
+  <lastmod>2019-08-19T08:54:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.decentraledelft.nl/contact/</loc>
+  <lastmod>2019-08-19T08:54:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.decentraledelft.nl/menukaart-en/</loc>
+  <lastmod>2019-08-19T08:54:44+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 
