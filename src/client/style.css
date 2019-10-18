@@ -529,6 +529,7 @@ button:hover, button:focus, button:active {
     -webkit-box-shadow: 4px 4px 53px -10px rgba(0,0,0,0.75);
         -moz-box-shadow: 4px 4px 53px -10px rgba(0,0,0,0.75);
             box-shadow: 4px 4px 53px -10px rgba(0,0,0,0.75);
+            margin-bottom:40px;
 }
 @media (max-width: 480px) {
     .menukaart-content{
