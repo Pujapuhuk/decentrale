@@ -75,7 +75,7 @@ h4{
     font-size: 32px;
     font-family: 'Gabriela', serif;
     letter-spacing:1.2px;  
-    text-align:center;
+    text-align:left;
     margin-bottom:30px;
 }
 
@@ -614,12 +614,17 @@ button:hover, button:focus, button:active {
     margin-top:-160px;
 }
 .sub-page-column{
-    padding-left:20px;
-    padding-right:20px;
+    padding-left:28px;
+    padding-right:28px;
 }
 .sub-page-info-block{
-    border: 4px solid black;
-    padding:32px;
+    /*border: 4px solid black;*/
+    padding:0px;
+    margin-bottom: 40px;
+}
+.sub-page-info-block-kunst{
+    /*border: 4px solid black;*/
+    padding:16px;
     margin-bottom: 40px;
 }
 .sub-page-yellow-block{
@@ -640,7 +645,7 @@ button:hover, button:focus, button:active {
 }
 @media (max-width: 768px) {
   .sub-page-info-block{
-    padding:20px;
+    padding:0px;
     }
   .sub-page-pink-block{
     padding:20px;
@@ -743,11 +748,11 @@ button:hover, button:focus, button:active {
 /*CULTUUR PAGINA*/
 /*******************/
 .cultuur-header{
-    background: url(img/cultuur/cultuur-header.jpg) 50% 20%/cover no-repeat;
+    background: url(img/cultuur/cultuur-header.jpg) 50% 50%/cover no-repeat;
 }
 @media (max-width: 480PX) {
   .cultuur-header {
-      background: url(img/cultuur/cultuur-header-S.jpg) 50% 20%/cover no-repeat;
+      background: url(img/cultuur/cultuur-header-S.jpg) 50% 50%/cover no-repeat;
       height:30vh;
   }
 }
