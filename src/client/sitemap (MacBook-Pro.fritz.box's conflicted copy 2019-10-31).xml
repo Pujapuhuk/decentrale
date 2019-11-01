@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://www.decentraledelft.nl/</loc>
+  <lastmod>2019-08-19T08:54:44+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.decentraledelft.nl/menukaart/</loc>
+  <lastmod>2019-08-19T08:54:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.decentraledelft.nl/wijnkaart/</loc>
+  <lastmod>2019-08-19T08:54:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.decentraledelft.nl/groepen/</loc>
+  <lastmod>2019-08-19T08:54:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.decentraledelft.nl/kunst/</loc>
+  <lastmod>2019-08-19T08:54:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.decentraledelft.nl/vacatures/</loc>
+  <lastmod>2019-08-19T08:54:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.decentraledelft.nl/contact/</loc>
+  <lastmod>2019-08-19T08:54:44+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.decentraledelft.nl/menukaart-en/</loc>
+  <lastmod>2019-08-19T08:54:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
