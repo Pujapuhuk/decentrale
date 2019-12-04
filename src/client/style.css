@@ -28,6 +28,20 @@ body, html {
     margin-left:auto;
     margin-right:auto;
 }
+.container-black{
+    background-color: #2f5645;
+    padding: 7px 40px 7px 40px;
+    color: white;
+}
+.container-black p {
+    font-family: 'Karla', sans-serif;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 0px;
+    font-size: 14px;
+    line-height: 28px;
+    margin-bottom:0;
+}
 @media (max-width: 768px) {
   .container-s{
     padding-left:40px;
@@ -804,8 +818,8 @@ button:hover, button:focus, button:active {
 }
 form{
     background-color: #EDEBEB;
-    padding:40px;
-    margin-top:40px;
+    padding:40px 40px 40px 40px;
+    margin-top:0px;
 }
 label{
     font-size:16px;
