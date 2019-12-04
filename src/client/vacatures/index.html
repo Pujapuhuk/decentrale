@@ -96,13 +96,23 @@
     <p></p>
   </div>
 
-  <div class="container-s">
-    <div class="vacature">
-      <h3>Bediening (2-3 dagen)</h3>
-      <p>Wil jij graag werken bij het leukste restaurant van Delft en heb je interesse voor mooie gerechten en goede wijn? <br><br> Wij zijn op zoek naar een nieuwe aanwinst in onze bediening voor 2 tot 3 dagen in de week!  <br><br>Stuur een mail naar <strong>werken@decentraledelft.nl</strong> t.a.v. Daan <br><br>
-Ervaring in de horeca is een pre.</p>
-<div class="image-square vacature-1"></div>
-</div>
+  <div class="container-m">
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-lg-6 sub-page-column">
+        <div class="vacature">
+          <h3>Bediening (2-3 dagen)</h3>
+          <p>Wil jij graag werken bij het leukste restaurant van Delft en heb je interesse voor mooie gerechten en goede wijn? <br><br> Wij zijn op zoek naar een nieuwe aanwinst in onze bediening voor 2 tot 3 dagen in de week!  <br><br>Stuur een mail naar <strong>werken@decentraledelft.nl</strong> t.a.v. Daan <br><br>Ervaring in de horeca is een pre.</p>
+          <div class="image-square vacature-1"></div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-6 sub-page-column">
+        <div class="vacature">
+           <h3>Afwasser</h3>
+            <p>Wij zoeken een afwasser voor 2/3 dagen in de week. Ben jij 17 of 18 jaar, niet vies van hard werken en wil je graag onderdeel zijn van een gezellig team?<br><br>Stuur een mail naar <strong>werken@decentraledelft.nl</strong> t.a.v. Daan <br><br></p>
+            <div class="image-square vacature-2"></div>
+        </div>
+      </div>
+    </div>
   </div>
   <footer class="container-l">
     <div class="row">
@@ -125,150 +135,12 @@ Ervaring in de horeca is een pre.</p>
     </div>
   </footer>
 
-  <script>
-    /**
-     * initialize Google Calendar API using our config.
-     */
-    function init() {
-      const ApiConfig = {
-        apiKey: 'AIzaSyAZNrZJmglPTHZphiJ80MmbD3stQGbbcJo',
-        discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest'],
-      }
-
-      gapi.client
-        .init(ApiConfig)
-        .then(() => requestCalendarEvents())
-        .then((res) => parseResponseResult(res))
-        .catch((err) => logError(err))
-    }
-
-    /**
-     * request all events from the calendar.
-     */
-    function requestCalendarEvents() {
-      const date = getSelectedDate()
-      const timeMin = dayjs(date).toString()
-      const timeMax = dayjs(date).add(1, 'day').subtract(1, 'second').toString()
-      const requestConfig = {
-        calendarId: '0pbhpkd9b1qik41539d52vu3ko@group.calendar.google.com',
-        alwaysIncludeEmail: false,
-        orderBy: 'startTime',
-        singleEvents: true,
-        timeMin: formatDate(timeMin, 'YYYY-MM-DDTHH:mm:ss[Z]'),
-        timeMax: formatDate(timeMax, 'YYYY-MM-DDTHH:mm:ss[Z]'),
-      }
-
-      return gapi.client.calendar.events.list(requestConfig)
-    }
-
-    /**
-     * parse the received response, and update the timeslots on the page.
-     */
-    function parseResponseResult(data) {
-      const body = JSON.parse(data.body)
-
-      if (body.items) {
-        updateTimeslots(body.items)
-      }
-    }
-
-    /**
-     * compare the received events times with the timeslots
-     * if a match is found, the corresponding timeslot is disabled.
-     */
-    function updateTimeslots(items) {
-      const timeslots = [...document.getElementById('timeslots').children]
-      const offset = -(new Date().getTimezoneOffset() / 60)
-      const events = formatEvents(items)
-      const date = getSelectedDate()
-
-      /* Remove selected and disabled attributes and reset the slot innerHTML */
-      timeslots.map(slot => {
-        slot.disabled = false
-        slot.selected = false
-        slot.innerHTML = slot.value
-      })
-
-      /* if timeslot falls between the start time and end time of a calendar event
-      we disable that timeslot and add '(vol)' after the value */
-      timeslots.map(slot => {
-        const dateTime = formatDate(`${date}T${slot.value}`, 'YYYY-MM-DDTHH:mm:ss[Z]')
-        const slotStartTime = dayjs(dateTime).unix()
-        const slotEndTime = dayjs(dateTime).add(1, 'minute').unix()
-
-        const match = events.find((event) =>
-          slotStartTime >= dayjs(event.startTime).unix() &&
-          slotEndTime <= dayjs(event.endTime).unix()
-        )
-
-        if (match) {
-          slot.disabled = true
-          slot.selected = false
-          slot.innerHTML = `${slot.value} (vol)`
-        }
-      })
-    }
-
-    /**
-     * Get the selected date.
-     * Returns date with format: mm/dd/yyyy
-     */
-    function getSelectedDate() {
-      const date = document.getElementById('form_date').value.split('-')
-      const newDate = [date[2], date[1], date[0]].join('-')
-      return formatDate(newDate, 'YYYY-MM-DD')
-    }
-
-    /**
-     *
-     */
-    function formatDate(date, format) {
-      const parsedDate = dayjs(date).toDate()
-      return dayjs(parsedDate).format(format).toString()
-    }
-
-    /**
-     * Format the received calendar events to only contain
-     * the necessary data we need.
-     */
-    function formatEvents(items) {
-      return items.map((item) => ({
-        id: item.id,
-        startTime: formatDate(item.start.dateTime, 'YYYY-MM-DDTHH:mm:ss[Z]'),
-        endTime: formatDate(item.end.dateTime, 'YYYY-MM-DDTHH:mm:ss[Z]'),
-      }))
-    }
-
-    /**
-     * Log any API errors
-     * format: error code, message
-     */
-    function logError(reason) {
-      const { error } = reason.result
-      console.error(error.code, error.message)
-    }
-
-    /**
-     * Start loading the Google API Client.
-     */
-    function initApiClient() {
-      gapi.load('client', init)
-    }
-  </script>
-
-  <!-- Google API Client -->
-  <script async defer src="https://apis.google.com/js/api.js"
-    onload="this.onload=function(){};initApiClient()"
-    onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
-
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="/js/jquery.1.11.1.js"></script>
 
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <script src="/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
-  <script src="/bootstrap-datepicker/locales/bootstrap-datepicker.nl.min.js"></script>
 
   <!-- Error message in form -->
   <script src="/js/validator.js"></script>
@@ -276,37 +148,4 @@ Ervaring in de horeca is een pre.</p>
   <!-- Validator on form -->
   <script src="/js/contact.js"></script>
 
-  <!-- DayJS -->
-  <script src="/js/dayjs.min.js"></script>
-
-  <script>
-    $(document).ready(() => {
-      const datepickerConfig = {
-        weekStart: 1,
-        daysOfWeekDisabled: '2',
-        autoclose: true,
-        format: 'dd-mm-yyyy',
-        startDate: '+0d',
-        language: 'nl',
-        todayHighlight: true,
-      }
-
-      // initialize datepicker
-      $('#form_date')
-        .datepicker(datepickerConfig)
-        .datepicker('setDate', new Date())
-        .on('changeDate', () => {
-          initApiClient()
-        })
-
-      // initialize navbar toggle behavior
-      $(document).click((event) => {
-        const clickover = $(event.target)
-        const opened = $('.navbar-collapse').hasClass('show')
-        if (opened === true && !clickover.hasClass('navbar-toggler')) {
-          $('.navbar-toggler').click()
-        }
-      })
-    })
-  </script>
 </body>
