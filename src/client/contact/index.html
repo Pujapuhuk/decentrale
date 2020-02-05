@@ -32,7 +32,13 @@
       ga('create', 'UA-36915461-3', 'auto');
       ga('send', 'pageview');
     </script>
+    <!-- reCaptcha -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+      function onSubmit(token) {
+        document.getElementById("demo-form").submit();
+      }
+    </script>
   </head>
   <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-light">
@@ -167,7 +173,7 @@
               </div>
             </div>
           </div>
-          <input type="submit" class="btn btn-success btn-send btn-form" value="VERSTUUR" />
+          <button type="submit" class="btn btn-success btn-send btn-form" value="VERSTUUR">VERSTUUR</button>
         </div>
       </form>
     </div>
