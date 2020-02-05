@@ -764,15 +764,15 @@ button:hover, button:focus, button:active {
   }
 }
 .kunst-1{
-    background: url(img/cultuur/kunst1.jpg) center/cover no-repeat;
+    background: url(img/cultuur/vivian1.jpg) center/cover no-repeat;
     margin-bottom:40px;
 }
 .kunst-2{
-    background: url(img/cultuur/kunst2.jpg) center/cover no-repeat;
-    margin-bottom:0px;
+    background: url(img/cultuur/kunst2.png) right/cover no-repeat;
+    margin-bottom:40px;
 }
 .kunst-3{
-    background: url(img/cultuur/maaike-3.jpg) center/cover no-repeat;
+    background: url(img/cultuur/vivian2.jpg) center/cover no-repeat;
     margin-bottom:40px;
     margin-top:20px;
 }
