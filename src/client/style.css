@@ -856,6 +856,18 @@ label{
     box-shadow: 2px;
     color: #fff;
 }
+.btn-form.disabled{
+    background-color: white; 
+    border: 2px solid #595959;
+    color:#595959;
+    letter-spacing:1.2px;  
+    box-shadow: none;
+}
+.btn-form:hover {
+    color: #fff;
+    background-color: #218838;
+    border-color: #1e7e34;
+}
 @media (max-width: 480px) {
   form {
     padding-top: 20px;
@@ -875,13 +887,7 @@ label{
     border-radius: 0px;
   }
 }
-.btn-success.disabled{
-    background-color: white; 
-    border: 2px solid #595959;
-    color:#595959;
-    letter-spacing:1.2px;  
-    box-shadow: none;
-}
+
 /*footer*/
 footer{
   background-color: #101010;
