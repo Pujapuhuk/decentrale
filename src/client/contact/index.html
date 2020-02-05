@@ -167,9 +167,6 @@
               </div>
             </div>
           </div>
-          <div class="messages"></div>
-          <div class="g-recaptcha" data-sitekey="6Lfe-9UUAAAAAMRzzLBpKmW2ewUFyGu44YvfHbJM" required="required" data-callback="correctCaptcha"></div>
-      <br/>
           <input type="submit" class="btn btn-success btn-send btn-form" value="VERSTUUR" />
         </div>
       </form>
@@ -201,17 +198,6 @@
     </footer>
 
     <script>
-      /**
-       * disable submit until recaptcha
-       */
-      $("form").each(function() {
-    $(this).find(':input[type="submit"]').prop('disabled', true);
-});
-function correctCaptcha() {
-    $("form").each(function() {
-        $(this).find(':input[type="submit"]').prop('disabled', false);
-    });
-}
       /**
        * initialize Google Calendar API using our config.
        */
