@@ -31,6 +31,15 @@ exports.handler = function (event, context, callback) {
 	const name = postData.name
 	const email = postData.email
 	const emailBody = getEmailBody(postData)
+	const honeyPotValue = postData.petsName
+
+	if (honeyPotValue) {
+		return callback(null, {
+			statusCode: 403,
+			body: 'FORBIDDEN'
+		})
+	}
+
 	const options = {
 		"From": `${name} <${EMAIL_FROM}>`,
 		"To": EMAIL_TO,
