@@ -888,6 +888,14 @@ label{
   }
 }
 
+.honing {
+    position: absolute;
+    width: 0;
+    height: 0;
+    clip: rect(0, 0, 0, 0);
+    z-index: -1;
+}
+
 /*footer*/
 footer{
   background-color: #101010;
