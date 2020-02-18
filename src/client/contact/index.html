@@ -362,10 +362,20 @@
           language: 'nl',
           todayHighlight: true,
         }
+
+        const currentDate = new Date()
+        let initialDate
+        // select Wednesday as default when it's Tuesday
+        if (currentDate.getDay() === 2) {
+          initialDate = new Date(new Date().setDate(currentDate.getDate() + 1))
+        } else {
+          initialDate = currentDate
+        }
+
         // initialize datepicker
         $('#form_date')
           .datepicker(datepickerConfig)
-          .datepicker('setDate', new Date())
+          .datepicker('setDate', initialDate)
           .on('changeDate', () => {
             initApiClient()
           })
