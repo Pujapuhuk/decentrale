@@ -1,5 +1,9 @@
 .icon-wijnpakket{
-    width:184px; 
-    margin-bottom:24px;
-    margin-top:20px;
+    width:120px; 
+    margin-bottom:12px;
+    margin-top:8px;
+}
+
+#eigen-vondst-container {
+    margin-bottom: 40px;
 }
