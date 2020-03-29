@@ -1,7 +1,7 @@
 .icon-wijnpakket{
-    width:120px; 
-    margin-bottom:12px;
-    margin-top:8px;
+    width:84px; 
+    margin-bottom:24px;
+    margin-top:20px;
 }
 
 #eigen-vondst-container {
@@ -57,3 +57,26 @@ table.blueTable {
     background:  #FFFAEB;
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.05);
   }
+  .hoe-bestellen{
+    margin-left:20% !important;
+    margin-right:20% !important;
+    text-align:center;
+  }
+  h1{
+    font-family: 'Karla', serif;
+    font-style:normal !important;
+    margin-bottom:16px;
+  }
+  h2 {
+    margin-top: 40px;
+    margin-bottom: 8px;
+}
+.shop-rules{
+    margin-bottom:40px;
+}
+.cadeaubon-footer{
+    background: url(../img/wijnpakket/wijn-tafel.jpg) 50% 50%/cover no-repeat;
+    background-size: 1400px;
+    min-height: 80vh;
+    margin-top:50px;  
+}
