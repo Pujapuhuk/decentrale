@@ -289,6 +289,10 @@ button:hover, button:focus, button:active {
 .nav-link-reserveer>a{
     border: 2px solid #000000;
 }
+.nav-link-wijnpakket>a{
+    background-color: #000000;
+    color: white !important; 
+}
 .navbar-nav > .nav-link-reserveer> a:hover{
     color:#000000;
     text-decoration: none;
