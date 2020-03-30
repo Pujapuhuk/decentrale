@@ -15,6 +15,11 @@ h1{
     text-transform: none;
     font-style:italic;
 }
+@media (max-width: 480px) {
+    h1{
+        font-size:24px;
+    }
+}
 h2 {
     font-family: 'Spectral', serif;
     font-size: 26px;
@@ -95,9 +100,6 @@ h2 {
         margin-top:16px;
     }
 }
-@media (max-width: 480px) {
-    
-}
 .wijn-container{
     display:flex;
     justify-content: space-between;
@@ -147,6 +149,13 @@ h2 {
 .bestellen{
     margin:44px;
     text-align: center;
+}
+
+@media (max-width: 480px) {
+    .bestellen{
+        margin:0px;
+        text-align: center;
+    }
 }
 .bestellen a{
     color: blue;
