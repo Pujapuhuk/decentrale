@@ -6,20 +6,6 @@ p{
     font-weight: 400;
     font-family: 'Spectral', serif;
 }
-h1{
-    font-size:36px;
-    color:white;
-    font-weight: 700;
-    height:48px;
-    letter-spacing: 0px;
-    text-transform: none;
-    font-style:italic;
-}
-@media (max-width: 480px) {
-    h1{
-        font-size:24px;
-    }
-}
 h2 {
     font-family: 'Spectral', serif;
     font-size: 26px;

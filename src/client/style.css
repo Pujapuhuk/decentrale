@@ -344,7 +344,7 @@ button:hover, button:focus, button:active {
 .home-header{
     background: url(../img/home/home-header.jpg) 50% 50%/cover no-repeat;
     background-size: 1800px;
-    min-height: 100vh;
+    min-height: 120vh;
     margin-top:50px;  
 }
 @media (max-width: 480PX) {
@@ -414,30 +414,19 @@ button:hover, button:focus, button:active {
 }
 
 .btn-pakketten{
-    font-size:20px;
+    font-size:18px;
     font-weight: 700;
     letter-spacing:1.2px;  
-    text-transform: uppercase;
-    padding:24px;
-    padding-left:32px;
-    padding-right:32px;
-    color:white;
-    background-color:#303030;
-    cursor:pointer;
-    border: none;
-}
-.btn-pakketten:hover{
-    font-size:20px;
-    font-weight: 700;
-    letter-spacing:1.2px;  
-    text-transform: uppercase;
-    padding:24px;
-    padding-left:32px;
-    padding-right:32px;
+    text-transform: none;
+    padding:12px;
+    padding-left:20px;
+    padding-right:20px;
     color:white;
     background-color:black;
     cursor:pointer;
     border: none;
+}
+.btn-pakketten:hover{
     -webkit-transform: scale(1.02);
     -moz-transform: scale(1.02);
     -ms-transform: scale(1.02);

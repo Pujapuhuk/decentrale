@@ -1,3 +1,18 @@
+h1{
+  font-family: 'Karla', sans-serif;
+  font-size:32px;
+  color:white;
+  font-weight: 700;
+  height:48px;
+  letter-spacing: 0px;
+  letter-spacing: 1px;
+  text-transform: none;
+}
+@media (max-width: 480px) {
+  h1{
+      font-size:24px;
+  }
+}
 .icon-wijnpakket{
     width:84px; 
     margin-bottom:24px;
