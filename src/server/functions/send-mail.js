@@ -26,10 +26,11 @@ exports.handler = function (event, context, callback) {
 	}
 
 	const postData = queryString.parse(event.body)
-	const date = postData.date
-	const time = postData.time
+	const datum = postData.date
+	const tijd = postData.time
 	const name = postData.name
 	const email = postData.email
+	const dress = postData.adress
 	const emailBody = getEmailBody(postData)
 	const honeyPotValue = postData.petsName
 
@@ -44,7 +45,7 @@ exports.handler = function (event, context, callback) {
 		"From": `${name} <${EMAIL_FROM}>`,
 		"To": EMAIL_TO,
 		"ReplyTo": email,
-		"Subject": `${date} - ${time} Reservering bij De Centrale`,
+		"Subject": `${datum} - ${tijd} Eten bestellen bij De Centrale`,
 		"TextBody": emailBody
 	}
 	const callbackHandler = {
