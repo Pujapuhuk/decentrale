@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <title>Reserveren | De Centrale</title>
+    <title>Eten bestellen | De Centrale</title>
     <meta name="description" content="Je kunt bij ons gemakkelijk resereveren met dit formulier.">
 
     <!-- favicon -->
@@ -55,7 +55,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a href="/menukaart/" class="nav-link page-scroll">Menukaart</a>
+            <a href="/menukaart/" class="nav-link page-scroll">Menu</a>
           </li>
           <li class="nav-item">
             <a href="/wijnkaart/" class="nav-link page-scroll">Wijnkaart</a>
@@ -66,29 +66,26 @@
           <li class="nav-item">
                 <a href="/kunst/" class="nav-link page-scroll">Kunst</a>
               </li>
-              <li class="nav-item">
-                <a href="/vacatures/" class="nav-link page-scroll">Vacatures</a>
-        </li>
         <li class="nav-item nav-link-wijnpakket">
-              <a href="/wijnpakket/" class="nav-link page-scroll">Bestel wijnpakket</a>
+              <a href="/wijnpakket/" class="nav-link page-scroll">Wijnpakket</a>
             </li>
      
           <li class="nav-item nav-link-reserveer ">
-            <a href="/contact/" class="nav-link page-scroll">Reserveer</a>
+            <a href="/contact/" class="nav-link page-scroll">Bestel eten</a>
           </li>
         </ul>
       </div>
     </nav>
     <div class="container-l page-title-contact d-block d-sm-none">
       <div class="page-title-text-wrap">
-        <h5>Reserveer</h5>
+        <h5>Bestel eten</h5>
       </div>
     </div>
     <!-- content-reserveren -->
     <div class="page-title-white container-s reserveren-content  d-none d-sm-block">
 
       <div class="page-title-text-wrap">
-        <h1>RESERVEER</h1>
+        <h1>BESTEL ETEN</h1>
       </div>
     </div>
     <div class="container-s page-intro-text text-center reserveren-intro">
@@ -96,11 +93,11 @@
         pas vast als je een bevestigende e-mail van ons hebt ontvangen. Bel je liever?
         Doe dat dan tijdens onze openingstijden op <br>015-8892777.</p>
     </div>
-    <div class="container-s">
+    <!--<div class="container-s">
       <div class="container-black">
         <p>Alles gereserveerd? Wij houden altijd een aantal tafels vrij voor de spontane bezoeker! </p>
       </div>
-    </div>
+    </div>-->
     <div class="container-s">
       <form id="contact-form" method="post" action="/.netlify/functions/send-mail" autocomplete="off">
         <div class="controls">
@@ -113,29 +110,55 @@
               </div>
             </div>
             <div class="col-xs-6 col-md-4">
-              <div class="form-group">
+       
                 <label for="timeslots">Hoe laat? *</label>
                 <div class="selectpicker">
                   <select id ="timeslots" name="time" class="form-control" required="required" data-error="Selecteer een tijd">
                     <option selected disabled value="">Kies een tijd</option>
-                    <option value="17:30">17:30</option>
-                    <option value="17:30">17:30</option>
-                    <option value="18:00">18:00</option>
-                    <option value="18:30">18:30</option>
-                    <option value="19:00">19:00</option>
-                    <option value="19:30">19:30</option>
-                    <option value="20:00">20:00</option>
-                    <option value="20:30">20:30</option>
-                    <option value="21:00">21:00</option>
+                    <option value="17:30">bezorgen</option>
+                    <option value="18:30">afhalen</option>
                   </select>
-                </div>
+
               </div>
             </div>
             <div class="col-xs-6 col-md-4">
               <div class="form-group">
-                <label for="form_number">Hoeveel personen? *</label>
-                <input id="form_number" name="number" type="number" class="formnumber form-control" placeholder="" min="1" required="required" data-error="Geef een aantal op." />
+                <select id ="form_number" name="number" class="formnumber form-control" required="required" data-error="Selecteer een aantal">
+                  <option selected disabled value="">Hoeveel personen?</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="3">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                </select>
                 <div class="help-block with-errors"></div>
+              </div>
+            </div>
+            
+            <div class="col-xs-6 col-md-4">
+              <div class="form-group">
+                <select id ="form_menuType" name="menuType" class="form-control" required="required" data-error="Selecteer een aantal">
+                  <option selected disabled value="">Hoeveel gangen?</option>
+                  <option value="2">3-gangen</option>
+                  <option value="3">4-gangen</option>
+                </select>
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+      
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-md-12">
+              <p>Extra's:</p>
+              <div>
+                <input type="checkbox" id="oesters" name="oester"
+                      checked>
+                <label for="oesters">Oesters (6,00 p.p.)</label>
+              </div>
+
+              <div>
+                <input type="checkbox" id="kaas" name="kaas">
+                <label for="kaas">Kaas (4,00 p.p.)</label>
               </div>
             </div>
           </div>
@@ -170,6 +193,15 @@
               <div class="form-group">
                 <label for="form_phone">Telefoonnummer *</label>
                 <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="" required="required" data-error="Als je wilt reserveren hebben we een telefoonnummer nodig.">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-md-8">
+              <div class="form-group">
+                <label for="form_adress">Bezorg adress</label>
+                <input id="form_adress" type="adress" name="adress" class="form-control" placeholder="" required="required" data-error="Als je wilt reserveren hebben we een telefoonnummer nodig.">
                 <div class="help-block with-errors"></div>
               </div>
             </div>
