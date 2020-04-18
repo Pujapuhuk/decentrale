@@ -11,7 +11,7 @@ const client = new postmark.Client(POSTMARK_SERVER_TOKEN)
 
 function getEmailBody(data) {
 	return Object.keys(data).reduce((order, next) => {
-		order += `${next}\n ${data[next]}\n\n`
+		order += `${next}\n ${data[next]}\n\n` +  `${time}` + `'kan ik nog iets kwijt?'`
 		return order
 	}, '')
 }
@@ -26,11 +26,10 @@ exports.handler = function (event, context, callback) {
 	}
 
 	const postData = queryString.parse(event.body)
-	const datum = postData.date
-	const tijd = postData.time
+	const date = postData.date
+	const time = postData.time
 	const name = postData.name
 	const email = postData.email
-	const dress = postData.adress
 	const emailBody = getEmailBody(postData)
 	const honeyPotValue = postData.petsName
 
@@ -45,7 +44,7 @@ exports.handler = function (event, context, callback) {
 		"From": `${name} <${EMAIL_FROM}>`,
 		"To": EMAIL_TO,
 		"ReplyTo": email,
-		"Subject": `${datum} - ${tijd} Eten bestellen bij De Centrale`,
+		"Subject": `${date} - ${time} Eten bestellen bij De Centrale`,
 		"TextBody": emailBody
 	}
 	const callbackHandler = {
