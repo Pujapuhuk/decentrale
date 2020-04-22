@@ -11,7 +11,7 @@ const client = new postmark.Client(POSTMARK_SERVER_TOKEN)
 
 function getEmailBody(data) {
 	return Object.keys(data).reduce((order, next) => {
-		order += `${next}\n ${data[next]}\n\n` + `'kan ik nog iets kwijt?'`
+		order += `${next}\n ${data[next]}\n\n`
 		return order
 	}, '')
 }
