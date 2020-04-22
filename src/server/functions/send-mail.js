@@ -11,7 +11,7 @@ const client = new postmark.Client(POSTMARK_SERVER_TOKEN)
 
 function getEmailBody(data) {
 	return Object.keys(data).reduce((order, next) => {
-		order += `${date}\n ${next}\n ${data[next]}\n\n`
+		order += `${next}\n ${data[next]}\n\n`
 		return order
 	}, '')
 }
@@ -45,7 +45,8 @@ exports.handler = function (event, context, callback) {
 		"To": EMAIL_TO,
 		"ReplyTo": email,
 		"Subject": `${date} Eten bestellen bij De Centrale`,
-		"TextBody": emailBody
+		"TextBody": `Ik wil graag ${2-menu-type-3-vega} x 3 gangen vega, ${1-menu-type-3-standaard} x 3 gangen standaar \n
+		Extr's ${5-oesters}`
 	}
 	const callbackHandler = {
 		statusCode: 302,
