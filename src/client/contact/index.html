@@ -89,10 +89,11 @@
       </div>
     </div>
     <div class="container-s page-intro-text text-center reserveren-intro">
-      <p>Bestel ons menu van 3 of 4 gangen voor aan je eigen keukentafel. Hoe? Wij doen alle voorbereidingen. 
-        Alleen voor het hoofdgerecht hoef je nog een klein aantal, simpele handelingen te verrichten. Met onze 
-        instructies kan een kind de was doen! <br> <button class="btn-header btn-reserveer" onclick="parent.location='/menukaart/'">Menu</button>
-        <p>Afhalen en bezorgen is mogelijk op vrijdag, zaterdag en zondag. Bestel met het onderstaande formulier.</p>
+      <p>Bestel ons menu van 3 of 4 gangen voor thuis. Hoe? Wij doen alle voorbereidingen. 
+        Het werkt heel makkelijk, want wij bereiden alles voor. Alleen het hoofdgerecht geef je 
+        thuis de finishing touch door onze eenvoudige instructies te volgen. Een kind kan de was doen!<br> 
+        <button class="btn-header btn-round" onclick="parent.location='/menukaart/'">Bekijk menu</button>
+        <p>🚚 Afhalen en bezorgen is mogelijk op vrijdag, zaterdag en zondag. <br>  ⬇️ Bestel met het onderstaande formulier.</p>
     </div>
     <!--<div class="container-s">
       <div class="container-black">
@@ -177,11 +178,11 @@
         </div>
         <div class="form-group">
           <input type="checkbox" id="bijpassend_speciaal" name="7-bijpassend-speciaal">
-          <label for="bijpassend_speciaal"><a href="https://www.alain-voge.com/en/saint-peray/les-bulles-d-alain"> Rhône Cremant:  Bulles d’Alain – A.O.P. Saint-Péray – 2014 (bio)</a>(40,00)</label>
+          <label for="bijpassend_speciaal">Bubbel<a href="https://www.alain-voge.com/en/saint-peray/les-bulles-d-alain">Rhône Cremant:  Bulles d’Alain – A.O.P. Saint-Péray – 2014 (bio)</a>(40,00)</label>
         </div>
         <div class="form-group">
           <input type="checkbox" id="bijpassend_pakket" name="7-bijpassend-pakket">
-          <label for="bijpassend_pakket"> Bijpassend wijnpakket, 3 flessen bij voor, hoofd en na) (45,00)</label>
+          <label for="bijpassend_pakket"> Bijpassend wijnpakket, 3 flessen bij voor, hoofd en na. (45,00)</label>
         </div>
       </div>
     </div>
@@ -206,10 +207,21 @@
         <div class="form-group">
           <label for="form_methode">Bezorgen of afhalen?</label>
           <div class="selectpicker">
-            <select id ="timeslots" name="time" class="form-control" required="required" data-error="Selecteer een tijd">
-              <option selected disabled value="">---</option>
-              <option value="bezorgen">bezorgen</option>
-              <option value="afhalen">afhalen</option>
+            <select id ="form_methode" name="9-methode" class="form-control" required="required" data-error="Selecteer een tijd">
+              <option selected disabled value="">Kies</option>
+              <option value="bezorgen">Bezorgen [tussen 14:00 - 17:00]</option>
+              <option value="afhalen">Afhalen</option>
+            </select>
+          </div>
+          <label for="form_afhaal_tijd">Indien afhalen, hoe laat?</label>
+          <div class="selectpicker">
+            <select id ="form_afhaal_tijd" name="10-afhalen-tijd" class="form-control">
+              <option selected disabled value="">Kies</option>
+              <option value="afhalen-16:00">16:00</option>
+              <option value="afhalen-16:30">16:30</option>
+              <option value="afhalen-17:00">17:00</option>
+              <option value="afhalen-17:30">17:30</option>
+              <option value="afhalen-18:00">18:00</option>
             </select>
           </div>
         <div class="help-block with-errors"></div>
@@ -220,14 +232,14 @@
     <div class="row">
       <div class="col-md-12">
         <h6>Persoonlijke gegevens?</h6>
-        <p>Geef aan wanneer je wilt eten en of je het komt halen of dat wij het kunnen bezorgen.</p>
+        <p>Wanneer je hebt besteld, nemen we zo snel mogelijk contact met je op.</p>
       </div>
     </div>
     <div class="row">
       <div class="col-xs-12 col-md-8">
         <div class="form-group">
           <label for="form_name">Naam *</label>
-          <input id="form_name" type="text" name="name" class="form-control" placeholder="" required="required" data-error="Vul een naam in.">
+          <input id="form_name" type="text" name="11-name" class="form-control" placeholder="" required="required" data-error="Vul een naam in.">
           <div class="help-block with-errors"></div>
         </div>
       </div>
@@ -236,7 +248,7 @@
       <div class="col-xs-12 col-md-8">
         <div class="form-group">
           <label for="form_email">Email *</label>
-          <input id="form_email" type="email" name="email" class="form-control" placeholder="" required="required" data-error="Vul een geldig emailadres in.">
+          <input id="form_email" type="email" name="12-email" class="form-control" placeholder="" required="required" data-error="Vul een geldig emailadres in.">
           <div class="help-block with-errors"></div>
         </div>
       </div>
@@ -245,7 +257,7 @@
       <div class="col-xs-12 col-md-8">
         <div class="form-group">
           <label for="form_phone">Telefoonnummer *</label>
-          <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="" required="required" data-error="Als je wilt reserveren hebben we een telefoonnummer nodig.">
+          <input id="form_phone" type="tel" name="13-phone" class="form-control" placeholder="" required="required" data-error="Als je wilt reserveren hebben we een telefoonnummer nodig.">
           <div class="help-block with-errors"></div>
         </div>
       </div>
@@ -253,46 +265,43 @@
     <div class="row">
       <div class="col-xs-12 col-md-8">
         <div class="form-group">
-          <label for="form_adress">Bezorg adress (straat & postcode)</label>
-          <input id="form_adress" type="adress" name="adress" class="form-control" placeholder="" required="required" data-error="Als je wilt reserveren hebben we een telefoonnummer nodig.">
+          <label for="form_adress">Bezorg adres (straat, huisnummer & postcode)</label>
+          <input id="form_adress" type="adress" name="14-adress" class="form-control" placeholder="" required="required" data-error="Als je wilt reserveren hebben we een telefoonnummer nodig.">
           <div class="help-block with-errors"></div>
         </div>
       </div>
     </div>            
-  
-          
-          <label class="honing" tabindex="-1" aria-hidden="true">
-            <input type="text" name="petsName">
-          </label>
-          <button type="submit" class="btn-form">VERSTUUR</button>
-        </div>
-      </form>
+    <label class="honing" tabindex="-1" aria-hidden="true">
+    <input type="text" name="petsName"></label>
+    <button type="submit" class="btn-form">VERSTUUR</button>
+</form>
+</div>
+
+<footer class="container-l">
+  <div class="row">
+    <div class="footer-box col-md-3 text-center">
+      <h6>Contact</h6>
+      <p>015 - 889 27 77</p>
+      <p>hallo@decentraledelft.nl</p>
     </div>
-    <footer class="container-l">
-      <div class="row">
-        <div class="footer-box col-md-3 text-center">
-          <h6>Contact</h6>
-          <p>015 - 889 27 77</p>
-          <p>hallo@decentraledelft.nl</p>
-        </div>
-        <div class="footer-box col-md-3 text-center">
-          <h6>Openingstijden</h6>
-          <p>ma, wo, do, vr, za en zo open vanaf 17:30</p>
-          <p>alleen dinsdag gesloten</p>
-        </div>
-        <div class="footer-box col-md-3 text-center">
-          <h6>Locatie</h6>
-          <p>Voldersgracht 2<br>2611 ET Delft</p>
-          <a href="https://www.google.nl/maps/place/Voldersgracht+2,+2611+ET+Delft/@52.011741,4.355754,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5b5c3b08304c5:0x79ad52aba43f8354!8m2!3d52.011741!4d4.357948" target="_blank" rel="noopener">
-            Route
-          </a>
-        </div>
-        <div class="col-md-3 text-center">
-          <p><a href="https://www.facebook.com/decentraledelft" target="_blank" rel="noopener">Facebook</a></p>
-          <p><a href="https://www.instagram.com/decentraledelft/" target="_blank" rel="noopener">Instagram</a></p>
-        </div>
-      </div>
-    </footer>
+    <div class="footer-box col-md-3 text-center">
+      <h6>Openingstijden</h6>
+      <p>ma, wo, do, vr, za en zo open vanaf 17:30</p>
+      <p>alleen dinsdag gesloten</p>
+    </div>
+    <div class="footer-box col-md-3 text-center">
+      <h6>Locatie</h6>
+      <p>Voldersgracht 2<br>2611 ET Delft</p>
+      <a href="https://www.google.nl/maps/place/Voldersgracht+2,+2611+ET+Delft/@52.011741,4.355754,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5b5c3b08304c5:0x79ad52aba43f8354!8m2!3d52.011741!4d4.357948" target="_blank" rel="noopener">
+        Route
+      </a>
+    </div>
+    <div class="col-md-3 text-center">
+      <p><a href="https://www.facebook.com/decentraledelft" target="_blank" rel="noopener">Facebook</a></p>
+      <p><a href="https://www.instagram.com/decentraledelft/" target="_blank" rel="noopener">Instagram</a></p>
+    </div>
+  </div>
+</footer>
 
     <script>
       /**
