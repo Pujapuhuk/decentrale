@@ -156,6 +156,7 @@ a{
 }
 
 button {
+    font-family:'Karla', sans-serif;
     font-size:20px;
     font-weight: 700;
     letter-spacing:1.2px;  
@@ -896,10 +897,27 @@ form{
     padding:24px 40px 40px 40px;
     margin-top:0px;
 }
+form p{
+    font-family: 'Karla';
+    font-size:14px;
+    letter-spacing:0.1px;
+    color:grey;
+}
+form h6{
+    margin-bottom:-8px;
+}
+form a{
+    font-size:14px;
+    color:blue;
+}
 label{
     font-size:14px;
     letter-spacing:0.1px;
     margin-bottom:4px;
+}
+.small-field{
+    width:100px !important;
+    float:right;
 }
 .form-control {
     display: block;

@@ -85,127 +85,182 @@
     <div class="page-title-white container-s reserveren-content  d-none d-sm-block">
 
       <div class="page-title-text-wrap">
-        <h1>BESTEL ETEN</h1>
+        <h1>BESTELLEN</h1>
       </div>
     </div>
     <div class="container-s page-intro-text text-center reserveren-intro">
-      <p>Reserveren voor het diner kan via onderstaand formulier. Let op! Je reservering staat
-        pas vast als je een bevestigende e-mail van ons hebt ontvangen. Bel je liever?
-        Doe dat dan tijdens onze openingstijden op <br>015-8892777.</p>
+      <p>Bestel ons menu van 3 of 4 gangen voor aan je eigen keukentafel. Hoe? Wij doen alle voorbereidingen. 
+        Alleen voor het hoofdgerecht hoef je nog een klein aantal, simpele handelingen te verrichten. Met onze 
+        instructies kan een kind de was doen! <br> <button class="btn-header btn-reserveer" onclick="parent.location='/menukaart/'">Menu</button>
+        <p>Afhalen en bezorgen is mogelijk op vrijdag, zaterdag en zondag. Bestel met het onderstaande formulier.</p>
     </div>
     <!--<div class="container-s">
       <div class="container-black">
         <p>Alles gereserveerd? Wij houden altijd een aantal tafels vrij voor de spontane bezoeker! </p>
       </div>
     </div>-->
-    <div class="container-s">
-      <form id="contact-form" method="post" action="/.netlify/functions/send-mail" autocomplete="off">
-        <div class="controls">
-          <div class="row">
-            <div class="col-xs-12 col-md-8">
-              <div class="form-group">
-                <label for="form_date">Welke dag wil je komen?</label>
-                <input id="form_date" name="date" type="text" class="form-control formnumber" placeholder="dd/mm/yyyy"  required="required" data-error="Selecteer een dag" />
-                <div class="help-block with-errors"></div>
-              </div>
-            </div>
-            <div class="col-xs-6 col-md-4">
-       
-                <label for="timeslots">Hoe laat? *</label>
-                <div class="selectpicker">
-                  <select id ="timeslots" name="time" class="form-control" required="required" data-error="Selecteer een tijd">
-                    <option selected disabled value="">Kies een tijd</option>
-                    <option value="17:30">bezorgen</option>
-                    <option value="18:30">afhalen</option>
-                  </select>
-
-              </div>
-            </div>
-            <div class="col-xs-6 col-md-4">
-              <div class="form-group">
-                <select id ="form_number" name="number" class="formnumber form-control" required="required" data-error="Selecteer een aantal">
-                  <option selected disabled value="">Hoeveel personen?</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="3">4</option>
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                </select>
-                <div class="help-block with-errors"></div>
-              </div>
-            </div>
-            
-            <div class="col-xs-6 col-md-4">
-              <div class="form-group">
-                <select id ="form_menuType" name="1_menuType" class="form-control" required="required" data-error="Selecteer een aantal">
-                  <option selected disabled value="">Hoeveel gangen?</option>
-                  <option value="3-gangen">3-gangen</option>
-                  <option value="4-gangen">4-gangen</option>
-                </select>
-                <div class="help-block with-errors"></div>
-              </div>
-            </div>
-      
+<div class="container-s">
+  <form id="contact-form" method="post" action="/.netlify/functions/send-mail" autocomplete="off">
+    <div class="row">
+      <div class="col-md-12">
+        <h6>KIES MENU</h6>
+        <p>Vanaf twee personen</p>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="3_gangen_standaard" class="col-sm-6">3-gangen standaard (29,50 p.p.)</label>
+      <div class="col-sm-6">
+          <input type="number" class="form-control small-field" name="1-menu-type-3-standaard" id="3_gangen_standaard">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="3_gangen_vega" class="col-sm-6">3-gangen vega (29,50 p.p.)</label>
+      <div class="col-sm-6">
+          <input type="number" class="form-control small-field" name="2-menu-type-3-vega" id="3_gangen_vega">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="4_gangen_standaard" class="col-sm-6">4-gangen standaard (34,50 p.p.)</label>
+      <div class="col-sm-6">
+          <input type="number" class="form-control small-field" name="3-menu-type-4-standaard" id="4_gangen_standaard">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="4_gangen_vega" class="col-sm-6">4-gangen vega (34,50 p.p.)</label>
+      <div class="col-sm-6">
+          <input type="number" class="form-control small-field" name="4-menu-type-4-vega" id="4_gangen_vega">
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-12">
+        <h6>KIES EXTRA'S</h6>
+        <p>Oesters vooraf of kaas als extra gang</p>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="oesters" class="col-sm-6">Oester (Incl. oestermes)</label>
+      <div class="col-sm-6">
+        <div class="selectpicker">
+          <select id="oesters" name="5-oesters" class="form-control small-field">
+            <option selected disabled value="">Hoeveel?</option>
+            <option value="6-stuks">6 st. (18,00)</option>
+            <option value="12-stuks">12 st. (36,00)</option>
+            <option value="18-stuks">18 st. (54,00)</option>
+            <option value="24-stuks">24 st. (72,00)</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="kaas" class="col-sm-6">Kaas (10,00 p.p.)</label>
+      <div class="col-sm-6">
+          <input type="number" class="form-control small-field" name="6-kaas" id="kaas">
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-12">
+        <h6>KIES WIJN</h6>
+        <p>Bijpassende flessen wijn of wijnpakketten</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="checkbox" id="bijpassend_wit" name="7-bijpassend-wit">
+          <label for="bijpassend_wit"> Bijpassend wit (17,50)</label>
+        </div>
+        <div class="form-group">
+          <input type="checkbox" id="bijpassend_rood" name="7-bijpassend-rood">
+          <label for="bijpassend_rood"> Bijpassend rood (17,50)</label>
+        </div>
+        <div class="form-group">
+          <input type="checkbox" id="bijpassend_speciaal" name="7-bijpassend-speciaal">
+          <label for="bijpassend_speciaal"><a href="https://www.alain-voge.com/en/saint-peray/les-bulles-d-alain"> Rhône Cremant:  Bulles d’Alain – A.O.P. Saint-Péray – 2014 (bio)</a>(40,00)</label>
+        </div>
+        <div class="form-group">
+          <input type="checkbox" id="bijpassend_pakket" name="7-bijpassend-pakket">
+          <label for="bijpassend_pakket"> Bijpassend wijnpakket, 3 flessen bij voor, hoofd en na) (45,00)</label>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-12">
+        <h6>WANNEER?</h6>
+        <p>Geef aan wanneer je wilt eten en of je het komt halen of dat wij het kunnen bezorgen.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-8">
+        <div class="form-group">
+          <label for="form_date">Welke dag wil je eten?</label>
+          <input id="form_date" name="8-date" type="text" class="form-control formnumber" placeholder="dd/mm/yyyy"  required="required" data-error="Selecteer een dag" />
+          <div class="help-block with-errors"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-8">
+        <div class="form-group">
+          <label for="form_methode">Bezorgen of afhalen?</label>
+          <div class="selectpicker">
+            <select id ="timeslots" name="time" class="form-control" required="required" data-error="Selecteer een tijd">
+              <option selected disabled value="">---</option>
+              <option value="bezorgen">bezorgen</option>
+              <option value="afhalen">afhalen</option>
+            </select>
           </div>
-          <div class="row">
-            <div class="col-xs-12 col-md-12">
-              <p>Extra's:</p>
-              <div>
-                <input type="checkbox" id="oesters" name="oester"
-                      checked>
-                <label for="oesters">Oesters (6,00 p.p.)</label>
-              </div>
-
-              <div>
-                <input type="checkbox" id="kaas" name="kaas">
-                <label for="kaas">Kaas (4,00 p.p.)</label>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12 col-md-12">
-              <div class="form-group">
-                <label for="form_message">Zijn er allergieën of andere eetwensen waar we rekening mee moeten houden?</label>
-                <textarea id="form_message" name="message" class="form-control textarea-form" placeholder="" rows="4" data-error=""></textarea>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12 col-md-8">
-              <div class="form-group">
-                <label for="form_name">Naam *</label>
-                <input id="form_name" type="text" name="name" class="form-control" placeholder="" required="required" data-error="Vul een naam in.">
-                <div class="help-block with-errors"></div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12 col-md-8">
-              <div class="form-group">
-                <label for="form_email">Email *</label>
-                <input id="form_email" type="email" name="email" class="form-control" placeholder="" required="required" data-error="Vul een geldig emailadres in.">
-                <div class="help-block with-errors"></div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12 col-md-8">
-              <div class="form-group">
-                <label for="form_phone">Telefoonnummer *</label>
-                <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="" required="required" data-error="Als je wilt reserveren hebben we een telefoonnummer nodig.">
-                <div class="help-block with-errors"></div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12 col-md-8">
-              <div class="form-group">
-                <label for="form_adress">Bezorg adress</label>
-                <input id="form_adress" type="adress" name="adress" class="form-control" placeholder="" required="required" data-error="Als je wilt reserveren hebben we een telefoonnummer nodig.">
-                <div class="help-block with-errors"></div>
-              </div>
-            </div>
-          </div>
+        <div class="help-block with-errors"></div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-12">
+        <h6>Persoonlijke gegevens?</h6>
+        <p>Geef aan wanneer je wilt eten en of je het komt halen of dat wij het kunnen bezorgen.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-8">
+        <div class="form-group">
+          <label for="form_name">Naam *</label>
+          <input id="form_name" type="text" name="name" class="form-control" placeholder="" required="required" data-error="Vul een naam in.">
+          <div class="help-block with-errors"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-8">
+        <div class="form-group">
+          <label for="form_email">Email *</label>
+          <input id="form_email" type="email" name="email" class="form-control" placeholder="" required="required" data-error="Vul een geldig emailadres in.">
+          <div class="help-block with-errors"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-8">
+        <div class="form-group">
+          <label for="form_phone">Telefoonnummer *</label>
+          <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="" required="required" data-error="Als je wilt reserveren hebben we een telefoonnummer nodig.">
+          <div class="help-block with-errors"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-8">
+        <div class="form-group">
+          <label for="form_adress">Bezorg adress (straat & postcode)</label>
+          <input id="form_adress" type="adress" name="adress" class="form-control" placeholder="" required="required" data-error="Als je wilt reserveren hebben we een telefoonnummer nodig.">
+          <div class="help-block with-errors"></div>
+        </div>
+      </div>
+    </div>            
+  
+          
           <label class="honing" tabindex="-1" aria-hidden="true">
             <input type="text" name="petsName">
           </label>
@@ -387,11 +442,11 @@
       $(document).ready(() => {
         const datepickerConfig = {
           weekStart: 1,
-          daysOfWeekDisabled: '2',
+          daysOfWeekDisabled: '1,2,3,4',
           datesDisabled: [],
           autoclose: true,
           format: 'dd-mm-yyyy',
-          startDate: '+0d',
+          startDate: '+1d',
           language: 'nl',
           todayHighlight: true,
         }
