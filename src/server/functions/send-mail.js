@@ -26,7 +26,7 @@ exports.handler = function (event, context, callback) {
 	}
 
 	const postData = queryString.parse(event.body)
-	const date = postData.date
+	const date = postData["8-date"]
 	const time = postData.time
 	const name = postData.name
 	const email = postData.email
