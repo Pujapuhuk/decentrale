@@ -26,7 +26,7 @@ exports.handler = function (event, context, callback) {
 	}
 
 	const postData = queryString.parse(event.body)
-	const date = postData["8-date"]
+	const date = postData.date
 	const time = postData.time
 	const name = postData.name
 	const email = postData.email
@@ -45,8 +45,7 @@ exports.handler = function (event, context, callback) {
 		"To": EMAIL_TO,
 		"ReplyTo": email,
 		"Subject": `${date} Eten bestellen bij De Centrale`,
-		"TextBody": `Ik wil graag ${2-menu-type-3-vega} x 3 gangen vega, ${1-menu-type-3-standaard} x 3 gangen standaar \n
-		Extr's ${5-oesters}`
+		"TextBody": emailBody
 	}
 	const callbackHandler = {
 		statusCode: 302,
