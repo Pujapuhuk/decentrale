@@ -159,7 +159,7 @@ button {
     font-size:20px;
     font-weight: 700;
     letter-spacing:1.2px;  
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     padding:14px;
     padding-left:20px;
     padding-right:20px;
@@ -603,12 +603,25 @@ button:hover, button:focus, button:active {
     -webkit-box-shadow: 4px 4px 53px -10px rgba(0,0,0,0.75);
         -moz-box-shadow: 4px 4px 53px -10px rgba(0,0,0,0.75);
             box-shadow: 4px 4px 53px -10px rgba(0,0,0,0.75);
-            margin-bottom:40px;
+  margin-bottom:20px;
+}
+.menukaart-button{
+    background-color: white;
+    -webkit-box-shadow: 4px 4px 53px -10px rgba(0,0,0,0.75);
+        -moz-box-shadow: 4px 4px 53px -10px rgba(0,0,0,0.75);
+            box-shadow: 4px 4px 53px -10px rgba(0,0,0,0.75);
+    margin-bottom:40px;
+    padding:40px;
+    text-align: center;
 }
 @media (max-width: 480px) {
     .menukaart-content{
-      padding-top:80px;
-}
+        padding:2px;
+      padding-top:60px;
+    }
+    .menukaart-button{
+        padding:20px;
+    }
 }
 
 /*******************/
