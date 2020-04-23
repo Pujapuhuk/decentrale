@@ -57,28 +57,28 @@ exports.handler = function (event, context, callback) {
 		"From": `${name} <${EMAIL_FROM}>`,
 		"To": EMAIL_TO,
 		"ReplyTo": email,
-		"Subject": `Eten bestellen bij De Centrale voor ${date} | ${time}`,
-		"TextBody": `Wij willen graag: \n 
-			${menuStandaardDrie} x 3-gangen standaard \n 
-			${menuVegaDrie} x 3-gangen vega \n
-			${menuStandaardVier} x 4-gangen standaard \n 
-			${menuVegaVier} x 4-gangen vega \n\n
-			Extra: \n
-			Oester: ${oesters} \n
-			Kaas: ${kaas} x \n\n
-			Wijn:
-			Bijpassend wit: ${wijnWit} \n
-			Bijpassen rood: ${wijnRood} \n
-			Bubbel: ${bubbel} \n
-			Bijpassend pakket: ${wijnPakket} \n\n
-			Wanneer en hoe? \n
-			${methode} op ${date} \n
-			${time} \n\n
-			Persoonlijke gegeven:
-			Naam: ${name} \n
-			E-mail: ${email} \n
-			Telefoon: ${phone} \n
-			Adres: ${adres}`
+		"Subject": `Eten bestellen bij De Centrale voor ${date} | ${methode} | ${time}`,
+		"TextBody": `Wij willen graag: 
+		3-gangen standaard: ${menuStandaardDrie} x
+		3-gangen vega: ${menuVegaDrie} x
+		4-gangen standaard: ${menuStandaardVier} x
+		4-gangen vega: ${menuVegaVier} x\n\n
+		Extra:\n
+		Oester: ${oesters}\n
+		Kaas: ${kaas} x\n\n
+		Wijn:
+		Bijpassend wit: ${wijnWit} \n
+		Bijpassen rood: ${wijnRood} \n
+		Bubbel: ${bubbel} \n
+		Bijpassend pakket: ${wijnPakket} \n\n
+		Wanneer en hoe? \n
+		${methode} op ${date} \n
+		${time} \n\n
+		Persoonlijke gegeven:
+		Naam: ${name} \n
+		E-mail: ${email} \n
+		Telefoon: ${phone} \n
+		Adres: ${adres}`
 	}
 	const callbackHandler = {
 		statusCode: 302,
