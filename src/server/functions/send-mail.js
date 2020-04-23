@@ -26,10 +26,11 @@ exports.handler = function (event, context, callback) {
 	}
 
 	const postData = queryString.parse(event.body)
+	const menuStandaardDrie = postData["01_menutype_3_standaard"]
 	const date = postData["08_date"]
-	const time = postData.time
-	const name = postData.name
-	const email = postData.email
+	const time = postData["10_afhalen_tijd"]
+	const name = postData["11_name"]
+	const email = postData["12_email"]
 	const emailBody = getEmailBody(postData)
 	const honeyPotValue = postData.petsName
 
@@ -44,8 +45,8 @@ exports.handler = function (event, context, callback) {
 		"From": `${name} <${EMAIL_FROM}>`,
 		"To": EMAIL_TO,
 		"ReplyTo": email,
-		"Subject": `${date} Eten bestellen bij De Centrale`,
-		"TextBody": emailBody
+		"Subject": `Eten bestellen bij De Centrale voor ${date} | ${time}`,
+		"TextBody": `Wij willen graag:\n ${menuStandaardDrie} x 3-gangen standaard\n om ${date}`
 	}
 	const callbackHandler = {
 		statusCode: 302,
