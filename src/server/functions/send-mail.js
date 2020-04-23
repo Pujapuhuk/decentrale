@@ -26,11 +26,23 @@ exports.handler = function (event, context, callback) {
 	}
 
 	const postData = queryString.parse(event.body)
-	const menuStandaardDrie = postData["01_menutype_3_standaard"]
-	const date = postData["08_date"]
-	const time = postData["10_afhalen_tijd"]
-	const name = postData["11_name"]
-	const email = postData["12_email"]
+	const menuStandaardDrie = postData["menuStandaardDrie"]
+	const menuVegaDrie = postData["menuVegaDrie"]
+	const menuStandaardVier = postData["menuStandaardVier"]
+	const menuVegaVier = postData["menuVegaVier"]
+	const oesters = postData.oesters
+	const kaas = postData.kaas
+	const wijnWit = postData["wijn_wit"]
+	const wijnRood = postData["wijn_rood"]
+	const bubbel = postData.bubbel
+	const wijnPakket = postData["wijn_pakket"]
+	const methode = postData.methode
+	const date = postData.date
+	const time = postData.time
+	const name = postData.name
+	const email = postData.email
+	const phone = postData.phone
+	const adres = postData.adres
 	const emailBody = getEmailBody(postData)
 	const honeyPotValue = postData.petsName
 
@@ -46,7 +58,27 @@ exports.handler = function (event, context, callback) {
 		"To": EMAIL_TO,
 		"ReplyTo": email,
 		"Subject": `Eten bestellen bij De Centrale voor ${date} | ${time}`,
-		"TextBody": `Wij willen graag:\n ${menuStandaardDrie} x 3-gangen standaard\n om ${date}`
+		"TextBody": `Wij willen graag: \n 
+			${menuStandaardDrie} x 3-gangen standaard \n 
+			${menuVegaDrie} x 3-gangen vega \n
+			${menuStandaardVier} x 4-gangen standaard \n 
+			${menuVegaVier} x 4-gangen vega \n\n
+			Extra: \n
+			Oester: ${oesters} \n
+			Kaas: ${kaas} x \n\n
+			Wijn:
+			Bijpassend wit: ${wijnWit} \n
+			Bijpassen rood: ${wijnRood} \n
+			Bubbel: ${bubbel} \n
+			Bijpassend pakket: ${wijnPakket} \n\n
+			Wanneer en hoe? \n
+			${methode} op ${date} \n
+			${time} \n\n
+			Persoonlijke gegeven:
+			Naam: ${name} \n
+			E-mail: ${email} \n
+			Telefoon: ${phone} \n
+			Adres: ${adres}`
 	}
 	const callbackHandler = {
 		statusCode: 302,
