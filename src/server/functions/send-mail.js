@@ -62,22 +62,22 @@ exports.handler = function (event, context, callback) {
 		3-gangen standaard: ${menuStandaardDrie} x
 		3-gangen vega: ${menuVegaDrie} x
 		4-gangen standaard: ${menuStandaardVier} x
-		4-gangen vega: ${menuVegaVier} x\n\n
-		Extra:\n
-		Oester: ${oesters}\n
-		Kaas: ${kaas} x\n\n
+		4-gangen vega: ${menuVegaVier} x\n
+		Extra:
+		Oester: ${oesters}
+		Kaas: ${kaas} x\n
 		Wijn:
-		Bijpassend wit: ${wijnWit} \n
-		Bijpassen rood: ${wijnRood} \n
-		Bubbel: ${bubbel} \n
-		Bijpassend pakket: ${wijnPakket} \n\n
-		Wanneer en hoe? \n
-		${methode} op ${date} \n
-		${time} \n\n
+		Bijpassend wit: ${wijnWit}
+		Bijpassen rood: ${wijnRood}
+		Bubbel: ${bubbel}
+		Bijpassend pakket: ${wijnPakket} \n
+		Wanneer en hoe?
+		${methode} op ${date}
+		${time} \n
 		Persoonlijke gegeven:
-		Naam: ${name} \n
-		E-mail: ${email} \n
-		Telefoon: ${phone} \n
+		Naam: ${name}
+		E-mail: ${email}
+		Telefoon: ${phone}
 		Adres: ${adres}`
 	}
 	const callbackHandler = {
