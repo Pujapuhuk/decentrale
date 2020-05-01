@@ -33,6 +33,7 @@ exports.handler = function (event, context, callback) {
 	const oesters = postData.oesters
 	const kaas = postData.kaas
 	const wijnWit = postData["wijn_wit"]
+	const wijnRose = postData["wijn_rose"]
 	const wijnRood = postData["wijn_rood"]
 	const bubbel = postData.bubbel
 	const wijnPakket = postData["wijn_pakket"]
@@ -69,6 +70,7 @@ exports.handler = function (event, context, callback) {
 		Kaas: ${kaas} x\n
 		Wijn:
 		Bijpassend wit: ${wijnWit}
+		Bijpassend rose: ${wijnRose}
 		Bijpassen rood: ${wijnRood}
 		Bubbel: ${bubbel}
 		Bijpassend pakket: ${wijnPakket}\n
