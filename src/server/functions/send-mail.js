@@ -81,7 +81,8 @@ exports.handler = function (event, context, callback) {
 		Naam: ${name}
 		E-mail: ${email}
 		Telefoon: ${phone}
-		Adres: ${adres}`
+		Adres: ${adres}
+		Reserveren: ${emailBody}`
 	}
 	const callbackHandler = {
 		statusCode: 302,
