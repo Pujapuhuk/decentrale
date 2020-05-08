@@ -282,24 +282,51 @@ button:hover, button:focus, button:active {
 .navbar-nav > li > a:hover{
     text-decoration: underline
 }
-.nav-link-reserveer>a{
-    border: 2px solid #000000;
-}
+
 .nav-link-wijnpakket>a{
     background-color: #000000;
     color: white !important; 
 }
-.navbar-nav > .nav-link-reserveer> a:hover{
+
+.nav-link-contact>a{
+    border: 2px solid #000000;
+}
+
+.navbar-nav > .nav-link-contact> a:hover{
     color:#000000;
     text-decoration: none;
     background-color:#FFEC00;
 
 }
-.navbar-nav > .active-reserveer> a{
+.navbar-nav > .active-contact> a{
     color:#000000;
     text-decoration: none;
     background-color:#FFEC00;
     border: 2px solid #FFEC00;
+}
+.navbar-nav > .nav-link-contact> a:active{
+    position:relative;
+    top:1px;
+    -webkit-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0);
+        -moz-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0);
+            box-shadow: 0px 0px 4px 0px rgba(0,0,0,0);
+}
+
+.nav-link-reserveer>a{
+    border: 2px solid #000000;
+}
+
+.navbar-nav > .nav-link-reserveer> a:hover{
+    color:#000000;
+    text-decoration: none;
+    background-color: rgb(255,102,203);
+
+}
+.navbar-nav > .active-reserveer> a{
+    color:#000000;
+    text-decoration: none;
+    background-color: rgb(255,102,203);
+    border: 2px solid rgb(255,102,203);
 }
 .navbar-nav > .nav-link-reserveer> a:active{
     position:relative;
