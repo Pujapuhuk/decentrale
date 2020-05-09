@@ -319,14 +319,14 @@ button:hover, button:focus, button:active {
 .navbar-nav > .nav-link-reserveer> a:hover{
     color:#000000;
     text-decoration: none;
-    background-color: rgb(255,102,203);
+    background-color:#CEE1BB;
 
 }
 .navbar-nav > .active-reserveer> a{
     color:#000000;
     text-decoration: none;
-    background-color: rgb(255,102,203);
-    border: 2px solid rgb(255,102,203);
+    background-color: #CEE1BB;
+    border: 2px solid #CEE1BB;
 }
 .navbar-nav > .nav-link-reserveer> a:active{
     position:relative;
