@@ -50,7 +50,7 @@ exports.handler = function (event, context, callback) {
 	if (honeyPotValue) {
 		return callback(null, {
 			statusCode: 403,
-			body: 'FORBIDDEN'
+			body: 'Sorry, er is iets misgegaan. Mail alstublieft naar hallo@decentraledelft.nl en wij nemen contact met u op. Hartelijk dank!'
 		})
 	}
 
