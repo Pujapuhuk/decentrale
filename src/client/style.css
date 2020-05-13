@@ -379,12 +379,24 @@ button:hover, button:focus, button:active {
   }
 }
 /* home-widgets */
+
+.container-nieuw{
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
 .home-widgets{
     position:absolute;
     left:80px;
     top:10vh;
     width:240px; 
 }
+
+.nieuw{
+    position: relative;  
+    top: 10vh;
+}
+
 .widget{ 
     padding:24px;  
     margin-bottom:10px;   
@@ -414,6 +426,13 @@ button:hover, button:focus, button:active {
       top:40px;
     }
  }
+
+@media(min-width: 768px){
+    .klein{
+        max-width: 240px;
+    }
+}
+
 /* announcements */
 .announcement{
     position:relative;
