@@ -44,7 +44,6 @@ exports.handler = function (event, context, callback) {
 	const email = postData.email
 	const phone = postData.phone
 	const adres = postData.adres
-	const emailBody = getEmailBody(postData)
 	const honeyPotValue = postData.petsName
 
 	if (honeyPotValue) {

@@ -12,7 +12,10 @@
 	<link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
 
 	<!-- Bootstrap -->
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 	<!-- Scrolling nav -->
 	<link href="css/scrolling-nav.css" rel="stylesheet">
@@ -83,60 +86,46 @@
 	</nav>
 
 	<!-- Header -->
-	<div class="container-l home-header">
-		<!--<div class="container-l page-title-home d-block d-sm-none">
-			<div class="page-title-text-wrap">
-				<h5>Restaurant & Wijnbar</h5>
-			</div> 
-		</div>-->
-	<!-- <div class="home-widgets">
-			<div class="widget">
-				<button class="btn-header" style="width:100%;" onclick="parent.location='/contact/'">Reserveer</button>
+	<div class="container-fluid home-header">
+		<div class="row">
+			<div class="col-lg-4 col-sm-6">
+				<div class="announcement">
+					<p>Lieve gast,<br><br>
+				
+						Bedankt voor al jullie steun de afgelopen weken. Heel blij en opgelucht zijn we om in juni weer gedeeltelijk open te kunnen!
+						<br><br>
+						<span style="font-weight: 700;"> Klein feestje</span><br>
+						Aangezien we in juni ook 4 jaar bestaan, maken wij het extra leuk. We serveren – alleen in juni - het Beste van De Centrale-menu. In dit menu (4, 5, 6 of 7 gangen) zitten de beste gerechten van De Centrale. Reserveren kan! 
+						<br><br>
+						<span style="font-weight: 700;">Thuis bezorgen en afhalen</span><br>
+						In mei en juni blijven wij gewoon doorgaan met het bezorgen en afhalen van een menu en/of wijnpaketten. 
+						<br><br>
+						Groetjes, het Centrale team</p>
+					</div>
 			</div>
-			<div class="widget">
-				<h6>Openingstijden</h6>
-				<p>ma 17:30<br><span style="color:#696969">di gesloten</span><br>wo 17:30<br>do 17:30<br>vr 17:30<br>za 17:30<br>zo
-					17:30<br></p>
+			<div class="col-lg-3 col-sm-6">
+				<div class="widget">
+					<p> 🍽️ <br> Reserveer voor een plekje in juni of later.</p>
+					<button class="btn-reserveer btn-header" onclick="parent.location='/reserveer/'">Reserveer</button>
+				</div>
+				<div class="widget">
+					<p> 	🏠 <br>	Bestel een menu aan huis</p>
+					<button class="btn-reserveer btn-header" onclick="parent.location='/contact/'">Bestellen</button>
+				</div>
 			</div>
-		</div> -->
-<div class="announcement">
-	<p>Lieve gast,<br><br>
-	Mis je onze gerechten ook? Dan hebben we goed nieuws, want wij zijn weer begonnen met koken! <br><br>
-	Vanaf nu kun je een menu van 3 of 4 gangen bestellen voor bij je thuis.
-	Het werkt heel makkelijk, want wij bereiden alles voor. Alleen het hoofdgerecht geef je thuis de finishing touch
-	door onze eenvoudige instructies te volgen. Een kind kan de was doen! <br><br>
-	🚚Afhalen en bezorgen is mogelijk op vrijdag, zaterdag en zondag. <br>
-	🦪Oesters van tevoren of een kaasplank erbij? Geen probleem! <br>
-	🍾Wil je een fles bijpassende wijn, of zelfs per gang een bijpassende fles? Dat kan natuurlijk ook.
-		<br><br>
-		<button class="btn-reserveer btn-header" onclick="parent.location='/contact/'">Bestel menu</button><br>
-	
-	<p><span style="font-weight:700;">Wijnpakketten</span><br>
-	Wij blijven ook verschillende soorten wijnpakketten bezorgen.<br></p>
-	
-		<p><span style="font-weight:700;">Cadeaubonnen</span><br>Wil je ons een extra hart onder de riem steken? Bestel dan
-		een cadeaubon. Mail ons op <a style="color:blue;font-size:13px;"
-			href="mailto:hallo@decentraledelft.nl?subject=Cadeaubon">hallo@decentraledelft.nl</a>. Bij een aankoop van
-		100 euro en meer, krijg je van ons een mooie fles wijn erbij
-		<br><br>
-		Hopelijk tot snel!
-		<br><br>
-		Groetjes, het Centrale team</p>
+		</div>
+	</div>
 
-</div>
-</div>
-
+	
 	<!-- Title bar-->
-	<div class="container-l page-title d-none d-sm-block">
+	<div class="container-fluid page-title">
 		<div class="page-title-text-wrap">
 			<h1>Restaurant & Wijnbar</h1>
 		</div>
 	</div>
 
-	
-
 	<!-- intro text-->
-	<div class="container-m page-intro-text text-center">
+	<div class="container page-intro-text text-center">
 		<p>Welkom op de website van De Centrale!<br>Wij zijn een eigenzinnig restaurant waar je heerlijk en relaxed kunt
 			dineren. Bij De Centrale maken we bijna alles zelf; van het koffiekoekje tot het meubilair. We werken veel samen met
 			leveranciers uit de omgeving. Zo houden we de lijntjes kort en de kwaliteit hoog. Kom bij ons langs, laat je gidsen
@@ -144,7 +133,7 @@
 	</div>
 
 	<!-- image-1 + slogan -->
-	<div class="container-m">
+	<div class="container">
 		<div class="row">
 			<div class="col-md-8 col-sm-12">
 				<div class="image-square home-1"></div>
@@ -158,7 +147,7 @@
 	</div>
 
 	<!-- image-2 + slogan -->
-	<div class="container-m home-row-2">
+	<div class="container home-row-2">
 		<div class="row">
 			<div class="col-md-6 col-sm-12">
 				<div class="slogan slogan-home-left">
@@ -173,7 +162,7 @@
 
 
 	<!-- image-3 + slogan -->
-	<div class="container-m">
+	<div class="container">
 		<div class="row">
 			<div class="col-md-8 col-sm-12">
 				<div class="image-square home-3"></div>
@@ -188,7 +177,7 @@
 	</div>
 
 <!-- FOOTER-->
-<footer class="container-l">
+<footer class="container-fluid">
 	<div class="row">
 		<div class="footer-box col-md-3 text-center">
 			<h6>Contact<br></h6>
@@ -217,13 +206,4 @@
 
 	</div>
 </footer>
-
-
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-
 </body>
