@@ -44,6 +44,7 @@ exports.handler = function (event, context, callback) {
 	const email = postData.email
 	const phone = postData.phone
 	const adres = postData.adres
+	const postcode = postData.postcode
 	const emailBody = getEmailBody(postData) 
 	const honeyPotValue = postData.petsName
 
@@ -81,7 +82,8 @@ exports.handler = function (event, context, callback) {
 		Naam: ${name}
 		E-mail: ${email}
 		Telefoon: ${phone}
-		Adres: ${adres}`
+		Adres: ${adres}
+		Postcode: ${postcode}`
 	}
 	const callbackHandler = {
 		statusCode: 302,

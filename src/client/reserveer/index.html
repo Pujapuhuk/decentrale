@@ -104,8 +104,7 @@
     </div>
     <div class="container-s">
       <div class="container-black">
-        <!--<p>Alles gereserveerd? Helaas kunnen wij in deze tijd geen aanloop aannemen. </p>-->
-        <p>Vanaf 1 juni zijn we geopend. </p>
+        <p>Vanaf 1 juni zijn we weer geopend. </p>
       </div>
     </div> 
     <div class="container-s">
@@ -147,6 +146,14 @@
             </div>
           </div>
           <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <input type="checkbox" id="opsplitsen" name="opsplitsen">
+                <label for="opsplitsen"> Wij zijn <u>geen</u> huishouden</label>
+              </div>
+            </div>
+          </div>
+          <div class="row">
             <div class="col-xs-12 col-md-12">
               <div class="form-group">
                 <label for="form_message">Zijn er allergieën of andere eetwensen waar we rekening mee moeten houden?</label>
@@ -177,6 +184,15 @@
               <div class="form-group">
                 <label for="form_phone">Telefoonnummer *</label>
                 <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="" required="required" data-error="Als je wilt reserveren hebben we een telefoonnummer nodig.">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <input type="checkbox" id="voorwaarden" name="voorwaarden" required="required" data-error="Graag aanvinken als je wilt reserveren">
+                <label for="voorwaarden"> Bij coronaklachten zullen we tijdig annuleren.*</label>
                 <div class="help-block with-errors"></div>
               </div>
             </div>

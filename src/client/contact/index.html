@@ -291,12 +291,21 @@
     <div class="row">
       <div class="col-xs-12 col-md-8">
         <div class="form-group">
-          <label for="form_adress">Bezorg adres (straat, huisnummer & postcode)</label>
+          <label for="form_adress">Bezorg adres (straat, huisnummer)</label>
           <input id="form_adress" type="adress" name="adres" class="form-control" placeholder="" data-error="Als je wil dat we berzorgen, hebben we een adres nodig.">
           <div class="help-block with-errors"></div>
         </div>
       </div>
-    </div>            
+    </div>  
+    <div class="row">
+      <div class="col-xs-12 col-md-8">
+        <div class="form-group">
+          <label for="form_postcode">Bezorg postcode</label>
+          <input id="form_postcode" type="adress" name="postcode" class="form-control" placeholder="" data-error="Voor het bezorgen hebben we ook je postcode nodig.">
+          <div class="help-block with-errors"></div>
+        </div>
+      </div>
+    </div>          
     <label class="honing" tabindex="-1" aria-hidden="true">
     <input type="text" name="petsName"></label>
     <button type="submit" class="btn-form">VERSTUUR</button>
