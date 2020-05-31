@@ -971,6 +971,11 @@ label{
     z-index: -1;
 }
 
+.nieuw p{
+    color: black;
+    line-height: 1.4em;
+}
+
 /*footer*/
 footer{
   background-color: #101010;
