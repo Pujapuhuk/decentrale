@@ -386,6 +386,12 @@ button:hover, button:focus, button:active {
     font-size:13px;
     line-height: 26px;
 }
+.announcement a{
+    font-family: 'Spectral', serif;
+    font-size:13px;
+    line-height: 26px;
+}
+
 .widget{ 
     padding:24px;  
     margin-bottom:10px;   
