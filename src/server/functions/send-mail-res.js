@@ -30,6 +30,12 @@ exports.handler = function (event, context, callback) {
 	const time = postData.time
 	const name = postData.name
 	const email = postData.email
+	const number = postData.number
+	const phone = postData.phone
+	const message = postData.message
+	const geen_huishouden = postData.geen_huishouden
+	const voorwaarden = postData.voorwaarden
+
 	const emailBody = getEmailBody(postData)
 	const honeyPotValue = postData.petsName
 
@@ -44,8 +50,17 @@ exports.handler = function (event, context, callback) {
 		"From": `${name} <${EMAIL_FROM}>`,
 		"To": EMAIL_TO,
 		"ReplyTo": email,
-		"Subject": `${date} - ${time} Reservering bij De Centrale`,
-		"TextBody": emailBody
+		"Subject": `${date} - ${time} - ${number}p Reservering bij De Centrale`,
+		"TextBody": `
+		Date: ${date}
+		Time: ${time}
+		Number: ${number}
+		Geen huishouden: ${geen_huishouden}\n
+		Message: ${message}\n
+		Name: ${name}
+		Email: ${email}
+		Phone: ${phone}\n
+		Voorwaarden: ${voorwaarden}`
 	}
 	const callbackHandler = {
 		statusCode: 302,
