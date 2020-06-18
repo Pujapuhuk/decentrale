@@ -50,7 +50,7 @@ exports.handler = function (event, context, callback) {
 		"From": `${name} <${EMAIL_FROM}>`,
 		"To": EMAIL_TO,
 		"ReplyTo": email,
-		"Subject": `${date} | ${time} | ${number}p Reservering bij De Centrale`,
+		"Subject": `${date} | ${time} | Reservering bij De Centrale`,
 		"TextBody": `
 		Datum: ${date}
 		Tijd: ${time}
