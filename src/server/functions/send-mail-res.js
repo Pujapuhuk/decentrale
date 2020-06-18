@@ -50,16 +50,16 @@ exports.handler = function (event, context, callback) {
 		"From": `${name} <${EMAIL_FROM}>`,
 		"To": EMAIL_TO,
 		"ReplyTo": email,
-		"Subject": `${date} - ${time} - ${number}p Reservering bij De Centrale`,
+		"Subject": `${date} | ${time} | ${number}p Reservering bij De Centrale`,
 		"TextBody": `
-		Date: ${date}
-		Time: ${time}
-		Number: ${number}
+		Datum: ${date}
+		Tijd: ${time}
+		Aantal: ${number}
 		Geen huishouden: ${geen_huishouden}\n
-		Message: ${message}\n
-		Name: ${name}
+		Bericht: ${message}\n
+		Naam: ${name}
 		Email: ${email}
-		Phone: ${phone}\n
+		Telefoon: ${phone}\n
 		Voorwaarden: ${voorwaarden}`
 	}
 	const callbackHandler = {
