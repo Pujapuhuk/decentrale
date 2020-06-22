@@ -33,7 +33,7 @@ exports.handler = function (event, context, callback) {
 	const number = postData.number
 	const phone = postData.phone
 	const message = postData.message
-	const geen_huishouden = postData.geen_huishouden
+	const huishouden = postData.huishouden
 	const voorwaarden = postData.voorwaarden
 
 	const emailBody = getEmailBody(postData)
@@ -55,7 +55,7 @@ exports.handler = function (event, context, callback) {
 		Datum: ${date}
 		Tijd: ${time}
 		Aantal: ${number}
-		Geen huishouden: ${geen_huishouden}\n
+		Samenstelling: ${huishouden}\n
 		Bericht: ${message}\n
 		Naam: ${name}
 		Email: ${email}
