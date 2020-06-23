@@ -119,33 +119,35 @@
               <div class="form-group">
                 <label for="plek">Binnen of op het terras? *</label>
                 <div class="selectpicker">
-                  <select id ="plek" name="plek" class="form-control formnieuw" required="required" data-error="Kies een plek">
-                    <option value="binnen">Binnen</option>
-                    <option value="terras">Terras</option>
+                  <select id ="plek" name="plek" class="form-control formnew" required="required" data-error="Kies een plek">
+                    <option selected disabled value="">Kies een plek</option>
+                    <option value="binnen">binnen</option>
+                    <option value="terras">terras</option>
                   </select>
                 </div>
               </div>
             </div>
             <div class="col-xs-6 col-md-4">
                 <div class="form-group">
-                  <label for="timeslots">Hoe laat? *</label>
-                  <div class="selectpicker">
+                <label for="timeslots">Hoe laat? *</label>
+                    <div class="selectpicker">
                     <select id ="timeslots" name="time" class="form-control" required="required" data-error="Selecteer een tijd">
-                      <option selected disabled value="">Kies een tijd</option>
-                      <option value="17:30">17:30</option>
-                      <option value="18:00">18:00</option>
-                      <option value="18:30">18:30</option>
-                      <option value="19:00">19:00</option>
-                      <option value="19:30">19:30</option>
-                      <option value="20:00">20:00</option>
-                      <option value="20:30">20:30</option>
-                      <option value="21:00">21:00</option>
-                      <option value="21:30b">21:30 buiten</option>
-                      <option value="21.30">21:30 vol?</option>
+                    <option selected disabled value="">Kies een tijd</option>
+                    <option value="17:30">17:30</option>
+                    <option value="18:00">18:00</option>
+                    <option value="18:30">18:30</option>
+                    <option value="19:00">19:00</option>
+                    <option value="19:30">19:30</option>
+                    <option value="20:00">20:00</option>
+                    <option value="20:30">20:30</option>
+                    <option value="*17:30">*17:30 buiten</option>
+                    <option value="buiten">buiten</option>
+                    <option value="buiten:17:30">buiten</option>        
+                    <option value="buiten:17:30">17:30</option>        
+
                     </select>
-                  </div>
+                    </div>
                 </div>
-              </div>
             </div>
             <div class="col-xs-6 col-md-4">
               <div class="form-group row">
