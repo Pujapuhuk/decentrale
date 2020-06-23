@@ -982,6 +982,10 @@ label{
     line-height: 1.4em;
 }
 
+.box {
+    display: none; 
+}
+
 /*footer*/
 footer{
   background-color: #101010;
