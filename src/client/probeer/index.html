@@ -136,7 +136,8 @@
                 <label for="plek">Binnen of op het terras? *</label>
                 <div class="selectpicker">
                   <select id ="plek" name="plek" class="form-control formnew" required="required" data-error="Kies een plek">
-                    <option value="binnen" selected>binnen</option>
+                    <option disabled selected value="">Kies waar je wil zitten</option>
+                    <option value="binnen">binnen</option>
                     <option value="terras">terras</option>
                   </select>
                 </div>
@@ -173,7 +174,7 @@
           </div>
             
             <div class="col-xs-6 col-md-4">
-              <div class="form-group row">
+              <div class="form-group">
                 <label for="form_number">Hoeveel personen? *</label>
                 <input id="form_number" name="number" type="number" class="formnumber form-control" placeholder="" min="1" required="required" data-error="Geef een aantal op." >
                 <div class="help-block with-errors"></div>
