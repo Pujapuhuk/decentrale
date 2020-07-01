@@ -34,7 +34,6 @@ exports.handler = function (event, context, callback) {
 	const phone = postData.phone
 	const message = postData.message
 	const huishouden = postData.huishouden
-	const voorwaarden = postData.voorwaarden
 	const locatie = postData.locatie
 
 	const emailBody = getEmailBody(postData)
@@ -61,8 +60,7 @@ exports.handler = function (event, context, callback) {
 		Bericht: ${message}\n
 		Naam: ${name}
 		Email: ${email}
-		Telefoon: ${phone}\n
-		Voorwaarden: ${voorwaarden}`
+		Telefoon: ${phone}`
 	}
 	const callbackHandler = {
 		statusCode: 302,
