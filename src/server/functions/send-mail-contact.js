@@ -26,26 +26,17 @@ exports.handler = function (event, context, callback) {
 	}
 
 	const postData = queryString.parse(event.body)
-	const menuStandaardDrie = postData["menuStandaardDrie"]
-	const menuVegaDrie = postData["menuVegaDrie"]
-	const menuStandaardVier = postData["menuStandaardVier"]
-	const menuVegaVier = postData["menuVegaVier"]
-	const oesters = postData.oesters
-	const kaas = postData.kaas
-	const wijnWit = postData["wijn_wit"]
-	const wijnRose = postData["wijn_rose"]
-	const wijnRood = postData["wijn_rood"]
-	const bubbel = postData.bubbel
-	const wijnPakket = postData["wijn_pakket"]
-	const methode = postData.methode
 	const date = postData.date
 	const time = postData.time
 	const name = postData.name
 	const email = postData.email
+	const number = postData.number
 	const phone = postData.phone
-	const adres = postData.adres
-	const postcode = postData.postcode
-	const emailBody = getEmailBody(postData) 
+	const message = postData.message
+	const huishouden = postData.huishouden
+	const locatie = postData.locatie
+
+	const emailBody = getEmailBody(postData)
 	const honeyPotValue = postData.petsName
 
 	if (honeyPotValue) {
@@ -59,36 +50,17 @@ exports.handler = function (event, context, callback) {
 		"From": `${name} <${EMAIL_FROM}>`,
 		"To": EMAIL_TO,
 		"ReplyTo": email,
-		"Subject": `Eten bestellen bij De Centrale voor ${date} | ${methode} | ${time}`,
+		"Subject": `Contactgegevens`,
 		"TextBody": `
-		Wij willen graag: 
-		3-gangen standaard: ${menuStandaardDrie} x
-		3-gangen vega: ${menuVegaDrie} x
-		4-gangen standaard: ${menuStandaardVier} x
-		4-gangen vega: ${menuVegaVier} x\n
-		Extra:
-		Oester: ${oesters}
-		Kaas: ${kaas} x\n
-		Wijn:
-		Bijpassend wit: ${wijnWit}
-		Bijpassend rose: ${wijnRose}
-		Bijpassen rood: ${wijnRood}
-		Bubbel: ${bubbel}
-		Bijpassend pakket: ${wijnPakket}\n
-		Wanneer en hoe?
-		${methode} op ${date}
-		${time}\n
-		Persoonlijke gegeven:
 		Naam: ${name}
-		E-mail: ${email}
 		Telefoon: ${phone}
-		Adres: ${adres}
-		Postcode: ${postcode}`
+		Aantal: ${number}
+		`
 	}
 	const callbackHandler = {
 		statusCode: 302,
 		headers: {
-			"Location": '/bedankt/'
+			"Location": '/bedankt-contact/'
 		},
 		body: ''
 	}
