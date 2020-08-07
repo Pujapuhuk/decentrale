@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <title>Eten bestellen | De Centrale</title>
+    <title>Reserveren | De Centrale</title>
     <meta name="description" content="Je kunt bij ons gemakkelijk resereveren met dit formulier.">
 
     <!-- favicon -->
@@ -64,7 +64,7 @@
             <a href="/groepen/" class="nav-link page-scroll">Groepen</a>
           </li>
           <li class="nav-item">
-                <a href="/kunst/" class="nav-link page-scroll">Kunst</a>
+              <a href="/kunst/" class="nav-link page-scroll">Kunst</a>
           </li>
           <li class="nav-item">
             <a href="/vacatures/" class="nav-link page-scroll">Vacatures</a>
@@ -72,275 +72,89 @@
           <li class="nav-item nav-link-wijnpakket">
               <a href="/wijnpakket/" class="nav-link page-scroll">Wijnpakketten</a>
           </li>
-          <li class="nav-item nav-link-contact active-contact">
-            <a href="/contact/" class="nav-link page-scroll">Bestellen</a>
-          </li>
-          <li class="nav-item nav-link-reserveer ">
+          <li class="nav-item nav-link-reserveer">
             <a href="/reserveer/" class="nav-link page-scroll">Reserveer</a>
           </li>
-          
         </ul>
       </div>
     </nav>
     <div class="container-l page-title-contact d-block d-sm-none">
       <div class="page-title-text-wrap">
-        <h5>Bestel eten</h5>
+        <h5>Contact</h5>
       </div>
     </div>
-    <!-- content-reserveren -->
+    <!-- content-contact -->
     <div class="page-title-white container-s reserveren-content  d-none d-sm-block">
-
       <div class="page-title-text-wrap">
-        <h1>BESTELLEN</h1>
+        <h1>CONTACT</h1>
       </div>
     </div>
     <div class="container-s page-intro-text text-center reserveren-intro">
-      <p>Bestel ons menu van 3 of 4 gangen voor thuis. Hoe? Het werkt heel makkelijk! Je voorgerecht, 
-        tussengerecht en dessert krijg je zoals je van ons gewend bent. Alleen het hoofdgerecht geef je 
-        thuis de finishing touch door onze eenvoudige instructies te volgen. Een kind kan de was doen! 
-        Wil je de complete Centrale ervaring? Kies dan voor de bijpassende wijnen, oesters vooraf of een kaasplank!<br><br>
-        Bestel voor 22.00 uur je diner voor de volgende dag! <br>
-        
-        <p>🚚 Afhalen en bezorgen is mogelijk op vrijdag, zaterdag en zondag.
-         <br>😬 Helaas kunnen wij geen rekening houden met uitzonderingen. <br>  ⬇️ Bestel met het onderstaande formulier.</p>
-        <button class="btn-header" onclick="parent.location='/menukaart/'">Bekijk menu</button>
+      <p>Lieve gast, leuk dat je bij ons bent binnengelopen. Via onderstaand formulier
+        kan je je gegevens achterlaten ten behoeve van bron- en contactonderzoek door de GGD bij een besmetting.
+        De registratie is vrijwillig. 
+      </p>
     </div>
-    <!--<div class="container-s">
-      <div class="container-black">
-        <p>Alles gereserveerd? Wij houden altijd een aantal tafels vrij voor de spontane bezoeker! </p>
-      </div>
-    </div>-->
-<div class="container-s">
-  <form id="contact-form" method="post" action="/.netlify/functions/send-mail" autocomplete="off">
-    <div class="row">
-      <div class="col-md-12">
-        <h6>KIES MENU</h6>
-        <p>Vanaf twee personen</p>
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="3_gangen_standaard" class="col-sm-6">3-gangen standaard (29,50 p.p.)</label>
-      <div class="col-sm-6">
-          <input type="number" class="form-control small-field" name="menuStandaardDrie" id="3_gangen_standaard">
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="3_gangen_vega" class="col-sm-6">3-gangen vega (29,50 p.p.)</label>
-      <div class="col-sm-6">
-          <input type="number" class="form-control small-field" name="menuVegaDrie" id="3_gangen_vega">
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="4_gangen_standaard" class="col-sm-6">4-gangen standaard (34,50 p.p.)</label>
-      <div class="col-sm-6">
-          <input type="number" class="form-control small-field" name="menuStandaardVier" id="4_gangen_standaard">
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="4_gangen_vega" class="col-sm-6">4-gangen vega (34,50 p.p.)</label>
-      <div class="col-sm-6">
-          <input type="number" class="form-control small-field" name="menuVegaVier" id="4_gangen_vega">
-      </div>
-    </div>
-    <hr>
-    <div class="row">
-      <div class="col-md-12">
-        <h6>KIES EXTRA'S</h6>
-        <p>Oesters vooraf of kaas als extra gang</p>
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="oesters" class="col-sm-6">Oester (Incl. oestermes)</label>
-      <div class="col-sm-6">
-        <div class="selectpicker">
-          <select id="oesters" name="oesters" class="form-control small-field">
-            <option selected disabled value="">Hoeveel?</option>
-            <option value="geen oesters">geen</option>
-            <option value="6-stuks">6 st. (18,00)</option>
-            <option value="12-stuks">12 st. (36,00)</option>
-            <option value="18-stuks">18 st. (54,00)</option>
-            <option value="24-stuks">24 st. (72,00)</option>
-          </select>
-        </div>
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="kaas" class="col-sm-6">Kaas (10,00 p.p.)</label>
-      <div class="col-sm-6">
-          <input type="number" class="form-control small-field" name="kaas" id="kaas">
-      </div>
-    </div>
-    <hr>
-    <div class="row">
-      <div class="col-md-12">
-        <h6>KIES WIJN</h6>
-        <p>Bijpassende flessen wijn of wijnpakketten</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="form-group">
-          <input type="checkbox" id="bijpassend_wit" name="wijn_wit">
-          <label for="bijpassend_wit"> Bijpassend wit (17,50)</label>
-        </div>
-        <div class="form-group">
-          <input type="checkbox" id="bijpassend_rose" name="wijn_rose">
-          <label for="bijpassend_rose"> Bijpassend rosé (17,50)</label>
-        </div>
-        <div class="form-group">
-          <input type="checkbox" id="bijpassend_rood" name="wijn_rood">
-          <label for="bijpassend_rood"> Bijpassend rood (17,50)</label>
-        </div>
-        <div class="form-group">
-          <input type="checkbox" id="bijpassend_speciaal" name="bubbel">
-          <label for="bijpassend_speciaal">Bubbel<a href="https://www.alain-voge.com/en/saint-peray/les-bulles-d-alain" target="_blank">Rhône Cremant:  Bulles d’Alain – A.O.P. Saint-Péray – 2014 (bio)</a>(40,00)</label>
-        </div>
-        <div class="form-group">
-          <input type="checkbox" id="bijpassend_pakket" name="wijn_pakket">
-          <label for="bijpassend_pakket"> Bijpassend wijnpakket, 3 flessen bij voor, hoofd en na. (45,00)</label>
-        </div>
-      </div>
-    </div>
-    <hr>
-    <div class="row">
-      <div class="col-md-12">
-        <h6>WANNEER?</h6>
-        <p>Geef aan wanneer je wilt eten en of je het komt halen of dat wij het kunnen bezorgen.</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12 col-md-8">
-        <div class="form-group">
-          <label for="form_date">Welke dag wil je eten?*</label>
-          <input id="form_date" name="date" type="text" class="form-control formnumber" placeholder="dd/mm/yyyy"  required="required" data-error="Selecteer een dag" />
-          <div class="help-block with-errors"></div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12 col-md-8">
-        <div class="form-group">
-          <label for="form_methode">Bezorgen of afhalen?*</label>
-          <div class="selectpicker">
-            <select id ="form_methode" name="methode" class="form-control" required="required" data-error="Afhalen of bezorgen?">
-              <option selected disabled value="">Kies</option>
-              <option value="bezorgen">Bezorgen [tussen 14:00 - 17:00]</option>
-              <option value="afhalen">Afhalen</option>
-            </select>
+    <div class="container-s">
+      <form id="contact-form" method="post" action="/.netlify/functions/send-mail-res" autocomplete="off">
+        <div class="controls">            
+          <div class="row">
+            <div class="col-xs-12 col-md-8">
+              <div class="form-group">
+                <label for="form_name">Naam *</label>
+                <input id="form_name" type="text" name="name" class="form-control" placeholder="" required="required" data-error="Vul een naam in.">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
           </div>
-          <div class="help-block with-errors"></div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12 col-md-8">
-        <div class="form-group">
-          <label for="timeslots">Indien afhalen, hoe laat?</label>
-          <div class="selectpicker">
-            <select id ="timeslots" name="time" class="form-control">
-              <option selected disabled value="">Kies</option>
-              <option value="afhalen-15:00">15:00</option>
-              <option value="afhalen-15:15">15:15</option>
-              <option value="afhalen-15:30">15:30</option>
-              <option value="afhalen-15:45">15:45</option>
-              <option value="afhalen-16:00">16:00</option>
-              <option value="afhalen-16:15">16:15</option>
-              <option value="afhalen-16:30">16:30</option>
-              <option value="afhalen-16:45">16:45</option>
-              <option value="afhalen-17:00">17:00</option>
-              <option value="afhalen-17:15">17:15</option>
-              <option value="afhalen-17:30">17:30</option>
-              <option value="afhalen-17:45">17:45</option>
-              <option value="afhalen-18:00">18:00</option>
-            </select>
+          <div class="row">
+            <div class="col-xs-12 col-md-8">
+              <div class="form-group">
+                <label for="form_phone">Telefoonnummer *</label>
+                <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="" required="required" data-error="Als je wilt reserveren hebben we een telefoonnummer nodig.">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
           </div>
+          <div class="col-xs-6 col-md-4">
+            <div class="form-group row">
+              <label for="form_number">Hoeveel personen? *</label>
+              <input id="form_number" name="number" type="number" class="formnumber form-control" placeholder="" min="1" required="required" data-error="Geef een aantal op." >
+              <div class="help-block with-errors"></div>
+            </div>
+          </div>
+          <label class="honing" tabindex="-1" aria-hidden="true">
+            <input type="text" name="petsName">
+          </label>
+          <button type="submit" class="btn-form">VERSTUUR</button>
         </div>
-      </div>
+      </form>
     </div>
-    <hr>
-    <div class="row">
-      <div class="col-md-12">
-        <h6>Persoonlijke gegevens?</h6>
-        <p>Wanneer je hebt besteld, nemen we zo snel mogelijk contact met je op.</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12 col-md-8">
-        <div class="form-group">
-          <label for="form_name">Naam *</label>
-          <input id="form_name" type="text" name="name" class="form-control" placeholder="" required="required" data-error="Vul een naam in.">
-          <div class="help-block with-errors"></div>
+    <footer class="container-l">
+      <div class="row">
+        <div class="footer-box col-md-3 text-center">
+          <h6>Contact</h6>
+          <p>015 - 889 27 77</p>
+          <p>hallo@decentraledelft.nl</p>
+        </div>
+        <div class="footer-box col-md-3 text-center">
+          <h6>Openingstijden</h6>
+          <p>ma, wo, do, vr, za en zo open vanaf 17:30</p>
+          <p>alleen dinsdag gesloten</p>
+        </div>
+        <div class="footer-box col-md-3 text-center">
+          <h6>Locatie</h6>
+          <p>Voldersgracht 2<br>2611 ET Delft</p>
+          <a href="https://www.google.nl/maps/place/Voldersgracht+2,+2611+ET+Delft/@52.011741,4.355754,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5b5c3b08304c5:0x79ad52aba43f8354!8m2!3d52.011741!4d4.357948" target="_blank" rel="noopener">
+            Route
+          </a>
+        </div>
+        <div class="col-md-3 text-center">
+          <p><a href="https://www.facebook.com/decentraledelft" target="_blank" rel="noopener">Facebook</a></p>
+          <p><a href="https://www.instagram.com/decentraledelft/" target="_blank" rel="noopener">Instagram</a></p>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12 col-md-8">
-        <div class="form-group">
-          <label for="form_email">Email *</label>
-          <input id="form_email" type="email" name="email" class="form-control" placeholder="" required="required" data-error="Vul een geldig emailadres in.">
-          <div class="help-block with-errors"></div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12 col-md-8">
-        <div class="form-group">
-          <label for="form_phone">Telefoonnummer *</label>
-          <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="" required="required" data-error="Als je wilt reserveren hebben we een telefoonnummer nodig.">
-          <div class="help-block with-errors"></div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12 col-md-8">
-        <div class="form-group">
-          <label for="form_adress">Bezorg adres (straat, huisnummer)</label>
-          <input id="form_adress" type="adress" name="adres" class="form-control" placeholder="" data-error="Als je wil dat we berzorgen, hebben we een adres nodig.">
-          <div class="help-block with-errors"></div>
-        </div>
-      </div>
-    </div>  
-    <div class="row">
-      <div class="col-xs-12 col-md-8">
-        <div class="form-group">
-          <label for="form_postcode">Bezorg postcode</label>
-          <input id="form_postcode" type="adress" name="postcode" class="form-control" placeholder="" data-error="Voor het bezorgen hebben we ook je postcode nodig.">
-          <div class="help-block with-errors"></div>
-        </div>
-      </div>
-    </div>          
-    <label class="honing" tabindex="-1" aria-hidden="true">
-    <input type="text" name="petsName"></label>
-    <button type="submit" class="btn-form">VERSTUUR</button>
-</form>
-</div>
-
-<footer class="container-l">
-	<div class="row">
-		<div class="footer-box col-md-3 text-center">
-			<h6>Contact<br></h6>
-			<p>015 - 889 27 77<br>hallo@decentraledelft.nl</p>
-		</div>
-
-		<div class="footer-box col-md-3 text-center">
-			<h6>Bezorgen & afhalen <br></h6>
-			<p>Wij koken heerlijk eten voor thuis op vr, za en zo<br><br></p>
-		</div>
-
-		<div class="footer-box col-md-3 text-center">
-			<h6>Locatie<br></h6>
-			<p>Voldersgracht 2<br>2611 ET Delft</p><a
-				href="https://www.google.nl/maps/place/Voldersgracht+2,+2611+ET+Delft/@52.011741,4.355754,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5b5c3b08304c5:0x79ad52aba43f8354!8m2!3d52.011741!4d4.357948"
-				target="_blank">route</a>
-		</div>
-
-		<div class="col-md-3 text-center">
-			<a href="https://www.facebook.com/decentraledelft" target="_blank">facebook</a><br>
-			<a href="https://www.instagram.com/decentraledelft/" target="_blank">instagram</a>
-		</div>
-
-	</div>
-</footer>
+    </footer>
 
     <script>
       /**
@@ -490,11 +304,11 @@
       $(document).ready(() => {
         const datepickerConfig = {
           weekStart: 1,
-          daysOfWeekDisabled: '1,2,3,4',
+          daysOfWeekDisabled: '2',
           datesDisabled: [],
           autoclose: true,
           format: 'dd-mm-yyyy',
-          startDate: '+1d',
+          startDate: '+0d',
           language: 'nl',
           todayHighlight: true,
         }
@@ -516,6 +330,15 @@
             initApiClient()
           })
       })
+    </script>
+    <script>
+    $('input.formnumber').on('change', function(){
+       if($(this).val()>=3){
+           $('div.more_then_2').css('display', 'block');
+       } else {
+           $('div.more_then_2').css('display', 'none');
+       }
+    });
     </script>
   </body>
   </html>
