@@ -50,7 +50,7 @@ exports.handler = function (event, context, callback) {
 		"From": `${name} <${EMAIL_FROM}>`,
 		"To": EMAIL_TO,
 		"ReplyTo": email,
-		"Subject": `Vandaag | Contactgegevens`,
+		"Subject": `Contactgegevens`,
 		"TextBody": `
 		Naam: ${name}
 		Telefoon: ${phone}
