@@ -34,7 +34,6 @@ exports.handler = function (event, context, callback) {
 	const phone = postData.phone
 	const message = postData.message
 	const huishouden = postData.huishouden
-	const locatie = postData.locatie
 
 	const emailBody = getEmailBody(postData)
 	const honeyPotValue = postData.petsName
@@ -54,7 +53,6 @@ exports.handler = function (event, context, callback) {
 		"TextBody": `
 		Datum: ${date}
 		Tijd: ${time}
-		Locatie: ${locatie}
 		Aantal: ${number}
 		Samenstelling: ${huishouden}\n
 		Bericht: ${message}\n
