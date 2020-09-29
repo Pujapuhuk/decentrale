@@ -139,7 +139,6 @@
                   <option value="19:00">19:00</option>
                   <option value="19:30">19:30</option>
                   <option value="20:00">20:00</option>
-                  <option value="20:30">20:30</option>      
                   </select>
                 </div>
               </div>
@@ -148,7 +147,7 @@
             <div class="col-xs-6 col-md-4">
               <div class="form-group row">
                 <label for="form_number">Hoeveel personen? *</label>
-                <input id="form_number" name="number" type="number" class="formnumber form-control" placeholder="" min="1" max="4" required="required" data-error="Geef een aantal op." >
+                <input id="form_number" name="number" type="number" class="formnumber form-control" placeholder="" min="1" required="required" data-error="Geef een aantal op." >
                 <div class="help-block with-errors"></div>
               </div>
             </div>
@@ -163,15 +162,12 @@
           </div>
           <div class="more_then_2">
             <div class="form-group row">
-              <label for="form_huishouden" class="col-xs-12 col-md-12">Wat is de samenstelling van uw gezelschap? Bij verschillende huishoudens kunnen we zorgen voor afstand tussen elke tafel van 2 personen. Het maximale aantal personen is 4.</label>
+              <label for="form_huishouden" class="col-xs-12 col-md-12">Zijn jullie een huishouden? Een gezelschap mag bestaan uit maximaal 4 personen buiten het eigen huishouden. </label>
               <div class="col-xs-6 col-md-6">
-                <div class="selectpicker">
-                  <select id="huishouden" name="huishouden" class="form-control">
-                    <option value="huishouden">Één huishouden</option>
-                    <option value="2-huishoudens">2 huishoudens</option>
-                    <option value="3-huishoudens">3 huishoudens</option>
-                    <option value="4-huishoudens">4 huishoudens</option>
-                  </select>
+                <div class="checkbox">
+                  <input type="checkbox" id="huishouden" name="huishouden">
+                  <label for="huishouden"> Wij zijn een huishouden</label>
+                  </input>
                 </div>
               </div>
             </div> 
