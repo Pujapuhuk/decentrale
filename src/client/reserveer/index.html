@@ -100,9 +100,15 @@
       </div>
     </div>
     <div class="container-s page-intro-text text-center reserveren-intro">
-      <p>Reserveren voor het diner kan via onderstaand formulier. Let op! Je reservering staat
-        pas vast als je een bevestigende e-mail van ons hebt ontvangen. Bel je liever?
-        Doe dat dan tijdens onze openingstijden op <br>015-8892777.</p>
+        <p> We serveren ons <b>Menu van Nu</b>. In dit menu (4, 5, 6 of 7 gangen) geniet u van een culinair avontuur, ontworpen door onze chefs.
+        Onze À la Carte is tijdelijk niet te bestellen.<br></p>
+        4 gangen - €43<br>
+        5 gangen - €53<br>
+        6 gangen - €62<br>
+        7 gangen - €68<br><br>
+        <p>Reserveren voor het diner kan via onderstaand formulier. Let op! Je reservering staat
+          pas vast als je een bevestigende e-mail van ons hebt ontvangen. Bel je liever?
+          Doe dat dan tijdens onze openingstijden op <br>015-8892777.</p>
     </div>
     <div class="container-s">
       <div class="container-black">
@@ -126,13 +132,13 @@
                 <div class="selectpicker">
                   <select id ="timeslots" name="time" class="form-control" required="required" data-error="Selecteer een tijd">
                   <option selected disabled value="">Kies een tijd</option>
+                  <option value="17:00">17:00</option>
                   <option value="17:30">17:30</option>
                   <option value="18:00">18:00</option>
                   <option value="18:30">18:30</option>
                   <option value="19:00">19:00</option>
                   <option value="19:30">19:30</option>
                   <option value="20:00">20:00</option>
-                  <option value="20:30">20:30</option>      
                   </select>
                 </div>
               </div>
@@ -156,16 +162,12 @@
           </div>
           <div class="more_then_2">
             <div class="form-group row">
-              <label for="form_huishouden" class="col-xs-12 col-md-12">Wat is de samenstelling van uw gezelschap? Bij verschillende huishoudens kunnen we zorgen voor afstand tussen elke tafel van 2 personen.</label>
+              <label for="form_huishouden" class="col-xs-12 col-md-12">Zijn jullie een huishouden? Een gezelschap mag bestaan uit maximaal 4 personen buiten het eigen huishouden. </label>
               <div class="col-xs-6 col-md-6">
-                <div class="selectpicker">
-                  <select id="huishouden" name="huishouden" class="form-control">
-                    <option value="huishouden">Één huishouden</option>
-                    <option value="2-huishoudens">2 huishoudens</option>
-                    <option value="3-huishoudens">3 huishoudens</option>
-                    <option value="4-huishoudens">4 huishoudens</option>
-                    <option value="meer-dan-4">Meer dan 4 huishoudens</option>
-                  </select>
+                <div class="checkbox">
+                  <input type="checkbox" id="huishouden" name="huishouden">
+                  <label for="huishouden"> Wij zijn een huishouden</label>
+                  </input>
                 </div>
               </div>
             </div> 
@@ -213,7 +215,7 @@
         </div>
         <div class="footer-box col-md-3 text-center">
           <h6>Openingstijden</h6>
-          <p>ma, wo, do, vr, za en zo open vanaf 17:30</p>
+          <p>ma, wo, do, vr, za en zo open vanaf 17:00</p>
           <p>alleen dinsdag gesloten</p>
         </div>
         <div class="footer-box col-md-3 text-center">
