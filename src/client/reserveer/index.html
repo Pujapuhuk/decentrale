@@ -100,21 +100,29 @@
       </div>
     </div>
     <div class="container-s page-intro-text text-center reserveren-intro">
-        <p> We serveren ons <b>Menu van Nu</b>. In dit menu (4, 5, 6 of 7 gangen) geniet u van een culinair avontuur, ontworpen door onze chefs.
-        Onze À la Carte is tijdelijk niet te bestellen.<br></p>
+      <p style="font-size:20px"><b>Lunch</b></p>
+      <p> Lunch is het nieuwe diner! Daarom serveren we nu ook overdag een verrassingsmenu.
+        Kom heerlijk uitgebreid bij ons tafelen op de zaterdag- en de zondagmiddag tussen 13.00 en 16.00 uur.
+      </p>
+      3 gangen - €32,50<br>
+      4 gangen - €37,50<br><br>
+      <p style="font-size:20px"> <b> Diner</b></p>
+      <p> In de avond serveren wij ons <b>Menu van Nu</b>. In dit verrassingsmenu (4, 5, 6 of 7 gangen) geniet u van een culinair avontuur, ontworpen door onze chefs.
+        Onze À la Carte is tijdelijk niet te bestellen. Reserveer lekker vroeg op de avond, zodat je alle tijd hebt om te genieten!<br></p>
         4 gangen - €43<br>
         5 gangen - €53<br>
         6 gangen - €62<br>
         7 gangen - €68<br><br>
-        <p>Reserveren voor het diner kan via onderstaand formulier. Let op! Je reservering staat
-          pas vast als je een bevestigende e-mail van ons hebt ontvangen. Vragen?
-          Bel ons tijdens onze openingstijden op <br>015-8892777.</p>
+        <p>Reserveren voor de lunch of het diner kan via onderstaand formulier. Let op! Je
+          reservering staat pas vast als je een bevestigende e-mail van ons hebt ontvangen.
+          Vragen? Bel ons tijdens onze openingstijden op         
+          <br>015-8892777.</p>
     </div>
-    <div class="container-s">
+    <!--<div class="container-s">
       <div class="container-black">
         <p>Alles gereserveerd? Wij houden altijd een aantal tafels vrij voor de spontane bezoeker! </p>
       </div>
-    </div>
+    </div>-->
     <div class="container-s">
       <form id="contact-form" method="post" action="/.netlify/functions/send-mail-res" autocomplete="off">
         <div class="controls">
@@ -132,13 +140,15 @@
                 <div class="selectpicker">
                   <select id ="timeslots" name="time" class="form-control" required="required" data-error="Selecteer een tijd">
                   <option selected disabled value="">Kies een tijd</option>
+                  <option value="13:00">13:00 (za & zo)</option>
+                  <option value="13:30">13:30 (za & zo)</option>
+                  <option value="14:00">14:00 (za & zo)</option>
                   <option value="17:00">17:00</option>
                   <option value="17:30">17:30</option>
                   <option value="18:00">18:00</option>
                   <option value="18:30">18:30</option>
                   <option value="19:00">19:00</option>
                   <option value="19:30">19:30</option>
-                  <option value="20:00">20:00</option>
                   </select>
                 </div>
               </div>
@@ -216,7 +226,7 @@
         <div class="footer-box col-md-3 text-center">
           <h6>Openingstijden</h6>
           <p>ma, wo, do, vr, za en zo open vanaf 17:00</p>
-          <p>alleen dinsdag gesloten</p>
+          <p>za en zo ook van 13:00 tot 16:00</p>
         </div>
         <div class="footer-box col-md-3 text-center">
           <h6>Locatie</h6>
