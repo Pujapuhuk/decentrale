@@ -26,26 +26,15 @@ exports.handler = function (event, context, callback) {
 	}
 
 	const postData = queryString.parse(event.body)
-	const menuStandaardVier = postData["menuStandaardVier"]
-	const menuVegaVier = postData["menuVegaVier"]
-	const oesters = postData.oesters
-	const kaas = postData.kaas
-	const koffie = postData.koffie
-	const friandises = postData.friandises
-	const wijnWit = postData["wijn_wit"]
-	const wijnRose = postData["wijn_rose"]
-	const wijnRood = postData["wijn_rood"]
-	const bubbel = postData.bubbel
-	const wijnPakket = postData["wijn_pakket"]
-	const methode = postData.methode
 	const date = postData.date
 	const time = postData.time
 	const name = postData.name
+	const wijn = postData.wijn
 	const email = postData.email
+	const aantal = postData.aantal
 	const phone = postData.phone
-	const adres = postData.adres
-	const postcode = postData.postcode
-	const emailBody = getEmailBody(postData) 
+
+	const emailBody = getEmailBody(postData)
 	const honeyPotValue = postData.petsName
 
 	if (honeyPotValue) {
@@ -59,31 +48,15 @@ exports.handler = function (event, context, callback) {
 		"From": `${name} <${EMAIL_FROM}>`,
 		"To": EMAIL_TO,
 		"ReplyTo": email,
-		"Subject": `Eten bestellen bij De Centrale voor ${date} | ${methode} | ${time}`,
+		"Subject": `${date} | ${time} | ${aantal}x Roast bestelling bij De Centrale`,
 		"TextBody": `
-		Wij willen graag: 
-		4-gangen standaard: ${menuStandaardVier} x
-		4-gangen vega: ${menuVegaVier} x\n
-		Extra:
-		Oester: ${oesters}
-		Kaas: ${kaas} x
-		Koffie: ${koffie} x
-		Friandises: ${friandises}x/n
-		Wijn:
-		Bijpassend wit: ${wijnWit}
-		Bijpassend rose: ${wijnRose}
-		Bijpassen rood: ${wijnRood}
-		Bubbel: ${bubbel}
-		Bijpassend pakket: ${wijnPakket}\n
-		Wanneer en hoe?
-		${methode} op ${date}
-		${time}\n
-		Persoonlijke gegeven:
+		Datum: ${date}
+		Tijd: ${time}\n
+		Aantal: ${aantal}
+		Bijpassende wijn: ${wijn}
 		Naam: ${name}
-		E-mail: ${email}
-		Telefoon: ${phone}
-		Adres: ${adres}
-		Postcode: ${postcode}`
+		Email: ${email}
+		Telefoon: ${phone}`
 	}
 	const callbackHandler = {
 		statusCode: 302,

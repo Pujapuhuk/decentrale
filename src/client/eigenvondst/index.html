@@ -103,51 +103,63 @@
     <p>De acht hectaren aan wijngaarden van Zorzon bevinden zich in Collio. Tegen de uitlopers van de Alpen aan de grens met Slovenië, net buiten het dorpje Brazzano. De unieke grondsamenstelling in dit gebied noemen de Italianen: Ponca. Het is juist deze grond die zorgt voor de bijzondere wijnen. De witte wijnen van Zorzon zijn loepzuiver, mineraalrijk en expressief. </p>
   </div>
   <div class="wijn-container">
-    <div class="wijn-kaart">
-      <div class="wijn-foto sauvignon"></div>
-      <div class="wijn-beschrijving">
-        <p style="font-weight: 700;">Sauvignon Blanc - D.O.C. Collio - 2018</p>
-        <p>€ 68.00 (6 stuks)</p>
+    <form id="contact-form" method="post" action="/.netlify/functions/send-mail-res" autocomplete="off">
+      <div class="controls">
+        <div class="wijn-kaart">
+          <div class="wijn-foto sauvignon"></div>
+          <div class="wijn-beschrijving">
+            <p style="font-weight: 700;">Sauvignon Blanc - D.O.C. Collio - 2018</p>
+            <p>€ 68.00 (6 stuks)</p>
+          </div>
+          <div class="col-xs-6 col-md-4">
+            <div class="form-group">
+              <label for="form_number">Aantal</label>
+              <input id="form_number" name="number" type="number" class="formnumber form-control" placeholder="" min="1" required="required" data-error="Geef een aantal op." >
+              <div class="help-block with-errors"></div>
+            </div>
+          </div>
+        </div>
+        <div class="wijn-kaart">
+          <div class="wijn-foto friulano"></div>
+          <div class="wijn-beschrijving">
+            <p style="font-weight: 700;">Friulano - D.O.C. Collio - 2018</p>
+            <p>€ 62.00 (6 stuks)</p>
+          </div>
+        </div>
+        <div class="wijn-kaart">
+          <div class="wijn-foto pinot-g"></div>
+          <div class="wijn-beschrijving">
+            <p style="font-weight: 700;">Pinot Grigio - D.O.C. Collio - 2018</p>
+            <p>€ 65.00 (6 stuks)</p>
+          </div>
+        </div>
+        <div class="wijn-kaart">
+          <div class="wijn-foto malvasia"></div>
+          <div class="wijn-beschrijving">
+            <p style="font-weight: 700;">Malvasia - D.O.C. Collio - 2018</p>
+            <p>€ 75.00 (6 stuks)</p>
+          </div>
+        </div>
+        <div class="wijn-kaart">
+          <div class="wijn-foto cabernet"></div>
+          <div class="wijn-beschrijving">
+            <p style="font-weight: 700;">Cabernet Franc - D.O.C. Collio - 2017</p>
+            <p>€ 68.00 (6 stuks)</p>
+          </div>
+        </div>
+        <div class="wijn-kaart">
+          <div class="wijn-foto merlot"></div>
+          <div class="wijn-beschrijving">
+            <p style="font-weight: 700;">Merlot - D.O.C. Collio - 2016</p>
+            <p>€ 65.00 (6 stuks)</p>
+          </div>
+        </div>
+        <button type="submit" class="btn-form">VERSTUUR</button>
       </div>
-    </div>
-    <div class="wijn-kaart">
-      <div class="wijn-foto friulano"></div>
-      <div class="wijn-beschrijving">
-        <p style="font-weight: 700;">Friulano - D.O.C. Collio - 2018</p>
-        <p>€ 62.00 (6 stuks)</p>
-      </div>
-    </div>
-    <div class="wijn-kaart">
-      <div class="wijn-foto pinot-g"></div>
-      <div class="wijn-beschrijving">
-        <p style="font-weight: 700;">Pinot Grigio - D.O.C. Collio - 2018</p>
-        <p>€ 65.00 (6 stuks)</p>
-      </div>
-    </div>
-    <div class="wijn-kaart">
-      <div class="wijn-foto malvasia"></div>
-      <div class="wijn-beschrijving">
-        <p style="font-weight: 700;">Malvasia - D.O.C. Collio - 2018</p>
-        <p>€ 75.00 (6 stuks)</p>
-      </div>
-    </div>
-    <div class="wijn-kaart">
-      <div class="wijn-foto cabernet"></div>
-      <div class="wijn-beschrijving">
-        <p style="font-weight: 700;">Cabernet Franc - D.O.C. Collio - 2017</p>
-        <p>€ 68.00 (6 stuks)</p>
-      </div>
-    </div>
-    <div class="wijn-kaart">
-      <div class="wijn-foto merlot"></div>
-      <div class="wijn-beschrijving">
-        <p style="font-weight: 700;">Merlot - D.O.C. Collio - 2016</p>
-        <p>€ 65.00 (6 stuks)</p>
-      </div>
-    </div>
+    </form>
   </div>
 
-<div id="line-break-center"></div>
+< id="line-break-center"></>
 <div class="bestellen">
   <h2>Hoe kan ik bestellen?</h2>
   <div class="shop-rules">
