@@ -48,44 +48,47 @@
 
 <body>
 
-<nav class="navbar fixed-top navbar-expand-xl navbar-light">
-  <a class="navbar-brand js-scroll-trigger" href="/">DE CENTRALE</a>
-  <button class="navbar-toggler custom-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    <span class="my-1 close">
-<svg fill="#000000" height="32" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
-    <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
-    <path d="M0 0h24v24H0z" fill="none"/>
-</svg></span>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+		<a class="navbar-brand js-scroll-trigger" href="/">DE CENTRALE</a>
+		<button class="navbar-toggler custom-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+		 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			<span class="my-1 close">
+				<svg fill="#000000" height="32" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
+					<path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+					<path d="M0 0h24v24H0z" fill="none" />
+				</svg></span>
 
-  </button>
+		</button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a href="/menukaart/" class="nav-link page-scroll">Menukaart</a>
-        </li>
-        <li class="nav-item">
-          <a href="/wijnkaart/" class="nav-link page-scroll">Wijnkaart</a>
-        </li>
-        <li class="nav-item">
-          <a href="/groepen/" class="nav-link page-scroll">Groepen</a>
-        </li>
-        <li class="nav-item">
-              <a href="/kunst/" class="nav-link page-scroll">Kunst</a>
-            </li>
-            <li class="nav-item">
-              <a href="/vacatures/" class="nav-link page-scroll">Vacatures</a>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a href="/menukaart/" class="nav-link page-scroll">Menu</a>
+				</li>
+				<li class="nav-item">
+					<a href="/wijnkaart/" class="nav-link page-scroll">Wijnkaart</a>
+				</li>
+				<li class="nav-item">
+        			<a href="/kunst/" class="nav-link page-scroll">Kunst</a>
+				</li>
+				<li class="nav-item active">
+        			<a href="/eigenvondst/" class="nav-link page-scroll">🍷 Wijnshop</a>
+				</li>
+		  <li class="nav-item nav-link-wijnpakket">
+            <a href="/wijnpakket/" class="nav-link page-scroll">Wijnpakketten</a>
+		  </li>
+		  <li class="nav-item nav-link-reserveer ">
+            <a href="/contact/" class="nav-link page-scroll">Bestel Menu</a>
+		  </li>
+		  <li class="nav-item nav-link-reserveer ">
+            <a href="/roast/" class="nav-link page-scroll">Bestel Roast</a>
           </li>
-          <li class="nav-item active">
-            <a href="/eigenvondst/" class="nav-link page-scroll">🍷 Wijnshop</a>
-          </li>
-        <li class="nav-item nav-link-reserveer ">
-          <a href="/contact/" class="nav-link page-scroll">Reserveer</a>
-        </li>
-      </ul>
-  </div>
-</nav>
+   
+
+			</ul>
+		</div>
+	</nav>
 
 <div id="eigen-vondst-container">
   <h2>Wijnshop</h2>
@@ -103,63 +106,51 @@
     <p>De acht hectaren aan wijngaarden van Zorzon bevinden zich in Collio. Tegen de uitlopers van de Alpen aan de grens met Slovenië, net buiten het dorpje Brazzano. De unieke grondsamenstelling in dit gebied noemen de Italianen: Ponca. Het is juist deze grond die zorgt voor de bijzondere wijnen. De witte wijnen van Zorzon zijn loepzuiver, mineraalrijk en expressief. </p>
   </div>
   <div class="wijn-container">
-    <form id="contact-form" method="post" action="/.netlify/functions/send-mail-res" autocomplete="off">
-      <div class="controls">
-        <div class="wijn-kaart">
-          <div class="wijn-foto sauvignon"></div>
-          <div class="wijn-beschrijving">
-            <p style="font-weight: 700;">Sauvignon Blanc - D.O.C. Collio - 2018</p>
-            <p>€ 68.00 (6 stuks)</p>
-          </div>
-          <div class="col-xs-6 col-md-4">
-            <div class="form-group">
-              <label for="form_number">Aantal</label>
-              <input id="form_number" name="number" type="number" class="formnumber form-control" placeholder="" min="1" required="required" data-error="Geef een aantal op." >
-              <div class="help-block with-errors"></div>
-            </div>
-          </div>
-        </div>
-        <div class="wijn-kaart">
-          <div class="wijn-foto friulano"></div>
-          <div class="wijn-beschrijving">
-            <p style="font-weight: 700;">Friulano - D.O.C. Collio - 2018</p>
-            <p>€ 62.00 (6 stuks)</p>
-          </div>
-        </div>
-        <div class="wijn-kaart">
-          <div class="wijn-foto pinot-g"></div>
-          <div class="wijn-beschrijving">
-            <p style="font-weight: 700;">Pinot Grigio - D.O.C. Collio - 2018</p>
-            <p>€ 65.00 (6 stuks)</p>
-          </div>
-        </div>
-        <div class="wijn-kaart">
-          <div class="wijn-foto malvasia"></div>
-          <div class="wijn-beschrijving">
-            <p style="font-weight: 700;">Malvasia - D.O.C. Collio - 2018</p>
-            <p>€ 75.00 (6 stuks)</p>
-          </div>
-        </div>
-        <div class="wijn-kaart">
-          <div class="wijn-foto cabernet"></div>
-          <div class="wijn-beschrijving">
-            <p style="font-weight: 700;">Cabernet Franc - D.O.C. Collio - 2017</p>
-            <p>€ 68.00 (6 stuks)</p>
-          </div>
-        </div>
-        <div class="wijn-kaart">
-          <div class="wijn-foto merlot"></div>
-          <div class="wijn-beschrijving">
-            <p style="font-weight: 700;">Merlot - D.O.C. Collio - 2016</p>
-            <p>€ 65.00 (6 stuks)</p>
-          </div>
-        </div>
-        <button type="submit" class="btn-form">VERSTUUR</button>
+    <div class="wijn-kaart">
+      <div class="wijn-foto sauvignon"></div>
+      <div class="wijn-beschrijving">
+        <p style="font-weight: 700;">Sauvignon Blanc - D.O.C. Collio - 2018</p>
+        <p>€ 68.00 (6 stuks)</p>
       </div>
-    </form>
+    </div>
+    <div class="wijn-kaart">
+      <div class="wijn-foto friulano"></div>
+      <div class="wijn-beschrijving">
+        <p style="font-weight: 700;">Friulano - D.O.C. Collio - 2018</p>
+        <p>€ 62.00 (6 stuks)</p>
+      </div>
+    </div>
+    <div class="wijn-kaart">
+      <div class="wijn-foto pinot-g"></div>
+      <div class="wijn-beschrijving">
+        <p style="font-weight: 700;">Pinot Grigio - D.O.C. Collio - 2018</p>
+        <p>€ 65.00 (6 stuks)</p>
+      </div>
+    </div>
+    <div class="wijn-kaart">
+      <div class="wijn-foto malvasia"></div>
+      <div class="wijn-beschrijving">
+        <p style="font-weight: 700;">Malvasia - D.O.C. Collio - 2018</p>
+        <p>€ 75.00 (6 stuks)</p>
+      </div>
+    </div>
+    <div class="wijn-kaart">
+      <div class="wijn-foto cabernet"></div>
+      <div class="wijn-beschrijving">
+        <p style="font-weight: 700;">Cabernet Franc - D.O.C. Collio - 2017</p>
+        <p>€ 68.00 (6 stuks)</p>
+      </div>
+    </div>
+    <div class="wijn-kaart">
+      <div class="wijn-foto merlot"></div>
+      <div class="wijn-beschrijving">
+        <p style="font-weight: 700;">Merlot - D.O.C. Collio - 2016</p>
+        <p>€ 65.00 (6 stuks)</p>
+      </div>
+    </div>
   </div>
 
-< id="line-break-center"></>
+<div id="line-break-center"></div>
 <div class="bestellen">
   <h2>Hoe kan ik bestellen?</h2>
   <div class="shop-rules">
@@ -178,8 +169,33 @@
     <div class="link-mail-thijs-bg"><a class="link" href="mailto:eigenvondst@decentraledelft.nl?subject=Wijn bestellen">BESTEL VIA EMAIL</a></div>
 
   </div>
-
-
+  <footer class="container-l">
+    <div class="row">
+      <div class="footer-box col-md-3 text-center">
+        <h6>Contact<br></h6>
+        <p>015 - 889 27 77<br>hallo@decentraledelft.nl</p>
+      </div>
+  
+      <div class="footer-box col-md-3 text-center">
+        <h6>Bezorgen & afhalen <br></h6>
+        <p>Wij koken heerlijk eten voor thuis op zaterdag en zondag<br><br></p>
+      </div>
+  
+      <div class="footer-box col-md-3 text-center">
+        <h6>Locatie<br></h6>
+        <p>Voldersgracht 2<br>2611 ET Delft</p><a
+          href="https://www.google.nl/maps/place/Voldersgracht+2,+2611+ET+Delft/@52.011741,4.355754,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5b5c3b08304c5:0x79ad52aba43f8354!8m2!3d52.011741!4d4.357948"
+          target="_blank">route</a>
+      </div>
+  
+      <div class="col-md-3 text-center">
+        <a href="https://www.facebook.com/decentraledelft" target="_blank">facebook</a><br>
+        <a href="https://www.instagram.com/decentraledelft/" target="_blank">instagram</a>
+      </div>
+  
+    </div>
+  </footer>
+  
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 

@@ -53,7 +53,7 @@ exports.handler = function (event, context, callback) {
 		Datum: ${date}
 		Tijd: ${time}\n
 		Aantal: ${aantal}
-		Bijpassende wijn: ${wijn}
+		Bijpassende wijn: ${wijn}\n
 		Naam: ${name}
 		Email: ${email}
 		Telefoon: ${phone}`
