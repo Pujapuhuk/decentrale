@@ -60,7 +60,7 @@ exports.handler = function (event, context, callback) {
 		"From": `${name} <${EMAIL_FROM}>`,
 		"To": EMAIL_TO,
 		"ReplyTo": email,
-		"Subject": `Eten bestellen bij De Centrale voor ${date} | ${methode} | ${time}`,
+		"Subject": `Menu bestellen bij De Centrale voor ${date} | ${methode} | ${time}`,
 		"TextBody": `
 		Wij willen graag: 
 		4-gangen standaard: ${menuStandaardVier} x
@@ -69,8 +69,8 @@ exports.handler = function (event, context, callback) {
 		Oester: ${oesters}
 		Kaas: ${kaas} x
 		Koffie: ${koffie} x
-		Friandises: ${friandises}x/n
-		Cadeaubon: ${cadeaubon}/n
+		Friandises: ${friandises}x
+		Cadeaubon: ${cadeaubon} euro \n
 		Wijn:
 		Bijpassend wit: ${wijnWit}
 		Bijpassend rose: ${wijnRose}
