@@ -33,7 +33,6 @@ exports.handler = function (event, context, callback) {
 	const email = postData.email
 	const aantal = postData.aantal
 	const phone = postData.phone
-	const nieuwsbrief = postData.nieuwsbrief
 	const emailBody = getEmailBody(postData)
 	const honeyPotValue = postData.petsName
 
