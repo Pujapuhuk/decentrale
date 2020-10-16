@@ -29,7 +29,7 @@ exports.handler = function (event, context, callback) {
 	const date = postData.date
 	const time = postData.time
 	const name = postData.name
-	const wijn = postData.wijn
+	const wijn = postData.wijn 
 	const email = postData.email
 	const aantal = postData.aantal
 	const phone = postData.phone
@@ -53,7 +53,7 @@ exports.handler = function (event, context, callback) {
 		Datum: ${date}
 		Tijd: ${time}\n
 		Aantal: ${aantal} personen
-		Bijpassende wijn: ${wijn}\n
+		Bijpassende wijn: ${wijn}x \n
 		Naam: ${name}
 		Email: ${email}
 		Telefoon: ${phone}`

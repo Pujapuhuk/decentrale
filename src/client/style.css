@@ -192,6 +192,16 @@ button:hover, button:focus, button:active {
     text-align: left;
 }
 
+.btn-announcement{
+    position: relative;
+    text-align: center;
+    background-color: #FFFAEE;
+}
+
+.center{
+
+}
+
 .btn-back{
     padding:4px;
     position:fixed;

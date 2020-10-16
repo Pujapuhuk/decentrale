@@ -88,20 +88,35 @@
 	<!-- Header -->
 	<div class="container-fluid home-header">
 		<div class="row justify-content-between">
-			<div class="col-lg-3 col-sm-6">
-				<div class="widget">
-					<p> 🍽️ <br> Bestel een 4-gangen menu voor thuis.</p>
-					<button class="btn-reserveer btn-header" onclick="parent.location='/contact/'">Menu bestellen</button>
-				</div>
-				<div class="widget">
-					<p> 🍽️<br>	Bestel een weekend roast.</p>
-					<button class="btn-reserveer btn-header" onclick="parent.location='/roast/'">Roast bestellen</button>
+			<div class="col-lg-4 col-sm-6">
+				<div class="announcement">
+					<p>Lieve gast,<br><br>
+						Dat wij je de komende tijd niet kunnen ontvangen, betekent niet dat je niet van ons kan genieten!
+					<br><br>
+					Wij serveren namelijk ons vertrouwde <b>Menu van Nu</b> 	in het weekend. In een handomdraai zet je een Centrale-waardig menu van 4 gangen op tafel.
+					<br>
+					<button class="btn-reserveer btn-header d-block d-sm-none" onclick="parent.location='/contact/'">Menu van Nu</button>
+					<br>
+					Toch liever een wat minder uitgebreid diner? Ga dan voor de <b>Weekend Roast</b>. Ieder weekend haal je bij ons een ander topgerecht af dat alleen nog even de oven in moet. 
+					<br>
+					<button class="btn-reserveer btn-header d-block d-sm-none" onclick="parent.location='/roast/'">Weekend Roast</button>
+					<br>
+					<span style="font-weight: 700;">Wijnen</span><br>
+					Drink je graag wijn bij het diner? Dat komt goed uit. Wij serveren, zoals je van ons gewend bent, bijpassende wijnen bij het Menu van Nu en bij de Roast. Ook hebben wij 
+					weer allerlei verschillende <b>wijnpakketten </b>voor jullie klaar staan!<br><br>
+					<button class="btn-reserveer btn-header" onclick="parent.location='/wijnpakket/'">Wijnpakketten</button>
+					<br><br>
+					Groetjes, het Centrale team</p>
 				</div>
 			</div>
-			<div class="col-lg-3 col-md-4 col-sm-6">
-				<div class="widget">
-					<p> 🍷 <br>Wijn voor thuis.</p>
-					<button class="btn-reserveer btn-header" onclick="parent.location='/wijnpakket/'">Wijnpakketten</button>
+			<div class="col-lg-3 col-sm-6">
+				<div class="widget d-none d-sm-block">
+					<p> 🍽️ <br> Bestel het Menu van Nu.</p>
+					<button class="btn-reserveer btn-header" onclick="parent.location='/contact/'">Menu van Nu</button>
+				</div>
+				<div class="widget d-none d-sm-block">
+					<p> 🍽️ <br> Bestel de Weekend Roast</p>
+					<button class="btn-reserveer btn-header" onclick="parent.location='/roast/'">Weekend Roast</button>
 				</div>
 			</div>
 		</div>
