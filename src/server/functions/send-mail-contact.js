@@ -34,10 +34,10 @@ exports.handler = function (event, context, callback) {
 	const friandises = postData.friandises
 	const cadeaubon = postData.cadeaubon
 	const wijnWit = postData["wijn_wit"]
-	const wijnRose = postData["wijn_rose"]
+	const wijnCava = postData["wijn_cava"]
 	const wijnRood = postData["wijn_rood"]
 	const bubbel = postData.bubbel
-	const wijnPakket = postData["wijn_pakket"]
+	const wijnpakket = postData["wijnpakket"]
 	const methode = postData.methode
 	const date = postData.date
 	const time = postData.time
@@ -46,6 +46,7 @@ exports.handler = function (event, context, callback) {
 	const phone = postData.phone
 	const adres = postData.adres
 	const postcode = postData.postcode
+	const nieuwsbrief = postData.nieuwsbrief
 	const emailBody = getEmailBody(postData) 
 	const honeyPotValue = postData.petsName
 
@@ -73,10 +74,10 @@ exports.handler = function (event, context, callback) {
 		Cadeaubon: ${cadeaubon} euro \n
 		Wijn:
 		Bijpassend wit: ${wijnWit}
-		Bijpassend rose: ${wijnRose}
 		Bijpassen rood: ${wijnRood}
+		Bijpassend cava: ${wijnCava}
 		Bubbel: ${bubbel}
-		Bijpassend pakket: ${wijnPakket}\n
+		Bijpassend pakket: ${wijnpakket} flessen \n
 		Wanneer en hoe?
 		${methode} op ${date}
 		${time}\n

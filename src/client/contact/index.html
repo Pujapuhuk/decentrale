@@ -96,7 +96,7 @@
       <p><br>Bestel ons menu van 4 gangen voor thuis. Hoe? Het werkt heel makkelijk! Je voorgerecht, 
         tussengerecht en dessert krijg je zoals je van ons gewend bent. Alleen het hoofdgerecht geef je 
         thuis de finishing touch door onze eenvoudige instructies te volgen. Een kind kan de was doen! 
-        Wil je de complete Centrale ervaring? Kies dan voor de bijpassende wijnen, oesters vooraf of een kaasplank!<br>
+        Wil je de complete Centrale ervaring? Kies dan voor de bijpassende wijnen, oesters vooraf, een kaasplank of koffie van Miss Morrison met friandises!<br>
         <br>
         <button class="btn-header" onclick="parent.location='/menukaart/'">Bekijk menu</button>
 
@@ -118,13 +118,13 @@
       </div>
     </div>
     <div class="form-group row">
-      <label for="4_gangen_standaard" class="col-sm-6">4-gangen standaard (34,50 p.p.)</label>
+      <label for="4_gangen_standaard" class="col-sm-6">4-gangen standaard (35,00 p.p.)</label>
       <div class="col-sm-6">
           <input type="number" class="form-control small-field" name="menuStandaardVier" id="4_gangen_standaard">
       </div>
     </div>
     <div class="form-group row">
-      <label for="4_gangen_vega" class="col-sm-6">4-gangen vega (34,50 p.p.)</label>
+      <label for="4_gangen_vega" class="col-sm-6">4-gangen vega (35,00 p.p.)</label>
       <div class="col-sm-6">
           <input type="number" class="form-control small-field" name="menuVegaVier" id="4_gangen_vega">
       </div>
@@ -179,30 +179,22 @@
     <hr>
     <div class="row">
       <div class="col-md-12">
-        <h6>CADEAUBON</h6>
-        <p>Geef ons dat extra duwtje in de rug</p>
+        <h6>KIES WIJN</h6>
+        <p>Bijpassende flessen wijn of wijnpakketten</p>
       </div>
     </div>
     <div class="form-group row">
-      <label for="cadeaubon" class="col-sm-6">Cadeaubon</label>
+      <label for="wijnpakket" class="col-sm-6">Bijpassend wijnpakket</label>
       <div class="col-sm-6">
         <div class="selectpicker">
-          <select id="cadeaubon" name="cadeaubon" class="form-control small-field">
-            <option selected disabled value="">Hoeveel?</option>
+          <select id="wijnpakket" name="wijnpakket" class="form-control middle-field">
+            <option selected disabled value="">Hoeveel flessen?</option>
             <option value="geen">geen</option>
-            <option value="25">25 euro</option>
-            <option value="50">50 euro</option>
-            <option value="75">75 euro</option>
-            <option value="100">100 euro</option>
+            <option value="2">2 flessen (30,00)</option>
+            <option value="3">3 flessen (45,00)</option>
+            <option value="4">4 flessen (60,00)</option>
           </select>
         </div>
-      </div>
-    </div>
-    <hr>
-    <div class="row">
-      <div class="col-md-12">
-        <h6>KIES WIJN</h6>
-        <p>Bijpassende flessen wijn of wijnpakketten</p>
       </div>
     </div>
     <div class="row">
@@ -212,20 +204,16 @@
           <label for="bijpassend_wit"> Bijpassend wit (17,50)</label>
         </div>
         <div class="form-group">
-          <input type="checkbox" id="bijpassend_rose" name="wijn_rose">
-          <label for="bijpassend_rose"> Bijpassend rosé (17,50)</label>
-        </div>
-        <div class="form-group">
           <input type="checkbox" id="bijpassend_rood" name="wijn_rood">
           <label for="bijpassend_rood"> Bijpassend rood (17,50)</label>
         </div>
         <div class="form-group">
-          <input type="checkbox" id="bijpassend_speciaal" name="bubbel">
-          <label for="bijpassend_speciaal">Bubbel<a href="https://www.alain-voge.com/en/saint-peray/les-bulles-d-alain" target="_blank">Rhône Cremant:  Bulles d’Alain – A.O.P. Saint-Péray – 2014 (bio)</a>(40,00)</label>
+          <input type="checkbox" id="bijpassend_cava" name="wijn_cava">
+          <label for="bijpassend_cava"> Cava - Clos Montblanc - Brut Silver (17,50)</label>
         </div>
         <div class="form-group">
-          <input type="checkbox" id="bijpassend_pakket" name="wijn_pakket">
-          <label for="bijpassend_pakket"> Bijpassend wijnpakket, 3 flessen bij voor, hoofd en na. (45,00)</label>
+          <input type="checkbox" id="bijpassend_speciaal" name="bubbel">
+          <label for="bijpassend_speciaal">Bubbel<a href="https://www.alain-voge.com/en/saint-peray/les-bulles-d-alain" target="_blank">Rhône Cremant:  Bulles d’Alain – A.O.P. Saint-Péray – 2014 (bio)</a>(40,00)</label>
         </div>
       </div>
     </div>
@@ -329,6 +317,22 @@
           <label for="form_postcode">Bezorg postcode</label>
           <input id="form_postcode" type="adress" name="postcode" class="form-control" placeholder="" data-error="Voor het bezorgen hebben we ook je postcode nodig.">
           <div class="help-block with-errors"></div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="form-group row">
+      <label for="cadeaubon" class="col-sm-6">Cadeaubon</label>
+      <div class="col-sm-6">
+        <div class="selectpicker">
+          <select id="cadeaubon" name="cadeaubon" class="form-control small-field">
+            <option selected disabled value="">Hoeveel?</option>
+            <option value="geen">geen</option>
+            <option value="25">25 euro</option>
+            <option value="50">50 euro</option>
+            <option value="75">75 euro</option>
+            <option value="100">100 euro</option>
+          </select>
         </div>
       </div>
     </div>          

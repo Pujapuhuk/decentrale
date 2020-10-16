@@ -917,6 +917,10 @@ label{
     width:100px !important;
     float:right;
 }
+.middle-field{
+    width:200px !important;
+    float:right;
+}
 .help-block li{
     color: red;
 }
@@ -987,11 +991,11 @@ label{
 }
 
 
-/*******************/ 
+/*******************/
 /*Bestel pagina PAGINA*/
 /*******************/
 
-.bestel-header{
+.bestel-header {
     background: url(img/bestel/bestel-header.jpg) 65% 35%/cover no-repeat;
 }
 
