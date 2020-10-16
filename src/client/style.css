@@ -986,6 +986,21 @@ label{
     display: none; 
 }
 
+
+/*******************/ 
+/*Bestel pagina PAGINA*/
+/*******************/
+
+.bestel-header{
+    background: url(img/bestel/bestel-header.jpg) 65% 35%/cover no-repeat;
+}
+
+@media (max-width: 480PX) {
+    .bestel-header {
+        background: url(img/bestel/bestel-header-S.jpg) 50% 20%/cover no-repeat;
+        height:30vh;
+    }
+}
 /*footer*/
 footer{
   background-color: #101010;
