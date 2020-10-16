@@ -192,6 +192,16 @@ button:hover, button:focus, button:active {
     text-align: left;
 }
 
+.btn-announcement{
+    position: relative;
+    text-align: center;
+    background-color: #FFFAEE;
+}
+
+.center{
+
+}
+
 .btn-back{
     padding:4px;
     position:fixed;
@@ -917,6 +927,10 @@ label{
     width:100px !important;
     float:right;
 }
+.middle-field{
+    width:200px !important;
+    float:right;
+}
 .help-block li{
     color: red;
 }
@@ -986,6 +1000,21 @@ label{
     display: none; 
 }
 
+
+/*******************/
+/*Bestel pagina PAGINA*/
+/*******************/
+
+.bestel-header {
+    background: url(img/bestel/bestel-header.jpg) 65% 35%/cover no-repeat;
+}
+
+@media (max-width: 480PX) {
+    .bestel-header {
+        background: url(img/bestel/bestel-header-S.jpg) 50% 20%/cover no-repeat;
+        height:30vh;
+    }
+}
 /*footer*/
 footer{
   background-color: #101010;

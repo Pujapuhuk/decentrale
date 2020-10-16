@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <title>Eten bestellen | De Centrale</title>
-    <meta name="description" content="Je kunt bij ons gemakkelijk resereveren met dit formulier.">
+    <meta name="description" content="Je kunt bij ons gemakkelijk bestellen met dit formulier.">
 
     <!-- favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
@@ -71,158 +71,97 @@
         <li class="nav-item nav-link-wijnpakket">
               <a href="/wijnpakket/" class="nav-link page-scroll">Wijnpakketten</a>
         </li>
-        <li class="nav-item nav-link-reserveer active-reserveer">
+        <li class="nav-item nav-link-reserveer">
               <a href="/contact/" class="nav-link page-scroll">Bestel Menu</a>
         </li>
-        <li class="nav-item nav-link-reserveer ">
+        <li class="nav-item nav-link-reserveer active-reserveer">
               <a href="/roast/" class="nav-link page-scroll">Bestel Roast</a>
             </li>
+     
+  
         </ul>
       </div>
     </nav>
-
     <div class="container-l page-title-contact d-block d-sm-none">
       <div class="page-title-text-wrap">
-        <h5>Bestel menu</h5>
+        <h5>Weekend roast</h5>
       </div>
     </div>
-    <div class="container-l page-header bestel-header"></div>
+    <!-- content-reserveren -->
+    <div class="page-title-white container-s reserveren-content  d-none d-sm-block">
 
-    <div class="container-s page-title sub-page-title d-none d-sm-block">
-      <h1>BESTEL MENU</h1>
+      <div class="page-title-text-wrap">
+        <h1>Weekend roast</h1>
+      </div>
     </div>
-    
     <div class="container-s page-intro-text text-center reserveren-intro">
-      <p><br>Bestel ons menu van 4 gangen voor thuis. Hoe? Het werkt heel makkelijk! Je voorgerecht, 
-        tussengerecht en dessert krijg je zoals je van ons gewend bent. Alleen het hoofdgerecht geef je 
-        thuis de finishing touch door onze eenvoudige instructies te volgen. Een kind kan de was doen! 
-        Wil je de complete Centrale ervaring? Kies dan voor de bijpassende wijnen, oesters vooraf, een kaasplank of koffie van Miss Morrison met friandises!<br>
-        <br>
-        <button class="btn-header" onclick="parent.location='/menukaart/'">Bekijk menu</button>
+      <p> Met z’n tweeën op de bank hangen met een heerlijk gerecht en een goede fles wijn of met het hele gezin gezellig aan tafel het weekend vieren?
+        Wij serveren naar Engelse traditie ieder weekend een wisselende roast. Een gerecht voor minimaal 2 personen dat alleen nog even de oven in moet.
+        Zoals je van ons gewend bent maken we alles zelf met verse producten, dus bestel snel, want op = op!
+      </p>
+      Weekend Roast 24 en 25 oktober (20 euro) <br>
 
-        <p>🚚 Afhalen en bezorgen is mogelijk op zaterdag en zondag.
-          <br> 💳 We sturen een tikkie of bij afhalen kan je direct pinnen.
-         <br>😬 Helaas kunnen wij geen rekening houden met uitzonderingen of allergiën. <br>  ⬇️ Bestel met het onderstaande formulier.</p>
+      <p>48 uur gegaarde short ribs met Yorkshire pudding, pompoen crème, geroosterde aardappelen, bospeen met sesam en doperwten met een rijke jus. </p>
+      
+      Bijpassende wijn: Mataro Boy (22 euro)
+
+      <p>Serge Baux, de inmiddels 75 jarige wijnmaker, speelde ooit in het Franse nationale Rugby team – zoals te zien op de fles. Deze biologische wijn uit de 
+      Roussilion van de Mourvèdre-druif (de oorspronkelijke naam is Mataro in Catalonië) is zo krachtig als de foto op het etiket doet vermoeden vanwege de zeer 
+      lage opbrengst van zijn wijngaarden. Intens, sappig en kruidig. </p>
+        <p>🚚 Afhalen is mogelijk op zaterdag en zondag. 
+          <br> 💳 Bij het afhalen kan je pinnen.
+         <br>😬 Helaas kunnen wij geen rekening houden met uitzonderingen of allergiën. 
+         <br>  ⬇️ Bestel met het onderstaande formulier.</p>
     </div>
-    <br>
-    <div class="container-s">
+    <!--<div class="container-s">
       <div class="container-black">
-        <p> Bestel voor 22.00 uur je diner voor de volgende dag! </p>
+        <p>Alles gereserveerd? Wij houden altijd een aantal tafels vrij voor de spontane bezoeker! </p>
       </div>
-    </div>
+    </div>-->
 <div class="container-s">
-  <form id="contact-form" method="post" action="/.netlify/functions/send-mail-contact" autocomplete="off">
+  <form id="contact-form" method="post" action="/.netlify/functions/send-mail-roast" autocomplete="off">
     <div class="row">
       <div class="col-md-12">
-        <h6>KIES MENU</h6>
-        <p>Vanaf twee personen</p>
+        <h6>WEEKEND ROAST</h6>
+        <p>Te bestellen vanaf twee personen</p>
       </div>
     </div>
     <div class="form-group row">
-      <label for="4_gangen_standaard" class="col-sm-6">4-gangen standaard (35,00 p.p.)</label>
-      <div class="col-sm-6">
-          <input type="number" class="form-control small-field" name="menuStandaardVier" id="4_gangen_standaard">
-      </div>
+        <label for="aantal" class="col-sm-6">Aantal personen (20,00 p.p.)</label>
+        <div class="col-sm-6">
+          <div class="selectpicker">
+            <select id="aantal" name="aantal" class="form-control small-field">
+              <option selected disabled value="">Hoeveel?</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+            </select>
+          </div>
+        </div>
     </div>
     <div class="form-group row">
-      <label for="4_gangen_vega" class="col-sm-6">4-gangen vega (35,00 p.p.)</label>
-      <div class="col-sm-6">
-          <input type="number" class="form-control small-field" name="menuVegaVier" id="4_gangen_vega">
-      </div>
-    </div>
-    <hr>
-    <div class="row">
-      <div class="col-md-12">
-        <h6>KIES EXTRA'S</h6>
-        <p>Oesters vooraf of kaas als extra gang</p>
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="oesters" class="col-sm-6">Oester (Incl. oestermes)</label>
+      <label for="wijn" class="col-sm-6">Fles Mataro Boy (22,00)</label>
       <div class="col-sm-6">
         <div class="selectpicker">
-          <select id="oesters" name="oesters" class="form-control small-field">
+          <select id="wijn" name="wijn" class="form-control small-field">
             <option selected disabled value="">Hoeveel?</option>
-            <option value="geen oesters">geen</option>
-            <option value="6-stuks">6 st. (18,00)</option>
-            <option value="12-stuks">12 st. (36,00)</option>
-            <option value="18-stuks">18 st. (54,00)</option>
-            <option value="24-stuks">24 st. (72,00)</option>
-          </select>
-        </div>
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="kaas" class="col-sm-6">Kaas (10,00 p.p.)</label>
-      <div class="col-sm-6">
-          <input type="number" class="form-control small-field" name="kaas" id="kaas">
-      </div>
-    </div>
-    <hr>
-    <div class="row">
-      <div class="col-md-12">
-        <h6>KOFFIE EN LEKKERS</h6>
-        <p>Voor erna</p>
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="koffie" class="col-sm-6">Miss Morrison Koffie Cups (doosje van 10 stuks voor 5,25)</label>
-      <div class="col-sm-6">
-          <input type="number" class="form-control small-field" name="koffie" id="koffie">
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="friandises" class="col-sm-6">Friandises (6,00 p.p.), 4 kleine lekkernijen voor bij de koffie</label>
-      <div class="col-sm-6">
-          <input type="number" class="form-control small-field" name="friandises" id="friandises">
-      </div>
-    </div>
-    <hr>
-    <div class="row">
-      <div class="col-md-12">
-        <h6>KIES WIJN</h6>
-        <p>Bijpassende flessen wijn of wijnpakketten</p>
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="wijnpakket" class="col-sm-6">Bijpassend wijnpakket</label>
-      <div class="col-sm-6">
-        <div class="selectpicker">
-          <select id="wijnpakket" name="wijnpakket" class="form-control middle-field">
-            <option selected disabled value="">Hoeveel flessen?</option>
             <option value="geen">geen</option>
-            <option value="2">2 flessen (30,00)</option>
-            <option value="3">3 flessen (45,00)</option>
-            <option value="4">4 flessen (60,00)</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
           </select>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="form-group">
-          <input type="checkbox" id="bijpassend_wit" name="wijn_wit">
-          <label for="bijpassend_wit"> Bijpassend wit (17,50)</label>
-        </div>
-        <div class="form-group">
-          <input type="checkbox" id="bijpassend_rood" name="wijn_rood">
-          <label for="bijpassend_rood"> Bijpassend rood (17,50)</label>
-        </div>
-        <div class="form-group">
-          <input type="checkbox" id="bijpassend_cava" name="wijn_cava">
-          <label for="bijpassend_cava"> Cava - Clos Montblanc - Brut Silver (17,50)</label>
-        </div>
-        <div class="form-group">
-          <input type="checkbox" id="bijpassend_speciaal" name="bubbel">
-          <label for="bijpassend_speciaal">Bubbel<a href="https://www.alain-voge.com/en/saint-peray/les-bulles-d-alain" target="_blank">Rhône Cremant:  Bulles d’Alain – A.O.P. Saint-Péray – 2014 (bio)</a>(40,00)</label>
-        </div>
-      </div>
-    </div>
+  </div>
     <hr>
     <div class="row">
       <div class="col-md-12">
         <h6>WANNEER?</h6>
-        <p>Geef aan wanneer je wilt eten en of je het komt halen of dat wij het kunnen bezorgen.</p>
+        <p>Geef aan wanneer je wilt eten.</p>
       </div>
     </div>
     <div class="row">
@@ -237,22 +176,7 @@
     <div class="row">
       <div class="col-xs-12 col-md-8">
         <div class="form-group">
-          <label for="form_methode">Bezorgen of afhalen?*</label>
-          <div class="selectpicker">
-            <select id ="form_methode" name="methode" class="form-control" required="required" data-error="Afhalen of bezorgen?">
-              <option selected disabled value="">Kies</option>
-              <option value="bezorgen">Bezorgen [tussen 15:00 - 17:00]</option>
-              <option value="afhalen">Afhalen</option>
-            </select>
-          </div>
-          <div class="help-block with-errors"></div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12 col-md-8">
-        <div class="form-group">
-          <label for="timeslots">Indien afhalen, hoe laat?</label>
+          <label for="timeslots">Hoelaat wilt u afhalen?</label>
           <div class="selectpicker">
             <select id ="timeslots" name="time" class="form-control">
               <option selected disabled value="">Kies</option>
@@ -272,7 +196,7 @@
     <hr>
     <div class="row">
       <div class="col-md-12">
-        <h6>Persoonlijke gegevens?</h6>
+        <h6>PERSOONLIJKE GEGEVENS</h6>
         <p>Wanneer je hebt besteld, nemen we zo snel mogelijk contact met je op.</p>
       </div>
     </div>
@@ -303,40 +227,7 @@
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-xs-12 col-md-8">
-        <div class="form-group">
-          <label for="form_adress">Bezorg adres (straat, huisnummer)</label>
-          <input id="form_adress" type="adress" name="adres" class="form-control" placeholder="" data-error="Als je wil dat we berzorgen, hebben we een adres nodig.">
-          <div class="help-block with-errors"></div>
-        </div>
-      </div>
-    </div>  
-    <div class="row">
-      <div class="col-xs-12 col-md-8">
-        <div class="form-group">
-          <label for="form_postcode">Bezorg postcode</label>
-          <input id="form_postcode" type="adress" name="postcode" class="form-control" placeholder="" data-error="Voor het bezorgen hebben we ook je postcode nodig.">
-          <div class="help-block with-errors"></div>
-        </div>
-      </div>
-    </div>
-    <br>
-    <div class="form-group row">
-      <label for="cadeaubon" class="col-sm-6">Cadeaubon</label>
-      <div class="col-sm-6">
-        <div class="selectpicker">
-          <select id="cadeaubon" name="cadeaubon" class="form-control small-field">
-            <option selected disabled value="">Hoeveel?</option>
-            <option value="geen">geen</option>
-            <option value="25">25 euro</option>
-            <option value="50">50 euro</option>
-            <option value="75">75 euro</option>
-            <option value="100">100 euro</option>
-          </select>
-        </div>
-      </div>
-    </div>          
+             
     <label class="honing" tabindex="-1" aria-hidden="true">
     <input type="text" name="petsName"></label>
     <button type="submit" class="btn-form">VERSTUUR</button>
