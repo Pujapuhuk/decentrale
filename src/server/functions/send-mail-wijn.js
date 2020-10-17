@@ -51,10 +51,10 @@ exports.handler = function (event, context, callback) {
 		"ReplyTo": email,
 		"Subject": `Wijnbestelling bij de Centrale | ${date}`,
 		"TextBody": `
+		Bestelling: ${message} \n
 		Wanneer en hoe?
 		${methode} op ${date}
 		${time}\n
-		Wijnen: ${message}x \n
 		Naam: ${name}
 		Email: ${email}
 		Telefoon: ${phone}`
