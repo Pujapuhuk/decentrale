@@ -846,7 +846,7 @@ button:hover, button:focus, button:active {
 /*CULTUUR PAGINA*/
 /*******************/
 .cultuur-header{
-    background: url(img/cultuur/cultuur-header.jpg) 50% 50%/cover no-repeat;
+    background: url(img/cultuur/cultuur-header.jpg) 0% 100%/cover no-repeat;
 }
 @media (max-width: 480PX) {
   .cultuur-header {
@@ -855,15 +855,15 @@ button:hover, button:focus, button:active {
   }
 }
 .kunst-1{
-    background: url(img/cultuur/vivian1.jpg) center/cover no-repeat;
+    background: url(img/cultuur/tessa1.jpg) center/cover no-repeat;
     margin-bottom:40px;
 }
 .kunst-2{
-    background: url(img/cultuur/kunst2.png) right/cover no-repeat;
+    background: url(img/cultuur/tessa2.jpg) 90%/cover no-repeat;
     margin-bottom:40px;
 }
 .kunst-3{
-    background: url(img/cultuur/vivian2.jpg) center/cover no-repeat;
+    background: url(img/cultuur/tessa3.jpg) center/cover no-repeat;
     margin-bottom:40px;
     margin-top:20px;
 }
