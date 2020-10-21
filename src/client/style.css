@@ -850,7 +850,7 @@ button:hover, button:focus, button:active {
 }
 @media (max-width: 480PX) {
   .cultuur-header {
-      background: url(img/cultuur/cultuur-header-S.jpg) 50% 50%/cover no-repeat;
+      background: url(img/cultuur/cultuur-header-S.jpg) 0% 100%/cover no-repeat;
       height:30vh;
   }
 }
