@@ -157,7 +157,7 @@
       <p>Kom je wijn halen bij De Centrale of laat het bezorgen (gratis binnen Delft en omstreken)</p> </div>
     </div>
 </div>
-
+<div id="line-break-center"></div>
 <div class="container-s">
   <form id="contact-form" method="post" action="/.netlify/functions/send-mail-wijn" autocomplete="off">
     <div class="row">
@@ -283,11 +283,15 @@
         </div>
       </div>
     </div>
-    <!--<div class="form-group">
-      <input type="checkbox" id="nieuwsbrief" name="nieuwsbrief">
-      <label for="nieuwsbrief"> Ja, ik wil graag via een nieuwsbrief ontvangen over wat jullie doen.</label>
-    </div> -->
-             
+    <hr>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <input type="checkbox" id="nieuwsbrief" name="nieuwsbrief">
+          <label for="nieuwsbrief"> Ja, ik blijf graag via e-mail op de hoogte van de Centrale.</label>
+        </div>
+      </div>
+    </div>   
     <label class="honing" tabindex="-1" aria-hidden="true">
     <input type="text" name="petsName"></label>
     <button type="submit" class="btn-form">VERSTUUR</button>
@@ -497,8 +501,8 @@ $(document).ready(function () {
       datesDisabled: [],
       autoclose: true,
       format: 'dd-mm-yyyy',
-      startDate: '+2d',
-      language: 'nl',
+      startDate: '+0d',
+      language: 'nl',s
       todayHighlight: true,
     }
 
