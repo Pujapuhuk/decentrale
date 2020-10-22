@@ -107,6 +107,16 @@ h6{
     line-height:26px; 
     letter-spacing:0.5px;
 }
+
+h7{
+    font-family: 'Gabriela', serif;
+    color: black;
+    font-weight: 400;
+    letter-spacing:0.5px;
+    font-size:16px; 
+    line-height: 10px;
+}
+
 p {
     font-family: 'Gabriela', serif;
     color: black;
@@ -115,6 +125,7 @@ p {
     font-size:16px; 
     line-height: 32px;
 }
+
 figcaption{
     font-weight:400;
     font-size:0.8em;
@@ -913,6 +924,13 @@ form p{
 form h6{
     margin-bottom:-8px;
 }
+form h7{
+    font-family: 'Karla';
+    font-size:14px;
+    letter-spacing:0.1px;
+    color:grey;
+}
+
 form a{
     font-size:14px;
     color:blue;
