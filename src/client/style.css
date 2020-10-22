@@ -209,10 +209,6 @@ button:hover, button:focus, button:active {
     background-color: #FFFAEE;
 }
 
-.center{
-
-}
-
 .btn-back{
     padding:4px;
     position:fixed;
@@ -1029,6 +1025,21 @@ label{
 @media (max-width: 480PX) {
     .bestel-header {
         background: url(img/bestel/bestel-header-S.jpg) 50% 20%/cover no-repeat;
+        height:30vh;
+    }
+}
+
+/*******************/
+/*Roast pagina PAGINA*/
+/*******************/
+
+.roast-header {
+    background: url(img/roast/roast-header.jpg) 70% 90%/cover no-repeat;
+}
+
+@media (max-width: 480PX) {
+    .roast-header {
+        background: url(img/roast/roast-header-S.jpg) left center/cover no-repeat;
         height:30vh;
     }
 }
