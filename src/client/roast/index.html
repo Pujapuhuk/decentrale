@@ -87,9 +87,9 @@
         <h5>Weekend Roast</h5>
       </div>
     </div>
-    <div class="container-fluid page-header roast-header"></div>
+    <div class="container-l page-header roast-header"></div>
 
-    <div class="container-s page-title sub-page-title d-none d-sm-block">
+    <div class="container-s page-title-roast d-none d-sm-block">
       <h1>Weekend Roast</h1>
     </div>
     
@@ -98,25 +98,29 @@
         Wij serveren naar Engelse traditie ieder weekend een wisselende roast. Een gerecht voor minimaal 2 personen dat alleen nog even de oven in moet.
         Zoals je van ons gewend bent maken we alles zelf met verse producten, dus bestel snel, want op = op!
       </p>
-      Weekend Roast 24 en 25 oktober (20 euro) <br>
+      Weekend Roast 31 oktober en 1 november (20 euro) <br>
 
-      <p>48 uur gegaarde short ribs met Yorkshire pudding, pompoen crème, geroosterde aardappelen, bospeen met sesam en doperwten met een rijke jus. </p>
+      <p>Kabeljauwrug met een paddenstoelen korst, venkel in een romige vissaus met aardpeercrème,
+        geroosterde pompoen, bospeen, pompoenpitten en gekonfijte krieltjes geserveerd met Franse mayonaise. </p>
       
-      Bijpassende wijn: Mataro Boy (22 euro)
+      Bijpassende wijn: Château Turcaud - Cuvée Majeure - A.O.P. Bordeaux (22 euro)
 
-      <p>Serge Baux, de inmiddels 75 jarige wijnmaker, speelde ooit in het Franse nationale Rugby team – zoals te zien op de fles. Deze biologische wijn uit de 
-      Roussillon van de Mourvèdre-druif (de oorspronkelijke naam is Mataro in Catalonië) is zo krachtig als de foto op het etiket doet vermoeden vanwege de zeer 
-      lage opbrengst van zijn wijngaarden. Intens, sappig en kruidig. </p>
+      <p>Bordeaux is het grootste wijngebied van Frankrijk, maar is met name bekend vanwege de rode wijnen. 
+        Slechts 5% van de wijn afkomstig uit deze streek is wit. Vaak is dit een blend van de frisse Sauvignon- 
+        en de tropische Sémillon-druif. En juist deze combinatie maakt witte Bordeaux spannend. Een opvoeding van 
+        zeven maanden op barrique zorgt voor een flinke dosis romantiek in deze wijn. Drink dit vloeibare goud 
+        vooral niet té koud bij dit heerlijke herfstgerecht! 
+       </p>
         <p>🚚 Afhalen is mogelijk op zaterdag en zondag. 
           <br> 💳 Bij het afhalen kan je pinnen.
          <br>😬 Helaas kunnen wij geen rekening houden met uitzonderingen of allergiën. 
          <br>  ⬇️ Bestel met het onderstaande formulier.</p>
     </div>
-    <div class="container-s">
+    <!--<div class="container-s">
       <div class="container-black">
-        <p> De Weekend Roast van 24 en 25 oktober is helemaal uitverkocht. Volgende week weer een nieuwe Roast!  </p>
+        <p> </p>
       </div>
-    </div>
+    </div>-->
 <div class="container-s">
   <form id="contact-form" method="post" action="/.netlify/functions/send-mail-roast" autocomplete="off">
     <div class="row">
@@ -143,7 +147,7 @@
         </div>
     </div>
     <div class="form-group row">
-      <label for="wijn" class="col-sm-6">Fles Mataro Boy (22,00)</label>
+      <label for="wijn" class="col-sm-6">Fles Château Turcaud (22 euro)</label>
       <div class="col-sm-6">
         <div class="selectpicker">
           <select id="wijn" name="wijn" class="form-control small-field">
@@ -412,7 +416,7 @@
           datesDisabled: [],
           autoclose: true,
           format: 'dd-mm-yyyy',
-          startDate: '+3d',
+          startDate: '+0d',
           language: 'nl',
           todayHighlight: true,
         }
