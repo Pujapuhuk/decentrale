@@ -33,6 +33,7 @@ exports.handler = function (event, context, callback) {
 	const methode = postData.methode
 	const phone = postData.phone
 	const message = postData.message
+	const verpakken = postData.verpakken
 	const cadeaubon = postData.cadeaubon
 	const nieuwsbrief = postData.nieuwsbrief
 
@@ -53,6 +54,7 @@ exports.handler = function (event, context, callback) {
 		"Subject": `Wijnbestelling bij de Centrale | ${date}`,
 		"TextBody": `
 		Bestelling: ${message} \n
+		Verpakken als cadeau: ${verpakken}\n
 		Wanneer en hoe?
 		${methode} op ${date}
 		${time}\n

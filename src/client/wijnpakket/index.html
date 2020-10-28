@@ -169,8 +169,23 @@
     <div class="row">
       <div class="col-xs-12 col-md-12">
         <div class="form-group">
-          <label for="form_message">Welke wijnpakketten wil je bestellen?</label>
+          <label for="form_message">Welke wijnpakketten wil je bestellen?*</label>
           <textarea id="form_message" name="message" class="form-control textarea-form" placeholder="" rows="4" data-error=""></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+        <div class="form-group">
+          <label for="form_methode">Wil je het als cadeau laten verpakken? (2 euro per pakket)</label>
+          <div class="selectpicker">
+            <select id ="form_methode" name="verpakken" class="form-control">
+              <option selected disabled value="">Kies</option>
+              <option value="Ja">Ja</option>
+              <option value="Nee">Nee</option>
+            </select>
+          </div>
+          <div class="help-block with-errors"></div>
         </div>
       </div>
     </div>
