@@ -1,0 +1,170 @@
+
+p{
+    font-size:14px;
+    color:black;
+    line-height: 24px;
+    font-weight: 400;
+    font-family: 'Spectral', serif;
+}
+h2 {
+    font-family: 'Spectral', serif;
+    font-size: 26px;
+    font-weight:700;
+    text-transform: none;
+    letter-spacing: 0px;
+    margin-bottom: 8px;
+}
+#eigen-vondst-container {
+    width: 100%;
+    top:90px;
+    padding:40px 20% 40px 20%;
+    text-align: center;
+    font-family: 'Spectral', serif;
+    background-color:#303030;
+    margin-top:90px;
+}
+@media (max-width: 1024px) {
+    #eigen-vondst-container {
+        padding:40px 10% 40px 10%;
+    }
+}
+@media (max-width: 480px) {
+    #eigen-vondst-container {
+        padding:32px 16px 32px 16px;
+        margin-top:50px;
+    }
+}
+#eigen-vondst-container h2 {
+    color:white;
+    font-size:22px;
+    font-family: "Karla",serif; 
+    text-transform:uppercase;
+}
+
+#eigen-vondst-container p {
+    color:white;
+}
+#box-container {
+    display:flex;
+    flex-direction: column;
+    max-width: 960px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:60px;
+    padding:24px;
+}
+#box-2 {    
+    width: 100%;
+    background-color:white;
+    padding: 80px 0px 32px 0px;
+}
+#line-break{
+    height:2px;
+    background-color:black;
+    width:50%;
+    border-style: solid;
+    border-width: 0.5px;
+    opacity: 0.28;
+}
+#line-break-center{
+    height:2px;
+    background-color:black;
+    width:50%;
+    margin:auto;
+    border-style: solid;
+    border-width: 0.5px;
+    opacity: 0.28;
+}
+.wijnhuis{
+    width:75%;
+    margin-top:44px;
+    margin-bottom:44px;
+}
+@media (max-width: 1024px) {
+    .wijnhuis{
+        width:100%;
+        margin-top:16px;
+    }
+}
+.wijn-container{
+    display:flex;
+    justify-content: space-between;
+    width:100%;
+    flex-wrap: wrap;
+    flex-direction:row;
+}
+.wijn-kaart{
+    width: 350px;
+    height: 460px;
+    margin-bottom: 64px;
+}
+.wijn-foto{
+    width:100%;
+    height:350px;
+    background-size:cover;
+}
+
+.sauvignon{
+    background-image: url(../img/wijnshop/sauvignon.png);
+}
+.friulano{
+    background-image: url(../img/wijnshop/friulano.png);
+}
+.pinot-g{
+    background-image: url(../img/wijnshop/pinot-g.png);
+}
+.malvasia{
+    background-image: url(../img/wijnshop/malvasia.png);
+}
+.cabernet{
+    background-image: url(../img/wijnshop/cabernet.png);
+}
+.merlot{
+    background-image: url(../img/wijnshop/merlot.png);
+}
+
+.wijn-beschrijving{
+    width:100%;
+    padding-top:8px;
+}
+.wijn-beschrijving p{
+    font-size:16px;
+    margin:0px;
+
+}
+.bestellen{
+    margin:44px;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .bestellen{
+        margin:0px;
+        text-align: center;
+    }
+}
+.bestellen a{
+    color: blue;
+    font-family: 'Spectral', serif;
+    font-size:14px;
+    text-decoration: underline;
+}
+.shop-rules{
+    width: 100%;
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    margin-top:44px;
+    flex-wrap: wrap;
+}
+.rule{
+    width:200px;
+}
+.rule h1{
+    color: black;
+}
+.link-mail-thijs-bg{
+    font-family: "Karla",serif; 
+    width:240px;
+    margin-top:40px;
+}
