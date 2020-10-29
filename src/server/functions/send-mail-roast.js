@@ -31,8 +31,10 @@ exports.handler = function (event, context, callback) {
 	const name = postData.name
 	const wijn = postData.wijn 
 	const email = postData.email
-	const aantal = postData.aantal
 	const phone = postData.phone
+	const aantal = postData.aantal
+	const cadeaubon = postData.cadeaubon
+	const nieuwsbrief = postData.nieuwsbrief
 	const emailBody = getEmailBody(postData)
 	const honeyPotValue = postData.petsName
 
@@ -55,7 +57,9 @@ exports.handler = function (event, context, callback) {
 		Bijpassende wijn: ${wijn}x \n
 		Naam: ${name}
 		Email: ${email}
-		Telefoon: ${phone}`
+		Telefoon: ${phone} \n
+		Cadeaubon: ${cadeaubon} euro 
+		Nieuwsbrief: ${nieuwsbrief}`
 	}
 	const callbackHandler = {
 		statusCode: 302,

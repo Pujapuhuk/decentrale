@@ -33,6 +33,8 @@ exports.handler = function (event, context, callback) {
 	const methode = postData.methode
 	const phone = postData.phone
 	const message = postData.message
+	const adres = postData.adres
+	const postcode = postData.postcode
 	const verpakken = postData.verpakken
 	const cadeaubon = postData.cadeaubon
 	const nieuwsbrief = postData.nieuwsbrief
@@ -61,6 +63,8 @@ exports.handler = function (event, context, callback) {
 		Naam: ${name}
 		Email: ${email}
 		Telefoon: ${phone}\n
+		Adres: ${adres}
+		Postcode: ${postcode} \n
 		Cadeaubon: ${cadeaubon} euro \n
 		Nieuwsbrief: ${nieuwsbrief}`
 	}
