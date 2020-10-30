@@ -531,7 +531,7 @@ button:hover, button:focus, button:active {
   .page-intro-text{
     padding-top:40px;
     padding-bottom:40px;
-}
+    }
 }
 /*image-square*/
 .image-square {
@@ -1025,7 +1025,6 @@ label{
 /*******************/
 /*Bestel pagina PAGINA*/
 /*******************/
-
 .bestel-header {
     background: url(img/bestel/bestel-header.jpg) 65% 35%/cover no-repeat;
 }
@@ -1036,13 +1035,99 @@ label{
         height:30vh;
     }
 }
+.bestel-back{
+    background-color:lavender;
+    min-height: 120vh;
+    padding-top:130px;
+}
 
-.nav-bestel {
-    margin: auto;
-    font-size: 30px;
-    text-align: center;
-    letter-spacing: 1.2px;
-    color: #0F8D08;
+.box-info{
+    background-color: white;
+    margin-left: 5%;
+    margin-right: 0px;
+}
+
+.box-right{
+    background-color: white;
+    margin-left: 0px;
+    margin-right: 5%;
+    height: 30vh;
+}
+
+.bestel-intro-text{
+    padding:60px;
+}
+@media (max-width: 480px) {
+  .bestel-intro-text{
+    padding:40px;
+  }
+}
+
+.bestel-text{
+    padding:10%;
+}
+
+.bestel-text p{
+    font-family: 'Spectral', serif;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.image-bestel {
+    width: 100%;
+    height: 30vh;
+    margin-left: 5%;
+}
+.image-bestel:after{
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+.bestel-1{
+    background: url(img/bestel/bestel-header.jpg) center/cover no-repeat;
+}
+
+.image-roast {
+    width: 100%;
+    height: 30vh;
+}
+.image-roast:after{
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+/*******************/
+/*GESCHENKEN PAGINA*/
+/*******************/
+
+.geschenken-header{
+    background: url(../img/geschenken/geschenken-header.jpg) 50% 50%/cover no-repeat;
+    background-size: 1800px;
+    min-height: 120vh;
+    padding-top:130px;
+}
+
+.geschenken-text{
+    position:relative;
+    background-color: white;
+    padding:32px; 
+    margin-left:24px;
+    -webkit-box-shadow: 0px 0px 16px 0px rgba(54,54,54,0.15);
+    -moz-box-shadow: 0px 0px 16px 0px rgba(54,54,54,0.15);
+    box-shadow: 0px 0px 16px 0px rgba(54,54,54,0.15);
+    text-align:left;
+}
+
+.geschenken-text p{
+    font-family: 'Spectral', serif;
+    font-size:13px;
+    line-height: 26px;
+}
+.geschenken-text a{
+    font-family: 'Spectral', serif;
+    font-size:13px;
+    line-height: 26px;
 }
 
 /*******************/
