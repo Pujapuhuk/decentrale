@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <title>Eten bestellen | De Centrale</title>
-    <meta name="description" content="Je kunt bij ons gemakkelijk bestellen met dit formulier.">
+    <title>WijnLijn WijnTest | De Centrale</title>
+    <meta name="description" content="Wij stellen een pakket op maat voor je samen.">
 
     <!-- favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
@@ -68,46 +68,229 @@
           <li class="nav-item">
                 <a href="/kunst/" class="nav-link page-scroll">Kunst</a>
           </li>
-          <li class="nav-item">
-                <a href="/eigenvondst/" class="nav-link page-scroll">🍷 Wijnshop</a>
-          </li>
         <li class="nav-item nav-link-wijnpakket">
-              <a href="/wijnpakket/" class="nav-link page-scroll">Wijnpakketten</a>
+              <a href="/wijn/" class="nav-link page-scroll">Wijn bestellen</a>
         </li>
         <li class="nav-item nav-link-reserveer">
-              <a href="/contact/" class="nav-link page-scroll">Bestel Menu</a>
+              <a href="/bestel/" class="nav-link page-scroll">Diner bestellen</a>
         </li>
-        <li class="nav-item nav-link-reserveer active-reserveer">
-              <a href="/roast/" class="nav-link page-scroll">Bestel Roast</a>
-            </li>
-     
-  
         </ul>
       </div>
     </nav>
+
     <div id="eigen-vondst-container">
-      <h1>Wijnlijn</h1>
-      <p>Mis je onze wijnen? Wij stellen een persoonlijk pakket voor je samen. En nog meer tekst. 
-        <br>
-        Laat hieronder je wens en telefoon nummer achter en wij bellen je binnen .. uur terug.<br><br></p>
-      <!--<div class="video-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/JUx9MJZ7QLQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>-->
+      <h1>WijnLijn WijnTest</h1><br>
+      <p>Mis je onze wijnen of geef je graag iemand het perfecte lockdown cadeau? Wij stellen een pakket op maat voor je samen. 
+        Vul de Wijnlijn Wijntest in, laat je gegevens achter en wij bezorgen jouw ideale wijnpakket! <br><br>
+        Bespreek je liever je wensen met de Wijnlijn? Dat kan! We heten niet voor niets de Wijnlijn.<br>
+        Laat je telefoonnummer achter en wij bellen je binnen 24 uur.
+        <br><br></p>
     </div>
 
     <div class="container-s">
       <form id="contact-form" method="post" action="/.netlify/functions/send-mail-wijnlijn" autocomplete="off">
         <div class="row">
           <div class="col-md-12">
-            <h6>WIJNLIJN</h6>
-            <p>Laat je wensen en telefoonnummer achter en wij bellen je terug.</p>
+            <h6>De Wijnlijn Wijntest</h6>
+            <p>Doe de wijnlijn wijntest door jouw voorkeuren in te vullen! Heb je bij bepaalde vragen geen voorkeur, of vind je beide opties niks? Laat het vakje dan blanco.
+            </p><br>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="keuze1" class="col-sm-6"> Wit | Rood | Mix </label>
+          <div class="col-sm-6">
+            <div class="selectpicker">
+              <select id="keuze1" name="keuze1" class="form-control small-field">
+                <option selected value=""> </option>
+                <option value="wit">Wit</option>
+                <option value="rood">Rood</option>
+                <option value="mix">Mix</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="keuze2" class="col-sm-6"> Strak | Sappig </label>
+          <div class="col-sm-6">
+            <div class="selectpicker">
+              <select id="keuze2" name="keuze2" class="form-control small-field">
+                <option selected value=""> </option>
+                <option value="strak">Strak</option>
+                <option value="sappig">Sappig</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="keuze3" class="col-sm-6"> Prosseco | Cava </label>
+          <div class="col-sm-6">
+            <div class="selectpicker">
+              <select id="keuze3" name="keuze3" class="form-control small-field">
+                <option selected value=""> </option>
+                <option value="prosecco">Prosecco</option>
+                <option value="cava">Cava</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="keuze4" class="col-sm-6"> Rioja | Rhône </label>
+          <div class="col-sm-6">
+            <div class="selectpicker">
+              <select id="keuze4" name="keuze4" class="form-control small-field">
+                <option selected value=""> </option>
+                <option value="rioja">Rioja</option>
+                <option value="rhone">Rhône</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="keuze5" class="col-sm-6"> Vol & Rond | Fris & Mineraalrijk </label>
+          <div class="col-sm-6">
+            <div class="selectpicker">
+              <select id="keuze5" name="keuze5" class="form-control small-field">
+                <option selected value=""> </option>
+                <option value="volrond">Vol & rond</option>
+                <option value="frismineraal">Fris & Mineraalrijk</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="keuze6" class="col-sm-6"> Borrelwijn | Dinerwijn </label>
+          <div class="col-sm-6">
+            <div class="selectpicker">
+              <select id="keuze6" name="keuze6" class="form-control small-field">
+                <option selected value=""> </option>
+                <option value="borrelwijn">Borrelwijn</option>
+                <option value="dinerwijn">Dinerwijn</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="keuze7" class="col-sm-6"> Borrelwijn | Dinerwijn </label>
+          <div class="col-sm-6">
+            <div class="selectpicker">
+              <select id="keuze7" name="keuze7" class="form-control small-field">
+                <option selected value=""> </option>
+                <option value="primitivo">Primitivo</option>
+                <option value="barbera">Barbera</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="keuze8" class="col-sm-6"> Vettig | Fruitig </label>
+          <div class="col-sm-6">
+            <div class="selectpicker">
+              <select id="keuze8" name="keuze8" class="form-control small-field">
+                <option selected value=""> </option>
+                <option value="vettig">Vettig</option>
+                <option value="fruitig">Fruitig</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="keuze9" class="col-sm-6"> Grenache | Syrah </label>
+          <div class="col-sm-6">
+            <div class="selectpicker">
+              <select id="keuze9" name="keuze9" class="form-control small-field">
+                <option selected value=""> </option>
+                <option value="grenache">Grenache</option>
+                <option value="syrah">Syrah</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="keuze10" class="col-sm-6"> Stevig | Soepel </label>
+          <div class="col-sm-6">
+            <div class="selectpicker">
+              <select id="keuze10" name="keuze10" class="form-control small-field">
+                <option selected value=""> </option>
+                <option value="stevig">Stevig</option>
+                <option value="soepel">Soepel</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="keuze11" class="col-sm-6"> Gelagerd | Zuiver </label>
+          <div class="col-sm-6">
+            <div class="selectpicker">
+              <select id="keuze11" name="keuze11" class="form-control small-field">
+                <option selected value=""> </option>
+                <option value="gelagerd">Gelagerd</option>
+                <option value="zuiver">Zuiver</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="keuze12" class="col-sm-6"> Moezel | Elzas </label>
+          <div class="col-sm-6">
+            <div class="selectpicker">
+              <select id="keuze12" name="keuze12" class="form-control small-field">
+                <option selected value=""> </option>
+                <option value="moezel">Moezel</option>
+                <option value="elzas">Elzas</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="keuze13" class="col-sm-6"> Viognier | Pinot Grigio </label>
+          <div class="col-sm-6">
+            <div class="selectpicker">
+              <select id="keuze13" name="keuze13" class="form-control small-field">
+                <option selected value=""> </option>
+                <option value="viognier">Viognier</option>
+                <option value="pinotgrigio">Pinot Grigio</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="keuze14" class="col-sm-6"> Sicilië | Languedoc </label>
+          <div class="col-sm-6">
+            <div class="selectpicker">
+              <select id="keuze14" name="keuze14" class="form-control small-field">
+                <option selected value=""> </option>
+                <option value="sicilie">Sicilië</option>
+                <option value="languedoc">Languedoc</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="keuze15" class="col-sm-6"> Pinot Noir | Merlot </label>
+          <div class="col-sm-6">
+            <div class="selectpicker">
+              <select id="keuze15" name="keuze15" class="form-control small-field">
+                <option selected value=""> </option>
+                <option value="pinotnoir">Pinot Noir</option>
+                <option value="merlot">Merlot</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-xs-12 col-md-12">
+            <div class="form-group">
+              <label for="form_message">Heb je hier nog iets aan toe te voegen? Wij horen het graag!</label>
+              <textarea id="form_message" name="message" class="form-control textarea-form" placeholder="" rows="4" data-error=""></textarea>
+            </div>
           </div>
         </div>
         <div class="row">
           <div class="col-xs-12 col-md-12">
             <div class="form-group">
-              <label for="form_message">Waar hou je van?*</label>
-              <textarea id="form_message" name="message" class="form-control textarea-form" placeholder="" rows="4" data-error=""></textarea>
+              <label for="form_message">Wil je gebeld worden door de wijnlijn om je wensen verder te bespreken?</label>
+              <textarea id="form_message" name="bellen" class="form-control textarea-form" placeholder="" rows="1" data-error=""></textarea>
             </div>
           </div>
         </div>
@@ -125,7 +308,67 @@
               <div class="help-block with-errors"></div>
             </div>
           </div>
-        </div>       
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-md-12">
+            <h6>WANNEER?</h6>
+            <p>Geef aan wanneer je het pakket wil komen halen of dat wij het kunnen bezorgen.</p>
+          </div>
+        </div> 
+        <br>      
+        <div class="row">
+          <div class="col-xs-12 col-md-8">
+            <div class="form-group">
+              <label for="form_date">Welke dag wil je het pakket afhalen of laten bezorgen?*</label>
+              <input id="form_date" name="date" type="text" class="form-control formnumber" placeholder="dd/mm/yyyy"  required="required" data-error="Selecteer een dag" />
+              <div class="help-block with-errors"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-md-8">
+            <div class="form-group">
+              <label for="form_methode">Bezorgen of afhalen?*</label>
+              <div class="selectpicker">
+                <select id ="form_methode" name="methode" class="form-control" required="required" data-error="Afhalen of bezorgen?">
+                  <option selected disabled value="">Kies</option>
+                  <option value="bezorgen">Bezorgen [tussen 15:00 - 17:00]</option>
+                  <option value="afhalen">Afhalen</option>
+                </select>
+              </div>
+              <div class="help-block with-errors"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-md-8">
+            <div class="form-group">
+              <label for="timeslots">Indien afhalen, hoe laat?</label>
+              <div class="selectpicker">
+                <select id ="timeslots" name="time" class="form-control">
+                  <option selected disabled value="">Kies</option>
+                  <option value="afhalen-15:30">15:30</option>
+                  <option value="afhalen-15:45">15:45</option>
+                  <option value="afhalen-16:00">16:00</option>
+                  <option value="afhalen-16:15">16:15</option>
+                  <option value="afhalen-16:30">16:30</option>
+                  <option value="afhalen-16:45">16:45</option>
+                  <option value="afhalen-17:00">17:00</option>
+                  <option value="afhalen-17:15">17:15</option>
+                  <option value="afhalen-17:30">17:30</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-md-12">
+            <h6>PERSOONLIJKE GEGEVENS</h6>
+            <p>Wanneer je hebt besteld nemen we zo snel mogelijk contact met je op.</p>
+          </div>
+        </div>
         <div class="row">
           <div class="col-xs-12 col-md-8">
             <div class="form-group">
@@ -154,13 +397,6 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-12">
-            <h6>BEZORGEN</h6>
-            <p>Indien je het wil laten bezorgen, kan je hier alvast je adres achterlaten.</p>
-            <br>
-          </div>
-        </div>
-        <div class="row">
           <div class="col-xs-12 col-md-8">
             <div class="form-group">
               <label for="form_adress">Bezorg adres (straat, huisnummer)</label>
@@ -178,6 +414,15 @@
             </div>
           </div>
         </div>
+        <hr>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="form-group">
+              <input type="checkbox" id="nieuwsbrief" name="nieuwsbrief">
+              <label for="nieuwsbrief"> Ja, ik blijf graag via e-mail op de hoogte van de Centrale.</label>
+            </div>
+          </div>
+        </div> 
                  
         <label class="honing" tabindex="-1" aria-hidden="true">
         <input type="text" name="petsName"></label>
@@ -362,7 +607,7 @@
           $(document).ready(() => {
             const datepickerConfig = {
               weekStart: 1,
-              daysOfWeekDisabled: '1,2,3,4,5',
+              daysOfWeekDisabled: '1,2,3,4',
               datesDisabled: [],
               autoclose: true,
               format: 'dd-mm-yyyy',
