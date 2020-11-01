@@ -38,6 +38,7 @@ exports.handler = function (event, context, callback) {
 	const message = postData.message
 	const bellen = postData.bellen
 	const verpakken = postData.verpakken
+	const prijs = postData.prijs
 	const keuze1 = postData.keuze1
 	const keuze2 = postData.keuze2
 	const keuze3 = postData.keuze3
@@ -74,6 +75,7 @@ exports.handler = function (event, context, callback) {
 		Voorkeuren: ${keuze1}, ${keuze2}, ${keuze3}, ${keuze4}, ${keuze5}, ${keuze6}, ${keuze7}, ${keuze8}, ${keuze9}, ${keuze10}, ${keuze11}, ${keuze12}, ${keuze13}, ${keuze14}, ${keuze15}\n
 		Bericht: ${message}
 		Bellen: ${bellen}
+		Prijs: ${prijs}
 		Verpakken als cadeau: ${verpakken}\n
 		Wanneer en hoe?
 		${methode} op ${date}

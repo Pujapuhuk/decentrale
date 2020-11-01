@@ -30,6 +30,12 @@ exports.handler = function (event, context, callback) {
 	const time = postData.time
 	const name = postData.name
 	const wijn = postData.wijn 
+	const oesters = postData.oesters
+	const char = postData.char
+	const kaas = postData.kaas
+	const dessert = postData.dessert
+	const koffie = postData.koffie
+	const friandises = postData.friandises
 	const email = postData.email
 	const phone = postData.phone
 	const aantal = postData.aantal
@@ -55,6 +61,13 @@ exports.handler = function (event, context, callback) {
 		Tijd: ${time}\n
 		Aantal: ${aantal} personen
 		Bijpassende wijn: ${wijn}x \n
+		Extra:
+		Oester: ${oesters}
+		Charcuterie: ${char} x	
+		Kaas: ${kaas} x
+		Dessert: ${dessert} x
+		Koffie: ${koffie} x
+		Friandises: ${friandises}x \n
 		Naam: ${name}
 		Email: ${email}
 		Telefoon: ${phone} \n

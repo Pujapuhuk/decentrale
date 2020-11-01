@@ -30,6 +30,7 @@ exports.handler = function (event, context, callback) {
 	const menuVegaVier = postData["menuVegaVier"]
 	const oesters = postData.oesters
 	const kaas = postData.kaas
+	const char = postData.char
 	const koffie = postData.koffie
 	const friandises = postData.friandises
 	const cadeaubon = postData.cadeaubon
@@ -69,6 +70,7 @@ exports.handler = function (event, context, callback) {
 		4-gangen vega: ${menuVegaVier} x\n
 		Extra:
 		Oester: ${oesters}
+		Charcuterie: ${char} x
 		Kaas: ${kaas} x
 		Koffie: ${koffie} x
 		Friandises: ${friandises}x

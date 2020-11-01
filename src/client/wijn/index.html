@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <title>Wijn bestellen | De Centrale</title>
+    <meta name="description" content="Wijnen van de Centrale voor thuis">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link id="bsdp-css" href="/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet">
+
+    <!-- Style -->
+    <link href="/style.css" rel="stylesheet">
+    <link media="screen and (max-width: 480px)" href="/css/style480.css" rel="stylesheet">
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Gabriela" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-36915461-3', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <!-- reCaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+     <script>
+       function onSubmit(token) {
+         document.getElementById("contact-form").submit();
+       }
+     </script>
+  </head>
+
+  <body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+      <a class="navbar-brand js-scroll-trigger" href="/">DE CENTRALE</a>
+      <button class="navbar-toggler custom-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        <span class="my-1 close">
+          <svg fill="#000000" height="32" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+            <path d="M0 0h24v24H0z" fill="none" />
+          </svg></span>
+  
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+          <a href="/menukaart/" class="nav-link page-scroll">Menu</a>
+          </li>
+          <li class="nav-item">
+          <a href="/wijnkaart/" class="nav-link page-scroll">Wijnkaart</a>
+          </li>
+          <li class="nav-item">
+            <a href="/kunst/" class="nav-link page-scroll">Kunst</a>
+          </li>
+        <li class="nav-item nav-link-wijnpakket">
+            <a href="/wijn/" class="nav-link page-scroll">Wijn bestellen</a>
+        </li>
+        <li class="nav-item nav-link-reserveer">
+            <a href="/bestel/" class="nav-link page-scroll">Diner bestellen</a>
+        </li>
+        </ul>
+        </div>
+      </nav>
+
+    <!-- PAGE CONTENT -->
+    <div class="container-fluid bestel-container">
+       <!--Bestel info half page-->
+      <div class="row justify-content-between">
+        <div class="col-lg-6 col-sm-12">
+          <div class="box-info bestel-intro-text">
+            <h5> WIJN VAN DE CENTRALE </h5> <br>
+            <p> intro tekstje</p>
+              <p> 🏠 Afhalen is mogelijk op vrijdag, zaterdag en zondag tussen 15:30 en 17:30. <br>
+                🚚 Bij bestelling van wijnen is bezorgen ook mogelijk op vrijdag, zaterdag en zondag tussen 15:00 en 17:00 binnen Delft en omstreken. 
+                <br> 💳 Bij het afhalen kan je pinnen, bij het bezorgen sturen we een tikkie.
+              <br>  ➡ Bestel gemakkelijk met het formulier op de pagina.</p>
+          </div>
+        </div>                                                       
+        
+        <!-- MENU VAN NU -->
+        <div class="col-lg-6 col-sm-12">
+          <div class="widget-bestel">
+            <div class="image-bestel wijn-1"></div>
+            <div>
+              <button class="btn-reserveer btn-header" style="width: 100%" onclick="parent.location='/wijnpakket'"> Wijnpakketten <span class="material-icons md-36 btn-icon-secundair" style="margin-top: 7px; margin-left:20px;">arrow_forward</span></button>
+            </div>
+          </div>
+          <div class="widget-bestel">
+            <div class="image-bestel wijn-2"></div>
+            <div>
+              <button class="btn-reserveer btn-header" style="width: 100%" onclick="parent.location='/wijnlijn'"> WijnLijn WijnTest<span class="material-icons md-36 btn-icon-secundair" style="margin-top: 7px; margin-left:20px;">arrow_forward</span> </button>
+            </div>
+          </div>
+          <div class="widget-bestel">
+            <div class="image-bestel wijn-3"></div>
+            <div>
+              <button class="btn-reserveer btn-header" style="width: 100%" onclick="parent.location='/eigenvondst'"> Eigen vondst <span class="material-icons md-36 btn-icon-secundair" style="margin-top: 7px; margin-left:20px;">arrow_forward</span></button>
+            </div>
+          </div>
+        </div>
+        
+
+    <!-- FOOTER-->
+    <footer class="container-l">
+      <div class="row">
+          <div class="footer-box col-md-3 text-center">
+              <h6>Contact<br></h6>
+              <p>015 - 889 27 77<br>hallo@decentraledelft.nl</p>
+          </div>
+  
+          <div class="footer-box col-md-3 text-center">
+              <h6>Bezorgen & afhalen <br></h6>
+              <p>Wij koken heerlijk eten voor thuis op vrijdag, zaterdag en zondag<br><br></p>
+          </div>
+  
+          <div class="footer-box col-md-3 text-center">
+              <h6>Locatie<br></h6>
+              <p>Voldersgracht 2<br>2611 ET Delft</p><a
+                  href="https://www.google.nl/maps/place/Voldersgracht+2,+2611+ET+Delft/@52.011741,4.355754,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5b5c3b08304c5:0x79ad52aba43f8354!8m2!3d52.011741!4d4.357948"
+                  target="_blank">route</a>
+          </div>
+  
+          <div class="col-md-3 text-center">
+              <a href="https://www.facebook.com/decentraledelft" target="_blank">facebook</a><br>
+              <a href="https://www.instagram.com/decentraledelft/" target="_blank">instagram</a>
+          </div>
+  
+      </div>
+  
+  </footer>
+</body>
