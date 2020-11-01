@@ -1068,8 +1068,14 @@ label{
 
 @media (max-width: 480px) {
   .bestel-intro-text{
-    padding:20px;
+    padding:30px;
   }
+}
+
+.bestel-intro-text p{
+    font-family: 'Spectral', serif;
+    font-size:16px;
+    line-height: 26px;
 }
 
 .widget-bestel{
@@ -1093,7 +1099,7 @@ label{
 }
 
 .bestel-1{
-    background: url(img/bestel/bestel-1.png) center/cover no-repeat;
+    background: url(img/bestel/bestel-1.jpg) center/cover no-repeat;
 }
 
 .bestel-2{
