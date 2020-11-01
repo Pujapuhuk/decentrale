@@ -1040,6 +1040,11 @@ label{
     min-height: 120vh;
     padding-top:130px;
 }
+@media (max-width: 480px) {
+    .bestel-container{
+    padding-top:70px;
+    }
+}
 
 .box-info{
     background-color:#FFFFFF;
@@ -1051,12 +1056,19 @@ label{
     margin-bottom: 5%;
 }
 
+@media (max-width: 480px) {
+    .box-info{
+    margin-left: 0%;
+    margin-right: 0%
+    }
+}
 .bestel-intro-text{
     padding:60px;
 }
+
 @media (max-width: 480px) {
   .bestel-intro-text{
-    padding:40px;
+    padding:20px;
   }
 }
 
