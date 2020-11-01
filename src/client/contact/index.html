@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <title>Eten bestellen | De Centrale</title>
-    <meta name="description" content="Je kunt bij ons gemakkelijk resereveren met dit formulier.">
+    <title>Menu bestellen | De Centrale</title>
+    <meta name="description" content="Wij koken heerlijk eten voor thuis.">
 
     <!-- favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
@@ -57,29 +57,23 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a href="/menukaart/" class="nav-link page-scroll">Menu</a>
+          <a href="/menukaart/" class="nav-link page-scroll">Menu</a>
           </li>
           <li class="nav-item">
-            <a href="/wijnkaart/" class="nav-link page-scroll">Wijnkaart</a>
+          <a href="/wijnkaart/" class="nav-link page-scroll">Wijnkaart</a>
           </li>
           <li class="nav-item">
-                <a href="/kunst/" class="nav-link page-scroll">Kunst</a>
-          </li>
-          <li class="nav-item">
-                <a href="/eigenvondst/" class="nav-link page-scroll">🍷 Wijnshop</a>
+            <a href="/kunst/" class="nav-link page-scroll">Kunst</a>
           </li>
         <li class="nav-item nav-link-wijnpakket">
-              <a href="/wijnpakket/" class="nav-link page-scroll">Wijnpakketten</a>
+            <a href="/wijn/" class="nav-link page-scroll">Wijn bestellen</a>
         </li>
-        <li class="nav-item nav-link-reserveer active-reserveer">
-              <a href="/contact/" class="nav-link page-scroll">Bestel Menu</a>
+        <li class="nav-item nav-link-reserveer">
+            <a href="/bestel/" class="nav-link page-scroll">Diner bestellen</a>
         </li>
-        <li class="nav-item nav-link-reserveer ">
-              <a href="/roast/" class="nav-link page-scroll">Bestel Roast</a>
-            </li>
         </ul>
-      </div>
-    </nav>
+        </div>
+      </nav>
 
     <div class="container-l page-title-contact d-block d-sm-none">
       <div class="page-title-text-wrap">
@@ -99,10 +93,6 @@
         Wil je de complete Centrale ervaring? Kies dan voor de bijpassende wijnen, oesters vooraf, een kaasplank of koffie van Miss Morrison met friandises!<br>
         <br>
         <button class="btn-header" onclick="parent.location='/menukaart/'">Bekijk menu</button>
-
-        <p>🚚 Afhalen en bezorgen is mogelijk op zaterdag en zondag.
-          <br> 💳 We sturen een tikkie of je kunt pinnen bij het afhalen.
-         <br>😬 Helaas kunnen wij geen rekening houden met uitzonderingen of allergiën. <br>  ⬇️ Bestel met het onderstaande formulier.</p>
     </div>
     <br>
     <div class="container-s">
@@ -134,7 +124,7 @@
     <div class="row">
       <div class="col-md-12">
         <h6>KIES EXTRA'S</h6>
-        <p>Oesters vooraf of kaas als extra gang</p>
+        <p>Oesters of charcuterie vooraf of kaas als extra gang</p>
       </div>
     </div>
     <div class="form-group row">
@@ -153,7 +143,13 @@
       </div>
     </div>
     <div class="form-group row">
-      <label for="kaas" class="col-sm-6">Kaas (10,00 p.p.)</label>
+      <label for="char" class="col-sm-6">Charcuterie (7,00 per stuk)</label>
+      <div class="col-sm-6">
+          <input type="number" class="form-control small-field" name="char" id="char">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="kaas" class="col-sm-6">Kaas (10,00 per stuk)</label>
       <div class="col-sm-6">
           <input type="number" class="form-control small-field" name="kaas" id="kaas">
       </div>
@@ -261,14 +257,16 @@
           <label for="timeslots">Indien afhalen, hoe laat?</label>
           <div class="selectpicker">
             <select id ="timeslots" name="time" class="form-control">
-              <option selected disabled value="">Kies</option>
-              <option value="afhalen-15:15">15:15</option>
+              <option selected disabled value="">Kies</option>             
               <option value="afhalen-15:30">15:30</option>
               <option value="afhalen-15:45">15:45</option>
               <option value="afhalen-16:00">16:00</option>
               <option value="afhalen-16:15">16:15</option>
               <option value="afhalen-16:30">16:30</option>
               <option value="afhalen-16:45">16:45</option>
+              <option value="afhalen-17:00">17:00</option>
+              <option value="afhalen-17:15">17:15</option>
+              <option value="afhalen-17:30">17:30</option>
             </select>
           </div>
         </div>
@@ -364,30 +362,31 @@
 </div>
 
 <footer class="container-l">
-	<div class="row">
-		<div class="footer-box col-md-3 text-center">
-			<h6>Contact<br></h6>
-			<p>015 - 889 27 77<br>hallo@decentraledelft.nl</p>
-		</div>
+  <div class="row">
+      <div class="footer-box col-md-3 text-center">
+          <h6>Contact<br></h6>
+          <p>015 - 889 27 77<br>hallo@decentraledelft.nl</p>
+      </div>
 
-		<div class="footer-box col-md-3 text-center">
-			<h6>Bezorgen & afhalen <br></h6>
-			<p>Wij koken heerlijk eten voor thuis op zaterdag en zondag<br><br></p>
-		</div>
+      <div class="footer-box col-md-3 text-center">
+          <h6>Bezorgen & afhalen <br></h6>
+          <p>Wij koken heerlijk eten voor thuis op vrijdag, zaterdag en zondag<br><br></p>
+      </div>
 
-		<div class="footer-box col-md-3 text-center">
-			<h6>Locatie<br></h6>
-			<p>Voldersgracht 2<br>2611 ET Delft</p><a
-				href="https://www.google.nl/maps/place/Voldersgracht+2,+2611+ET+Delft/@52.011741,4.355754,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5b5c3b08304c5:0x79ad52aba43f8354!8m2!3d52.011741!4d4.357948"
-				target="_blank">route</a>
-		</div>
+      <div class="footer-box col-md-3 text-center">
+          <h6>Locatie<br></h6>
+          <p>Voldersgracht 2<br>2611 ET Delft</p><a
+              href="https://www.google.nl/maps/place/Voldersgracht+2,+2611+ET+Delft/@52.011741,4.355754,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5b5c3b08304c5:0x79ad52aba43f8354!8m2!3d52.011741!4d4.357948"
+              target="_blank">route</a>
+      </div>
 
-		<div class="col-md-3 text-center">
-			<a href="https://www.facebook.com/decentraledelft" target="_blank">facebook</a><br>
-			<a href="https://www.instagram.com/decentraledelft/" target="_blank">instagram</a>
-		</div>
+      <div class="col-md-3 text-center">
+          <a href="https://www.facebook.com/decentraledelft" target="_blank">facebook</a><br>
+          <a href="https://www.instagram.com/decentraledelft/" target="_blank">instagram</a>
+      </div>
 
-	</div>
+  </div>
+
 </footer>
 
     <script>
@@ -538,7 +537,7 @@
       $(document).ready(() => {
         const datepickerConfig = {
           weekStart: 1,
-          daysOfWeekDisabled: '1,2,3,4,5',
+          daysOfWeekDisabled: '1,2,3,4',
           datesDisabled: [],
           autoclose: true,
           format: 'dd-mm-yyyy',

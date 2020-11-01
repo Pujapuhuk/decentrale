@@ -26,13 +26,35 @@ exports.handler = function (event, context, callback) {
 	}
 
 	const postData = queryString.parse(event.body)
+	const date = postData.date
+	const time = postData.time
+	const methode = postData.methode
 	const name = postData.name
 	const email = postData.email
 	const phone = postData.phone
-	const message = postData.message
 	const adres = postData.adres
 	const postcode = postData.postcode
+	const nieuwsbrief = postData.nieuwsbrief
+	const message = postData.message
+	const bellen = postData.bellen
 	const verpakken = postData.verpakken
+	const prijs = postData.prijs
+	const keuze1 = postData.keuze1
+	const keuze2 = postData.keuze2
+	const keuze3 = postData.keuze3
+	const keuze4 = postData.keuze4
+	const keuze5 = postData.keuze5
+	const keuze6 = postData.keuze6
+	const keuze7 = postData.keuze7
+	const keuze8 = postData.keuze8
+	const keuze9 = postData.keuze9
+	const keuze10 = postData.keuze10
+	const keuze11 = postData.keuze11
+	const keuze12 = postData.keuze12
+	const keuze13 = postData.keuze13
+	const keuze14 = postData.keuze14
+	const keuze15 = postData.keuze15
+
 
 	const emailBody = getEmailBody(postData)
 	const honeyPotValue = postData.petsName
@@ -48,22 +70,29 @@ exports.handler = function (event, context, callback) {
 		"From": `${name} <${EMAIL_FROM}>`,
 		"To": EMAIL_TO,
 		"ReplyTo": email,
-		"Subject": `Wijnlijn | ${name}`,
+		"Subject": `Wijnlijn | ${date}`,
 		"TextBody": `
-		Mijn bericht: ${message} \n
+		Voorkeuren: ${keuze1}, ${keuze2}, ${keuze3}, ${keuze4}, ${keuze5}, ${keuze6}, ${keuze7}, ${keuze8}, ${keuze9}, ${keuze10}, ${keuze11}, ${keuze12}, ${keuze13}, ${keuze14}, ${keuze15}\n
+		Bericht: ${message}
+		Bellen: ${bellen}
+		Prijs: ${prijs}
 		Verpakken als cadeau: ${verpakken}\n
+		Wanneer en hoe?
+		${methode} op ${date}
+		${time}\n
 		Naam: ${name}
 		Email: ${email}
 		Telefoon: ${phone}\n
 		Indien bezorgen
 		Adres: ${adres}
-		Postcode: ${postcode} \n`
+		Postcode: ${postcode} \n
+		Nieuwsbrief: ${nieuwsbrief}`
 	}
 	
 	const callbackHandler = {
 		statusCode: 302,
 		headers: {
-			"Location": '/bedankt-wijnlijn/'
+			"Location": '/bedankt/'
 		},
 		body: ''
 	}
