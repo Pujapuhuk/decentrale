@@ -62,10 +62,8 @@ exports.handler = function (event, context, callback) {
 		"Subject": `Wijnlijn | ${date}`,
 		"TextBody": `
 		Kleur en borrel/dinerwijn: ${keuze}\n
-
 		Voorkeuren rood: ${keuze1}\n
 		Voorkeuren wit: ${keuze2}\n
-
 		Bericht: ${message}
 		Bellen: ${bellen}
 		Prijs: ${prijs}

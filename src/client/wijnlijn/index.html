@@ -78,15 +78,21 @@
       </div>
     </nav>
 
-  
+    
     <div id="eigen-vondst-container">
-      <h1>WijnLijn WijnTest</h1><br>
+      <div class="row">
+      <div class="col-md-6">
+        <div class="image-home wijnlijn-page" ></div>
+      </div>
+      <div class="col-md-6" style="text-align:left; margin-top:10%">
       <p>Mis je onze wijnen of geef je graag iemand het perfecte lockdown cadeau? Wij stellen een pakket op maat voor je samen. 
         Vul de Wijnlijn Wijntest in, laat je gegevens achter en wij bezorgen jouw ideale wijnpakket! Onze wijnpakketten bevatten drie flessen. <br><br>
         Bespreek je liever je wensen met de Wijnlijn? Dat kan! We heten niet voor niets de Wijnlijn.<br>
         Laat je telefoonnummer achter en wij bellen je binnen 24 uur.
         
         <br><br></p>
+      </div>
+    </div>
     </div>
       
     
@@ -95,10 +101,10 @@
     </div>-->
         
     <div class="container-wijnlijn">
-      <form id="contact-form" method="post" action="/.netlify/functions/send-mail-wijnlijn" autocomplete="off">
+      <form id="contact-form" style="background-color: #CEE1BB;" method="post" action="/.netlify/functions/send-mail-wijnlijn" autocomplete="off">
         <div class="row">
           <div class="col-md-12">
-            <h6>De Wijnlijn Wijntest</h6><br>
+            <br><h6>De Wijnlijn Wijntest</h6><br>
             <p>Doe de wijnlijn wijntest door jouw voorkeuren in te vullen! Heb je bij bepaalde keuzes geen voorkeur,
               of vind je beide opties niks? Laat het vakje dan blanco. Aan de hand van jouw gemaakte keuzes stellen wij
                 jouw ideale pakket samen!</p><br>
@@ -136,8 +142,9 @@
         <div class="row">
           <div class="col-md-4 col-sm-6">
             <label for="keuze1"> 
-              <a class="dfn-hover"><dfn data-info="Primitivo is een druif en dit en dat en italie en zo verder">Primitivo</dfn></a>|
-              <a class="dfn-hover"><dfn data-info="Barbera is ... ">Barbera</dfn></a> 
+              <a class="dfn-hover"><dfn data-info="Primitivo is een druif die veel in Puglia (Zuid-Italië) wordt aangeplant. In de V.S. heet deze druif Zinfandel.">Primitivo</dfn></a>|
+              <a class="dfn-hover"><dfn data-info="Barbera kom je vaak tegen in Piëmont (noordwest Italië). Barbera d’Alba is de bekendste wijn die met deze druif wordt gemaakt.
+                ">Barbera</dfn></a> 
             </label> 
             <div class="selectpicker">
               <select id="keuze1" name="keuze1" class="form-control">
@@ -160,8 +167,10 @@
           </div>
           <div class="col-md-4 col-sm-6">
             <label for="keuze1"> 
-              <a class="dfn-hover"><dfn data-info="">Rioja</dfn></a>|
-              <a class="dfn-hover"><dfn data-info="">Rhône</dfn></a> 
+              <a class="dfn-hover"><dfn data-info="Rioja is het bekendste wijngebied van Spanje en Tempranillo is de meest aangeplante druif hier.
+                ">Rioja</dfn></a>|
+              <a class="dfn-hover"><dfn data-info="De (zuidelijke) Rhône is het gebied rondom de Franse stad Avignon. Châteauneuf-du-Pape is een van de bekendste wijnen die dit gebied kent. Veelgebruikte druiven hier zijn Grenache, Syrah en Mourvèdre.
+                ">Rhône</dfn></a> 
             </label>
             <div class="selectpicker">
               <select id="keuze1" name="keuze1" class="form-control">
@@ -195,8 +204,10 @@
           </div>
           <div class="col-md-4 col-sm-6">
             <label for="keuze1"> 
-              <a class="dfn-hover"><dfn data-info="">Bordeaux</dfn></a>|
-              <a class="dfn-hover"><dfn data-info="">Bourgogne</dfn></a>  
+              <a class="dfn-hover"><dfn data-info="De Bordeaux is het grootste wijngebied van Frankrijk. De meeste wijnen hier bevatten de druiven Merlot en Cabernet Sauvignon. 
+                ">Bordeaux</dfn></a>|
+              <a class="dfn-hover"><dfn data-info="De Bourgogne is het meest prestigieuze wijngebied van de wereld. De rode wijnen in dit gebied worden gemaakt van de Pinot Noir-druif. 
+                ">Bourgogne</dfn></a>  
             </label>
             <div class="selectpicker">
               <select id="keuze1" name="keuze1" class="form-control">
@@ -209,22 +220,25 @@
         <br>
           <div class="col-md-4 col-sm-6">
             <label for="keuze1" class=""> 
-              <a class="dfn-hover"><dfn data-info="">Toscane</dfn></a>|
-              <a class="dfn-hover"><dfn data-info="">Piemonte</dfn></a>
+              <a class="dfn-hover"><dfn data-info="Toscane is de bakermat van de westerse beschaving en van de Italiaanse wijn. Chianti, Montalcino en Montepulciano zijn voorbeelden van bekende Toscaanse wijngebieden.
+                ">Toscane</dfn></a>|
+              <a class="dfn-hover"><dfn data-info="Piëmont (aan de voet van de berg) is het gebied van Fiat, Nutella, Martini, maar ook van de Barolo, Barbaresco en Barbera d’Alba.
+                ">Piëmont</dfn></a>
             </label>
             <div class="selectpicker">
               <select id="keuze1" name="keuze1" class="form-control">
                 <option selected value=""> </option>
                 <option value="toscane">Toscane</option>
-                <option value="piemonte">Piemonte</option>
+                <option value="piemont">Piëmont</option>
               </select>
             </div>
           </div>
           <label for="keuze1"> </label>
           <div class="col-md-4 col-sm-6">
             <label for="keuze1" class=""> 
-              <a class="dfn-hover"><dfn data-info="">Pinot Noir</dfn></a>|
-              <a class="dfn-hover"><dfn data-info="">Cabernet Sauvignon</dfn></a>
+              <a class="dfn-hover"><dfn data-info="Pinot Noir is een druif die voornamelijk in koelere wijngebieden te vinden is en geeft zachte en soepele wijnen met een lichte kleur en fruitige aroma’s.">Pinot Noir</dfn></a>|
+              <a class="dfn-hover"><dfn data-info="Met Cabernet Sauvignon worden stevige wijnen met veel tannine geproduceerd. De druif wordt voornamelijk aangeplant in warmere wijngebieden. 
+                ">Cabernet Sauvignon</dfn></a>
             </label>
             <div class="selectpicker">
               <select id="keuze1" name="keuze1" class="form-control">
@@ -236,8 +250,8 @@
           </div>
           <div class="col-md-4 col-sm-6">
             <label for="keuze1"> 
-              <a class="dfn-hover"><dfn data-info="">Garnacha</dfn></a>|
-              <a class="dfn-hover"><dfn data-info="">Syrah</dfn></a>
+              <a class="dfn-hover"><dfn data-info="Garnacha geeft wijnen met veel body, alcohol en fruit. De druif wordt vaak gebruikt in blends en komt veel voor in Spanje en Zuid-Frankrijk.">Garnacha</dfn></a>|
+              <a class="dfn-hover"><dfn data-info="Syrah geeft wijnen met complexe aroma’s van peper, viooltjes en zwarte kersen. De druif heeft zich vanuit Frankrijk in rap tempo over de wereld verspreid. ">Syrah</dfn></a>
             </label>
             <div class="selectpicker">
               <select id="keuze1" name="keuze1" class="form-control">
@@ -249,13 +263,15 @@
           </div>
         </div>
           <hr>
-        <br>Voor wit en mix: <br><br>
+        <br>Vragen voor wit en mix: <br><br>
         
         <div class="row">
           <div class="col-md-4 col-sm-6">
             <label for="keuze2" class=""> 
-              <a class="dfn-hover"><dfn data-info="">Viognier</dfn></a>|
-              <a class="dfn-hover"><dfn data-info="">Pinot Gris</dfn></a> </label>
+              <a class="dfn-hover"><dfn data-info="Viognier geeft wijnen met een lage zuurgraad en een bloemig boeket. Condrieu is de bekendste wijn gemaakt met 100% Viognier en komt uit de noordelijke Rhône.
+                ">Viognier</dfn></a>|
+              <a class="dfn-hover"><dfn data-info="Pinot Gris en is een afstammeling van de rode Pinot Noir. In de Franse Elzas worden hier volle, kruidige en soms licht zoete wijnen mee gemaakt. De meeste bekendheid geniet de druif in Noord-Italië in frissere variant als Pinot Grigio.
+                ">Pinot Gris</dfn></a> </label>
             <div class="selectpicker">
               <select id="keuze2" name="keuze2" class="form-control">
                 <option selected value=""> </option>
@@ -276,13 +292,15 @@
           </div>
           <div class="col-md-4 col-sm-6">
             <label for="keuze2"> 
-              <a class="dfn-hover"><dfn data-info="">Moezel</dfn></a>|
-              <a class="dfn-hover"><dfn data-info="">Bourgogne</dfn></a> </label>
+              <a class="dfn-hover"><dfn data-info="Moezel is het bekendste wijngebied van Duitsland en dé druif hier is Riesling – “de koningin der druiven”. Riesling van hoge kwaliteit wordt heel mooi oud vanwege de hoge zuurgraad.
+                ">Moezel</dfn></a>|
+              <a class="dfn-hover"><dfn data-info="In de Bourgogne worden witte wijnen gemaakt met de druif der druiven: Chardonnay. De witte Bourgognes in het noorden zijn relatief fris (Chablis) en in het zuiden vol en rond (Pouilly-Fuissé). 
+                ">Bourgogne</dfn></a> </label>
             <div class="selectpicker">
               <select id="keuze2" name="keuze2" class="form-control">
                 <option selected value=""> </option>
                 <option value="moezel">Moezel</option>
-                <option value="bourgogne">Borgougne</option>
+                <option value="bourgogne">Bourgogne</option>
               </select>
             </div>
           </div>
@@ -300,8 +318,10 @@
           <label for="keuze2"> </label>
           <div class="col-md-4 col-sm-6">
             <label for="keuze2" class=""> 
-              <a class="dfn-hover"><dfn data-info="">Sauvignon Blanc</dfn></a>|
-              <a class="dfn-hover"><dfn data-info="">Chardonnay</dfn></a>
+              <a class="dfn-hover"><dfn data-info="De Sauvignon Blanc druif geeft vaak stuivende (en meestal) frisse wijnen. De bekendste varianten komen uit het noorden van Frankrijk. 
+                ">Sauvignon Blanc</dfn></a>|
+              <a class="dfn-hover"><dfn data-info="Chardonnay is de kameleon der druiven. Je kunt er frisse wijnen mee maken in koelere wijngebieden, maar ook volle en tropische varianten. Bovendien is Chardonnay zeer geschikt om op hout te rijpen. 
+                ">Chardonnay</dfn></a>
             </label>
             <div class="selectpicker">
               <select id="keuze2" name="keuze2" class="form-control">
@@ -323,22 +343,27 @@
           </div>
           <div class="col-md-4 col-sm-6">
             <label for="keuze2" class="">
-              <a class="dfn-hover"><dfn data-info="">Albariño</dfn></a>|
-              <a class="dfn-hover"><dfn data-info="">Grüner Veltliner</dfn></a>
+              <a class="dfn-hover"><dfn data-info="Albariño komt uit Spanje en in Portugal en is familie van de Duitse Riesling. In Galicië worden mineraalrijke Albariño’s gemaakt met tropische aroma’s die uitstekend combineren met schaal- en schelpdieren.">Albariño</dfn></a>|
+              <a class="dfn-hover"><dfn data-info="Met de trots van Oostenrijk, de Grüner Veltliner, worden frisse en peperige wijnen gemaakt. De Grüner Veltliner is met name populair als borrelwijn.  
+ 
+                ">Grüner Veltliner</dfn></a>
              </label>
             <div class="selectpicker">
               <select id="keuze2" name="keuze2" class="form-control">
                 <option selected value=""> </option>
                 <option value="albarino">Albariño</option>
-                <option value="grunervelt">Grüner Veltliner</option>
+                <option value="grunerveltliner">Grüner Veltliner</option>
               </select>
             </div>
           </div>
           <label for="keuze2"> </label>
           <div class="col-md-4 col-sm-6">
             <label for="keuze2" class=""> 
-              <a class="dfn-hover"><dfn data-info="">Cava</dfn></a>|
-              <a class="dfn-hover"><dfn data-info="">Prosecco</dfn></a> 
+              <a class="dfn-hover"><dfn data-info="Cava wordt, net zoals Champagne, gemaakt volgens de méthode traditionnelle. Hierbij ontstaat de mousse door een tweede vergisting op fles. De gistcellen zorgen voor complexe smaken in de wijn.
+ 
+                ">Cava</dfn></a>|
+              <a class="dfn-hover"><dfn data-info="Prosecco wordt (bijna altijd) gemaakt volgens de (Franse) methode Charmat. Hoewel Italianen menen dat deze methode de Metodo Martinotti moet heten. In beide gevallen vindt de tweede vergisting op tank plaats. Hierdoor krijg je over het algemeen een fruitigere mousserende wijn dan bij de méthode traditionnelle.
+                ">Prosecco</dfn></a> 
             </label>
             <div class="selectpicker">
               <select id="keuze2" name="keuze2" class="form-control">
@@ -350,8 +375,11 @@
           </div>
           <div class="col-md-4 col-sm-6">
             <label for="keuze2"> 
-              <a class="dfn-hover"><dfn data-info="">Rueda</dfn></a>|
-              <a class="dfn-hover"><dfn data-info="">Loire</dfn></a>
+              <a class="dfn-hover"><dfn data-info="Rueda is een wijngebied ten noordwesten van Madrid. Bijna alle wijn hier wordt gemaakt van de Verdejo druif. Door de grote temperatuurverschillen in dit gebied heeft een goed gemaakte Verdejo een hoge zuurgraad en tropische aroma’s.
+
+
+                ">Rueda</dfn></a>|
+              <a class="dfn-hover"><dfn data-info="In het Loiredal worden over het algemeen frisse witte wijnen gemaakt van de Sauvignon Blanc en de Muscadet. Met de Chenin Blanc wordt bijna elke denkbare soort wijn geproduceerd. Bekende appellations in dit gebied zijn Sancerre, Touraine en Pouilly-Fumé.">Loire</dfn></a>
             </label>
             <div class="selectpicker">
               <select id="keuze2" name="keuze2" class="form-control">
@@ -377,9 +405,9 @@
         
         <div class="row">
           <div class="col-md-6">
-          <label for="prijs" class=""> Wil je gebeld worden door de wijnlijn om je wensen verder te bespreken?</label>
+          <label for="bellen" class=""> Wil je gebeld worden door de wijnlijn om je wensen verder te bespreken?</label>
             <div class="selectpicker">
-              <select id="prijs" name="prijs" class="form-control small-field" style="float:left;">
+              <select id="bellen" name="bellen" class="form-control small-field" style="float:left;">
                 <option selected value="nee">Nee</option>
                 <option value="ja">Ja</option>
               </select>
