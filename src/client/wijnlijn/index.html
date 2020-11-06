@@ -78,91 +78,51 @@
       </div>
     </nav>
 
+  
     <div id="eigen-vondst-container">
       <h1>WijnLijn WijnTest</h1><br>
       <p>Mis je onze wijnen of geef je graag iemand het perfecte lockdown cadeau? Wij stellen een pakket op maat voor je samen. 
-        Vul de Wijnlijn Wijntest in, laat je gegevens achter en wij bezorgen jouw ideale wijnpakket! <br><br>
+        Vul de Wijnlijn Wijntest in, laat je gegevens achter en wij bezorgen jouw ideale wijnpakket! Onze wijnpakketten bevatten drie flessen. <br><br>
         Bespreek je liever je wensen met de Wijnlijn? Dat kan! We heten niet voor niets de Wijnlijn.<br>
-        Laat je telefoonnummer achter en wij bellen je binnen 24 uur. <br><br>
-        Onze wijnpakketten bevatten drie flessen.
+        Laat je telefoonnummer achter en wij bellen je binnen 24 uur.
+        
         <br><br></p>
     </div>
-
-    <div class="container-s">
+      
+    
+    <!--<div class="container-s">
+          <div class="image-home wijnlijn-page" style="width:50%;"></div>
+    </div>-->
+        
+    <div class="container-wijnlijn">
       <form id="contact-form" method="post" action="/.netlify/functions/send-mail-wijnlijn" autocomplete="off">
         <div class="row">
           <div class="col-md-12">
-            <h6>De Wijnlijn Wijntest</h6>
-            <p>Doe de wijnlijn wijntest door jouw voorkeuren in te vullen! Heb je bij bepaalde vragen geen voorkeur, of vind je beide opties niks? Laat het vakje dan blanco.
-            </p><br>
+            <h6>De Wijnlijn Wijntest</h6><br>
+            <p>Doe de wijnlijn wijntest door jouw voorkeuren in te vullen! Heb je bij bepaalde keuzes geen voorkeur,
+              of vind je beide opties niks? Laat het vakje dan blanco. Aan de hand van jouw gemaakte keuzes stellen wij
+                jouw ideale pakket samen!</p><br>
           </div>
         </div>
-        <div class="form-group row">
-          <label for="keuze1" class="col-sm-6"> Wit | Rood | Mix </label>
-          <div class="col-sm-6">
+        <div class="row">
+          <div class="col-md-4">
+            <label for="keuze" class=""> Rood | Wit | Mix </label>
             <div class="selectpicker">
-              <select id="keuze1" name="keuze1" class="form-control small-field">
+              <select id="keuze" name="keuze" class="form-control">
                 <option selected value=""> </option>
-                <option value="wit">Wit</option>
                 <option value="rood">Rood</option>
+                <option value="wit">Wit</option>
                 <option value="mix">Mix</option>
               </select>
             </div>
           </div>
         </div>
-        <div class="form-group row">
-          <label for="keuze2" class="col-sm-6"> Strak | Sappig </label>
-          <div class="col-sm-6">
+        <br>
+        <div class="row">
+          <div class="col-md-4">
+            <label for="keuze" class=""> Borrelwijn | Dinerwijn </label>
             <div class="selectpicker">
-              <select id="keuze2" name="keuze2" class="form-control small-field">
-                <option selected value=""> </option>
-                <option value="strak">Strak</option>
-                <option value="sappig">Sappig</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="keuze3" class="col-sm-6"> Prosseco | Cava </label>
-          <div class="col-sm-6">
-            <div class="selectpicker">
-              <select id="keuze3" name="keuze3" class="form-control small-field">
-                <option selected value=""> </option>
-                <option value="prosecco">Prosecco</option>
-                <option value="cava">Cava</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="keuze4" class="col-sm-6"> Rioja | Rhône </label>
-          <div class="col-sm-6">
-            <div class="selectpicker">
-              <select id="keuze4" name="keuze4" class="form-control small-field">
-                <option selected value=""> </option>
-                <option value="rioja">Rioja</option>
-                <option value="rhone">Rhône</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="keuze5" class="col-sm-6"> Vol & Rond | Fris & Mineraalrijk </label>
-          <div class="col-sm-6">
-            <div class="selectpicker">
-              <select id="keuze5" name="keuze5" class="form-control small-field">
-                <option selected value=""> </option>
-                <option value="volrond">Vol & rond</option>
-                <option value="frismineraal">Fris & Mineraalrijk</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="keuze6" class="col-sm-6"> Borrelwijn | Dinerwijn </label>
-          <div class="col-sm-6">
-            <div class="selectpicker">
-              <select id="keuze6" name="keuze6" class="form-control small-field">
+              <select id="keuze" name="keuze" class="form-control">
                 <option selected value=""> </option>
                 <option value="borrelwijn">Borrelwijn</option>
                 <option value="dinerwijn">Dinerwijn</option>
@@ -170,136 +130,268 @@
             </div>
           </div>
         </div>
-        <div class="form-group row">
-          <label for="keuze7" class="col-sm-6"> Primitivo | Barbera </label>
-          <div class="col-sm-6">
+        <hr>
+        <br>Vragen voor rood en mix: <br><br>
+                
+        <div class="row">
+          <div class="col-md-4 col-sm-6">
+            <label for="keuze1"> 
+              <a class="dfn-hover"><dfn data-info="Primitivo is een druif en dit en dat en italie en zo verder">Primitivo</dfn></a>|
+              <a class="dfn-hover"><dfn data-info="Barbera is ... ">Barbera</dfn></a> 
+            </label> 
             <div class="selectpicker">
-              <select id="keuze7" name="keuze7" class="form-control small-field">
+              <select id="keuze1" name="keuze1" class="form-control">
                 <option selected value=""> </option>
                 <option value="primitivo">Primitivo</option>
                 <option value="barbera">Barbera</option>
               </select>
             </div>
           </div>
-        </div>
-        <div class="form-group row">
-          <label for="keuze8" class="col-sm-6"> Vettig | Fruitig </label>
-          <div class="col-sm-6">
+          <label for="keuze1"> </label>
+          <div class="col-md-4 col-sm-6">
+            <label for="keuze1" class=""> Stevig | Soepel </label>
             <div class="selectpicker">
-              <select id="keuze8" name="keuze8" class="form-control small-field">
-                <option selected value=""> </option>
-                <option value="vettig">Vettig</option>
-                <option value="fruitig">Fruitig</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="keuze9" class="col-sm-6"> Grenache | Syrah </label>
-          <div class="col-sm-6">
-            <div class="selectpicker">
-              <select id="keuze9" name="keuze9" class="form-control small-field">
-                <option selected value=""> </option>
-                <option value="grenache">Grenache</option>
-                <option value="syrah">Syrah</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="keuze10" class="col-sm-6"> Stevig | Soepel </label>
-          <div class="col-sm-6">
-            <div class="selectpicker">
-              <select id="keuze10" name="keuze10" class="form-control small-field">
-                <option selected value=""> </option>
+              <select id="keuze1" name="keuze1" class="form-control">
+                <option dispabled selected value=""> </option>
                 <option value="stevig">Stevig</option>
                 <option value="soepel">Soepel</option>
               </select>
             </div>
           </div>
-        </div>
-        <div class="form-group row">
-          <label for="keuze11" class="col-sm-6"> Gelagerd | Zuiver </label>
-          <div class="col-sm-6">
+          <div class="col-md-4 col-sm-6">
+            <label for="keuze1"> 
+              <a class="dfn-hover"><dfn data-info="">Rioja</dfn></a>|
+              <a class="dfn-hover"><dfn data-info="">Rhône</dfn></a> 
+            </label>
             <div class="selectpicker">
-              <select id="keuze11" name="keuze11" class="form-control small-field">
+              <select id="keuze1" name="keuze1" class="form-control">
+                <option selected value=""> </option>
+                <option value="rioja">Rioja</option>
+                <option value="rhone">Rhône</option>
+              </select>
+            </div>
+          </div>
+        <br>
+          <div class="col-md-4 col-sm-6">
+            <label for="keuze1" class=""> Gelagerd | Zuiver </label>
+            <div class="selectpicker">
+              <select id="keuze1" name="keuze1" class="form-control">
                 <option selected value=""> </option>
                 <option value="gelagerd">Gelagerd</option>
                 <option value="zuiver">Zuiver</option>
               </select>
             </div>
           </div>
-        </div>
-        <div class="form-group row">
-          <label for="keuze12" class="col-sm-6"> Moezel | Elzas </label>
-          <div class="col-sm-6">
+          <label for="keuze1"> </label>
+          <div class="col-md-4 col-sm-6">
+            <label for="keuze1" class=""> Strak | Sappig</label>
             <div class="selectpicker">
-              <select id="keuze12" name="keuze12" class="form-control small-field">
+              <select id="keuze1" name="keuze1" class="form-control">
+                <option dispabled selected value=""></option>
+                <option value="strak">Strak</option>
+                <option value="sappig">Sappig</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <label for="keuze1"> 
+              <a class="dfn-hover"><dfn data-info="">Bordeaux</dfn></a>|
+              <a class="dfn-hover"><dfn data-info="">Bourgogne</dfn></a>  
+            </label>
+            <div class="selectpicker">
+              <select id="keuze1" name="keuze1" class="form-control">
                 <option selected value=""> </option>
-                <option value="moezel">Moezel</option>
-                <option value="elzas">Elzas</option>
+                <option value="bordeaux">Bordeaux</option>
+                <option value="bourgogne">Bourgogne</option>
+              </select>
+            </div>
+          </div>
+        <br>
+          <div class="col-md-4 col-sm-6">
+            <label for="keuze1" class=""> 
+              <a class="dfn-hover"><dfn data-info="">Toscane</dfn></a>|
+              <a class="dfn-hover"><dfn data-info="">Piemonte</dfn></a>
+            </label>
+            <div class="selectpicker">
+              <select id="keuze1" name="keuze1" class="form-control">
+                <option selected value=""> </option>
+                <option value="toscane">Toscane</option>
+                <option value="piemonte">Piemonte</option>
+              </select>
+            </div>
+          </div>
+          <label for="keuze1"> </label>
+          <div class="col-md-4 col-sm-6">
+            <label for="keuze1" class=""> 
+              <a class="dfn-hover"><dfn data-info="">Pinot Noir</dfn></a>|
+              <a class="dfn-hover"><dfn data-info="">Cabernet Sauvignon</dfn></a>
+            </label>
+            <div class="selectpicker">
+              <select id="keuze1" name="keuze1" class="form-control">
+                <option dispabled selected value=""> </option>
+                <option value="pinotnoir">Pinot Noir</option>
+                <option value="cabernetsauv">Cabernet Sauvignon</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <label for="keuze1"> 
+              <a class="dfn-hover"><dfn data-info="">Garnacha</dfn></a>|
+              <a class="dfn-hover"><dfn data-info="">Syrah</dfn></a>
+            </label>
+            <div class="selectpicker">
+              <select id="keuze1" name="keuze1" class="form-control">
+                <option selected value=""> </option>
+                <option value="garnacha">Garnacha</option>
+                <option value="syrah">Syrah</option>
               </select>
             </div>
           </div>
         </div>
-        <div class="form-group row">
-          <label for="keuze13" class="col-sm-6"> Viognier | Pinot Grigio </label>
-          <div class="col-sm-6">
+          <hr>
+        <br>Voor wit en mix: <br><br>
+        
+        <div class="row">
+          <div class="col-md-4 col-sm-6">
+            <label for="keuze2" class=""> 
+              <a class="dfn-hover"><dfn data-info="">Viognier</dfn></a>|
+              <a class="dfn-hover"><dfn data-info="">Pinot Gris</dfn></a> </label>
             <div class="selectpicker">
-              <select id="keuze13" name="keuze13" class="form-control small-field">
+              <select id="keuze2" name="keuze2" class="form-control">
                 <option selected value=""> </option>
                 <option value="viognier">Viognier</option>
-                <option value="pinotgrigio">Pinot Grigio</option>
+                <option value="pinotgris">Pinot Gris</option>
               </select>
             </div>
           </div>
-        </div>
-        <div class="form-group row">
-          <label for="keuze14" class="col-sm-6"> Sicilië | Languedoc </label>
-          <div class="col-sm-6">
+          <div class="col-md-4 col-sm-6">
+            <label for="keuze2" class=""> Strak | Sappig </label>
             <div class="selectpicker">
-              <select id="keuze14" name="keuze14" class="form-control small-field">
-                <option selected value=""> </option>
-                <option value="sicilie">Sicilië</option>
-                <option value="languedoc">Languedoc</option>
+              <select id="keuze2" name="keuze2" class="form-control">
+                <option dispabled selected value=""> </option>
+                <option value="strak">Strak</option>
+                <option value="sappig">Sappig</option>
               </select>
             </div>
           </div>
-        </div>
-        <div class="form-group row">
-          <label for="keuze15" class="col-sm-6"> Pinot Noir | Merlot </label>
-          <div class="col-sm-6">
+          <div class="col-md-4 col-sm-6">
+            <label for="keuze2"> 
+              <a class="dfn-hover"><dfn data-info="">Moezel</dfn></a>|
+              <a class="dfn-hover"><dfn data-info="">Bourgogne</dfn></a> </label>
             <div class="selectpicker">
-              <select id="keuze15" name="keuze15" class="form-control small-field">
+              <select id="keuze2" name="keuze2" class="form-control">
                 <option selected value=""> </option>
-                <option value="pinotnoir">Pinot Noir</option>
-                <option value="merlot">Merlot</option>
+                <option value="moezel">Moezel</option>
+                <option value="bourgogne">Borgougne</option>
+              </select>
+            </div>
+          </div>
+        
+          <div class="col-md-4 col-sm-6">
+            <label for="keuze2" class=""> Vol en rond | Fris en mineraalrijk </label>
+            <div class="selectpicker">
+              <select id="keuze2" name="keuze2" class="form-control">
+                <option selected value=""> </option>
+                <option value="volrond">Vol en rond</option>
+                <option value="frismineraal">Fris en mineraalrijk</option>
+              </select>
+            </div>
+          </div>
+          <label for="keuze2"> </label>
+          <div class="col-md-4 col-sm-6">
+            <label for="keuze2" class=""> 
+              <a class="dfn-hover"><dfn data-info="">Sauvignon Blanc</dfn></a>|
+              <a class="dfn-hover"><dfn data-info="">Chardonnay</dfn></a>
+            </label>
+            <div class="selectpicker">
+              <select id="keuze2" name="keuze2" class="form-control">
+                <option dispabled selected value=""></option>
+                <option value="sauvignonblanc">Sauvignon Blanc</option>
+                <option value="chardonnay">Chardonnay</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <label for="keuze2"> Gelagerd | Zuiver </label>
+            <div class="selectpicker">
+              <select id="keuze2" name="keuze2" class="form-control">
+                <option selected value=""> </option>
+                <option value="gelagerd">Gelagerd</option>
+                <option value="zuiver">Zuiver</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <label for="keuze2" class="">
+              <a class="dfn-hover"><dfn data-info="">Albariño</dfn></a>|
+              <a class="dfn-hover"><dfn data-info="">Grüner Veltliner</dfn></a>
+             </label>
+            <div class="selectpicker">
+              <select id="keuze2" name="keuze2" class="form-control">
+                <option selected value=""> </option>
+                <option value="albarino">Albariño</option>
+                <option value="grunervelt">Grüner Veltliner</option>
+              </select>
+            </div>
+          </div>
+          <label for="keuze2"> </label>
+          <div class="col-md-4 col-sm-6">
+            <label for="keuze2" class=""> 
+              <a class="dfn-hover"><dfn data-info="">Cava</dfn></a>|
+              <a class="dfn-hover"><dfn data-info="">Prosecco</dfn></a> 
+            </label>
+            <div class="selectpicker">
+              <select id="keuze2" name="keuze2" class="form-control">
+                <option dispabled selected value=""> </option>
+                <option value="cava">Cava</option>
+                <option value="prosecco">Prosecco</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <label for="keuze2"> 
+              <a class="dfn-hover"><dfn data-info="">Rueda</dfn></a>|
+              <a class="dfn-hover"><dfn data-info="">Loire</dfn></a>
+            </label>
+            <div class="selectpicker">
+              <select id="keuze2" name="keuze2" class="form-control">
+                <option selected value=""> </option>
+                <option value="rueda">Rueda</option>
+                <option value="loire">Loire</option>
               </select>
             </div>
           </div>
         </div>
+
+            
+        <hr>
         <br>
         <div class="row">
-          <div class="col-xs-12 col-md-12">
+          <div class="col-xs-12 col-md-6">
             <div class="form-group">
               <label for="form_message">Heb je hier nog iets aan toe te voegen? Wij horen het graag!</label>
               <textarea id="form_message" name="message" class="form-control textarea-form" placeholder="" rows="4" data-error=""></textarea>
             </div>
           </div>
         </div>
+        
         <div class="row">
-          <div class="col-xs-12 col-md-12">
-            <div class="form-group">
-              <label for="form_message">Wil je gebeld worden door de wijnlijn om je wensen verder te bespreken?</label>
-              <textarea id="form_message" name="bellen" class="form-control textarea-form" placeholder="" rows="1" data-error=""></textarea>
+          <div class="col-md-6">
+          <label for="prijs" class=""> Wil je gebeld worden door de wijnlijn om je wensen verder te bespreken?</label>
+            <div class="selectpicker">
+              <select id="prijs" name="prijs" class="form-control small-field" style="float:left;">
+                <option selected value="nee">Nee</option>
+                <option value="ja">Ja</option>
+              </select>
             </div>
           </div>
         </div>
-        <div class="form-group row">
-          <label for="prijs" class="col-sm-6"> Voor welke prijs wil je een pakket?</label>
-          <div class="col-sm-6">
+        <br>
+        <div class="row">
+          <div class="col-md-6">
+          <label for="prijs" class=""> Voor welke prijs wil je een pakket?</label>
             <div class="selectpicker">
-              <select id="prijs" name="prijs" class="form-control small-field">
+              <select id="prijs" name="prijs" class="form-control small-field" style="float:left;">
                 <option selected value=""> </option>
                 <option value="35">35,00</option>
                 <option value="40">40,00</option>
@@ -315,8 +407,9 @@
             </div>
           </div>
         </div>
+        <br>
         <div class="row">
-          <div class="col-xs-12 col-md-12">
+          <div class="col-xs-12 col-md-6">
             <div class="form-group">
               <label for="form_methode">Wil je het als cadeau laten verpakken? (2 euro per pakket)</label>
               <div class="selectpicker">
@@ -339,7 +432,7 @@
         </div> 
         <br>      
         <div class="row">
-          <div class="col-xs-12 col-md-8">
+          <div class="col-xs-12 col-md-6">
             <div class="form-group">
               <label for="form_date">Welke dag wil je het pakket afhalen of laten bezorgen?*</label>
               <input id="form_date" name="date" type="text" class="form-control formnumber" placeholder="dd/mm/yyyy"  required="required" data-error="Selecteer een dag" />
@@ -348,7 +441,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-12 col-md-8">
+          <div class="col-xs-12 col-md-6">
             <div class="form-group">
               <label for="form_methode">Bezorgen of afhalen?*</label>
               <div class="selectpicker">
@@ -363,7 +456,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-12 col-md-8">
+          <div class="col-xs-12 col-md-6">
             <div class="form-group">
               <label for="timeslots">Indien afhalen, hoe laat?</label>
               <div class="selectpicker">
@@ -391,7 +484,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-12 col-md-8">
+          <div class="col-xs-12 col-md-6">
             <div class="form-group">
               <label for="form_name">Naam *</label>
               <input id="form_name" type="text" name="name" class="form-control" placeholder="" required="required" data-error="Vul een naam in.">
@@ -400,7 +493,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-12 col-md-8">
+          <div class="col-xs-12 col-md-6">
             <div class="form-group">
               <label for="form_email">Email *</label>
               <input id="form_email" type="email" name="email" class="form-control" placeholder="" required="required" data-error="Vul een geldig emailadres in.">
@@ -409,7 +502,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-12 col-md-8">
+          <div class="col-xs-12 col-md-6">
             <div class="form-group">
               <label for="form_phone">Telefoonnummer *</label>
               <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="" required="required" data-error="Als je wilt reserveren hebben we een telefoonnummer nodig.">
@@ -418,7 +511,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-12 col-md-8">
+          <div class="col-xs-12 col-md-6">
             <div class="form-group">
               <label for="form_adress">Bezorg adres (straat, huisnummer)</label>
               <input id="form_adress" type="adress" name="adres" class="form-control" placeholder="" data-error="Als je wil dat we berzorgen, hebben we een adres nodig.">
@@ -427,7 +520,7 @@
           </div>
         </div>  
         <div class="row">
-          <div class="col-xs-12 col-md-8">
+          <div class="col-xs-12 col-md-6">
             <div class="form-group">
               <label for="form_postcode">Bezorg postcode</label>
               <input id="form_postcode" type="adress" name="postcode" class="form-control" placeholder="" data-error="Voor het bezorgen hebben we ook je postcode nodig.">
@@ -437,7 +530,7 @@
         </div>
         <hr>
         <div class="row">
-          <div class="col-md-12">
+          <div class="col-md-6">
             <div class="form-group">
               <input type="checkbox" id="nieuwsbrief" name="nieuwsbrief">
               <label for="nieuwsbrief"> Ja, ik blijf graag via e-mail op de hoogte van de Centrale.</label>
