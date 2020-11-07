@@ -78,7 +78,7 @@ exports.handler = function (event, context, callback) {
 		Wijn:
 		Bijpassend wit: ${wijnWit}
 		Bijpassend rood: ${wijnRood}
-		Bijpassend kleine cava: ${wijnCavaKlein}
+		Bijpassend 2 persoonscava cava: ${wijnCavaKlein}
 		Bijpassend cava: ${wijnCava}
 		Bubbel: ${bubbel}
 		Bijpassend pakket: ${wijnpakket} flessen \n

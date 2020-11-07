@@ -39,21 +39,10 @@ exports.handler = function (event, context, callback) {
 	const bellen = postData.bellen
 	const verpakken = postData.verpakken
 	const prijs = postData.prijs
+	const keuze = postData.keuze
 	const keuze1 = postData.keuze1
 	const keuze2 = postData.keuze2
-	const keuze3 = postData.keuze3
-	const keuze4 = postData.keuze4
-	const keuze5 = postData.keuze5
-	const keuze6 = postData.keuze6
-	const keuze7 = postData.keuze7
-	const keuze8 = postData.keuze8
-	const keuze9 = postData.keuze9
-	const keuze10 = postData.keuze10
-	const keuze11 = postData.keuze11
-	const keuze12 = postData.keuze12
-	const keuze13 = postData.keuze13
-	const keuze14 = postData.keuze14
-	const keuze15 = postData.keuze15
+	
 
 
 	const emailBody = getEmailBody(postData)
@@ -72,7 +61,9 @@ exports.handler = function (event, context, callback) {
 		"ReplyTo": email,
 		"Subject": `Wijnlijn | ${date}`,
 		"TextBody": `
-		Voorkeuren: ${keuze1}, ${keuze2}, ${keuze3}, ${keuze4}, ${keuze5}, ${keuze6}, ${keuze7}, ${keuze8}, ${keuze9}, ${keuze10}, ${keuze11}, ${keuze12}, ${keuze13}, ${keuze14}, ${keuze15}\n
+		Kleur en borrel/dinerwijn: ${keuze}\n
+		Voorkeuren rood: ${keuze1}\n
+		Voorkeuren wit: ${keuze2}\n
 		Bericht: ${message}
 		Bellen: ${bellen}
 		Prijs: ${prijs}

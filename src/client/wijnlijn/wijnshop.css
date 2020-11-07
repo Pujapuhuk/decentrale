@@ -20,7 +20,7 @@ h2 {
     padding:40px 20% 40px 20%;
     text-align: center;
     font-family: 'Spectral', serif;
-    background-color:#303030;
+    background-color: white;;
     margin-top:90px;
 }
 @media (max-width: 1024px) {
@@ -35,14 +35,18 @@ h2 {
     }
 }
 #eigen-vondst-container h2 {
-    color:white;
+    color:black;
     font-size:22px;
     font-family: "Karla",serif; 
     text-transform:uppercase;
 }
 
+#eigen-vondst-container h1 {
+    color:black;
+}
+
 #eigen-vondst-container p {
-    color:white;
+    color:black;
 }
 #box-container {
     display:flex;
