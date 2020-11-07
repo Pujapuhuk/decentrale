@@ -43,7 +43,6 @@ body, html {
 }
 
 .container-wijnlijn{
-    background-color:;
     position: relative;
     padding-left:80px;
     padding-right:80px;
@@ -1286,7 +1285,6 @@ a.dfn-hover {
 /** Code for hover info **/
 
 dfn {
-  background:;
   border-bottom: dashed 1px rgba(0,0,0,0.8);
   padding: 0 0.4em;
   cursor: help;
