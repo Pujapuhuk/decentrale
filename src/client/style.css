@@ -1210,7 +1210,7 @@ label{
 /*******************/
 
 .roast-header {
-    background: url(img/roast/roast-header.jpg) 20% 70%/cover no-repeat;
+    background: url(img/roast/roast-header.jpg) center center/cover no-repeat;
 }
 
 @media (max-width: 480PX) {
