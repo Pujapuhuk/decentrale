@@ -1176,34 +1176,81 @@ label{
 /*GESCHENKEN PAGINA*/
 /*******************/
 
-.geschenken-header{
-    background: url(../img/geschenken/geschenken-header.jpg) 50% 50%/cover no-repeat;
-    background-size: 1800px;
-    min-height: 120vh;
-    padding-top:130px;
+.geschenken-container{
+    padding-top:140px;
+}
+@media (max-width: 480px) {
+    .geschenken-container{
+    padding-top:70px;
+    }
+}
+@media (max-width: 767px) {
+    .geschenken-container{
+    padding-top:95px;
+    }
 }
 
-.geschenken-text{
+/*copy from home voor geschenken*/
+
+/*slogan*/
+.slogan-geschenken{
     position:relative;
-    background-color: white;
-    padding:32px; 
-    margin-left:24px;
-    -webkit-box-shadow: 0px 0px 16px 0px rgba(54,54,54,0.15);
-    -moz-box-shadow: 0px 0px 16px 0px rgba(54,54,54,0.15);
-    box-shadow: 0px 0px 16px 0px rgba(54,54,54,0.15);
-    text-align:left;
+    height:auto;
+    background-color: #F8F8F8;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.022), 0 6.7px 5.3px rgba(0, 0, 0, 0.032), 0 12.5px 10px rgba(0, 0, 0, 0.04), 0 22.3px 17.9px rgba(0, 0, 0, 0.048), 0 41.8px 33.4px rgba(0, 0, 0, 0.058), 0 100px 80px rgba(0, 0, 0, 0.08);
+    z-index:2;
+    padding:60px;
+}
+@media (max-width: 768px) {
+  .slogan-geschenken{
+    padding:40px;
+  }
+}
+/*slogan home*/
+.slogan-geschenken-right{
+    top: 50%;
+    transform: translate(0%, -50%);
+    width:410px;
+    float:right;
+}
+.slogan-geschenken-left{
+    top: 50%;
+    transform: translate(0%, -50%);
+    width:500px;
+    float:left;
+    left:80px;
+}
+@media (max-width: 767px) {
+  .slogan-geschenken-right{
+    width:100%;
+    }
+    .slogan-geschenken-left{
+    left: 0px;
+    width:100%;
+    }
+}
+/*images home*/
+.geschenken-1{
+    background: url(img/geschenken/geschenken-3.jpg) center/cover no-repeat;
+}
+.geschenken-row-2{
+    margin-top:-80px;
+    margin-bottom:-80px;
+}
+@media (max-width: 768px) {
+  .geschenken-row-2{
+    margin-top:40px;
+    margin-bottom:40px;
+}
+}
+.geschenken-2{
+    background: url(img/geschenken/geschenken-4.jpg) center/cover no-repeat;
+}
+.geschenken-3{
+    background: url(img/geschenken/geschenken-5.jpg) center/cover no-repeat;
 }
 
-.geschenken-text p{
-    font-family: 'Spectral', serif;
-    font-size:13px;
-    line-height: 26px;
-}
-.geschenken-text a{
-    font-family: 'Spectral', serif;
-    font-size:13px;
-    line-height: 26px;
-}
+
 
 /*******************/
 /*Roast pagina PAGINA*/
