@@ -71,8 +71,8 @@ exports.handler = function (event, context, callback) {
 		"Subject": `Kerstmenu De Centrale voor ${date} | ${methode} | ${time}`,
 		"TextBody": `
 		Wij willen graag: 
-		4-gangen standaard: ${menuStandaard7} x
-		4-gangen vega: ${menuVega7} x\n
+		kerstmenu standaard: ${menuStandaard7} x
+		kerstmenu vega: ${menuVega7} x\n
 		Extra:
 		Oester: ${oesters}
 		Brood: ${brood} x
@@ -91,7 +91,7 @@ exports.handler = function (event, context, callback) {
 		Op borden serveren: ${borden}
 		Champagne wijnglazen: ${glas_cava} x
 		Rode wijnglazen: ${glas_rood}x
-		Witte wijnglazen: ${glas_wit}x
+		Witte wijnglazen: ${glas_wit}x \n
 		Wanneer en hoe?
 		${methode} op ${date}
 		${time}\n
