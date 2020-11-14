@@ -56,7 +56,7 @@ exports.handler = function (event, context, callback) {
 	const callbackHandler = {
 		statusCode: 302,
 		headers: {
-			"Location": '/bedankt/'
+			"Location": '/bedankt-geschenken/'
 		},
 		body: ''
 	}
