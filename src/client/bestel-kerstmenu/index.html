@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <title>Menu bestellen | Restaurant De Centrale Delft</title>
-    <meta name="description" content="Bezorgen en afhalen van ons vertrouwde Menu van Nu in Delft, Den Hoorn, Delfgauw of Pijnacker. 
+    <meta name="description" content="Bezorgen en afhalen van ons vertrouwde Kerstmenu in Delft, Den Hoorn, Delfgauw of Pijnacker. 
     Zo geniet je thuis van een heerlijk 4 gangen diner. Eet je liever vegetarisch? Je kunt ook een vega menu bestellen.">
 
     <!-- favicon -->
@@ -79,56 +79,59 @@
         </div>
       </nav>
 
-    <div class="container-l page-title-contact d-block d-sm-none">
+    <div class="container-l page-title-kerst-1 d-block d-sm-none">
       <div class="page-title-text-wrap">
-        <h5>MENU VAN NU</h5>
+        <h5>KERSTMENU</h5>
       </div>
     </div>
-    <div class="container-l page-header bestel-header"></div>
+    <div class="container-l page-header kerstmenu-header"></div>
 
-    <div class="container-s page-title-roast d-none d-sm-block">
-      <h1>MENU VAN NU</h1>
+    <div class="container-s page-title-kerst-2 d-none d-sm-block">
+      <h1>KERSTMENU</h1>
     </div>
     
     <div class="container-s page-intro-text text-center reserveren-intro">
-      <p><br>Bestel ons menu van 4 gangen voor thuis. Hoe? Het werkt heel makkelijk! Je kiest voor een standaard of vegetarisch menu. Je voorgerecht, 
-        tussengerecht en dessert krijg je zoals je van ons gewend bent. Alleen het hoofdgerecht geef je 
+      <p><br>Bestel ons kerstmenu van 7 gangen voor thuis. Hoe? Het werkt heel makkelijk! Je kiest voor een standaard of vegetarisch menu. Je voorgerecht, 
+        tussengerecht en nagrechten krijg je zoals je van ons gewend bent. Alleen het hoofdgerecht geef je 
         thuis de finishing touch door onze eenvoudige instructies te volgen. Een kind kan de was doen! 
-        Wil je de complete Centrale ervaring? Kies dan voor de bijpassende wijnen, oesters vooraf, een kaasplank of koffie van Miss Morrison met friandises!<br>
+        Wil je de complete Centrale ervaring? Kies dan voor de bijpassende wijnen, oesters vooraf, een verwenplank of koffie van Miss Morrison met friandises!<br>
+        <br>Wil je het menu op onze mooie borden geserveerd krijgen?
+            Geen probleem! De dag erop komen wij ze zelf weer ophalen en wassen we ze
+            zelf af.<br>
         <br>
-        <button class="btn-header" onclick="parent.location='/menukaart/'">Bekijk menu</button>
+        <button class="btn-header" onclick="parent.location='/kerstmenu/'">Bekijk kerstmenu</button>
     </div>
     <br>
-    <div class="container-s">
+    <!--<div class="container-s">
       <div class="container-black">
         <p>Bestel voor 22.00 uur je diner voor de volgende dag! </p> 
       </div>
-    </div>
+    </div>-->
 <div class="container-s">
-  <form id="contact-form" method="post" action="/.netlify/functions/send-mail-contact" autocomplete="off">
+  <form id="contact-form" method="post" action="/.netlify/functions/send-mail-kerstmenu" autocomplete="off">
     <div class="row">
       <div class="col-md-12">
-        <h6>KIES MENU</h6>
+        <h6>KERSTMENU</h6>
         <p>Vanaf twee personen</p>
       </div>
     </div>
     <div class="form-group row">
-      <label for="4_gangen_standaard" class="col-sm-6">4-gangen standaard (35,00 p.p.)</label>
+      <label for="7_gangen_standaard" class="col-sm-6">7-gangen standaard (70,00 p.p.)</label>
       <div class="col-sm-6">
-          <input type="number" class="form-control small-field" name="menuStandaardVier" id="4_gangen_standaard">
+          <input type="number" class="form-control small-field" name="menuStandaard7" id="7_gangen_standaard">
       </div>
     </div>
     <div class="form-group row">
-      <label for="4_gangen_vega" class="col-sm-6">4-gangen vega (35,00 p.p.)</label>
+      <label for="7_gangen_vega" class="col-sm-6">7-gangen vega (70,00 p.p.)</label>
       <div class="col-sm-6">
-          <input type="number" class="form-control small-field" name="menuVegaVier" id="4_gangen_vega">
+          <input type="number" class="form-control small-field" name="menuVega7" id="7_gangen_vega">
       </div>
     </div>
     <hr>
     <div class="row">
       <div class="col-md-12">
         <h6>KIES EXTRA'S</h6>
-        <p>Oesters of charcuterie vooraf of kaas als extra gang</p>
+        <p>Oesters of borrelplank vooraf?</p>
       </div>
     </div>
     <div class="form-group row">
@@ -153,10 +156,32 @@
       </div>
     </div>
     <div class="form-group row">
-      <label for="kaas" class="col-sm-6">Kaasplank (10,00 per stuk)</label>
-      <div class="col-sm-6">
-          <input type="number" class="form-control small-field" name="kaas" id="kaas">
+        <label for="verwenplank" class="col-sm-6">Verwenplank (15,00 per persoon). Aantal personen:</label>
+        <div class="col-sm-6">
+            <input type="number" class="form-control small-field" name="verwenplank" id="verwenplank">
+        </div>
       </div>
+    <div class="form-group row">
+      <label for="brood" class="col-sm-6">Huisgemaakt Zuurdesem (5,00 per stuk)</label>
+      <div class="col-sm-6">
+          <input type="number" class="form-control small-field" name="brood" id="brood">
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <input type="checkbox" id="bijpassend_cava" name="wijn_cava">
+            <label for="bijpassend_cava"> Cava - Clos Montblanc - Brut Silver (20,00)</label>
+          </div>
+          <div class="form-group">
+            <input type="checkbox" id="bijpassend_speciaal" name="bubbel">
+            <label for="bijpassend_speciaal">Bubbel<a href="https://www.alain-voge.com/en/saint-peray/les-bulles-d-alain" target="_blank">Rhône Cremant:  Bulles d’Alain – A.O.P. Saint-Péray – 2014 (bio)</a>(40,00)</label>
+          </div>
+          <div class="form-group">
+            <input type="checkbox" id="klein_cava" name="wijn_cava_klein">
+            <label for="bijpassend_cava_klein"> Cava voor 2 personen (12,00)</label>
+          </div>
+        </div>
     </div>
     <hr>
     <div class="row">
@@ -181,8 +206,10 @@
     <div class="row">
       <div class="col-md-12">
         <h6>KIES WIJN</h6>
-        <h7>Wil je net als bij de Centrale genieten van de lekkerste wijn-spijs combinaties? Ga dan voor een bijpassend wijnpakket en maak de keuze uit 2, 3 of 4 bijpassende wijnen. 
-          Hou je het liever bij een fles? Kies dan een bijpassende rode of witte wijn.</h7>
+        <h7>Wil je net als bij de Centrale genieten van de lekkerste wijn-spijs combinaties?
+            Ga dan voor een bijpassend wijnpakket en maak de keuze uit 2, 3, 4, 5 of 6
+            bijpassende wijnen. Hou je het liever bij een fles? Kies dan een bijpassende
+            rode of witte wijn. Bij het kerstmenu serveren we extra bijzondere wijnen!</h7>
       </div>
     </div>
     <br>
@@ -193,9 +220,11 @@
           <select id="wijnpakket" name="wijnpakket" class="form-control middle-field">
             <option selected disabled value="">Hoeveel flessen?</option>
             <option value="geen">geen</option>
-            <option value="2">2 flessen (30,00)</option>
-            <option value="3">3 flessen (45,00)</option>
-            <option value="4">4 flessen (60,00)</option>
+            <option value="2">2 flessen (40,00)</option>
+            <option value="3">3 flessen (60,00)</option>
+            <option value="4">4 flessen (80,00)</option>
+            <option value="5">5 flessen (100,00)</option>
+            <option value="6">6 flessen (120,00)</option>
           </select>
         </div>
       </div>
@@ -204,42 +233,82 @@
       <div class="col-md-12">
         <div class="form-group">
           <input type="checkbox" id="bijpassend_wit" name="wijn_wit">
-          <label for="bijpassend_wit"> Bijpassend wit (17,50)</label>
+          <label for="bijpassend_wit"> Bijpassend wit (22,50)</label>
         </div>
         <div class="form-group">
           <input type="checkbox" id="bijpassend_rood" name="wijn_rood">
-          <label for="bijpassend_rood"> Bijpassend rood (17,50)</label>
-        </div>
-        <div class="form-group">
-          <input type="checkbox" id="bijpassend_cava" name="wijn_cava">
-          <label for="bijpassend_cava"> Cava - Clos Montblanc - Brut Silver (20,00)</label>
-        </div>
-        <div class="form-group">
-          <input type="checkbox" id="klein_cava" name="wijn_cava_klein">
-          <label for="bijpassend_cava_klein"> Cava voor 2 personen (12,00)</label>
-        </div>
-        <div class="form-group">
-          <input type="checkbox" id="bijpassend_speciaal" name="bubbel">
-          <label for="bijpassend_speciaal">Bubbel<a href="https://www.alain-voge.com/en/saint-peray/les-bulles-d-alain" target="_blank">Rhône Cremant:  Bulles d’Alain – A.O.P. Saint-Péray – 2014 (bio)</a>(40,00)</label>
+          <label for="bijpassend_rood"> Bijpassend rood (22,50)</label>
         </div>
       </div>
     </div>
     <hr>
     <div class="row">
+        <div class="col-md-12">
+          <h6>GEEN AFWAS</h6>
+          <h7>Wil je het menu op onze mooie borden geserveerd krijgen?
+            Geen probleem! De dag erop komen wij ze zelf weer ophalen en wassen we ze
+            zelf af.</h7>
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <input type="checkbox" id="borden" name="borden">
+            <label for="borden"> Centrale borden (7,50 p.p.)</label>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-12">
+          <h6>CENTRALE GLAZEN</h6>
+            <h7>Wil je thuis dezelfde wijnglazen hebben als bij De Centrale?
+            Koop ze nu!
+            </h7>
+        </div>
+      </div>
+      <br>
+      <div class="form-group row">
+        <label for="glas_cava" class="col-sm-6"> Champagneglas (5 euro per stuk)</label>
+        <div class="col-sm-6">
+            <input type="number" class="form-control small-field" name="glas_cava" id="glas_cava">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="glas_rood" class="col-sm-6"> Wijnglas rood (5 euro per stuk)</label>
+        <div class="col-sm-6">
+            <input type="number" class="form-control small-field" name="glas_rood" id="glas_rood">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="glas_wit" class="col-sm-6">Wijnglas wit (5 euro per stuk)</label>
+        <div class="col-sm-6">
+            <input type="number" class="form-control small-field" name="glas_wit" id="glas_wit">
+        </div>
+      </div>
+      
+      <hr>
+    <div class="row">
       <div class="col-md-12">
         <h6>WANNEER?</h6>
-        <p>Geef aan wanneer je wilt eten en of je het komt halen of dat wij het kunnen bezorgen.</p>
+        <p>Wij bezorgen op kerstavond, eerste kerstdag en tweede kerstdag.</p>
       </div>
     </div>
     <div class="row">
-      <div class="col-xs-12 col-md-8">
-        <div class="form-group">
-          <label for="form_date">Welke dag wil je eten?*</label>
-          <input id="form_date" name="date" type="text" class="form-control formnumber" placeholder="dd/mm/yyyy"  required="required" data-error="Selecteer een dag" />
-          <div class="help-block with-errors"></div>
+        <div class="col-xs-12 col-md-8">
+          <div class="form-group">
+            <label for="date">Welke dag wil je eten?*</label>
+              <select id ="date" name="date" class="form-control" required="required" data-error="Selecteer een dag">
+                <option selected disabled value="">Kies</option>
+                <option value="24-12-2020">Kerstavond (donderdag 24-12-20)</option>
+                <option value="25-12-2020">Eerst Kerstdag (vrijdag 25-12-20)</option>
+                <option value="26-12-2020">Tweede Kerstdag (zaterdag 26-12-20)</option>
+              </select>
+            </div>
+            <div class="help-block with-errors"></div>
         </div>
       </div>
-    </div>
     <div class="row">
       <div class="col-xs-12 col-md-8">
         <div class="form-group">
@@ -541,11 +610,11 @@
       $(document).ready(() => {
         const datepickerConfig = {
           weekStart: 1,
-          daysOfWeekDisabled: '1,2,3,4',
+          daysOfWeekDisabled: '1,2,3,7',
           datesDisabled: [],
           autoclose: true,
           format: 'dd-mm-yyyy',
-          startDate: '+1d',
+          startDate: '23-12-2020',
           language: 'nl',
           todayHighlight: true,
         }

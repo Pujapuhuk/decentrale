@@ -520,6 +520,22 @@ button:hover, button:focus, button:active {
     margin-top: -8vh;
 }
 
+.page-title-kerst-1{
+    display: flex;
+    padding:80px; 
+    background-color:#a93c38;
+    padding:16px;
+    margin-top:50px;
+}
+
+.page-title-kerst-2{
+    display: flex;
+    background-color:#a93c38;
+    padding:4vh; 
+    margin-top: -8vh;
+}
+
+
 .page-title-white{
     display: flex; 
     padding:80px;
@@ -1139,7 +1155,7 @@ label{
 }
 
 .bestel-3{
-    background: url(img/bestel/borrel-header.jpg) center/cover no-repeat;
+    background: url(img/bestel-kerstmenu/kerst-header.jpg) center/cover no-repeat;
 }
 
 .wijn-1{
@@ -1370,3 +1386,16 @@ dfn:hover::after,
 dfn:hover::before {opacity: 1;}
 dfn:hover::after {top: 30px;}
 dfn:hover::before {top: 20px;}
+
+/* Kerstmenu bestel pagina*/
+
+.kerstmenu-header {
+    background: url(img/bestel-kerstmenu/kerst-header.jpg) 50% 60%/cover no-repeat;
+}
+
+@media (max-width: 480PX) {
+    .kerstmenu-header {
+        background: url(img/bestel-kerstmenu/kerst-header.jpg) 50% 60%/cover no-repeat;
+        height:30vh;
+    }
+}
