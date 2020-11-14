@@ -5,8 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
-  <title>De Centrale als cadeau |  De Centrale</title>
-  <meta name="description" content="De Centrale als cadeau">
+  <title>Kerstpakketten | Restaurant De Centrale</title>
+  <meta name="description" content="Kerstpakketten van de Centrale">
   
   <!-- favicon -->
   <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
@@ -55,15 +55,17 @@
 <body>
   <nav class="navbar fixed-top navbar-expand-lg navbar-light">
     <a class="navbar-brand js-scroll-trigger" href="/">DE CENTRALE</a>
-    <button class="navbar-toggler custom-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler custom-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       <span class="my-1 close">
         <svg fill="#000000" height="32" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
-          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
-          <path d="M0 0h24v24H0z" fill="none"/>
-        </svg>
-      </span>
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+          <path d="M0 0h24v24H0z" fill="none" />
+        </svg></span>
+
     </button>
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
@@ -73,7 +75,7 @@
         <a href="/wijnkaart/" class="nav-link page-scroll">Wijnkaart</a>
         </li>
         <li class="nav-item active">
-          <a href="/geschenken/" class="nav-link page-scroll">Geschenken</a>
+          <a href="/geschenken/" class="nav-link page-scroll">Kerstpakketten</a>
         </li>
       <li class="nav-item nav-link-wijnpakket">
           <a href="/wijn/" class="nav-link page-scroll">Wijn bestellen</a>
@@ -93,13 +95,13 @@
 <!-- Title bar-->
 <div class="container-fluid geschenken-container page-title">
     <div class="page-title-text-wrap">
-        <h1>De Centrale Cadeau</h1>
+        <h1>Kerstpakketten</h1>
     </div>
 </div>
 
 <!-- intro text-->
 <div class="container page-intro-text text-center">
-  <p>Relatiegeschenken <br><br>
+  <p>
     Ben je op zoek naar een bijzonder kerst- of relatiegeschenk? Bij de Centrale stellen we samen met
     jou het perfecte pakket samen. We maken onderscheid tussen drie verschillende pakketten,
     waarbinnen (bijna) alles mogelijk is!
@@ -118,7 +120,6 @@
               <h3>Het Centrale Kerstpakket</h3>
                 <p>Bij de Centrale maken we het zelf. Op zoek naar een kerstpakket met mooie en ambachtelijke producten? Wij maken er samen een onvergetelijk cadeau van! 
                 </p>  
-              
             </div>
         </div>
     </div>
@@ -160,12 +161,11 @@
 <!-- formulier-->
 <div class="container-s">
   
-  <form id="contact-form" method="post" action="/.netlify/functions/send-mail-wijn" autocomplete="off">
+  <form id="contact-form" method="post" action="/.netlify/functions/send-mail-kerst" autocomplete="off">
       <div class="row">
         <div class="col-md-12">
-          <h6>CONTACT FORMULIER</h6>
-          <br><p>Laat in onderstaand contactformulier achter wat de wensen zijn en wij nemen contact met je op!</p>
-          <br>
+          <h6>CONTACTFORMULIER</h6>
+          <br><p>Laat in onderstaand contactformulier achter wat de wensen zijn en wij nemen contact met je op en maken een passend voorstel!</p>
         </div>
       </div>
       <div class="row">
@@ -239,4 +239,190 @@
   </div>
 
 </footer>
+<script>
+  /**
+   * initialize Google Calendar API using our config.
+   */
+  function init() {
+    const ApiConfig = {
+      apiKey: 'AIzaSyAZNrZJmglPTHZphiJ80MmbD3stQGbbcJo',
+      discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest'],
+    }
+    gapi.client
+      .init(ApiConfig)
+      .then(() => requestCalendarEvents())
+      .then((res) => parseResponseResult(res))
+      .catch((err) => logError(err))
+  }
+  /**
+   * request all events from the calendar.
+   */
+  function requestCalendarEvents() {
+    const date = getSelectedDate()
+    const timeMin = dayjs(date).toString()
+    const timeMax = dayjs(date).add(1, 'day').subtract(1, 'second').toString()
+    const requestConfig = {
+      calendarId: '0pbhpkd9b1qik41539d52vu3ko@group.calendar.google.com',
+      alwaysIncludeEmail: false,
+      orderBy: 'startTime',
+      singleEvents: true,
+      timeMin: formatDate(timeMin, 'YYYY-MM-DDTHH:mm:ss[Z]'),
+      timeMax: formatDate(timeMax, 'YYYY-MM-DDTHH:mm:ss[Z]'),
+    }
+    return gapi.client.calendar.events.list(requestConfig)
+  }
+  /**
+   * parse the received response, and update the timeslots on the page.
+   */
+  function parseResponseResult(data) {
+    const body = JSON.parse(data.body)
+    if (body.items) {
+      updateTimeslots(body.items)
+    }
+  }
+  /**
+   * compare the received events times with the timeslots
+   * if a match is found, the corresponding timeslot is disabled.
+   */
+  function updateTimeslots(items) {
+    const selectElement = document.getElementById('timeslots')
+    const timeslots = [...selectElement.children]
+    const offset = -(new Date().getTimezoneOffset() / 60)
+    const events = formatEvents(items)
+    const selectedDate = getSelectedDate()
+    /*const disabledDayOfWeek = dayjs(selectedDate).day() === 2 // 2 = Tuesday
+    disabledDayOfWeek
+      ? selectElement.disabled = true
+      : selectElement.disabled = false
+    /* Remove selected and disabled attributes and reset the slot innerHTML */
+    timeslots.map(slot => {
+      slot.disabled = false
+      slot.selected = false
+      slot.innerHTML = slot.value
+    })
+    /* if timeslot falls between the start time and end time of a calendar event
+    we disable that timeslot and add '(vol)' after the value */
+    timeslots.map(slot => {
+      const dateTime = formatDate(`${selectedDate}T${slot.value}`, 'YYYY-MM-DDTHH:mm:ss[Z]')
+      const slotStartTime = dayjs(dateTime).unix()
+      const slotEndTime = dayjs(dateTime).add(1, 'minute').unix()
+      const match = events.find((event) =>
+        slotStartTime >= dayjs(event.startTime).unix() &&
+        slotEndTime <= dayjs(event.endTime).unix()
+      )
+      if (match) {
+        slot.disabled = true
+        slot.selected = false
+        slot.innerHTML = `${slot.value} (vol)`
+      }
+    })
+  }
+  /**
+   * Get the selected date.
+   * Returns date with format: mm/dd/yyyy
+   */
+  function getSelectedDate() {
+    const date = document.getElementById('form_date').value.split('-')
+    const newDate = [date[2], date[1], date[0]].join('-')
+    return formatDate(newDate, 'YYYY-MM-DD')
+  }
+  /**
+   * Return a date string in a specified format.
+   */
+  function formatDate(date, format) {
+    const parsedDate = dayjs(date).toDate()
+    return dayjs(parsedDate).format(format).toString()
+  }
+  /**
+   * Format the received calendar events to only contain
+   * the necessary data we need.
+   */
+  function formatEvents(items) {
+    return items.map((item) => ({
+      id: item.id,
+      startTime: formatDate(item.start.dateTime, 'YYYY-MM-DDTHH:mm:ss[Z]'),
+      endTime: formatDate(item.end.dateTime, 'YYYY-MM-DDTHH:mm:ss[Z]'),
+    }))
+  }
+  /**
+   * Log any API errors
+   * format: error code, message
+   */
+  function logError(reason) {
+    const { error } = reason.result
+    console.error(error.code, error.message)
+  }
+  /**
+   * Start loading the Google API Client.
+   */
+  function initApiClient() {
+    gapi.load('client', init)
+  }
+</script>
+
+<!-- Google API Client -->
+<script async defer src="https://apis.google.com/js/api.js"
+  onload="this.onload=function(){};initApiClient()"
+  onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="/js/jquery.1.11.1.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="/bootstrap-datepicker/locales/bootstrap-datepicker.nl.min.js"></script>
+
+<!-- Error message in form -->
+<script src="/js/validator.js"></script>
+
+<!-- Validator on form -->
+<script src="/js/contact.js"></script>
+
+<!-- DayJS -->
+<script src="/js/dayjs.min.js"></script>
+
+<script>
+  $(document).ready(() => {
+    const datepickerConfig = {
+      weekStart: 1,
+      daysOfWeekDisabled: '1,2,3,4',
+      datesDisabled: [],
+      autoclose: true,
+      format: 'dd-mm-yyyy',
+      startDate: '+0d',
+      language: 'nl',
+      todayHighlight: true,
+    }
+
+    const currentDate = new Date()
+    let initialDate
+    // select Wednesday as default when it's Tuesday
+    if (currentDate.getDay() === 2) {
+      initialDate = new Date(new Date().setDate(currentDate.getDate() + 1))
+    } else {
+      initialDate = currentDate
+    }
+
+    // initialize datepicker
+    $('#form_date')
+      .datepicker(datepickerConfig)
+      .datepicker('setDate', initialDate)
+      .on('changeDate', () => {
+        initApiClient()
+      })
+  })
+</script>
+  <script>
+    $(document).ready(function () {
+      $(document).click(function (event) {
+        var clickover = $(event.target);
+        var _opened = $(".navbar-collapse").hasClass("show");
+        if (_opened === true && !clickover.hasClass("navbar-toggler")) {
+          $(".navbar-toggler").click();
+        }
+      });
+    });
+  </script>
 </body>
