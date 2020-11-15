@@ -92,7 +92,7 @@
     
     <div class="container-s page-intro-text text-center reserveren-intro">
       <p><br>Bestel ons kerstmenu van 7 gangen voor thuis. Hoe? Het werkt heel makkelijk! Je kiest voor een standaard of vegetarisch menu. Je amuse, voorgerecht, 
-        tussengerecht en nagrechten krijg je zoals je van ons gewend bent. Alleen het hoofdgerecht geef je 
+        en nagrechten krijg je zoals je van ons gewend bent. Alleen het tussengerecht en hoofdgerecht geef je 
         thuis de finishing touch door onze eenvoudige instructies te volgen. Een kind kan de was doen! 
         Wil je de complete Centrale ervaring? Kies dan voor de bijpassende wijnen, oesters vooraf, een verwenplank of koffie van Miss Morrison met friandises!<br>
         <br>Wil je het menu op onze mooie borden geserveerd krijgen?
@@ -162,27 +162,30 @@
         </div>
       </div>
     <div class="form-group row">
-      <label for="brood" class="col-sm-6">Huisgemaakt Zuurdesem (5,00 per stuk)</label>
+      <label for="brood" class="col-sm-6">Huisgemaakt Zuurdesem met smeersels (5,00 per stuk)</label>
       <div class="col-sm-6">
           <input type="number" class="form-control small-field" name="brood" id="brood">
       </div>
     </div>
-    <div class="row">
-        <div class="col-md-12">
-          <div class="form-group">
-            <input type="checkbox" id="bijpassend_cava" name="wijn_cava">
-            <label for="bijpassend_cava"> Cava - Clos Montblanc - Brut Silver (20,00)</label>
-          </div>
-          <div class="form-group">
-            <input type="checkbox" id="bijpassend_speciaal" name="bubbel">
-            <label for="bijpassend_speciaal">Bubbel<a href="https://www.alain-voge.com/en/saint-peray/les-bulles-d-alain" target="_blank">Rhône Cremant:  Bulles d’Alain – A.O.P. Saint-Péray – 2014 (bio)</a>(40,00)</label>
-          </div>
-          <div class="form-group">
-            <input type="checkbox" id="klein_cava" name="wijn_cava_klein">
-            <label for="bijpassend_cava_klein"> Cava voor 2 personen (12,00)</label>
-          </div>
-        </div>
+    <div class="form-group row">
+      <label for="wijn_cava" class="col-sm-6"> Cava - Clos Montblanc - Brut Silver (20,00)</label>
+      <div class="col-sm-6">
+          <input type="number" class="form-control small-field" name="wijn_cava" id="wijn_cava">
+      </div>
     </div>
+    <div class="form-group row">
+      <label for="bijpassend_speciaal" class="col-sm-6"><a href="https://www.alain-voge.com/en/saint-peray/les-bulles-d-alain" target="_blank">Rhône Cremant:  Bulles d’Alain – A.O.P. Saint-Péray – 2014 (bio)</a>(40,00)</label>
+      <div class="col-sm-6">
+          <input type="number" class="form-control small-field" name="bubbel" id="bijpassend_speciaal">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="bijpassend_cava_klein" class="col-sm-6">  Cava voor 2 personen (12,00)</label>
+      <div class="col-sm-6">
+          <input type="number" class="form-control small-field" name="bijpassend_cava_klein" id="bijpassend_cava_klein">
+      </div>
+    </div>
+
     <hr>
     <div class="row">
       <div class="col-md-12">
@@ -229,16 +232,16 @@
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="form-group">
-          <input type="checkbox" id="bijpassend_wit" name="wijn_wit">
-          <label for="bijpassend_wit"> Bijpassend wit (22,50)</label>
-        </div>
-        <div class="form-group">
-          <input type="checkbox" id="bijpassend_rood" name="wijn_rood">
-          <label for="bijpassend_rood"> Bijpassend rood (22,50)</label>
-        </div>
+    <div class="form-group row">
+      <label for="bijpassend_wit" class="col-sm-6"> Bijpassend wit (22,50)</label>
+      <div class="col-sm-6">
+          <input type="number" class="form-control small-field" name="wijn_wit" id="bijpassend_wit">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="bijpassend_rood" class="col-sm-6"> Bijpassend rood (22,50)</label>
+      <div class="col-sm-6">
+          <input type="number" class="form-control small-field" name="wijn_rood" id="bijpassend_rood">
       </div>
     </div>
     <hr>
@@ -316,7 +319,7 @@
           <div class="selectpicker">
             <select id ="form_methode" name="methode" class="form-control" required="required" data-error="Afhalen of bezorgen?">
               <option selected disabled value="">Kies</option>
-              <option value="bezorgen">Bezorgen [tussen 15:00 - 17:00]</option>
+              <option value="bezorgen">Bezorgen [tussen 13:00 - 16:00]</option>
               <option value="afhalen">Afhalen</option>
             </select>
           </div>
@@ -330,16 +333,12 @@
           <label for="timeslots">Indien afhalen, hoe laat?</label>
           <div class="selectpicker">
             <select id ="timeslots" name="time" class="form-control">
-              <option selected disabled value="">Kies</option>             
-              <option value="afhalen-15:30">15:30</option>
-              <option value="afhalen-15:45">15:45</option>
-              <option value="afhalen-16:00">16:00</option>
-              <option value="afhalen-16:15">16:15</option>
-              <option value="afhalen-16:30">16:30</option>
-              <option value="afhalen-16:45">16:45</option>
-              <option value="afhalen-17:00">17:00</option>
-              <option value="afhalen-17:15">17:15</option>
-              <option value="afhalen-17:30">17:30</option>
+              <option selected disabled value="">Kies</option>
+              <option value="afhalen-14:00">14:00</option>
+              <option value="afhalen-14:15">14:15</option>
+              <option value="afhalen-14:30">14:30</option>             
+              <option value="afhalen-14:45">14:45</option>
+              <option value="afhalen-15:00">15:00</option>
             </select>
           </div>
         </div>
