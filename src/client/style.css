@@ -1181,7 +1181,7 @@ label{
 
 .image-roast {
     width: 100%;
-    height: 30vh;
+    height: 35vh;
 }
 .image-roast:after{
     content: "";
@@ -1273,7 +1273,7 @@ label{
 /*******************/
 
 .roast-header {
-    background: url(img/roast/roast-header.jpg) center center/cover no-repeat;
+    background: url(img/roast/roast-header.jpg) center 60%/cover no-repeat;
 }
 
 @media (max-width: 480PX) {
