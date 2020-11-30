@@ -1151,7 +1151,7 @@ label{
 }
 
 .bestel-2{
-    background: url(img/bestel/roast-header.jpg) center 65%/cover no-repeat;
+    background: url(img/bestel/roast-header.jpg) center 40%/cover no-repeat;
 }
 
 .bestel-3{
@@ -1171,8 +1171,20 @@ label{
 }
 
 .home-wijnlijn{
-    background: url(img/home/wijnlijn.jpg) center/cover no-repeat;
-    max-height: 25vh;
+    background: url(img/home/kerst.jpeg) center 100%/cover no-repeat;
+    max-height: 35vh;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 992PX) {
+    .home-wijnlijn {
+        max-height:50vh;
+    }
+}
+@media (max-width: 480PX) {
+    .home-wijnlijn {
+        max-height:35vh;
+    }
 }
 
 .wijnlijn-page{
