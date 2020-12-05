@@ -1158,6 +1158,10 @@ label{
     background: url(img/bestel-kerstmenu/kerst-header.jpg) center/cover no-repeat;
 }
 
+.bestel-4{
+    background: url(img/bestel/bestel-4.jpg) center/cover no-repeat;
+}
+
 .wijn-1{
     background: url(img/wijn/wijn-1.jpg) center 65%/cover no-repeat;
 }
