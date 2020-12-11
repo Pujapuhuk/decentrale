@@ -28,6 +28,8 @@ exports.handler = function (event, context, callback) {
 	const postData = queryString.parse(event.body)
 	const menuStandaard7 = postData["menuStandaard7"]
 	const menuVega7 = postData["menuVega7"]
+	const menuStandaard5 = postData["menuStandaard5"]
+	const menuVega5 = postData["menuVega5"]
 	const oesters = postData.oesters
 	const verwenplank = postData.verwenplank
 	const brood = postData.brood
@@ -71,10 +73,12 @@ exports.handler = function (event, context, callback) {
 		"Subject": `Kerstmenu De Centrale voor ${date} | ${methode} | ${time}`,
 		"TextBody": `
 		Wij willen graag: 
-		kerstmenu standaard: ${menuStandaard7} x
-		kerstmenu vega: ${menuVega7} x\n
+		kerstmenu 7 gangen standaard: ${menuStandaard7} x
+		kerstmenu 7 gangen vega: ${menuVega7} x
+		kerstmenu 5 gangen standaard: ${menuStandaard5} x
+		kerstmenu 5 gangen vega: ${menuVega5} x \n
 		Extra:
-		Oester: ${oesters}
+		Oesters: ${oesters}
 		Brood: ${brood} x
 		Charcuterie: ${char} x
 		Verwenplank: ${verwenplank} personen

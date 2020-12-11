@@ -7,7 +7,7 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <title>Menu bestellen | Restaurant De Centrale Delft</title>
     <meta name="description" content="Bezorgen en afhalen van ons vertrouwde Kerstmenu in Delft, Den Hoorn, Delfgauw of Pijnacker. 
-    Zo geniet je thuis van een heerlijk 4 gangen diner. Eet je liever vegetarisch? Je kunt ook een vega menu bestellen.">
+    Zo geniet je thuis van een heerlijk 7 gangen kerstdiner. Eet je liever vegetarisch? Je kunt ook een vega kerstmenu bestellen.">
 
     <!-- favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
@@ -91,7 +91,7 @@
     </div>
     
     <div class="container-s page-intro-text text-center reserveren-intro">
-      <p><br>Bestel ons kerstmenu van 7 gangen voor thuis. Hoe? Het werkt heel makkelijk! Je kiest voor een standaard of vegetarisch menu. Je amuse, voorgerecht, 
+      <p><br>Bestel ons kerstmenu van 5 of 7 gangen voor thuis. Hoe? Het werkt heel makkelijk! Je kiest voor een standaard of vegetarisch menu. Je amuse, voorgerecht, 
         en nagrechten krijg je zoals je van ons gewend bent. Alleen het tussengerecht en hoofdgerecht geef je 
         thuis de finishing touch door onze eenvoudige instructies te volgen. Een kind kan de was doen! 
         Wil je de complete Centrale ervaring? Kies dan voor de bijpassende wijnen, oesters vooraf, een verwenplank of koffie van Miss Morrison met friandises!<br>
@@ -102,11 +102,11 @@
         <button class="btn-header" onclick="parent.location='/kerstmenu/'">Bekijk kerstmenu</button>
     </div>
     <br>
-    <!--<div class="container-s">
+    <div class="container-s">
       <div class="container-black">
-        <p>Bestel voor 22.00 uur je diner voor de volgende dag! </p> 
+        <p>Bestellen kan tot en met 22 december.</p> 
       </div>
-    </div>-->
+    </div>
 <div class="container-s">
   <form id="contact-form" method="post" action="/.netlify/functions/send-mail-kerstmenu" autocomplete="off">
     <div class="row">
@@ -125,6 +125,18 @@
       <label for="7_gangen_vega" class="col-sm-6">7-gangen vega (70,00 p.p.)</label>
       <div class="col-sm-6">
           <input type="number" class="form-control small-field" name="menuVega7" id="7_gangen_vega">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="5_gangen_standaard" class="col-sm-6">5-gangen standaard (55,00 p.p.)</label>
+      <div class="col-sm-6">
+          <input type="number" class="form-control small-field" name="menuStandaard5" id="5_gangen_standaard">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="5_gangen_vega" class="col-sm-6">5-gangen vega (55,00 p.p.)</label>
+      <div class="col-sm-6">
+          <input type="number" class="form-control small-field" name="menuVega5" id="5_gangen_vega">
       </div>
     </div>
     <hr>
@@ -162,7 +174,7 @@
         </div>
       </div>
     <div class="form-group row">
-      <label for="brood" class="col-sm-6">Huisgemaakt Zuurdesem met smeersels (5,00 per stuk)</label>
+      <label for="brood" class="col-sm-6">Huisgemaakt Zuurdesem met hummus en rauwmelkse boter (5,00 per stuk)</label>
       <div class="col-sm-6">
           <input type="number" class="form-control small-field" name="brood" id="brood">
       </div>
@@ -194,15 +206,15 @@
       </div>
     </div>
     <div class="form-group row">
-      <label for="koffie" class="col-sm-6">Miss Morrison Koffie Cups (doosje van 10 stuks voor 5,25)</label>
-      <div class="col-sm-6">
-          <input type="number" class="form-control small-field" name="koffie" id="koffie">
-      </div>
-    </div>
-    <div class="form-group row">
       <label for="friandises" class="col-sm-6">Friandises (6,00 p.p.), 4 kleine lekkernijen voor bij de koffie</label>
       <div class="col-sm-6">
           <input type="number" class="form-control small-field" name="friandises" id="friandises">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="koffie" class="col-sm-6">Miss Morrison Koffie Cups (doosje van 10 stuks voor 5,25)</label>
+      <div class="col-sm-6">
+          <input type="number" class="form-control small-field" name="koffie" id="koffie">
       </div>
     </div>
     <hr>
