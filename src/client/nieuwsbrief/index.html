@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <title>Registreer uw bezoek | De Centrale</title>
+    <meta name="description" content="Registreer uw bezoek">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link id="bsdp-css" href="/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet">
+
+    <!-- Style -->
+    <link href="/style.css" rel="stylesheet">
+    <link media="screen and (max-width: 480px)" href="/css/style480.css" rel="stylesheet">
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Gabriela" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-36915461-3', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <!-- reCaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+     <script>
+       function onSubmit(token) {
+         document.getElementById("contact-form").submit();
+       }
+     </script>
+  </head>
+  <body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+      <a class="navbar-brand js-scroll-trigger" href="/">DE CENTRALE</a>
+      <button class="navbar-toggler custom-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        <span class="my-1 close">
+          <svg fill="#000000" height="32" viewBox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+          <a href="/menukaart/" class="nav-link page-scroll">Menu</a>
+          </li>
+          <li class="nav-item ">
+            <a href="/kerstmenu/" class="nav-link page-scroll">Kerstmenu</a>
+          </li>
+          <li class="nav-item">
+          <a href="/wijnkaart/" class="nav-link page-scroll">Wijnkaart</a>
+          </li>
+          <li class="nav-item">
+            <a href="/geschenken/" class="nav-link page-scroll">Kerstpakketten</a>
+          </li>
+        <li class="nav-item nav-link-wijnpakket">
+            <a href="/wijn/" class="nav-link page-scroll">Wijn bestellen</a>
+        </li>
+        <li class="nav-item nav-link-reserveer">
+            <a href="/bestel/" class="nav-link page-scroll">Diner bestellen</a>
+        </li>
+        </ul>
+        </div>
+      </nav>
+    <div class="container-l page-title-contact d-block d-sm-none">
+      <div class="page-title-text-wrap">
+        <h5>Nieuwsbrief</h5>
+      </div>
+    </div>
+    <!-- content-contact -->
+    <div class="page-title-white container-s reserveren-content  d-none d-sm-block">
+      <div class="page-title-text-wrap">
+        <h1>NIEUWSBRIEF</h1>
+      </div>
+    </div>
+    <div class="container-s page-intro-text text-center reserveren-intro">
+      <p>Lieve gast, jammer dat je je wil afmelden voor de nieuwsbrief. Laat in onderstaande formulier je naam en email achter en wij zullen je geen nieuwsbrieven meer sturen.
+      </p>
+    </div>
+    <div class="container-s">
+      <form id="contact-form" method="post" action="/.netlify/functions/send-mail-nieuwsbrief" autocomplete="off">
+        <div class="controls">            
+          <div class="row">
+            <div class="col-xs-12 col-md-8">
+              <div class="form-group">
+                <label for="form_name">Naam *</label>
+                <input id="form_name" type="text" name="name" class="form-control" placeholder="" required="required" data-error="Vul een naam in.">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-md-8">
+              <div class="form-group">
+                <label for="form_email">Email *</label>
+                <input id="form_email" type="email" name="email" class="form-control" placeholder="" required="required" data-error="Vul een geldig emailadres in.">
+                <div class="help-block with-errors"></div>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn-form">VERSTUUR</button>
+        </div>
+      </form>
+    </div>
+    <footer class="container-l">
+      <div class="row">
+          <div class="footer-box col-md-3 text-center">
+              <h6>Contact<br></h6>
+              <p>015 - 889 27 77<br>hallo@decentraledelft.nl</p>
+          </div>
+    
+          <div class="footer-box col-md-3 text-center">
+              <h6>Bezorgen & afhalen <br></h6>
+              <p>Wij koken heerlijk eten voor thuis op vrijdag, zaterdag en zondag<br><br></p>
+          </div>
+    
+          <div class="footer-box col-md-3 text-center">
+              <h6>Locatie<br></h6>
+              <p>Voldersgracht 2<br>2611 ET Delft</p><a
+                  href="https://www.google.nl/maps/place/Voldersgracht+2,+2611+ET+Delft/@52.011741,4.355754,17z/data=!3m1!4b1!4m5!3m4!1s0x47c5b5c3b08304c5:0x79ad52aba43f8354!8m2!3d52.011741!4d4.357948"
+                  target="_blank">route</a>
+          </div>
+    
+          <div class="col-md-3 text-center">
+              <a href="https://www.facebook.com/decentraledelft" target="_blank">facebook</a><br>
+              <a href="https://www.instagram.com/decentraledelft/" target="_blank">instagram</a>
+          </div>
+    
+      </div>
+    
+    </footer>
+    
+
+    <script>
+      /**
+       * initialize Google Calendar API using our config.
+       */
+      function init() {
+        const ApiConfig = {
+          apiKey: 'AIzaSyAZNrZJmglPTHZphiJ80MmbD3stQGbbcJo',
+          discoveryDocs: ['https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest'],
+        }
+        gapi.client
+          .init(ApiConfig)
+          .then(() => requestCalendarEvents())
+          .then((res) => parseResponseResult(res))
+          .catch((err) => logError(err))
+      }
+      /**
+       * request all events from the calendar.
+       */
+      function requestCalendarEvents() {
+        const date = getSelectedDate()
+        const timeMin = dayjs(date).toString()
+        const timeMax = dayjs(date).add(1, 'day').subtract(1, 'second').toString()
+        const requestConfig = {
+          calendarId: '0pbhpkd9b1qik41539d52vu3ko@group.calendar.google.com',
+          alwaysIncludeEmail: false,
+          orderBy: 'startTime',
+          singleEvents: true,
+          timeMin: formatDate(timeMin, 'YYYY-MM-DDTHH:mm:ss[Z]'),
+          timeMax: formatDate(timeMax, 'YYYY-MM-DDTHH:mm:ss[Z]'),
+        }
+        return gapi.client.calendar.events.list(requestConfig)
+      }
+      /**
+       * parse the received response, and update the timeslots on the page.
+       */
+      function parseResponseResult(data) {
+        const body = JSON.parse(data.body)
+        if (body.items) {
+          updateTimeslots(body.items)
+        }
+      }
+      /**
+       * compare the received events times with the timeslots
+       * if a match is found, the corresponding timeslot is disabled.
+       */
+      function updateTimeslots(items) {
+        const selectElement = document.getElementById('timeslots')
+        const timeslots = [...selectElement.children]
+        const offset = -(new Date().getTimezoneOffset() / 60)
+        const events = formatEvents(items)
+        const selectedDate = getSelectedDate()
+        /*const disabledDayOfWeek = dayjs(selectedDate).day() === 2 // 2 = Tuesday
+        disabledDayOfWeek
+          ? selectElement.disabled = true
+          : selectElement.disabled = false
+        /* Remove selected and disabled attributes and reset the slot innerHTML */
+        timeslots.map(slot => {
+          slot.disabled = false
+          slot.selected = false
+          slot.innerHTML = slot.value
+        })
+        /* if timeslot falls between the start time and end time of a calendar event
+        we disable that timeslot and add '(vol)' after the value */
+        timeslots.map(slot => {
+          const dateTime = formatDate(`${selectedDate}T${slot.value}`, 'YYYY-MM-DDTHH:mm:ss[Z]')
+          const slotStartTime = dayjs(dateTime).unix()
+          const slotEndTime = dayjs(dateTime).add(1, 'minute').unix()
+          const match = events.find((event) =>
+            slotStartTime >= dayjs(event.startTime).unix() &&
+            slotEndTime <= dayjs(event.endTime).unix()
+          )
+          if (match) {
+            slot.disabled = true
+            slot.selected = false
+            slot.innerHTML = `${slot.value} (vol)`
+          }
+        })
+      }
+      /**
+       * Get the selected date.
+       * Returns date with format: mm/dd/yyyy
+       */
+      function getSelectedDate() {
+        const date = document.getElementById('form_date').value.split('-')
+        const newDate = [date[2], date[1], date[0]].join('-')
+        return formatDate(newDate, 'YYYY-MM-DD')
+      }
+      /**
+       * Return a date string in a specified format.
+       */
+      function formatDate(date, format) {
+        const parsedDate = dayjs(date).toDate()
+        return dayjs(parsedDate).format(format).toString()
+      }
+      /**
+       * Format the received calendar events to only contain
+       * the necessary data we need.
+       */
+      function formatEvents(items) {
+        return items.map((item) => ({
+          id: item.id,
+          startTime: formatDate(item.start.dateTime, 'YYYY-MM-DDTHH:mm:ss[Z]'),
+          endTime: formatDate(item.end.dateTime, 'YYYY-MM-DDTHH:mm:ss[Z]'),
+        }))
+      }
+      /**
+       * Log any API errors
+       * format: error code, message
+       */
+      function logError(reason) {
+        const { error } = reason.result
+        console.error(error.code, error.message)
+      }
+      /**
+       * Start loading the Google API Client.
+       */
+      function initApiClient() {
+        gapi.load('client', init)
+      }
+    </script>
+
+    <!-- Google API Client -->
+    <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};initApiClient()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/js/jquery.1.11.1.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="/bootstrap-datepicker/locales/bootstrap-datepicker.nl.min.js"></script>
+
+    <!-- Error message in form -->
+    <script src="/js/validator.js"></script>
+
+    <!-- Validator on form -->
+    <script src="/js/contact.js"></script>
+
+    <!-- DayJS -->
+    <script src="/js/dayjs.min.js"></script>
+
+    <script>
+      $(document).ready(() => {
+        const datepickerConfig = {
+          weekStart: 1,
+          daysOfWeekDisabled: '2',
+          datesDisabled: [],
+          autoclose: true,
+          format: 'dd-mm-yyyy',
+          startDate: '+0d',
+          language: 'nl',
+          todayHighlight: true,
+        }
+
+        const currentDate = new Date()
+        let initialDate
+        // select Wednesday as default when it's Tuesday
+        if (currentDate.getDay() === 2) {
+          initialDate = new Date(new Date().setDate(currentDate.getDate() + 1))
+        } else {
+          initialDate = currentDate
+        }
+
+        // initialize datepicker
+        $('#form_date')
+          .datepicker(datepickerConfig)
+          .datepicker('setDate', initialDate)
+          .on('changeDate', () => {
+            initApiClient()
+          })
+      })
+    </script>
+    <script>
+    $('input.formnumber').on('change', function(){
+       if($(this).val()>=3){
+           $('div.more_then_2').css('display', 'block');
+       } else {
+           $('div.more_then_2').css('display', 'none');
+       }
+    });
+    </script>
+  </body>
+  </html>
