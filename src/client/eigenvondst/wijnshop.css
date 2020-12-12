@@ -134,6 +134,22 @@ h2 {
 .merlot{
     background-image: url(../img/wijnshop/merlot.png);
 }
+.chardonnay{
+    background-image: url(../img/wijnshop/chardonnay.jpg);
+}
+.kalmit{
+    background-image: url(../img/wijnshop/kalmit.jpg);
+}
+.pinotgris{
+    background-image: url(../img/wijnshop/pinotgris.jpg);
+}
+.pinotnoir{
+    background-image: url(../img/wijnshop/pinotnoir.jpg);
+}
+.pinotblanc{
+    background-image: url(../img/wijnshop/pinotblanc.jpg);
+}
+
 
 .wijn-beschrijving{
     width:100%;
