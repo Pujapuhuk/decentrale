@@ -92,7 +92,7 @@ exports.handler = function (event, context, callback) {
 		Bubbel: ${bubbel}
 		Bijpassend pakket: ${wijnpakket} flessen \n
 		Speciaal voor kerst:
-		Op borden serveren: ${borden}
+		Op borden serveren: uitverkocht
 		Champagne wijnglazen: ${glas_cava} x
 		Rode wijnglazen: ${glas_rood}x
 		Witte wijnglazen: ${glas_wit}x \n
