@@ -37,7 +37,6 @@ exports.handler = function (event, context, callback) {
 	const koffie = postData.koffie
 	const friandises = postData.friandises
 	const cadeaubon = postData.cadeaubon
-	const borden = postData.borden
 	const glas_cava = postData.glas_cava
 	const glas_rood = postData.glas_rood
 	const glas_wit = postData.glas_wit
