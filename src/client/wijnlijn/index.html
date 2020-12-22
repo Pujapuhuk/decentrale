@@ -456,14 +456,14 @@
         <div class="row">
           <div class="col-md-12">
             <h6>WANNEER?</h6>
-            <p>Geef aan wanneer je het pakket wil komen halen of dat wij het kunnen bezorgen.</p>
+            <p>Geef aan wanneer je het pakket wil komen halen.</p>
           </div>
         </div> 
         <br>      
         <div class="row">
           <div class="col-xs-12 col-md-6">
             <div class="form-group">
-              <label for="form_date">Welke dag wil je het pakket afhalen of laten bezorgen?*</label>
+              <label for="form_date">Welke dag wil je het pakket afhalen?*</label>
               <input id="form_date" name="date" type="text" class="form-control formnumber" placeholder="dd/mm/yyyy"  required="required" data-error="Selecteer een dag" />
               <div class="help-block with-errors"></div>
             </div>
@@ -472,34 +472,15 @@
         <div class="row">
           <div class="col-xs-12 col-md-6">
             <div class="form-group">
-              <label for="form_methode">Bezorgen of afhalen?*</label>
-              <div class="selectpicker">
-                <select id ="form_methode" name="methode" class="form-control" required="required" data-error="Afhalen of bezorgen?">
-                  <option selected disabled value="">Kies</option>
-                  <option value="bezorgen">Bezorgen [tussen 15:00 - 17:00]</option>
-                  <option value="afhalen">Afhalen</option>
-                </select>
-              </div>
-              <div class="help-block with-errors"></div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12 col-md-6">
-            <div class="form-group">
-              <label for="timeslots">Indien afhalen, hoe laat?</label>
+              <label for="timeslots">Hoe laat wil je het afhalen?</label>
               <div class="selectpicker">
                 <select id ="timeslots" name="time" class="form-control">
                   <option selected disabled value="">Kies</option>
-                  <option value="afhalen-15:30">15:30</option>
-                  <option value="afhalen-15:45">15:45</option>
-                  <option value="afhalen-16:00">16:00</option>
-                  <option value="afhalen-16:15">16:15</option>
-                  <option value="afhalen-16:30">16:30</option>
-                  <option value="afhalen-16:45">16:45</option>
-                  <option value="afhalen-17:00">17:00</option>
-                  <option value="afhalen-17:15">17:15</option>
-                  <option value="afhalen-17:30">17:30</option>
+                  <option value="afhalen-12:30">12:30</option>
+              <option value="afhalen-12:45">12:45</option>
+              <option value="afhalen-13:00">13:00</option>
+              <option value="afhalen-13:15">13:15</option>
+              <option value="afhalen-13:30">13:30</option>
                 </select>
               </div>
             </div>
@@ -539,24 +520,7 @@
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-xs-12 col-md-6">
-            <div class="form-group">
-              <label for="form_adress">Bezorg adres (straat, huisnummer)</label>
-              <input id="form_adress" type="adress" name="adres" class="form-control" placeholder="" data-error="Als je wil dat we berzorgen, hebben we een adres nodig.">
-              <div class="help-block with-errors"></div>
-            </div>
-          </div>
-        </div>  
-        <div class="row">
-          <div class="col-xs-12 col-md-6">
-            <div class="form-group">
-              <label for="form_postcode">Bezorg postcode</label>
-              <input id="form_postcode" type="adress" name="postcode" class="form-control" placeholder="" data-error="Voor het bezorgen hebben we ook je postcode nodig.">
-              <div class="help-block with-errors"></div>
-            </div>
-          </div>
-        </div>
+        
         <hr>
         <div class="row">
           <div class="col-md-6">
@@ -750,8 +714,8 @@
           $(document).ready(() => {
             const datepickerConfig = {
               weekStart: 1,
-              daysOfWeekDisabled: '1,2,3,4',
-              datesDisabled: [],
+              daysOfWeekDisabled: '1,2,3',
+              datesDisabled: ['27-12-2020','31-12-2020','01-01-2021','02-01-2021','03-01-2021','07-01-2021','08-01-2021','09-01-2021','10-01-2021','14-01-2021'],
               autoclose: true,
               format: 'dd-mm-yyyy',
               startDate: '+0d',

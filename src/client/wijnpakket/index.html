@@ -98,18 +98,12 @@
 <div id="eigen-vondst-container">
   <img class="icon-wijnpakket" src="../img/wijnpakket/icon-wijnpakket.png" alt="">
   <h1>Wijnpakketten</h1>
-  <p>Mis je onze wijnen? Dan komen wij ze bij je thuis bezorgen. 
+  <p>Mis je onze wijnen? 
     Wij stellen verschillende pakketten met drie flessen per pakket voor je samen. Dus kies je pakket, bepaal of je de 
     normale of luxere variant wilt en bestellen maar!
     <br><br>Geef je ons graag een extra duwtje in de rug? Bestel bij je pakket een cadeaubon.<br><br><br></p>
     <div class="embed-responsive embed-responsive-16by9">
       <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/JUx9MJZ7QLQ?rel=0&autoplay=1&loop=1&playlist?list=PLhouejEY3sMkaLrIL2__5Lxt8OSvPtl2G" frameborder="0"  allowfullscreen></iframe>
-    </div>
-  </div>
-  <div class="container-s">
-    <div class="container-red">
-      <p> Heb je eerder besteld maar geen bevestiging ontvangen? Wij hadden een storing en hebben uw bestelling niet ontvangen.
-        Neem even contact met ons op via decentraledelft@gmail.com of plaats uw bestelling opnieuw. Excuses voor het ongemak.</p> 
     </div>
   </div>
 
@@ -162,6 +156,12 @@
     </div>
 </div>
 <div id="line-break-center"></div>
+<br>
+<div class="container-s">
+  <div class="container-black">
+    <p> Afhalen van een wijnpakket is mogelijk tot en met 26 december tussen 12:30 en 13:30. Het is tijdelijk niet mogelijk om het te laten bezorgen.</p> 
+  </div>
+</div>
 <div class="container-s">
   <form id="contact-form" method="post" action="/.netlify/functions/send-mail-wijn" autocomplete="off">
     <div class="row">
@@ -196,7 +196,7 @@
     <div class="row">
       <div class="col-md-12">
         <h6>WANNEER?</h6>
-        <p>Geef aan wanneer je het komt afhalen of dat wij het kunnen bezorgen.</p>
+        <p>Geef aan wanneer je het komt afhalen.</p>
       </div>
     </div>
     <br>
@@ -212,34 +212,15 @@
     <div class="row">
       <div class="col-xs-12 col-md-8">
         <div class="form-group">
-          <label for="form_methode">Bezorgen of afhalen?*</label>
-          <div class="selectpicker">
-            <select id ="form_methode" name="methode" class="form-control" required="required" data-error="Afhalen of bezorgen?">
-              <option selected disabled value="">Kies</option>
-              <option value="bezorgen">Bezorgen [tussen 15:00 - 17:00]</option>
-              <option value="afhalen">Afhalen</option>
-            </select>
-          </div>
-          <div class="help-block with-errors"></div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12 col-md-8">
-        <div class="form-group">
-          <label for="timeslots">Indien afhalen, hoe laat?</label>
+          <label for="timeslots">Hoe laat wil je het afhalen?</label>
           <div class="selectpicker">
             <select id ="timeslots" name="time" class="form-control">
               <option selected disabled value="">Kies</option>
-              <option value="afhalen-15:30">15:30</option>
-              <option value="afhalen-15:45">15:45</option>
-              <option value="afhalen-16:00">16:00</option>
-              <option value="afhalen-16:15">16:15</option>
-              <option value="afhalen-16:30">16:30</option>
-              <option value="afhalen-16:45">16:45</option>
-              <option value="afhalen-17:00">17:00</option>
-              <option value="afhalen-17:15">17:15</option>
-              <option value="afhalen-17:30">17:30</option>
+              <option value="afhalen-12:30">12:30</option>
+              <option value="afhalen-12:45">12:45</option>
+              <option value="afhalen-13:00">13:00</option>
+              <option value="afhalen-13:15">13:15</option>
+              <option value="afhalen-13:30">13:30</option>
             </select>
           </div>
         </div>
@@ -276,24 +257,6 @@
         <div class="form-group">
           <label for="form_phone">Telefoonnummer *</label>
           <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="" required="required" data-error="Als je wilt reserveren hebben we een telefoonnummer nodig.">
-          <div class="help-block with-errors"></div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12 col-md-8">
-        <div class="form-group">
-          <label for="form_adress">Indien bezorgen, bezorg adres (straat, huisnummer)</label>
-          <input id="form_adress" type="adress" name="adres" class="form-control" placeholder="" data-error="Als je wil dat we berzorgen, hebben we een adres nodig.">
-          <div class="help-block with-errors"></div>
-        </div>
-      </div>
-    </div>  
-    <div class="row">
-      <div class="col-xs-12 col-md-8">
-        <div class="form-group">
-          <label for="form_postcode">Bezorg postcode</label>
-          <input id="form_postcode" type="adress" name="postcode" class="form-control" placeholder="" data-error="Voor het bezorgen hebben we ook je postcode nodig.">
           <div class="help-block with-errors"></div>
         </div>
       </div>
@@ -536,8 +499,8 @@ $(document).ready(function () {
   $(document).ready(() => {
     const datepickerConfig = {
       weekStart: 1,
-      daysOfWeekDisabled: '1,2,3,4',
-      datesDisabled: [],
+      daysOfWeekDisabled: '1,2,3',
+      datesDisabled: ['27-12-2020','31-12-2020','01-01-2021','02-01-2021','03-01-2021','07-01-2021','08-01-2021','09-01-2021','10-01-2021','14-01-2021'],
       autoclose: true,
       format: 'dd-mm-yyyy',
       startDate: '+0d',
