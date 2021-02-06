@@ -113,7 +113,11 @@
         </p>
            
     </div>
-    
+    <div class="container-s">
+      <div class="container-black">
+        <p>Wegens weersomstandigheden is het niet mogelijk om voor zondag 7 februari te bestellen. </p> 
+      </div>
+    </div>
     <div class="container-s">
       <form id="contact-form" method="post" action="/.netlify/functions/send-mail-roast" autocomplete="off">
         <div class="row">
@@ -499,7 +503,7 @@
             const datepickerConfig = {
               weekStart: 1,
               daysOfWeekDisabled: '1,2,3,4',
-              datesDisabled:'',
+              datesDisabled:'[07-02-2021]',
               autoclose: true,
               format: 'dd-mm-yyyy',
               startDate: '+0d',
