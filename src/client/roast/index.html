@@ -99,7 +99,7 @@
           Zoals je van ons gewend bent maken we alles zelf met verse producten, dus bestel snel, want op = op!
       </p>
 
-      <p style="font-size:20px; font-family: Karla;"> <b> WEEKEND - 5, 6 en 7 FEBRUARI</b></p>
+      <p style="font-size:20px; font-family: Karla;"> <b> UITVERKOCHT - WEEKEND - 5, 6 en 7 FEBRUARI</b></p>
       <div class="image-roast roast-header"></div><br>
       <p> Geroosterde Poulet Noir met champignons, prei, zilverui, krielen en mayonaise.  <br><br>
         We serveren een hele Poulet Noir per 2 personen. Ben je met 3 of 5 personen? Dan serveren we extra groenten voor 10 euro.
@@ -114,15 +114,10 @@
            
     </div>
     <div class="container-s">
-      <div class="container-black">
-        <p>Wegens weersomstandigheden is het niet mogelijk om voor zondag 7 februari te bestellen. </p> 
-      </div>
-    </div>
-    <div class="container-s">
       <form id="contact-form" method="post" action="/.netlify/functions/send-mail-roast" autocomplete="off">
         <div class="row">
           <div class="col-md-12">
-            <h6>WEEKEND ROAST</h6>
+            <h6>UITVERKOCHT - WEEKEND ROAST</h6>
             <p>Te bestellen vanaf twee personen</p>
           </div>
         </div>
@@ -503,7 +498,7 @@
             const datepickerConfig = {
               weekStart: 1,
               daysOfWeekDisabled: '1,2,3,4',
-              datesDisabled:'[07-02-2021]',
+              datesDisabled:['06-02-2021', '07-02-2021'],
               autoclose: true,
               format: 'dd-mm-yyyy',
               startDate: '+0d',
