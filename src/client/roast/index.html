@@ -95,20 +95,22 @@
     <div class="container-s page-intro-text reserveren-intro">
       
       <p> Met z’n tweeën op de bank hangen met een heerlijk gerecht en een goede fles wijn of met het hele gezin gezellig aan tafel het weekend vieren? 
-          Wij serveren naar Engelse traditie ieder weekend een wisselende roast. Een gerecht voor minimaal 2 personen dat alleen nog even de oven in moet. 
+          Wij serveren naar Engelse traditie ieder weekend een wisselende roast. Een gerecht voor minimaal 2 personen dat alleen nog even moet worden opgewarmd. 
           Zoals je van ons gewend bent maken we alles zelf met verse producten, dus bestel snel, want op = op!
       </p>
 
-      <p style="font-size:20px; font-family: Karla;"> <b> UITVERKOCHT - WEEKEND - 5, 6 en 7 FEBRUARI</b></p>
+      <p style="font-size:20px; font-family: Karla;"> <b>WEEKEND - 5, 6 en 7 FEBRUARI</b></p>
       <div class="image-roast roast-header"></div><br>
-      <p> Geroosterde Poulet Noir met champignons, prei, zilverui, krielen en mayonaise.  <br><br>
-        We serveren een hele Poulet Noir per 2 personen. Ben je met 3 of 5 personen? Dan serveren we extra groenten voor 10 euro.
+      <p>Hokkaido pompoen gevuld met Reypenaer kaasfondue met crudité, lange vingers van geroosterd
+        brood en een gepofte aardappel. <br><br>
       </p>
-        <br>
         <p style="font-size:20px; font-family: Karla;"> <b> BIJPASSENDE WIJN </b></p>
-        <p><b>Siegrist – Pinot Noir – Q.b.A. Pfalz        </b><br>
-          De eigenzinnige – en inmiddels 70 jaar oude wijnmaker – Thomas Siegrist maakt samen met zijn dochter en schoonzoon wijnen waar je voor omrijdt. Of in ons geval: wij rijden eens in de zoveel tijd speciaal naar de zuidelijke Pfalz om zijn wijnen in te slaan. Het pittoreske dorpje Leinsweiler ligt vlak tegen de grens met Frankrijk en leunt tegen de hellingen van het Pfälzerwald. Deze hellingen zorgen niet alleen voor optimale omstandigheden voor de wijnranken, maar zorgen ook voor een prachtig plaatje. Vanuit dit idyllische plaatsje begon Thomas in de jaren 80 een revolte tegen de gevestigde wijn-orde. Met succes: Thomas is met drie andere jonge wijnmakers terug te vinden in de geschiedenisboeken als de jongens die Duitse wijnbouw een permanente kwaliteitsinjectie gaven. Thomas werd gekroond tot de koning van de houtgelagerde Duitse wijn. Deze Pinot Noir heeft achttien maanden op eikenhout gerijpt.
-
+        <p><b>Siegrist – Riesling Eigensinn 2014 – Q.b.A. Pfalz        </b><br><br>
+          Denk je bij Duitse wijn niet meteen aan een romantisch diner? Straks wel. 
+          Tegen de hellingen van de zuidelijke Pfalz, vlakbij de Franse grens, ligt het dorpje Leinsweiler. Vierhonderd mensen wonen hier in middeleeuwse vakwerkhuisjes omringd door bos en wijngaard. Precies zeven jaar geleden kwam deze wijn hier onder grillige omstandigheden tot leven. Denk maar even terug: tot 2014 kon je als 16-jarige nog legaal drank bestellen en Conchita Wurst won dat jaar het songfestival.<br><br>
+          Riesling geeft wijnen die ontzettend mooi oud kunnen worden en doet het bij uitstek goed doet onder niet te warme omstandigheden. Wanneer de rijping geleidelijk plaatsvindt en de druif dus heel laat geplukt kan worden heb je een groeibriljant in handen. De Duitse wijnlegende Thomas Siegrist wordt de koning van de houtgelagerde wijn genoemd, maar Riesling rijp je op de fles – dat begrijpt hij als geen ander. De fonkelende zuren zorgen voor de ruggengraat en tijd doet de rest. <br><br>
+          Door deze wijn uit te schenken in een karaf geef je hem tijd om zijn verhaal te vertellen. Heb je geen karaf thuis? Koop er meteen eentje bij ons wanneer je de roast ophaalt en schenk de wijn minimaal een uur voordat je gaat eten uit. Steek een kaarsje aan en denk even terug aan 2014. Toen alles beter was.
+          
           <br><br>
         </p>
            
@@ -117,12 +119,12 @@
       <form id="contact-form" method="post" action="/.netlify/functions/send-mail-roast" autocomplete="off">
         <div class="row">
           <div class="col-md-12">
-            <h6>UITVERKOCHT - WEEKEND ROAST</h6>
+            <h6>WEEKEND ROAST</h6>
             <p>Te bestellen vanaf twee personen</p>
           </div>
         </div>
         <div class="form-group row">
-            <label for="aantal" class="col-sm-6">Aantal personen (40,00 per 2 personen). Bij 3 of 5 personen serveren we extra groenten (10,00).</label>
+            <label for="aantal" class="col-sm-6">Aantal personen (17,50 per persoon)</label>
             <div class="col-sm-6">
               <div class="selectpicker">
                 <select id="aantal" name="aantal" class="form-control small-field">
@@ -139,7 +141,7 @@
             </div>
         </div>
         <div class="form-group row">
-          <label for="wijn" class="col-sm-6">Fles Siegrist – Pinot Noir (18,00)</label>
+          <label for="wijn" class="col-sm-6">Fles Siegrist – Riesling 2014 (24,00)</label>
           <div class="col-sm-6">
             <div class="selectpicker">
               <select id="wijn" name="wijn" class="form-control small-field">
@@ -187,7 +189,7 @@
         </div>
       </div>
       <div class="form-group row">
-        <label for="dessert" class="col-sm-6">Dessert (7,00 per stuk): Peren cremeux met peren gel, pecannoot, crème van Griekse yoghurt en vanille, nashipeer, bergamot gel en palmsuiker parels 
+        <label for="dessert" class="col-sm-6">Dessert (7,00 per stuk): Bosvruchtengebak met ruby chocolade, ricotta crème met vanille en gepofte rijst.
         </label>
         <div class="col-sm-6">
             <input type="number" class="form-control small-field" name="dessert" id="dessert">
@@ -498,7 +500,7 @@
             const datepickerConfig = {
               weekStart: 1,
               daysOfWeekDisabled: '1,2,3,4',
-              datesDisabled:['06-02-2021', '07-02-2021'],
+              datesDisabled:[],
               autoclose: true,
               format: 'dd-mm-yyyy',
               startDate: '+0d',
