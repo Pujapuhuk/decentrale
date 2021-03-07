@@ -1181,7 +1181,7 @@ label{
 }
 
 .bestel-2{
-    background: url(img/bestel/roast-header.jpg) center 80%/cover no-repeat;
+    background: url(img/bestel/roast-header.jpg) center 45%/cover no-repeat;
 }
 
 .bestel-3{
@@ -1319,7 +1319,7 @@ label{
 /*******************/
 
 .roast-header {
-    background: url(img/roast/roast-header.jpg) center 80%/cover no-repeat;
+    background: url(img/roast/roast-header.jpg) center 55%/cover no-repeat;
 }
 
 @media (max-width: 480PX) {
