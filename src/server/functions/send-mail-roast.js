@@ -40,7 +40,6 @@ exports.handler = function (event, context, callback) {
 	const phone = postData.phone
 	const aantal = postData.aantal
 	const cadeaubon = postData.cadeaubon
-	const spekkoek = postData.spekkoek
 	const nieuwsbrief = postData.nieuwsbrief
 	const emailBody = getEmailBody(postData)
 	const honeyPotValue = postData.petsName
@@ -61,7 +60,6 @@ exports.handler = function (event, context, callback) {
 		Datum: ${date}
 		Tijd: ${time}\n
 		Aantal: ${aantal} personen
-		Spekkoek: ${spekkoek} x
 		Bijpassende wijn: ${wijn}x \n
 		Extra:
 		Oester: ${oesters}
